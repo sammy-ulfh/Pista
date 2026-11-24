@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+
+# Salida de Astro
+dist/
+.astro/
+
+# Python
+__pycache__/
+
+# Entorno y sistema
+.env
+.env.*
+.DS_Store
+npm-debug.log*
