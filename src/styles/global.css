@@ -1,0 +1,275 @@
+/*
+  Estilo «Cuaderno» de Pista (CONSTRUCCION.md, sección 9).
+
+  Aquí viven TODOS los colores, fuentes, radios y sombras del sitio. Los componentes usan las
+  clases que Tailwind genera a partir de estos tokens (bg-tinta, text-texto-2, rounded-cuaderno,
+  shadow-desplazada…) y nunca escriben un color a mano. Cambiar un valor aquí cambia todo el sitio.
+
+  Orden del archivo:
+    1. Tailwind y plugins
+    2. Tokens (@theme)
+    3. Utilidades propias (@utility)
+    4. Estilos base (cuerpo, títulos, foco)
+    5. Portadas generadas con CSS
+    6. Texto de lecciones (prose)
+    7. Lo que depende del estado de la demo (plan y sesión)
+*/
+
+/* ---------- 1. Tailwind y plugins ---------- */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ---------- 2. Tokens ---------- */
+@theme {
+  /* Se borra la paleta de colores de Tailwind: así solo existen los colores de Pista
+     y es imposible usar por error un `bg-blue-500`. */
+  --color-*: initial;
+
+  /* Colores base */
+  --color-tinta: #1f1e1c;     /* Texto, bordes, botón principal */
+  --color-papel: #fbfaf7;     /* Fondo general */
+  --color-blanco: #ffffff;    /* Tarjetas */
+  --color-relleno: #eceae4;   /* Botón secundario, opción elegida, elemento actual */
+  --color-suave: #f4f2ed;     /* Cajas de aviso */
+  --color-texto-2: #57534e;   /* Metadatos */
+  --color-texto-3: #78736b;   /* Bloqueado / próximamente (4,7:1 sobre blanco; NO usar sobre relleno) */
+  --color-linea: #d9d5cc;     /* Divisores */
+
+  /* Colores de escuela. Cada escuela elige uno en su campo `color` de datos/escuelas.json.
+     Para un color nuevo: agrega aquí `--color-<nombre>` y el nombre en COLORES_ESCUELA
+     (src/lib/compartido/esquemas.js); `npm run validar` avisa si falta. Mide el contraste (`npm run contraste`). */
+  --color-tecnologia: #2f5bd3;
+  --color-negocios: #b84e1e;
+  --color-comunicacion: #177a62;
+  --color-habilidades: #7a4fd1;
+  --color-diseno: #c2417a;
+
+  /* Tipografía (paquetes @fontsource-variable, importados en LayoutBase.astro) */
+  --font-titulo: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-texto: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-codigo: "JetBrains Mono Variable", ui-monospace, monospace;
+  --default-font-family: var(--font-texto);
+  --default-mono-font-family: var(--font-codigo);
+
+  /* Bordes y sombras: radio de 12 px y sombra desplazada de 4 px sin desenfoque */
+  --radius-cuaderno: 12px;
+  --shadow-desplazada: 4px 4px 0 0 var(--color-tinta);
+}
+
+/* ---------- 3. Utilidades propias ---------- */
+
+/* Ancho máximo del contenido y márgenes laterales (16 px en móvil). */
+@utility contenedor {
+  width: 100%;
+  max-width: 82rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* ---------- 4. Estilos base ---------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-papel);
+    color: var(--color-tinta);
+    font-family: var(--font-texto);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  /* Foco visible en todo lo que se puede usar con teclado */
+  :focus-visible {
+    outline: 3px solid var(--color-tinta);
+    outline-offset: 3px;
+  }
+
+  /* Quien pide menos movimiento en su sistema no ve transiciones ni animaciones (botones, menús, flechas). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Botones y elementos con rol de botón muestran la mano */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+}
+
+/* ---------- 5. Portadas generadas con CSS (ui/Portada.astro) ---------- */
+/*
+  La portada toma el color de su escuela de la variable `--escuela` (la pone el componente)
+  y dibuja un patrón con líneas o puntos de corte duro (no son degradados visibles).
+*/
+@layer components {
+  .portada {
+    --trazo: color-mix(in srgb, var(--color-blanco) 30%, transparent);
+    background-color: var(--escuela, var(--color-tinta));
+  }
+
+  .portada-patron {
+    position: absolute;
+    inset: 0;
+  }
+
+  .portada[data-patron="cuadricula"] .portada-patron {
+    background-image:
+      linear-gradient(var(--trazo) 2px, transparent 2px),
+      linear-gradient(90deg, var(--trazo) 2px, transparent 2px);
+    background-size: 24px 24px;
+  }
+
+  .portada[data-patron="rayas"] .portada-patron {
+    background-image: repeating-linear-gradient(-45deg, var(--trazo) 0 3px, transparent 3px 18px);
+  }
+
+  .portada[data-patron="puntos"] .portada-patron {
+    background-image: radial-gradient(circle, var(--trazo) 2.5px, transparent 3px);
+    background-size: 20px 20px;
+  }
+
+  .portada[data-patron="renglones"] .portada-patron {
+    background-image: repeating-linear-gradient(0deg, var(--trazo) 0 2px, transparent 2px 22px);
+  }
+
+  .portada[data-patron="circulos"] .portada-patron {
+    background-image: repeating-radial-gradient(circle at 100% 0, var(--trazo) 0 2px, transparent 2px 20px);
+  }
+}
+
+/* ---------- 6. Texto de lecciones (prose) ---------- */
+/*
+  Ajusta @tailwindcss/typography a los tokens. Va fuera de capas a propósito, para que gane
+  sobre los valores por defecto del plugin. Es el estilo de TODAS las lecciones del lector
+  (pages/cursos/[curso]/[leccion].astro): imágenes, código, resaltado, tablas y enlaces.
+*/
+.prose {
+  --tw-prose-body: var(--color-tinta);
+  --tw-prose-headings: var(--color-tinta);
+  --tw-prose-lead: var(--color-texto-2);
+  --tw-prose-links: var(--color-tinta);
+  --tw-prose-bold: var(--color-tinta);
+  --tw-prose-counters: var(--color-texto-2);
+  --tw-prose-bullets: var(--color-texto-2);
+  --tw-prose-hr: var(--color-linea);
+  --tw-prose-quotes: var(--color-tinta);
+  --tw-prose-quote-borders: var(--color-linea);
+  --tw-prose-captions: var(--color-texto-2);
+  --tw-prose-code: var(--color-tinta);
+  --tw-prose-pre-code: var(--color-papel);
+  --tw-prose-pre-bg: var(--color-tinta);
+  --tw-prose-th-borders: var(--color-linea);
+  --tw-prose-td-borders: var(--color-linea);
+}
+
+/* Código en línea, rutas y direcciones largas se parten antes de salirse de la pantalla del celular.
+   (Los bloques de código no se parten: se desplazan de lado dentro de su caja.) */
+.prose {
+  overflow-wrap: anywhere;
+}
+
+.prose :where(h1, h2, h3, h4) {
+  font-family: var(--font-titulo);
+}
+
+/* Imágenes: al ancho del contenido, con borde. `height: auto` respeta la proporción de width/height. */
+.prose :where(img) {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--color-tinta);
+  border-radius: var(--radius-cuaderno);
+  background-color: var(--color-blanco);
+}
+
+/* El botón que envuelve cada imagen para abrirla en grande (lector/VisorImagenes.astro). */
+.prose .imagen-ampliable {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  border-radius: var(--radius-cuaderno);
+  cursor: zoom-in;
+}
+
+.prose .imagen-ampliable:hover img {
+  box-shadow: var(--shadow-desplazada);
+}
+
+/* Bloques de código: fondo de tinta y fuente de código. Astro colorea el código con Shiki (tema en
+   astro.config.mjs, elegido para dar 4,5:1 sobre tinta: `npm run contraste`), que escribe su propio fondo en
+   `style`; por eso este `!important`. */
+.prose :where(pre) {
+  border-radius: var(--radius-cuaderno);
+  font-family: var(--font-codigo);
+  font-size: 0.875em;
+}
+
+.prose pre.astro-code {
+  background-color: var(--color-tinta) !important;
+}
+
+/* Código en línea: fondo suave, sin las comillas invertidas que agrega el plugin. */
+.prose :where(:not(pre) > code) {
+  background-color: var(--color-suave);
+  border: 1px solid var(--color-linea);
+  border-radius: 6px;
+  padding: 0.1em 0.35em;
+  font-weight: 500;
+  font-family: var(--font-codigo);
+}
+
+.prose :where(:not(pre) > code)::before,
+.prose :where(:not(pre) > code)::after {
+  content: none;
+}
+
+/* Tablas anchas (hay varias en los apuntes): se desplazan solas sin romper la página en el celular. */
+.prose :where(table) {
+  display: block;
+  overflow-x: auto;
+}
+
+.prose :where(mark) {
+  background-color: var(--color-relleno);
+  color: var(--color-tinta);
+  padding-inline: 0.15em;
+  border-radius: 4px;
+}
+
+/* ---------- 7. Lo que depende del estado de la demo (plan y sesión) ---------- */
+/*
+  El script en línea de LayoutBase.astro marca <html> con data-plan="activo|inactivo" y data-sesion="si|no"
+  ANTES de pintar la página, y lib/estado-en-pagina.ts los mantiene al día. Así, al recargar, nunca se ve
+  un instante la versión equivocada.
+  Sin atributos (sin JavaScript o sin estado) se ve lo de «sin plan» y la cabecera sin sesión.
+*/
+html:not([data-plan="activo"]) [data-con-plan],
+html[data-plan="activo"] [data-sin-plan],
+html:not([data-sesion="si"]) [data-con-sesion],
+html[data-sesion="si"] [data-sin-sesion] {
+  display: none !important;
+}

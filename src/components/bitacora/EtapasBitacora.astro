@@ -1,0 +1,68 @@
+---
+/**
+ * EtapasBitacora — «Tu roadmap» en la bitácora (pantalla 12): cada etapa con su estado («Completada», «Estás aquí»
+ * o pendiente) y cuántas lecciones llevas. Solo aparece si el área elegida tiene etapas (Ciberseguridad).
+ *
+ * El estado sale de `lib/roadmap.ts` (vía `vista-bitacora.ts`), igual que en «Mi ruta»: al marcar una lección como
+ * vista, cambia en las dos pantallas.
+ *
+ *   <EtapasBitacora />
+ */
+import Tarjeta from '../ui/Tarjeta.astro';
+---
+
+<div data-etapas-bitacora hidden>
+  <Tarjeta relleno="compacto" class="px-4 sm:px-6" como="section">
+    <div class="flex flex-wrap items-baseline justify-between gap-3">
+      <h2 class="text-2xl">Tu roadmap</h2>
+      <a href="/mi-ruta" class="inline-flex min-h-11 items-center font-semibold underline underline-offset-4">Ver mi roadmap</a>
+    </div>
+    <ol class="mt-1" data-lista></ol>
+  </Tarjeta>
+
+  <template data-plantilla-etapa>
+    <li class="flex items-center justify-between gap-3 border-b-2 border-dashed border-linea py-3 last:border-b-0">
+      <span class="min-w-0">
+        <span class="font-medium" data-campo="nombre"></span>
+        <span class="block text-sm text-texto-2" data-campo="detalle"></span>
+      </span>
+      <span class="inline-flex min-h-8 shrink-0 items-center rounded-full border-2 px-3 text-sm font-medium whitespace-nowrap" data-campo="estado"></span>
+    </li>
+  </template>
+</div>
+
+<script>
+  import { alTenerBitacora } from './vista-bitacora';
+
+  const raiz = document.querySelector<HTMLElement>('[data-etapas-bitacora]');
+  const lista = raiz?.querySelector<HTMLOListElement>('[data-lista]');
+  const plantilla = raiz?.querySelector<HTMLTemplateElement>('[data-plantilla-etapa]');
+
+  const ESTADO = {
+    completada: { texto: '✓ Completada', clases: 'border-tinta bg-blanco text-tinta' },
+    actual: { texto: 'Estás aquí', clases: 'border-tinta bg-relleno text-tinta' },
+    pendiente: { texto: 'Pendiente', clases: 'border-texto-3 bg-blanco text-texto-2' },
+  } as const;
+
+  if (raiz && lista && plantilla) {
+    alTenerBitacora((vista) => {
+      lista.replaceChildren();
+      raiz.hidden = !vista.etapas;
+      for (const etapa of vista.etapas ?? []) {
+        const fila = (plantilla.content.cloneNode(true) as DocumentFragment).firstElementChild as HTMLElement;
+        fila.querySelector('[data-campo="nombre"]')!.textContent = `Etapa ${etapa.numero} · ${etapa.nombre}`;
+        fila.querySelector('[data-campo="detalle"]')!.textContent = [
+          `${etapa.vistas} de ${etapa.lecciones.length} lecciones vistas`,
+          etapa.opcional ? 'opcional' : null,
+        ]
+          .filter(Boolean)
+          .join(' · ');
+        const estado = fila.querySelector<HTMLElement>('[data-campo="estado"]')!;
+        estado.textContent = ESTADO[etapa.estado].texto;
+        estado.className += ` ${ESTADO[etapa.estado].clases}`;
+        if (etapa.estado === 'actual') fila.setAttribute('aria-current', 'step');
+        lista.append(fila);
+      }
+    });
+  }
+</script>

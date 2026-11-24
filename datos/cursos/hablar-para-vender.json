@@ -1,0 +1,59 @@
+{
+  "id": "hablar-para-vender",
+  "estado": "muestra",
+  "oculto": false,
+  "titulo": "Hablar para vender",
+  "subtitulo": "Presenta lo que haces en un minuto y deja con ganas de saber más.",
+  "escuela": "comunicacion",
+  "areas": [
+    "persuasion",
+    "conseguir-clientes"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Presentar lo que haces en un minuto, con palabras que cualquiera entiende",
+    "Empezar por el problema de tu cliente y no por tu producto",
+    "Contar una historia corta que muestre cómo ayudas",
+    "Cerrar con una invitación clara a seguir platicando"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "hablar-para-vender/temario",
+      "titulo": "Temario",
+      "lecciones": [
+        {
+          "id": "hablar-para-vender/tu-presentacion-de-un-minuto",
+          "slug": "tu-presentacion-de-un-minuto",
+          "titulo": "Tu presentación de un minuto",
+          "fuente": "demo",
+          "ruta": null,
+          "seccion": null,
+          "minutos": 35,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": true
+        },
+        {
+          "id": "hablar-para-vender/cuenta-lo-que-haces-con-una-historia",
+          "slug": "cuenta-lo-que-haces-con-una-historia",
+          "titulo": "Cuenta lo que haces con una historia",
+          "fuente": "demo",
+          "ruta": null,
+          "seccion": null,
+          "minutos": 35,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": true
+        }
+      ]
+    }
+  ]
+}

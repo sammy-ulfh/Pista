@@ -1,0 +1,144 @@
+---
+/**
+ * Cuestionario — preguntas de una en una (pantallas 04 · Orientación y 06 · Diagnóstico del área).
+ *
+ * - Arriba, «Pregunta N de M» y la barra de avance.
+ * - Cada pregunta es un `<fieldset>` con opciones `<input type="radio">` reales (`OpcionRespuesta`).
+ * - «← Atrás» y «Siguiente →» («Siguiente» se activa al elegir una opción). En la primera pregunta,
+ *   «← Atrás» regresa a `volverA`; en la última, «Siguiente» dice `textoTerminar`.
+ * - La caja «No hay respuestas malas…» sale de los datos (`nota`).
+ *
+ * Cada respuesta se guarda en el estado de la demo en cuanto se elige (`lib/estado-demo.ts`); si la persona
+ * vuelve, sus respuestas siguen marcadas. Al terminar lleva a `destino` (y, si es un diagnóstico, guarda el
+ * área como `areaElegida`). Funciona solo con teclado: Tab, flechas, espacio y Enter.
+ *
+ * Este componente NO calcula nada: la recomendación y la ruta se calculan en `lib/orientacion.ts` y
+ * `lib/ruta.ts`, en la página de destino.
+ *
+ *   <Cuestionario tipo="diagnostico" area="conseguir-clientes" preguntas={…} nota="…"
+ *                 prefijo="Conseguir clientes" volverA="/areas/conseguir-clientes" destino="/mi-ruta"
+ *                 textoTerminar="Ver mi ruta →" />
+ */
+import BarraAvance from '../ui/BarraAvance.astro';
+import Boton from '../ui/Boton.astro';
+import CajaAviso from '../ui/CajaAviso.astro';
+import OpcionRespuesta from './OpcionRespuesta.astro';
+
+interface Props {
+  tipo: 'orientacion' | 'diagnostico';
+  /** Área del diagnóstico (solo con `tipo="diagnostico"`). */
+  area?: string;
+  preguntas: { id: string; texto: string; opciones: { id: string; texto: string }[] }[];
+  nota: string;
+  /** Se antepone a «Pregunta N de M» («Conseguir clientes · Pregunta 3 de 5»). */
+  prefijo?: string;
+  volverA: string;
+  destino: string;
+  textoTerminar?: string;
+}
+
+const { tipo, area, preguntas, nota, prefijo, volverA, destino, textoTerminar = 'Siguiente →' } = Astro.props;
+const total = preguntas.length;
+const textoAvance = (n: number) => `${prefijo ? `${prefijo} · ` : ''}Pregunta ${n} de ${total}`;
+---
+
+<form
+  class="mx-auto max-w-3xl"
+  data-cuestionario
+  data-tipo={tipo}
+  data-area={area}
+  data-destino={destino}
+  data-volver={volverA}
+  data-prefijo={prefijo ?? ''}
+  data-texto-terminar={textoTerminar}
+  novalidate
+>
+  <p class="text-sm text-texto-2" data-texto-avance>{textoAvance(1)}</p>
+  <BarraAvance valor={1} maximo={total} etiqueta="Avance de las preguntas" grosor="delgada" class="mt-2" />
+
+  {
+    preguntas.map((pregunta, i) => (
+      <fieldset class="mt-8 sm:mt-10" data-pregunta={pregunta.id} hidden={i > 0}>
+        <legend class="contents">
+          <h1 class="text-3xl outline-none sm:text-4xl" tabindex="-1" data-titulo-pregunta>
+            {pregunta.texto}
+          </h1>
+        </legend>
+        <div class="mt-6 flex flex-col gap-3 sm:gap-4">
+          {pregunta.opciones.map((opcion) => (
+            <OpcionRespuesta nombre={pregunta.id} valor={opcion.id} texto={opcion.texto} />
+          ))}
+        </div>
+      </fieldset>
+    ))
+  }
+
+  <CajaAviso class="mt-8">{nota}</CajaAviso>
+
+  <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
+    <Boton data-atras>← Atrás</Boton>
+    <Boton variante="principal" type="submit" disabled data-siguiente>Siguiente →</Boton>
+  </div>
+</form>
+
+<script>
+  import { elegirArea, guardarRespuestaDiagnostico, guardarRespuestaOrientacion, leerEstado } from '../../lib/estado-demo';
+
+  for (const formulario of document.querySelectorAll<HTMLFormElement>('form[data-cuestionario]')) {
+    const { tipo, area = '', destino = '/', volver = '/', prefijo = '', textoTerminar = 'Siguiente →' } = formulario.dataset;
+    const preguntas = [...formulario.querySelectorAll<HTMLFieldSetElement>('fieldset[data-pregunta]')];
+    const textoAvance = formulario.querySelector<HTMLElement>('[data-texto-avance]')!;
+    const barra = formulario.querySelector<HTMLElement>('[role="progressbar"]')!;
+    const siguiente = formulario.querySelector<HTMLButtonElement>('[data-siguiente]')!;
+    const atras = formulario.querySelector<HTMLButtonElement>('[data-atras]')!;
+    let actual = 0;
+
+    // Respuestas guardadas antes: se vuelven a marcar.
+    const estado = leerEstado();
+    const guardadas = tipo === 'diagnostico' ? (estado.diagnosticos[area] ?? {}) : estado.orientacion;
+    for (const pregunta of preguntas) {
+      const id = pregunta.dataset.pregunta!;
+      const radio = pregunta.querySelector<HTMLInputElement>(`input[value="${CSS.escape(guardadas[id] ?? '')}"]`);
+      if (radio) radio.checked = true;
+    }
+
+    const elegida = (i: number) => preguntas[i].querySelector<HTMLInputElement>('input:checked');
+
+    function mostrar(i: number, enfocar: boolean) {
+      actual = i;
+      preguntas.forEach((p, j) => (p.hidden = j !== i));
+      const n = i + 1;
+      textoAvance.textContent = `${prefijo ? `${prefijo} · ` : ''}Pregunta ${n} de ${preguntas.length}`;
+      barra.setAttribute('aria-valuenow', String(n));
+      barra.setAttribute('aria-valuetext', `${n} de ${preguntas.length}`);
+      (barra.firstElementChild as HTMLElement).style.width = `${(n / preguntas.length) * 100}%`;
+      siguiente.textContent = n === preguntas.length ? textoTerminar : 'Siguiente →';
+      siguiente.disabled = !elegida(i);
+      if (enfocar) preguntas[i].querySelector<HTMLElement>('[data-titulo-pregunta]')?.focus();
+    }
+
+    formulario.addEventListener('change', (evento) => {
+      const radio = evento.target;
+      if (!(radio instanceof HTMLInputElement) || radio.type !== 'radio') return;
+      if (tipo === 'diagnostico') guardarRespuestaDiagnostico(area, radio.name, radio.value);
+      else guardarRespuestaOrientacion(radio.name, radio.value);
+      siguiente.disabled = false;
+    });
+
+    // «Siguiente» es el botón de envío: también responde a Enter sobre una opción.
+    formulario.addEventListener('submit', (evento) => {
+      evento.preventDefault();
+      if (!elegida(actual)) return;
+      if (actual < preguntas.length - 1) return mostrar(actual + 1, true);
+      if (tipo === 'diagnostico') elegirArea(area);
+      window.location.href = destino;
+    });
+
+    atras.addEventListener('click', () => {
+      if (actual === 0) window.location.href = volver;
+      else mostrar(actual - 1, true);
+    });
+
+    mostrar(0, false);
+  }
+</script>

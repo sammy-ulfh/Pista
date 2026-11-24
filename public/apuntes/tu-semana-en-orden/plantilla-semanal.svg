@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 571" width="900" height="571" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Plantilla semanal en blanco</title>
+<desc id="d">Una tabla en blanco de lunes a domingo con filas de mañana, tarde y noche, y una caja arriba para escribir las tres prioridades de la semana.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="571" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#7A4FD1" text-anchor="start"><tspan x="40" dy="0">Mi semana</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Primero escribe tus 3 prioridades; después acomoda los bloques.</tspan></text>
+<rect x="40" y="105" width="820" height="70" rx="12" fill="#EEE8FA" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="133" font-size="17" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">Mis 3 prioridades de la semana:</tspan></text>
+<text x="60" y="160" font-size="16" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="60" dy="0">1. ____________________   2. ____________________   3. ____________________</tspan></text>
+<rect x="150" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="200.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="200.5" dy="0">Lun</tspan></text>
+<rect x="251" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="301.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="301.5" dy="0">Mar</tspan></text>
+<rect x="352" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="402.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="402.5" dy="0">Mié</tspan></text>
+<rect x="453" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="503.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="503.5" dy="0">Jue</tspan></text>
+<rect x="554" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="604.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="604.5" dy="0">Vie</tspan></text>
+<rect x="655" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="705.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="705.5" dy="0">Sáb</tspan></text>
+<rect x="756" y="195" width="101" height="40" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="806.5" y="222" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="806.5" dy="0">Dom</tspan></text>
+<rect x="40" y="235" width="110" height="100" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="291.0" font-size="16" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">Mañana</tspan></text>
+<rect x="150" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="251" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="352" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="453" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="554" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="655" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="756" y="235" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="335" width="110" height="100" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="391.0" font-size="16" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">Tarde</tspan></text>
+<rect x="150" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="251" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="352" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="453" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="554" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="655" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="756" y="335" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="435" width="110" height="100" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="491.0" font-size="16" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">Noche</tspan></text>
+<rect x="150" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="251" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="352" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="453" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="554" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="655" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="756" y="435" width="101" height="100" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,42 @@
+---
+/**
+ * BarraAvance — barra de progreso (lecciones vistas, preguntas respondidas…).
+ *
+ * `etiqueta` es obligatoria: es lo que leen los lectores de pantalla («Avance del curso»).
+ * Con `mostrarTexto` añade «2 de 4» a la derecha.
+ *
+ *   <BarraAvance valor={2} maximo={4} etiqueta="Avance del curso" mostrarTexto />
+ *
+ * Si el valor se conoce solo en el navegador (lecciones vistas), dibújala con `valor={0}` y actualízala con
+ * `pintarBarraAvance(contenedor, valor, maximo)` de `lib/barra-avance.ts`.
+ */
+interface Props {
+  valor: number;
+  maximo?: number;
+  etiqueta: string;
+  mostrarTexto?: boolean;
+  grosor?: 'normal' | 'delgada';
+  class?: string;
+}
+
+const { valor, maximo = 100, etiqueta, mostrarTexto = false, grosor = 'normal', class: claseExtra } = Astro.props;
+const porcentaje = maximo > 0 ? Math.min(100, Math.max(0, (valor / maximo) * 100)) : 0;
+---
+
+<div class:list={['flex items-center gap-3', claseExtra]} data-barra-avance>
+  <div
+    role="progressbar"
+    aria-label={etiqueta}
+    aria-valuemin="0"
+    aria-valuemax={maximo}
+    aria-valuenow={valor}
+    aria-valuetext={`${valor} de ${maximo}`}
+    class:list={[
+      'flex-1 rounded-full border-2 border-tinta bg-blanco',
+      grosor === 'normal' ? 'h-7 p-1' : 'h-5 p-0.5',
+    ]}
+  >
+    <div class="h-full rounded-full bg-tinta" style={`width: ${porcentaje}%`} data-relleno></div>
+  </div>
+  {mostrarTexto && <span class="text-sm whitespace-nowrap text-texto-2" data-texto>{valor} de {maximo}</span>}
+</div>

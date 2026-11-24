@@ -1,0 +1,2360 @@
+{
+ "orientacion": {
+  "preguntas": [
+   {
+    "id": "carrera",
+    "texto": "¿Qué estudias?",
+    "opciones": [
+     {
+      "id": "ingenieria",
+      "texto": "Ingeniería o sistemas",
+      "suma": {
+       "escuelas": {
+        "tecnologia": 2
+       },
+       "areas": {
+        "programacion": 1
+       }
+      }
+     },
+     {
+      "id": "negocios",
+      "texto": "Administración, contaduría o negocios",
+      "suma": {
+       "escuelas": {
+        "negocios": 2
+       },
+       "areas": {
+        "emprender": 1
+       }
+      }
+     },
+     {
+      "id": "humanidades",
+      "texto": "Comunicación, derecho o humanidades",
+      "suma": {
+       "escuelas": {
+        "comunicacion": 2
+       },
+       "areas": {
+        "hablar-en-publico": 1
+       }
+      }
+     },
+     {
+      "id": "artes",
+      "texto": "Diseño, arquitectura o artes",
+      "suma": {
+       "escuelas": {
+        "diseno": 2
+       },
+       "areas": {
+        "contenido-visual": 1
+       }
+      }
+     },
+     {
+      "id": "otra",
+      "texto": "Salud, ciencias u otra carrera",
+      "suma": {
+       "escuelas": {
+        "habilidades": 1
+       },
+       "areas": {
+        "productividad": 1
+       }
+      }
+     }
+    ]
+   },
+   {
+    "id": "lograr",
+    "texto": "¿Qué te gustaría lograr en los próximos meses?",
+    "opciones": [
+     {
+      "id": "trabajo-tecnologia",
+      "texto": "Conseguir trabajo o prácticas en tecnología",
+      "suma": {
+       "escuelas": {
+        "tecnologia": 3
+       },
+       "areas": {
+        "programacion": 1,
+        "ciberseguridad": 1
+       }
+      }
+     },
+     {
+      "id": "emprender",
+      "texto": "Emprender o conseguir mis primeros clientes",
+      "suma": {
+       "escuelas": {
+        "negocios": 3
+       },
+       "areas": {
+        "conseguir-clientes": 2,
+        "emprender": 1
+       }
+      }
+     },
+     {
+      "id": "hablar",
+      "texto": "Hablar en público sin ponerme nervioso",
+      "suma": {
+       "escuelas": {
+        "comunicacion": 3
+       },
+       "areas": {
+        "hablar-en-publico": 3
+       }
+      }
+     },
+     {
+      "id": "organizar",
+      "texto": "Organizar mejor mi tiempo y mi dinero",
+      "suma": {
+       "escuelas": {
+        "habilidades": 3
+       },
+       "areas": {
+        "productividad": 2,
+        "finanzas-personales": 2
+       }
+      }
+     }
+    ]
+   },
+   {
+    "id": "disfrutas",
+    "texto": "¿Qué disfrutas más hacer?",
+    "opciones": [
+     {
+      "id": "computadora",
+      "texto": "Resolver problemas con la computadora",
+      "suma": {
+       "escuelas": {
+        "tecnologia": 2
+       },
+       "areas": {
+        "programacion": 1,
+        "linux": 1
+       }
+      }
+     },
+     {
+      "id": "gente",
+      "texto": "Platicar con gente y convencerla",
+      "suma": {
+       "escuelas": {
+        "negocios": 1,
+        "comunicacion": 1
+       },
+       "areas": {
+        "ventas": 1,
+        "persuasion": 1,
+        "hablar-en-publico": 1
+       }
+      }
+     },
+     {
+      "id": "organizar",
+      "texto": "Planear y organizar",
+      "suma": {
+       "escuelas": {
+        "habilidades": 2
+       },
+       "areas": {
+        "productividad": 1
+       }
+      }
+     },
+     {
+      "id": "visual",
+      "texto": "Crear cosas visuales",
+      "suma": {
+       "escuelas": {
+        "diseno": 2
+       },
+       "areas": {
+        "diseno-grafico": 1
+       }
+      }
+     }
+    ]
+   },
+   {
+    "id": "primer-paso",
+    "texto": "Si pudieras empezar mañana, ¿qué harías primero?",
+    "opciones": [
+     {
+      "id": "primer-cliente",
+      "texto": "Conseguir mi primer cliente o venta",
+      "suma": {
+       "escuelas": {
+        "negocios": 2
+       },
+       "areas": {
+        "conseguir-clientes": 2
+       }
+      }
+     },
+     {
+      "id": "proteger",
+      "texto": "Entender cómo atacan los hackers para protegerme",
+      "suma": {
+       "escuelas": {
+        "tecnologia": 2
+       },
+       "areas": {
+        "ciberseguridad": 3
+       }
+      }
+     },
+     {
+      "id": "programa",
+      "texto": "Crear mi primer programa",
+      "suma": {
+       "escuelas": {
+        "tecnologia": 2
+       },
+       "areas": {
+        "programacion": 3
+       }
+      }
+     },
+     {
+      "id": "presentacion",
+      "texto": "Dar una presentación que salga bien",
+      "suma": {
+       "escuelas": {
+        "comunicacion": 2
+       },
+       "areas": {
+        "hablar-en-publico": 2
+       }
+      }
+     },
+     {
+      "id": "presupuesto",
+      "texto": "Hacer un presupuesto que sí cumpla",
+      "suma": {
+       "escuelas": {
+        "habilidades": 2
+       },
+       "areas": {
+        "finanzas-personales": 3
+       }
+      }
+     }
+    ]
+   }
+  ],
+  "regla": "Se suman los puntos de las 4 respuestas. Se recomienda la escuela con más puntos (empate: la que aparece primero en el catálogo) y, dentro de ella, las 1-2 áreas con más puntos (la segunda solo si tiene puntos). Si el área recomendada está en próximamente, se muestra un aviso y la alternativa disponible más cercana: el área disponible con más puntos de la misma escuela; si no hay, la de cualquier escuela; si nadie tiene puntos, la primera área disponible de esa escuela. «También te puede servir» = el área disponible con más puntos de otra escuela (si tiene puntos)."
+ },
+ "areas": [
+  {
+   "area_id": "conseguir-clientes",
+   "preguntas": [
+    {
+     "id": "oferta",
+     "texto": "¿Ya tienes algo que ofrecer (un producto o un servicio)?",
+     "opciones": [
+      {
+       "id": "idea",
+       "texto": "Todavía no, solo una idea",
+       "efectos": {
+        "curso_inicio": "que-es-emprender",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "no-se-explicar",
+       "texto": "Sí, pero no sé cómo explicarlo",
+       "efectos": {
+        "curso_inicio": "tus-primeros-clientes",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí, y sé explicarlo bien",
+       "efectos": {
+        "curso_inicio": "tus-primeros-clientes",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "cliente-ideal",
+     "texto": "¿Sabes quién es tu cliente ideal?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No tengo idea",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "mas-o-menos",
+       "texto": "Más o menos",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí, lo tengo muy claro",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "tus-primeros-clientes/cliente-ideal"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "has-vendido",
+     "texto": "¿Alguna vez le has vendido algo a alguien?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca",
+       "efectos": {
+        "curso_inicio": "que-es-emprender",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "conocidos",
+       "texto": "Sí, a amigos o familia",
+       "efectos": {
+        "curso_inicio": "tus-primeros-clientes",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "clientes",
+       "texto": "Sí, tengo clientes de vez en cuando",
+       "efectos": {
+        "curso_inicio": "tus-primeros-clientes",
+        "omitir_lecciones": [
+         "tus-primeros-clientes/donde-encontrarlo"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Qué te gustaría lograr al terminar?",
+     "opciones": [
+      {
+       "id": "primer-cliente",
+       "texto": "Conseguir mi primer cliente lo antes posible",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "precios-sin-miedo"
+        ]
+       }
+      },
+      {
+       "id": "clientes-cada-mes",
+       "texto": "Tener clientes cada mes",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "cobrar-mejor",
+       "texto": "Cobrar mejor por lo que hago",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "hablar-para-vender"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "hablar-en-publico",
+   "preguntas": [
+    {
+     "id": "veces",
+     "texto": "¿Cuántas veces has hablado frente a un grupo este año?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "pocas",
+       "texto": "Una o dos veces",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "seguido",
+       "texto": "Seguido",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "nervios",
+     "texto": "Cuando te toca presentar, ¿qué te pasa?",
+     "opciones": [
+      {
+       "id": "bloqueo",
+       "texto": "Me bloqueo o se me olvida todo",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "nervioso",
+       "texto": "Me pongo nervioso, pero termino",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "tranquilo",
+       "texto": "Me siento tranquilo",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "habla-en-publico-sin-miedo/por-que-nos-ponemos-nerviosos"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "estructura",
+     "texto": "¿Cómo preparas lo que vas a decir?",
+     "opciones": [
+      {
+       "id": "improviso",
+       "texto": "No lo preparo, improviso",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "lo-leo",
+       "texto": "Lo escribo completo y lo leo",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "guion",
+       "texto": "Hago un guion con inicio, ideas y cierre",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "habla-en-publico-sin-miedo/estructura-del-discurso"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Para qué lo necesitas más?",
+     "opciones": [
+      {
+       "id": "clase",
+       "texto": "Exposiciones de clase",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "entrevista",
+       "texto": "Entrevistas o exámenes orales",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "presentaciones-claras"
+        ]
+       }
+      },
+      {
+       "id": "convencer",
+       "texto": "Convencer a otros (debates, juicios, juntas)",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "agregar_cursos": [
+         "argumentar-y-convencer"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "productividad",
+   "preguntas": [
+    {
+     "id": "agenda",
+     "texto": "¿Usas agenda o calendario?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "a-veces",
+       "texto": "A veces",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "diario",
+       "texto": "Todos los días",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "tu-semana-en-orden/planea-tu-semana"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo-se-va",
+     "texto": "¿Sabes en qué se te va el tiempo?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No tengo idea",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "mas-o-menos",
+       "texto": "Más o menos",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí, lo tengo medido",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "tu-semana-en-orden/a-donde-se-va-tu-tiempo"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "concentracion",
+     "texto": "¿Te cuesta concentrarte cuando estudias?",
+     "opciones": [
+      {
+       "id": "mucho",
+       "texto": "Mucho",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "a-veces",
+       "texto": "A veces",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "casi-nunca",
+       "texto": "Casi nunca",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "tu-semana-en-orden/estudia-en-bloques"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Qué te gustaría lograr?",
+     "opciones": [
+      {
+       "id": "entregar",
+       "texto": "Entregar todo a tiempo",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "estudia-mejor"
+        ]
+       }
+      },
+      {
+       "id": "estudiar",
+       "texto": "Estudiar mejor en menos tiempo",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "descansar",
+       "texto": "Tener tiempo libre sin culpa",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "ciberseguridad",
+   "preguntas": [
+    {
+     "id": "terminal",
+     "texto": "¿Has usado Linux o la terminal (la ventana donde se escriben comandos)?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca lo he hecho",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "poco",
+       "texto": "Un poco: sé abrirla y escribir algunos comandos",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "linux-desde-cero/comandos-basicos-1-de-2"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "seguido",
+       "texto": "La uso seguido",
+       "efectos": {
+        "curso_inicio": "redes-desde-cero",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "laboratorio",
+     "texto": "¿Tienes una máquina virtual o una computadora con Linux para practicar?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "linux-desde-cero/preparar-equipo"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "redes",
+     "texto": "¿Sabes qué es una dirección IP?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "oido",
+       "texto": "He oído de eso",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "subredes",
+       "texto": "Sí, y sé calcular subredes",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "redes-desde-cero/direcciones-y-protocolos",
+         "redes-desde-cero/subredes"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Qué te gustaría lograr?",
+     "opciones": [
+      {
+       "id": "protegerme",
+       "texto": "Entender cómo me pueden atacar, para protegerme",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "docker-desde-cero",
+         "hacking-etico-explotacion"
+        ]
+       }
+      },
+      {
+       "id": "trabajar",
+       "texto": "Prepararme para trabajar en ciberseguridad",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "herramientas",
+       "texto": "Crear mis propias herramientas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "agregar_cursos": [
+         "python-desde-cero",
+         "python-redes"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "linux",
+   "preguntas": [
+    {
+     "id": "uso",
+     "texto": "¿Has usado Linux alguna vez?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca lo he hecho",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "poco",
+       "texto": "Un poco",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "seguido",
+       "texto": "Lo uso seguido",
+       "efectos": {
+        "curso_inicio": "terminal-y-bash",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "laboratorio",
+     "texto": "¿Tienes una máquina virtual o una computadora con Linux?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "linux-desde-cero/preparar-equipo"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "comandos",
+     "texto": "¿Sabes moverte entre carpetas escribiendo comandos?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "mas-o-menos",
+       "texto": "Más o menos",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "linux-desde-cero/comandos"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Para qué quieres usar Linux?",
+     "opciones": [
+      {
+       "id": "mi-compu",
+       "texto": "En mi computadora, y que se vea bien",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "agregar_cursos": [
+         "personaliza-tu-linux"
+        ],
+        "omitir_cursos": [
+         "administracion-linux"
+        ]
+       }
+      },
+      {
+       "id": "automatizar",
+       "texto": "Para automatizar tareas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "administracion-linux"
+        ]
+       }
+      },
+      {
+       "id": "servidores",
+       "texto": "Para administrar servidores",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "programacion",
+   "preguntas": [
+    {
+     "id": "experiencia",
+     "texto": "¿Has programado antes?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca lo he hecho",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "clase",
+       "texto": "Hice ejercicios en clase",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "proyectos",
+       "texto": "Ya hice proyectos pequeños",
+       "efectos": {
+        "curso_inicio": "python-practico",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "python",
+     "texto": "¿Has usado Python?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "poco",
+       "texto": "Un poco",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "python-desde-cero/caracteristicas-y-ventajas-de-python",
+         "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "objetos",
+     "texto": "¿Sabes qué es una clase o un objeto en programación?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "python-desde-cero/objetos"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Qué te gustaría poder hacer?",
+     "opciones": [
+      {
+       "id": "basico",
+       "texto": "Entender lo básico de programar",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "python-practico"
+        ]
+       }
+      },
+      {
+       "id": "apps",
+       "texto": "Hacer programas con ventanas y botones",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "automatizar",
+       "texto": "Automatizar tareas de servidores",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "agregar_cursos": [
+         "python-automatizacion"
+        ]
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "cloud-devops",
+   "preguntas": [
+    {
+     "id": "terminal",
+     "texto": "¿Has usado Linux o la terminal?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca lo he hecho",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "poco",
+       "texto": "Un poco",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "seguido",
+       "texto": "La uso seguido",
+       "efectos": {
+        "curso_inicio": "docker-desde-cero",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "contenedores",
+     "texto": "¿Has oído hablar de Docker o de los contenedores?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "oido",
+       "texto": "He oído, pero no los he usado",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "uso",
+       "texto": "Ya los uso",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "docker-desde-cero/introduccion"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "python",
+     "texto": "¿Programas en Python?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "poco",
+       "texto": "Un poco",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "python-automatizacion/panorama",
+         "python-automatizacion/sintaxis"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Qué te gustaría lograr?",
+     "opciones": [
+      {
+       "id": "entender",
+       "texto": "Entender qué hace un equipo de DevOps",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "omitir_cursos": [
+         "python-automatizacion"
+        ]
+       }
+      },
+      {
+       "id": "automatizar",
+       "texto": "Automatizar mis tareas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "publicar",
+       "texto": "Publicar mi propia aplicación",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  },
+  {
+   "area_id": "redes",
+   "preguntas": [
+    {
+     "id": "ip",
+     "texto": "¿Sabes qué es una dirección IP?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "mas-o-menos",
+       "texto": "Más o menos",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "redes-desde-cero/direcciones-ip-ipv4-e-ipv6"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "subredes",
+     "texto": "¿Has calculado subredes alguna vez?",
+     "opciones": [
+      {
+       "id": "nunca",
+       "texto": "Nunca lo he hecho",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "clase",
+       "texto": "En clase, con ayuda",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "soltura",
+       "texto": "Sí, con soltura",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "redes-desde-cero/subredes"
+        ],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "equipo",
+     "texto": "¿Has configurado un router o un switch?",
+     "opciones": [
+      {
+       "id": "no",
+       "texto": "No",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "si",
+       "texto": "Sí",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [
+         "redes-desde-cero/configurar-un-switch"
+        ],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    },
+    {
+     "id": "tiempo",
+     "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+     "opciones": [
+      {
+       "id": "menos-1",
+       "texto": "Menos de 1 hora",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0.5
+       }
+      },
+      {
+       "id": "1-2",
+       "texto": "De 1 a 2 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 1
+       }
+      },
+      {
+       "id": "3-4",
+       "texto": "De 3 a 4 horas",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 3
+       }
+      },
+      {
+       "id": "5-mas",
+       "texto": "5 horas o más",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 5
+       }
+      }
+     ]
+    },
+    {
+     "id": "meta",
+     "texto": "¿Para qué quieres aprender redes?",
+     "opciones": [
+      {
+       "id": "entender",
+       "texto": "Para entender cómo funciona internet",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [
+         "redes-desde-cero/vlans"
+        ],
+        "horas_semana": 0
+       }
+      },
+      {
+       "id": "seguridad",
+       "texto": "Para empezar en ciberseguridad",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0,
+        "agregar_cursos": [
+         "hacking-etico-reconocimiento"
+        ]
+       }
+      },
+      {
+       "id": "administrar",
+       "texto": "Para administrar la red de un lugar",
+       "efectos": {
+        "curso_inicio": "",
+        "omitir_lecciones": [],
+        "omitir_modulos": [],
+        "horas_semana": 0
+       }
+      }
+     ]
+    }
+   ],
+   "nota_al_final": "No hay respuestas malas: esto solo sirve para saber dónde empezar."
+  }
+ ],
+ "ritmo": {
+  "regla": "lecciones por semana = horas_semana * 60 / minutos promedio por lección (hacia abajo, mínimo 1); cada curso empieza en semana nueva; un curso próximamente ocupa ceil(minutos / (horas_semana * 60)) semanas",
+  "combinar_respuestas": "curso_inicio: gana el que va más adelante en la ruta; omitir_* y agregar_cursos: se unen; horas_semana: la última respuesta distinta de 0 (se usa el mínimo del rango elegido)",
+  "costo": "suma de los precios de los cursos de la ruta (los próximamente con su precio de referencia); paquete = suma × 0,85 redondeado hacia abajo al múltiplo de 5"
+ },
+ "perfiles_demo": [
+  {
+   "nombre": "Mariana",
+   "carrera": "Administración de empresas",
+   "objetivo": "Conseguir sus primeros clientes para un negocio de pasteles por encargo.",
+   "es_tecnologia": false,
+   "respuestas_orientacion": {
+    "carrera": "negocios",
+    "lograr": "emprender",
+    "disfrutas": "gente",
+    "primer-paso": "primer-cliente"
+   },
+   "escuela_id": "negocios",
+   "area_id": "conseguir-clientes",
+   "areas_recomendadas": [
+    "conseguir-clientes",
+    "emprender"
+   ],
+   "tambien_te_puede_servir": {
+    "area_id": "hablar-en-publico",
+    "escuela_id": "comunicacion"
+   },
+   "aviso_proximamente": null,
+   "puntos": {
+    "escuelas": {
+     "tecnologia": 0,
+     "negocios": 8,
+     "comunicacion": 1,
+     "habilidades": 0,
+     "diseno": 0
+    },
+    "areas": {
+     "conseguir-clientes": 4,
+     "emprender": 2,
+     "ventas": 1,
+     "hablar-en-publico": 1,
+     "persuasion": 1
+    }
+   },
+   "respuestas_diagnostico": {
+    "oferta": "no-se-explicar",
+    "cliente-ideal": "mas-o-menos",
+    "has-vendido": "conocidos",
+    "tiempo": "1-2",
+    "meta": "clientes-cada-mes"
+   },
+   "horas_semana": 1,
+   "semanas": 5,
+   "cursos_ruta": [
+    {
+     "curso": "tus-primeros-clientes",
+     "lecciones": 4,
+     "omitidas": 0,
+     "minutos": 83.6,
+     "lecciones_por_semana": 2,
+     "precio_mxn": 35,
+     "estado": "muestra"
+    },
+    {
+     "curso": "hablar-para-vender",
+     "lecciones": 0,
+     "omitidas": 0,
+     "minutos": 70,
+     "precio_mxn": 35,
+     "estado": "proximamente"
+    },
+    {
+     "curso": "precios-sin-miedo",
+     "lecciones": 0,
+     "omitidas": 0,
+     "minutos": 50,
+     "precio_mxn": 20,
+     "estado": "proximamente"
+    }
+   ],
+   "omitidos": [
+    {
+     "curso": "que-es-emprender",
+     "motivo": "curso_inicio"
+    }
+   ],
+   "omitir_lecciones": [],
+   "omitir_modulos": [],
+   "roadmap": [
+    {
+     "semana": 1,
+     "lecciones": [
+      "tus-primeros-clientes/cliente-ideal",
+      "tus-primeros-clientes/donde-encontrarlo"
+     ],
+     "titulo": "¿Quién es tu cliente ideal?",
+     "minutos": 39.3
+    },
+    {
+     "semana": 2,
+     "lecciones": [
+      "tus-primeros-clientes/primer-mensaje",
+      "tus-primeros-clientes/pedir-la-venta"
+     ],
+     "titulo": "Tu primer mensaje",
+     "minutos": 44.3
+    },
+    {
+     "semana": 3,
+     "lecciones": [
+      "curso:hablar-para-vender"
+     ],
+     "titulo": "Hablar para vender (1 de 2)",
+     "minutos": 35.0,
+     "proximamente": true
+    },
+    {
+     "semana": 4,
+     "lecciones": [
+      "curso:hablar-para-vender"
+     ],
+     "titulo": "Hablar para vender (2 de 2)",
+     "minutos": 35.0,
+     "proximamente": true
+    },
+    {
+     "semana": 5,
+     "lecciones": [
+      "curso:precios-sin-miedo"
+     ],
+     "titulo": "Precios sin miedo",
+     "minutos": 50.0,
+     "proximamente": true
+    }
+   ],
+   "minutos_total": 203.6,
+   "costo_total_mxn": 90,
+   "paquete_mxn": 75
+  },
+  {
+   "nombre": "Diego",
+   "carrera": "Derecho",
+   "objetivo": "Perder el miedo a hablar en público antes de sus audiencias simuladas.",
+   "es_tecnologia": false,
+   "respuestas_orientacion": {
+    "carrera": "humanidades",
+    "lograr": "hablar",
+    "disfrutas": "gente",
+    "primer-paso": "presentacion"
+   },
+   "escuela_id": "comunicacion",
+   "area_id": "hablar-en-publico",
+   "areas_recomendadas": [
+    "hablar-en-publico",
+    "persuasion"
+   ],
+   "tambien_te_puede_servir": null,
+   "aviso_proximamente": null,
+   "puntos": {
+    "escuelas": {
+     "tecnologia": 0,
+     "negocios": 1,
+     "comunicacion": 8,
+     "habilidades": 0,
+     "diseno": 0
+    },
+    "areas": {
+     "ventas": 1,
+     "hablar-en-publico": 7,
+     "persuasion": 1
+    }
+   },
+   "respuestas_diagnostico": {
+    "veces": "pocas",
+    "nervios": "bloqueo",
+    "estructura": "lo-leo",
+    "tiempo": "1-2",
+    "meta": "convencer"
+   },
+   "horas_semana": 1,
+   "semanas": 5,
+   "cursos_ruta": [
+    {
+     "curso": "habla-en-publico-sin-miedo",
+     "lecciones": 5,
+     "omitidas": 0,
+     "minutos": 96.3,
+     "lecciones_por_semana": 3,
+     "precio_mxn": 35,
+     "estado": "muestra"
+    },
+    {
+     "curso": "presentaciones-claras",
+     "lecciones": 0,
+     "omitidas": 0,
+     "minutos": 60,
+     "precio_mxn": 35,
+     "estado": "proximamente"
+    },
+    {
+     "curso": "argumentar-y-convencer",
+     "lecciones": 0,
+     "omitidas": 0,
+     "minutos": 80,
+     "precio_mxn": 35,
+     "estado": "proximamente"
+    }
+   ],
+   "omitidos": [],
+   "omitir_lecciones": [],
+   "omitir_modulos": [],
+   "roadmap": [
+    {
+     "semana": 1,
+     "lecciones": [
+      "habla-en-publico-sin-miedo/por-que-nos-ponemos-nerviosos",
+      "habla-en-publico-sin-miedo/estructura-del-discurso",
+      "habla-en-publico-sin-miedo/voz-y-cuerpo"
+     ],
+     "titulo": "Por qué nos ponemos nerviosos",
+     "minutos": 59.7
+    },
+    {
+     "semana": 2,
+     "lecciones": [
+      "habla-en-publico-sin-miedo/ensayar-sin-publico",
+      "habla-en-publico-sin-miedo/el-dia-de-la-presentacion"
+     ],
+     "titulo": "Ensayar sin público",
+     "minutos": 36.6
+    },
+    {
+     "semana": 3,
+     "lecciones": [
+      "curso:presentaciones-claras"
+     ],
+     "titulo": "Presentaciones que se entienden",
+     "minutos": 60.0,
+     "proximamente": true
+    },
+    {
+     "semana": 4,
+     "lecciones": [
+      "curso:argumentar-y-convencer"
+     ],
+     "titulo": "Argumentar y convencer (1 de 2)",
+     "minutos": 40.0,
+     "proximamente": true
+    },
+    {
+     "semana": 5,
+     "lecciones": [
+      "curso:argumentar-y-convencer"
+     ],
+     "titulo": "Argumentar y convencer (2 de 2)",
+     "minutos": 40.0,
+     "proximamente": true
+    }
+   ],
+   "minutos_total": 236.3,
+   "costo_total_mxn": 105,
+   "paquete_mxn": 85
+  },
+  {
+   "nombre": "Valeria",
+   "carrera": "Ingeniería en Mecatrónica",
+   "objetivo": "Entrar a ciberseguridad y conseguir prácticas en el área.",
+   "es_tecnologia": true,
+   "respuestas_orientacion": {
+    "carrera": "ingenieria",
+    "lograr": "trabajo-tecnologia",
+    "disfrutas": "computadora",
+    "primer-paso": "proteger"
+   },
+   "escuela_id": "tecnologia",
+   "area_id": "ciberseguridad",
+   "areas_recomendadas": [
+    "ciberseguridad",
+    "programacion"
+   ],
+   "tambien_te_puede_servir": null,
+   "aviso_proximamente": null,
+   "puntos": {
+    "escuelas": {
+     "tecnologia": 9,
+     "negocios": 0,
+     "comunicacion": 0,
+     "habilidades": 0,
+     "diseno": 0
+    },
+    "areas": {
+     "programacion": 3,
+     "ciberseguridad": 4,
+     "linux": 1
+    }
+   },
+   "respuestas_diagnostico": {
+    "terminal": "poco",
+    "laboratorio": "si",
+    "redes": "oido",
+    "tiempo": "3-4",
+    "meta": "trabajar"
+   },
+   "horas_semana": 3,
+   "semanas": 6,
+   "cursos_ruta": [
+    {
+     "curso": "linux-desde-cero",
+     "lecciones": 4,
+     "omitidas": 3,
+     "minutos": 31.5,
+     "lecciones_por_semana": 22,
+     "precio_mxn": 20,
+     "estado": "disponible"
+    },
+    {
+     "curso": "redes-desde-cero",
+     "lecciones": 12,
+     "omitidas": 0,
+     "minutos": 33.6,
+     "lecciones_por_semana": 64,
+     "precio_mxn": 20,
+     "estado": "disponible"
+    },
+    {
+     "curso": "hacking-etico-reconocimiento",
+     "lecciones": 16,
+     "omitidas": 0,
+     "minutos": 128.5,
+     "lecciones_por_semana": 22,
+     "precio_mxn": 35,
+     "estado": "disponible"
+    },
+    {
+     "curso": "docker-desde-cero",
+     "lecciones": 10,
+     "omitidas": 0,
+     "minutos": 75.1,
+     "lecciones_por_semana": 23,
+     "precio_mxn": 35,
+     "estado": "disponible"
+    },
+    {
+     "curso": "hacking-etico-explotacion",
+     "lecciones": 27,
+     "omitidas": 0,
+     "minutos": 200.4,
+     "lecciones_por_semana": 24,
+     "precio_mxn": 50,
+     "estado": "disponible"
+    }
+   ],
+   "omitidos": [],
+   "omitir_lecciones": [
+    "linux-desde-cero/comandos-basicos-1-de-2"
+   ],
+   "omitir_modulos": [
+    "linux-desde-cero/preparar-equipo"
+   ],
+   "roadmap": [
+    {
+     "semana": 1,
+     "lecciones": [
+      "linux-desde-cero/comandos-basicos-2-de-2",
+      "linux-desde-cero/control-de-flujo-y-procesos",
+      "linux-desde-cero/permisos",
+      "linux-desde-cero/permisos-especiales"
+     ],
+     "titulo": "Comandos básicos (2 de 2)",
+     "minutos": 31.5
+    },
+    {
+     "semana": 2,
+     "lecciones": [
+      "redes-desde-cero/direcciones-ip-ipv4-e-ipv6",
+      "redes-desde-cero/direcciones-mac-oui-y-nic",
+      "redes-desde-cero/protocolos-tcp-y-udp",
+      "redes-desde-cero/modelo-osi",
+      "redes-desde-cero/introduccion-a-las-subredes",
+      "redes-desde-cero/cidr-y-numero-de-equipos",
+      "redes-desde-cero/mascaras-y-clases-de-red",
+      "redes-desde-cero/interpretar-rangos-de-red",
+      "redes-desde-cero/trucos-para-calcular-rapido",
+      "redes-desde-cero/que-es-una-vlan",
+      "redes-desde-cero/configurar-un-switch",
+      "redes-desde-cero/buenas-practicas"
+     ],
+     "titulo": "Direcciones IP (IPv4 e IPv6)",
+     "minutos": 33.6
+    },
+    {
+     "semana": 3,
+     "lecciones": [
+      "hacking-etico-reconocimiento/antes-de-empezar-un-objetivo-autorizado",
+      "hacking-etico-reconocimiento/nmap-y-sus-modos-de-escaneo",
+      "hacking-etico-reconocimiento/escaneo-frente-a-cortafuegos",
+      "hacking-etico-reconocimiento/scripts-de-nmap",
+      "hacking-etico-reconocimiento/tus-propios-scripts-de-nmap",
+      "hacking-etico-reconocimiento/escanear-puertos-sin-nmap",
+      "hacking-etico-reconocimiento/descubrir-equipos-en-tu-red",
+      "hacking-etico-reconocimiento/identificar-el-sistema-operativo",
+      "hacking-etico-reconocimiento/correos-publicos-de-una-organizacion",
+      "hacking-etico-reconocimiento/busqueda-por-imagenes",
+      "hacking-etico-reconocimiento/encontrar-subdominios",
+      "hacking-etico-reconocimiento/filtraciones-de-datos",
+      "hacking-etico-reconocimiento/busquedas-avanzadas-en-google",
+      "hacking-etico-reconocimiento/que-tecnologias-usa-una-web",
+      "hacking-etico-reconocimiento/buscar-rutas-ocultas-1-de-2",
+      "hacking-etico-reconocimiento/buscar-rutas-ocultas-2-de-2"
+     ],
+     "titulo": "Antes de empezar: un objetivo autorizado",
+     "minutos": 128.5
+    },
+    {
+     "semana": 4,
+     "lecciones": [
+      "docker-desde-cero/introduccion-a-docker",
+      "docker-desde-cero/instalacion-de-docker-en-linux",
+      "docker-desde-cero/definiendo-la-estructura-basica-de-dockerfile",
+      "docker-desde-cero/creacion-y-construccion-de-imagenes",
+      "docker-desde-cero/desplegar-tu-primer-contenedor",
+      "docker-desde-cero/comandos-comunes-para-la-gestion-de-contenedores",
+      "docker-desde-cero/puertos-y-carpetas-compartidas",
+      "docker-desde-cero/lo-esencial-de-docker",
+      "docker-desde-cero/trabajar-con-docker",
+      "docker-desde-cero/trabajar-con-dockerfile"
+     ],
+     "titulo": "Introducción a Docker",
+     "minutos": 75.1
+    },
+    {
+     "semana": 5,
+     "lecciones": [
+      "hacking-etico-explotacion/laboratorio-con-docker-compose-1-de-2",
+      "hacking-etico-explotacion/laboratorio-con-docker-compose-2-de-2",
+      "hacking-etico-explotacion/servicio-ftp",
+      "hacking-etico-explotacion/servicio-ssh",
+      "hacking-etico-explotacion/servicios-http-y-https",
+      "hacking-etico-explotacion/carpetas-compartidas-smb",
+      "hacking-etico-explotacion/wordpress-1-de-2",
+      "hacking-etico-explotacion/wordpress-2-de-2",
+      "hacking-etico-explotacion/joomla",
+      "hacking-etico-explotacion/drupal",
+      "hacking-etico-explotacion/magento",
+      "hacking-etico-explotacion/introduccion-a-la-explotacion",
+      "hacking-etico-explotacion/introduccion-a-shells",
+      "hacking-etico-explotacion/reverse-shell",
+      "hacking-etico-explotacion/bind-shell",
+      "hacking-etico-explotacion/forward-shell",
+      "hacking-etico-explotacion/tipos-de-payloads",
+      "hacking-etico-explotacion/explotacion-manual-y-automatizada",
+      "hacking-etico-explotacion/revisar-un-sistema-por-dentro",
+      "hacking-etico-explotacion/introduccion-a-burp-suite",
+      "hacking-etico-explotacion/proxy",
+      "hacking-etico-explotacion/intruder",
+      "hacking-etico-explotacion/comparer",
+      "hacking-etico-explotacion/repeater"
+     ],
+     "titulo": "Laboratorio con Docker Compose (1 de 2)",
+     "minutos": 186.8
+    },
+    {
+     "semana": 6,
+     "lecciones": [
+      "hacking-etico-explotacion/decoder",
+      "hacking-etico-explotacion/extensiones",
+      "hacking-etico-explotacion/introduccion-a-la-inyeccion-sql"
+     ],
+     "titulo": "Decoder",
+     "minutos": 13.6
+    }
+   ],
+   "minutos_total": 469.1,
+   "costo_total_mxn": 160,
+   "paquete_mxn": 135
+  }
+ ],
+ "casos_de_prueba": [
+  {
+   "nombre": "Aviso de próximamente",
+   "respuestas_orientacion": {
+    "carrera": "otra",
+    "lograr": "organizar",
+    "disfrutas": "organizar",
+    "primer-paso": "presupuesto"
+   },
+   "esperado": "Finanzas personales (próximamente) -> aviso y alternativa Productividad",
+   "resultado": {
+    "escuela_id": "habilidades",
+    "areas_recomendadas": [
+     "finanzas-personales",
+     "productividad"
+    ],
+    "area_id": "productividad",
+    "aviso_proximamente": "«Finanzas personales» llega pronto. Mientras tanto te recomendamos un área disponible.",
+    "tambien_te_puede_servir": null
+   }
+  }
+ ]
+}

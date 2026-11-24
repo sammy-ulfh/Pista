@@ -1,0 +1,255 @@
+---
+curso: "python-ofensivo-laboratorio"
+modulo: "python-ofensivo-laboratorio/interceptar-trafico"
+leccion: "rastrear-trafico-https"
+titulo: "Rastrear tráfico HTTPS"
+orden: 4
+minutos: 20.4
+idioma: "es"
+riesgo: "alto"
+fuente: "notes-tecnologia"
+imagenes: 34
+ejercicios: []
+---
+
+Nos sumergiremos en el mundo del espionaje de tráfico HTTPS creando un rastreador de consultar HTTPS (HTTPS Sniffer) con **mitmdump**. **Mitmdump** es una herramienta potente que actúa como proxy, permitiéndonos interceptar, modificar y analizar el tráfico entre un cliente y un servidor, tanto para HTTP como para HTTPS. 
+
+El desafío con el tráfico HTTPS, que está cifrado para proteger la privacidad y seguridad de los datos, es que no se puede leer directamente. Aquí es donde entra en juego la instalación de un certificado en la máquina víctima. Al hacer esto, engañamos al dispositivo para que confíe en nuestro proxy, lo que nos permite descifrar y acceder al contenido del tráfico HTTPS.
+
+## Práctica
+
+En este caso ya no será necesario utilizar en envenenamiento ARP (ARP Spoofer). Emplearemos un MITM Attack, pero en su lugar emplearemos un proxy. 
+
+Un **proxy** es una herramienta que nos ayuda como intermediario a nuestras conexiones cliente-servidor, filtrando todos los paquetes entre ambos. De tal forma que el proxy se encarga en realizar las peticiones por nosotros, para que así el servidor no se entere de que nosotros, por detrás, somos los que realizamos estas peticiones. 
+
+Para ello utilizaremos **mitmdump**, la cual es una herramienta open source que no permitirá levantar un servidor proxy tipo MITM. Lo realizaremos de esta manera, ya que el principal problema al interceptar tráfico HTTPS es que este viaja cifrado y, por ende, no tenemos la posibilidad de verlo. 
+
+Por ello, nos aprovecharemos de un certificado el cual no permite hacer que la máquina víctima confíe en nosotros como proxy y a nivel de navegación no note ningún cambio, pero estaremos interceptando el tráfico en general y en este caso al confiar en nosotros como proxy, sí que podremos ver el tráfico HTTPS. 
+
+En este caso asumiremos que nosotros ya hemos vulnerado la máquina víctima y nos encontramos con permisos de administrador dentro de ella, primeramente se mostrara la forma manual de habilitar el proxy e instalar el certificado, pero después lo realizaremos desde la terminal, simulando más un entorno donde hemos vulnerado dicha máquina y nos encontremos en una sesión de PowerShell (en este caso la víctima será una máquina Windows).
+
+Primeramente, en nuestra máquina atacante nos descargaremos los binarios de **mitmproxy** para Linux, desde [aquí](https://mitmproxy.org/). 
+
+Esto nos decargara un binario comprimido y tendremos que extraer el contenido:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-001.webp" alt="Captura de los apuntes" width="399" height="111" decoding="async">
+
+### Configuración para la máquina víctima
+
+En este caso, desde nuestra máquina víctima vamos a abrir el navegador y abriremos la página **mitm.it**. De primeras solo veremos un mensaje:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-002.webp" alt="Captura de los apuntes" width="475" height="157" loading="lazy" decoding="async">
+
+Lo vemos así por el momento, ya que no estamos corriendo nada desde nuestra máquina atacante, pero en esta página, al momento en el que nuestro tráfico está siendo redirigido mediante mitmproxy. 
+
+Para ello, en nuestra máquina víctima tendremos que ejecutar el binario **mitmweb** que lo que hace es crear un servidor en el equipo local de atacante mediante el puerto 8080:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-003.webp" alt="Captura de los apuntes" width="514" height="48" loading="lazy" decoding="async">
+
+En el puerto 8081 corre un servicio HTTP que es como una página de configuración en el propio servicio que estamos corriendo. 
+
+Al tener el proxy corriendo en el puerto 8080, veremos cuál es nuestra IP como atacantes, en este caso, es la IP **192.168.100.81**. Con ello nos iremos a nuestra máquina víctima y primeramente configuraremos el proxy.
+
+### Configuración del proxy
+
+#### Manual
+
+Abriremos la configuración del proxy en nuestra máquina víctima:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-004.webp" alt="Captura de los apuntes" width="803" height="628" loading="lazy" decoding="async">
+
+Nos iremos a la configuración manual y habilitaremos el proxy:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-005.webp" alt="Captura de los apuntes" width="450" height="468" loading="lazy" decoding="async">
+
+En address colocaremos la IP del atacante y el puerto en el que se encuentra corriendo nuestro proxy y lo guardaremos dándole a save.
+
+#### Terminal
+
+También podremos configurar el proxy utilizando la terminal, para ello primeramente vamos a eliminar la configuración que colocamos del proxy y además vamos a deshabilitarlo. 
+
+Después, en la barra de búsqueda buscaremos el editor de registros:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-008.webp" alt="Captura de los apuntes" width="761" height="672" loading="lazy" decoding="async">
+
+Lo ejecutaremos y veremos lo siguiente:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-009.webp" alt="Captura de los apuntes" width="634" height="252" loading="lazy" decoding="async">
+
+Realmente lo que se hace es que se aplica un cambio a nivel de registro donde se habilita el proxy y se setea la IP y el puerto. 
+
+En el editor de registros desplegaríamos primeramente la carpeta **HKEY_CURRENT_USER**, después la carpeta **SOFTWARE**, despues la carpeta **MICROSOFT**, despues la carpeta **Windows**, despues la carpeta **CurrenVersion**, despues buscaremos la carpeta **Internet Settings** y presionaremos sobre ella, viendo lo siguiente del lado derecho:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-010.webp" alt="Captura de los apuntes" width="869" height="400" loading="lazy" decoding="async">
+
+En este caso vemos como se ha quedado cacheado lo de la configuración del proxy en **ProxyServer** a pesar de que ya lo hemos deshabilitado y borrado la configuración, esto realmente podremos darle clic derecho y eliminarlo, para visualizar el cambio solo seleccionamos otra carpeta del lado izquierdo y despues volvemos a seleccionar la de **Internet Settings**.
+
+Si observamos el valor de **ProxyEnable** veremos como entre paréntesis nos muestra un valor, en este caso sale uno porque en la configuración sigue activo, pero si lo deshabilitamos en la configuración y cambiamos de selección de carpeta para verlo actualizado, veremos como el valor cambia a cero, por ende este valor almacena cuando el proxy esté deshabilitado (0) o habilitado (1). 
+
+Por ende, si queremos habilitar o deshabilitar el proxy bastará con cambiar el valor de este archivo que almacena esta configuración con los valores 0 o 1. Para nosotros modificar esto utilizaríamos el comando **reg add** y tendremos que correr la terminal (CMD) en modo administrador. 
+
+Seguido del comando agregaríamos la ruta de donde se encuentra el archivo **ProxyEnable** para nosotros poder habilitar el proxy. La ruta comenzaría desde **HKEY_CURRENT_USER**, despues de colocar la ruta, utilizaríamos **/v** para indicar el nombre del archivo, en este caso **ProxyEnable**.
+
+También tendremos que indicarle el tipo de dato que vamos a agregar. Para ello se utilizará **/t** y le decimos que **REG_DWORD** y, a nivel de dato, con **/d** le asignaremos el 1, que en este caso sería indicar que se habilite el proxy. 
+
+Esto nos dejaría nuestro comando completo para realizar el cambio, pero si el archivo ya se encuentra, que es el caso, solicitará una confirmación diciéndote que ya existe y que sí deseas sobreescribirlo. Para evitar esto, agregamos al final un **/f** para forzar la acción que queremos realizar, sin que nos solicite confirmación. 
+
+Nuestro comando final sería:
+
+```powershell
+reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f
+```
+
+Con esto, cambiando el valor entre 1 y 0, veremos cómo, si vamos viendo nuevamente en la interfaz gráfica la configuración del proxy, se estará habilitando y deshabilitando:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-011.webp" alt="Captura de los apuntes" width="961" height="472" loading="lazy" decoding="async">
+
+Utilizaríamos el mismo principio para agregar la IP y el puerto de nuestra máquina atacante corriendo el servidor del proxy, como lo vimos anteriormente en este caso sería **ProxyServer** y en este caso como no agregaremos un número, sino, una cadena la cual tenga la estructura "{IP}:{PORT}", utilizaremos **REG_SZ** con **/t** para indicar que le asignaremos una cadena y finalmente con **/d** que en sí es para indicar a nivel de dato que le vamos a setear, en este caso será "**192.168.100.81:8080**", recordemos que con **/v** indicamos el nombre y con **/f** lo forzamos en caso de que el archivo ya exista. 
+
+El comando nos quedaría como:
+
+```powershell
+reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /t REG_SZ /d "192.168.100.81:8080" /f
+```
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-012.webp" alt="Captura de los apuntes" width="970" height="428" loading="lazy" decoding="async">
+
+Con ello ya habremos configurado el proxy desde terminal. 
+
+Al configurar el proxy, como aún no tenemos ningún certificado que confie en nuestro proxy, si intentamos acceder a cualquier página web desde nuestra maquina víctima observaremos lo siguiente:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-006.webp" alt="Captura de los apuntes" width="1714" height="618" loading="lazy" decoding="async">
+
+Esto ya tendrá que ser con nuestro **mitmweb** corriendo en nuestra maquina de atacante, de lo contrario la víctima simplemente no tendrá conexión a internet, ya que no estamos redirigiendo su tráfico ni interceptándolo, solo no va a ninguna parte debido a que no lo estamos interceptando.
+### Certificado de confianza en nuestro proxy
+
+Por ello, en la página **mitm.it** tenemos los certificados para poder descargarlos. Sí, ahora que nuestro tráfico pasa por el proxy intentamos acceder nuevamente, ya veremos las opciones para descargarlos:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-007.webp" alt="Captura de los apuntes" width="944" height="653" loading="lazy" decoding="async">
+
+#### Instalación manual
+
+Para la instalación manual, solo tendremos que descargarlo y, como al instalar cualquier aplicación, le daremos a siguiente hasta llegar al apartado de la contraseña.
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-013.webp" alt="Captura de los apuntes" width="539" height="522" loading="lazy" decoding="async">
+
+Cuando lleguemos al apartado de la contraseña, solo le damos lo siguiente, de esta manera lo tendremos sin contraseña y no nos preocuparemos por nada más. Finalmente, cuando lleguemos al partado del almacenamiento del certificado:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-014.webp" alt="Captura de los apuntes" width="536" height="525" loading="lazy" decoding="async">
+
+Seleccionaremos la segunda opción para seleccionar nosotros dónde almacenarlo y lo almacenaremos en las entidades de certificacion de confianza:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-015.webp" alt="Captura de los apuntes" width="532" height="525" loading="lazy" decoding="async">
+
+En este caso, la segunda opción, le damos a ok y siguiente. Finalmente, nos pedirá una confirmación y le daremos a "si":
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-016.webp" alt="Captura de los apuntes" width="404" height="375" loading="lazy" decoding="async">
+
+Con ello, ya tendríamos el certificado en el ordenador que es nuestra víctima. Finalmente, si deseáramos, podríamos eliminar de la carpeta de descargar el certificado, así como de la carpeta que almacena los archivos eliminados para no dejar rastro alguno. 
+
+Esto no nos salta el antivirus debido a que es un certificado, no malware. Es un certificado que nosotros mismos, como el propio "usuario" de la máquina, estamos importando y confiándolo en él.
+#### Instalación desde terminal (CMD as Admin)
+
+-- Falta investigar...........
+
+Con el certificado instalado y nuestro **mitmweb** corriendo desde nuestra maquina atacante, si ahora como prueba cerramos el navegador y lo abrimos nuevamente, al buscar cualquier cosa en internet ya no saldrá ninguna alerta y podremos navegar sin problemas:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-017.webp" alt="Captura de los apuntes" width="1671" height="547" loading="lazy" decoding="async">
+
+La víctima podría navegar siempre y cuando no cerremos nuestro programa **mitmweb**, de lo contrario tendríamos que deshabilitarle el proxy para que no notara nada. Teniendo todo esto, nosotros como atacantes ya tenemos la posibilidad de descifrar este tráfico HTTPS y ver qué es lo que nuestra maquina víctima está enviando a nivel de datos en las solicitudes que realiza.
+
+### Capturar el tráfico
+
+Para ver el tráfico, estaremos utilizando en nuestra maquina de atacante el binario **mitmproxy** en lugar de **mitmweb**. Esto nos abre un panel en el cual podremos ver el tráfico de una mejor manera:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-018.webp" alt="Captura de los apuntes" width="1655" height="769" loading="lazy" decoding="async">
+
+Si en el navegador ahora realizamos una búsqueda como "hack4u", capturaremos todo este tráfico:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-019.webp" alt="Captura de los apuntes" width="1648" height="758" loading="lazy" decoding="async">
+
+Podremos movernos hacia arriba o abajo con las flechas entre cada solicitud o directamente utilizar el cursor y presionar en alguna, en este caso seleccioné una de las que tenía **www\.bing.com**, ya que estoy en el navegador Edge y al presionar en la solicitud vemos de forma más extendida la información sobre esta, viendo como en el apartado **referer** vemos la URL de la solicitud y si nos fijamos en la búsqueda que realizamos en el navegador, es la misma URL.
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-020.webp" alt="Captura de los apuntes" width="1652" height="693" loading="lazy" decoding="async">
+
+Por lo tanto, ya estamos capturando todo el tráfico HTTPS sin ningún problema gracias a mitmproxy. Si ahora nos vamos a Facebook y enviamos una solicitud para loguearnos, evidentemente Facebook nos responderá que las credenciales son incorrectas:
+
+<img src="/apuntes/python-ofensivo-laboratorio/https-sniffer-021.webp" alt="Captura de los apuntes" width="1102" height="486" loading="lazy" decoding="async">
+
+Pero si nos vamos a nuestra maquina de atacante y vemos la solicitud POST, veremos cómo esta envía los datos y podemos verlos:
+
+<img src="/apuntes/python-ofensivo-laboratorio/022.webp" alt="Captura de los apuntes" width="1660" height="778" loading="lazy" decoding="async">
+
+En este caso vemos que la contraseña que viaja está cifrada. Esto seguramente es porque el front-end también se encarga de realizar algo como medida de seguridad. Es posible que utilice base64 de alguna forma para no enviarlo al servidor en texto claro. 
+
+Cuando vemos los paquetes con el **mitmproxy** podemos observar cómo vemos dos flechitas **>>** apuntando a la petición en la que nos encontramos posicionados. Esta herramienta también tiene la posibilidad de repetir alguna petición que envió la víctima si presionamos la letra **r** y esto le repetiría a la víctima esta petición.
+
+Ahora saldremos de **mitmproxy** con ESC y despues **y**. Utilizaremos en su lugar **mitmdump** que, si observamos con el manual (**--help**) veremos cómo tenemos la opción **--scripts**:
+
+<img src="/apuntes/python-ofensivo-laboratorio/023.webp" alt="Captura de los apuntes" width="733" height="96" loading="lazy" decoding="async">
+
+Esto lo que nos permite es adjuntarle un script a esta herramienta para nosotros manejar de la forma que consideremos el tráfico que nos llegue de la víctima.
+
+### Script
+
+Por ello, ahora nos crearemos nuestro **https_sniffer.py**.
+
+Empezamos importando de la librería **mitmproxy** http y ctx. Como tal, solo utilizaremos **http**, pero primeramente observaremos cómo es la funcionalidad **ctx** y para qué nos puede servir.
+
+Dentro de esto tenemos varias funciones que podemos sobreescribir. Nosotros nos enfocaremos en **request** y **response**. Existe otra que se llama start, la cual nos permite realizar algo al inicio. Podría ser como el típico mensaje inicial de **interceptando el tráfico de la máquina víctima**. 
+
+Cada función, tanto **request** como **response** reciben como argumento un paquete que es el de cada solicitud. 
+
+**ctx** nos es de ayudar para mostrar logs, por ejemplo, en la función request podremos utilizar **ctx.log.info()** y pasarle como argumento un str con la ruta extraída del paquete que se encuentra en **packet.request.url**, para la función **response** sería lo mismo, aquí recibiremos las respuestas del servidor de las solicitudes que se hayan realizado.
+
+<img src="/apuntes/python-ofensivo-laboratorio/024.webp" alt="Captura de los apuntes" width="535" height="224" loading="lazy" decoding="async">
+
+Con ello, ahora le podemos pasar el script a **mitmdump** con el parámetro **-s** y veremos cómo nos va mostrando el log con las solicitudes que se realicen:
+
+<img src="/apuntes/python-ofensivo-laboratorio/025.webp" alt="Captura de los apuntes" width="1639" height="382" loading="lazy" decoding="async">
+
+Esto de utilizar el context nos permite hacer un tipo de puente entre el script y el mitmproxy, pero tiene sus limitaciones. Por ello, gestionaremos todo solamente utilizando **http**. 
+
+Nosotros solo buscaremos observar el tráfico que la víctima está generando, por ello no trabajaremos tampoco con response, solamente son **request**. Ahora, vamos a traer de la librería **urllib.parse** a **urlparse**. 
+
+Esto nos servirá para parsear la url de una forma en la que puedamos extraer su información de forma más ordenada y controlada. Como ejemplo mostraremos la impresión de la url parseada y sin parsear:
+
+<img src="/apuntes/python-ofensivo-laboratorio/027.webp" alt="Captura de los apuntes" width="376" height="285" loading="lazy" decoding="async">
+
+<img src="/apuntes/python-ofensivo-laboratorio/026.webp" alt="Captura de los apuntes" width="944" height="74" loading="lazy" decoding="async">
+
+La diferencia es que al parsear la url, separamos la url en partes para acceder, más fácilmente ciertas partes y trabajar con ello. Es importante ver cómo el dominio lo podremos recuperar a través de **netloc**, el tipo de ruta (http o https) a través de **scheme** y la ruta visitada en el dominio a través de **path**. 
+
+Cuando ejecutamos el **mitmdump** don nuestro script, vemos muchas salidas por consola del propio **mitmdump**, para evitar esto y quedarnos únicamente con el output de nuestro script, podremos utilizar además del parámetro **-s** donde le pasamos como argumento nuestro script, el parámetro **--quiet** que automáticamente nos evitara todo el output que vemos al ejecutarlo y nos dejara únicamente el de nuestro script. 
+
+Con ello en mente, en nuestro script recuperaremos de la url parseada el **scheme**, **path** y **netloc** como dominio:
+
+<img src="/apuntes/python-ofensivo-laboratorio/029.webp" alt="Captura de los apuntes" width="616" height="325" loading="lazy" decoding="async">
+
+<img src="/apuntes/python-ofensivo-laboratorio/028.webp" alt="Captura de los apuntes" width="1068" height="284" loading="lazy" decoding="async">
+
+Esto ya nos captura las páginas que está visitando nuestra máquina víctima y si quisiéramos hacer algo como lo del HTTP Sniffer que además nos capturaba las credenciales, tendríamos que definir primeramente unas **keywords** que sería una lista de palabras clave que pueden contener las solicitudes a nivel de datos que si coinciden con palabras como **user**, **pass** o **mail** es muy posible que esté enviando credenciales mediante un logueo. 
+
+Por lo tanto, creamos nuestra lista de palabras clave y extraeremos los datos de nuestra solicitud que se extrae con **packet.request.get_text()**, que nos extrae todos los datos que son enviados por peticiones POST:
+
+<img src="/apuntes/python-ofensivo-laboratorio/030.webp" alt="Captura de los apuntes" width="618" height="426" loading="lazy" decoding="async">
+
+Recordemos que conforme vayamos modificando el script tendremos que ir ejecutando nuevamente el mitdump, ya que si este no se encuentra corriendo para interceptar el tráfico y moverlo, la máquina víctima estará sin internet. 
+
+Con esto podremos ver los datos enviados en el formulario de un login a nivel de prueba, en este caso para reddit:
+
+<img src="/apuntes/python-ofensivo-laboratorio/032.webp" alt="Captura de los apuntes" width="465" height="378" loading="lazy" decoding="async">
+
+Al mandar la solicitud, dependiendo de la plataforma, se llega a enviar de distinta forma. En este caso, Reddit lo que hace es enviar muchísimos valores basura alrededor de los datos para que estén un poco perdidos por así decirlo, pero al final de cuentas podremos verlo en texto claro:
+
+<img src="/apuntes/python-ofensivo-laboratorio/031.webp" alt="Captura de los apuntes" width="642" height="141" loading="lazy" decoding="async">
+
+Con esto en mente, ahora vamos a verificar que alguna de las palabras claves se encuentren dentro de los datos de la solicitud. Esto lo haremos con una función **has_keywords** a la que le pasaremos como argumentos **data** y las **keywords** y jugaremos con **any** para retornar True en caso de que se dé un match:
+
+<img src="/apuntes/python-ofensivo-laboratorio/033.webp" alt="Captura de los apuntes" width="635" height="608" loading="lazy" decoding="async">
+
+Recordemos que any automáticamente regresará True si en algún punto se da un match de alguna de las palabras clave. De esta forma, con esto ahora, cuando capturemos un posible login, lo veremos de la siguiente forma:
+
+<img src="/apuntes/python-ofensivo-laboratorio/034.webp" alt="Captura de los apuntes" width="1058" height="413" loading="lazy" decoding="async">
+
+De esta forma ya estaremos capturando todo el tráfico HTTPS sin que la víctima note alguna anomalía para notar que su tráfico está siendo interceptado.

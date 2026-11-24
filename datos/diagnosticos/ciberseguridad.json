@@ -1,0 +1,167 @@
+{
+  "area": "ciberseguridad",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar tu roadmap.",
+  "preguntas": [
+    {
+      "id": "terminal",
+      "texto": "¿Alguna vez has usado la terminal o la línea de comandos?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca lo he hecho",
+          "motivo": "nunca has usado la terminal: empiezas por lo básico de Linux",
+          "efectos": {}
+        },
+        {
+          "id": "poco",
+          "texto": "Un poco: sé abrirla y escribir algunos comandos",
+          "motivo": "ya escribes algunos comandos",
+          "efectos": {
+            "omitirLecciones": ["linux-desde-cero/comandos-basicos-1-de-2"]
+          }
+        },
+        {
+          "id": "seguido",
+          "texto": "La uso seguido",
+          "motivo": "ya usas la terminal seguido",
+          "efectos": {
+            "omitirModulos": ["linux-desde-cero/comandos", "terminal-y-bash/que-es-la-terminal"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "redes",
+      "texto": "¿Sabes qué es una dirección IP o un puerto?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "Nunca lo he visto",
+          "motivo": "todavía no conoces las redes: empiezas por las direcciones IP",
+          "efectos": {}
+        },
+        {
+          "id": "ip",
+          "texto": "Sé qué es una IP y para qué sirve un puerto",
+          "motivo": "ya sabes qué es una IP y un puerto",
+          "efectos": {
+            "omitirLecciones": ["redes-desde-cero/direcciones-ip-ipv4-e-ipv6", "redes-desde-cero/protocolos-tcp-y-udp"]
+          }
+        },
+        {
+          "id": "subredes",
+          "texto": "Sí, y hasta sé calcular subredes",
+          "motivo": "ya sabes calcular subredes",
+          "efectos": {
+            "omitirModulos": ["redes-desde-cero/direcciones-y-protocolos", "redes-desde-cero/subredes"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "programar",
+      "texto": "¿Has escrito algún script o programa?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca lo he hecho",
+          "motivo": "nunca has programado: Bash y Python empiezan desde cero",
+          "efectos": {}
+        },
+        {
+          "id": "sencillo",
+          "texto": "Sí, algo sencillo (en la escuela o por mi cuenta)",
+          "motivo": "ya escribiste algún programa sencillo",
+          "efectos": {
+            "omitirLecciones": [
+              "terminal-y-bash/programar-en-la-terminal",
+              "python-desde-cero/variables-y-tipos-de-datos",
+              "python-desde-cero/operadores-basicos-en-python",
+              "python-desde-cero/control-de-flujo-condicionales-y-bucles"
+            ]
+          }
+        },
+        {
+          "id": "seguido",
+          "texto": "Sí, programo seguido",
+          "motivo": "ya programas seguido",
+          "efectos": {
+            "omitirCursos": ["python-desde-cero"],
+            "omitirLecciones": [
+              "terminal-y-bash/programar-en-la-terminal",
+              "terminal-y-bash/variables",
+              "terminal-y-bash/condiciones",
+              "terminal-y-bash/ciclos-repeticiones",
+              "terminal-y-bash/funciones"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "virtuales",
+      "texto": "¿Has creado una máquina virtual o usado Docker?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca lo he hecho",
+          "motivo": "nunca has creado una máquina virtual: te enseñamos a preparar tu equipo",
+          "efectos": {}
+        },
+        {
+          "id": "maquina-virtual",
+          "texto": "Sí, he creado una máquina virtual",
+          "motivo": "ya sabes crear una máquina virtual",
+          "efectos": {
+            "omitirModulos": ["linux-desde-cero/preparar-equipo"]
+          }
+        },
+        {
+          "id": "docker",
+          "texto": "Sí, y también he usado Docker",
+          "motivo": "ya usas máquinas virtuales y Docker",
+          "efectos": {
+            "omitirModulos": ["linux-desde-cero/preparar-equipo", "docker-desde-cero/introduccion", "docker-desde-cero/construccion"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "objetivo",
+      "texto": "¿Qué te gustaría lograr?",
+      "opciones": [
+        {
+          "id": "protegerme",
+          "texto": "Entender cómo atacan para protegerme",
+          "motivo": "tu meta es protegerte",
+          "efectos": {
+            "etapasOpcionales": ["avanzado"]
+          }
+        },
+        {
+          "id": "practicas",
+          "texto": "Prepararme para prácticas o un trabajo en ciberseguridad",
+          "motivo": "quieres prácticas o un trabajo en el área: todas las etapas son obligatorias",
+          "efectos": {}
+        },
+        {
+          "id": "ctf",
+          "texto": "Competir en retos tipo CTF",
+          "motivo": "quieres competir en retos CTF",
+          "efectos": {
+            "etapasPrimero": ["reconocimiento", "explotacion"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "texto": "¿Cuántas horas a la semana puedes dedicarle?",
+      "opciones": [
+        { "id": "2-horas", "texto": "2 horas", "efectos": { "horasSemana": 2 } },
+        { "id": "3-horas", "texto": "3 horas", "efectos": { "horasSemana": 3 } },
+        { "id": "5-horas", "texto": "5 horas o más", "efectos": { "horasSemana": 5 } }
+      ]
+    }
+  ]
+}

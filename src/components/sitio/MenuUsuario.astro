@@ -1,0 +1,22 @@
+---
+/**
+ * MenuUsuario — el círculo del usuario en la cabecera «con sesión» (pantallas 07 a 12).
+ * En la demo no hay cuentas: es un enlace a «Mi bitácora» con la inicial del usuario de demo.
+ *
+ *   <MenuUsuario />
+ */
+interface Props {
+  /** Letra que se muestra en el círculo. */
+  inicial?: string;
+}
+
+const { inicial = 'E' } = Astro.props;
+---
+
+<a
+  href="/bitacora"
+  aria-label="Mi bitácora (usuario de demo)"
+  class="inline-flex size-12 shrink-0 items-center justify-center rounded-full border-2 border-tinta bg-relleno font-titulo text-lg font-bold hover:shadow-desplazada"
+>
+  <span aria-hidden="true">{inicial}</span>
+</a>

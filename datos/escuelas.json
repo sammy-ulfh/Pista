@@ -1,0 +1,358 @@
+[
+  {
+    "id": "tecnologia",
+    "nombre": "Tecnología",
+    "descripcion": "Aprende a programar, a cuidar sistemas y a trabajar con servidores.",
+    "estado": "disponible",
+    "color": "tecnologia",
+    "areas": [
+      {
+        "id": "programacion",
+        "nombre": "Programación",
+        "descripcion": "Aprende a programar con Python, desde tu primer programa hasta apps con ventanas.",
+        "estado": "disponible",
+        "cursos": [
+          "python-desde-cero",
+          "python-practico",
+          "python-automatizacion",
+          "python-redes"
+        ],
+        "ruta": [
+          "python-desde-cero",
+          "python-practico"
+        ],
+        "porQueEsteOrden": "Primero aprendes a escribir programas sencillos en Python y después los usas en proyectos más completos."
+      },
+      {
+        "id": "ciberseguridad",
+        "nombre": "Ciberseguridad",
+        "descripcion": "Entiende cómo se protege (y cómo se ataca) un sistema, siempre en entornos autorizados.",
+        "estado": "disponible",
+        "cursos": [
+          "linux-desde-cero",
+          "redes-desde-cero",
+          "terminal-y-bash",
+          "docker-desde-cero",
+          "hacking-etico-reconocimiento",
+          "hacking-etico-explotacion",
+          "python-desde-cero",
+          "python-redes",
+          "python-ofensivo-laboratorio"
+        ],
+        "ruta": [
+          "linux-desde-cero",
+          "redes-desde-cero",
+          "terminal-y-bash",
+          "docker-desde-cero",
+          "hacking-etico-reconocimiento",
+          "hacking-etico-explotacion",
+          "python-desde-cero",
+          "python-redes",
+          "python-ofensivo-laboratorio"
+        ],
+        "porQueEsteOrden": "Primero te mueves con soltura en Linux y entiendes cómo se conecta una red; luego montas tu propio laboratorio, aprendes a revisar un sistema y a probar su seguridad, y al final creas tus herramientas con Python. Todo se practica en tu laboratorio, nunca en sistemas ajenos.",
+        "etapas": [
+          {
+            "id": "fundamentos",
+            "nombre": "Fundamentos",
+            "cursos": [
+              "linux-desde-cero",
+              "redes-desde-cero"
+            ],
+            "alTerminar": "Te mueves con soltura en la terminal de Linux y entiendes cómo viaja la información en una red.",
+            "soloLaboratorio": false
+          },
+          {
+            "id": "laboratorio",
+            "nombre": "Tu laboratorio",
+            "cursos": [
+              "terminal-y-bash",
+              "docker-desde-cero"
+            ],
+            "alTerminar": "Automatizas tareas con Bash y montas con contenedores un laboratorio seguro para practicar.",
+            "soloLaboratorio": false
+          },
+          {
+            "id": "reconocimiento",
+            "nombre": "Reconocimiento",
+            "cursos": [
+              "hacking-etico-reconocimiento"
+            ],
+            "alTerminar": "Descubres qué servicios e información expone una máquina de práctica.",
+            "soloLaboratorio": true
+          },
+          {
+            "id": "explotacion",
+            "nombre": "Explotación",
+            "cursos": [
+              "hacking-etico-explotacion"
+            ],
+            "alTerminar": "Encuentras y aprovechas fallas en máquinas de práctica, y entiendes cómo se corrigen.",
+            "soloLaboratorio": true
+          },
+          {
+            "id": "avanzado",
+            "nombre": "Avanzado",
+            "cursos": [
+              "python-desde-cero",
+              "python-redes",
+              "python-ofensivo-laboratorio"
+            ],
+            "alTerminar": "Programas en Python tus propias herramientas de prueba para tu laboratorio.",
+            "soloLaboratorio": true
+          }
+        ]
+      },
+      {
+        "id": "linux",
+        "nombre": "Linux y terminal",
+        "descripcion": "Usa Linux con confianza: instalarlo, moverte con comandos y administrarlo.",
+        "estado": "disponible",
+        "cursos": [
+          "linux-desde-cero",
+          "terminal-y-bash",
+          "administracion-linux",
+          "personaliza-tu-linux"
+        ],
+        "ruta": [
+          "linux-desde-cero",
+          "terminal-y-bash",
+          "administracion-linux"
+        ],
+        "porQueEsteOrden": "Primero instalas Linux y aprendes los comandos básicos; después automatizas tareas con la terminal y al final administras un sistema completo."
+      },
+      {
+        "id": "cloud-devops",
+        "nombre": "Cloud y DevOps",
+        "descripcion": "Prepara y automatiza servidores y empaqueta aplicaciones en contenedores.",
+        "estado": "disponible",
+        "cursos": [
+          "linux-desde-cero",
+          "docker-desde-cero",
+          "terminal-y-bash",
+          "python-automatizacion",
+          "administracion-linux"
+        ],
+        "ruta": [
+          "linux-desde-cero",
+          "docker-desde-cero",
+          "terminal-y-bash",
+          "python-automatizacion"
+        ],
+        "porQueEsteOrden": "Primero usas Linux, luego empaquetas aplicaciones en contenedores y al final automatizas tareas con la terminal y con Python."
+      },
+      {
+        "id": "redes",
+        "nombre": "Redes",
+        "descripcion": "Entiende cómo se conectan las computadoras y cómo se organiza una red.",
+        "estado": "disponible",
+        "cursos": [
+          "redes-desde-cero"
+        ],
+        "ruta": [
+          "redes-desde-cero"
+        ],
+        "porQueEsteOrden": "Empiezas por las direcciones y los protocolos, sigues con las subredes y terminas organizando una red con VLAN."
+      },
+      {
+        "id": "desarrollo-web",
+        "nombre": "Desarrollo web",
+        "descripcion": "Crea páginas y aplicaciones web.",
+        "estado": "proximamente",
+        "cursos": [
+          "html-desde-cero"
+        ],
+        "ruta": [
+          "html-desde-cero"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "negocios",
+    "nombre": "Negocios y Emprendimiento",
+    "descripcion": "Convierte una idea en algo que se vende y consigue tus primeros clientes.",
+    "estado": "muestra",
+    "color": "negocios",
+    "areas": [
+      {
+        "id": "conseguir-clientes",
+        "nombre": "Conseguir clientes",
+        "descripcion": "Encuentra a quién le sirve lo que haces y consigue tus primeras ventas.",
+        "estado": "muestra",
+        "cursos": [
+          "que-es-emprender",
+          "tus-primeros-clientes",
+          "hablar-para-vender",
+          "precios-sin-miedo"
+        ],
+        "ruta": [
+          "que-es-emprender",
+          "tus-primeros-clientes",
+          "hablar-para-vender",
+          "precios-sin-miedo"
+        ],
+        "porQueEsteOrden": "Primero defines a quién le vendes, luego practicas cómo decirlo y al final pones tu precio."
+      },
+      {
+        "id": "emprender",
+        "nombre": "Emprender",
+        "descripcion": "Pasa de una idea a un proyecto que puedes probar con poco dinero.",
+        "estado": "proximamente",
+        "cursos": [
+          "que-es-emprender",
+          "valida-tu-idea",
+          "propuesta-de-valor"
+        ],
+        "ruta": [
+          "que-es-emprender",
+          "valida-tu-idea",
+          "propuesta-de-valor"
+        ]
+      },
+      {
+        "id": "ventas",
+        "nombre": "Ventas",
+        "descripcion": "Vende con seguridad, responde dudas y cierra acuerdos.",
+        "estado": "proximamente",
+        "cursos": [
+          "responder-objeciones",
+          "vender-por-mensaje",
+          "precios-sin-miedo"
+        ],
+        "ruta": [
+          "responder-objeciones",
+          "vender-por-mensaje"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comunicacion",
+    "nombre": "Comunicación",
+    "descripcion": "Habla en público con seguridad y explica tus ideas para convencer.",
+    "estado": "muestra",
+    "color": "comunicacion",
+    "areas": [
+      {
+        "id": "hablar-en-publico",
+        "nombre": "Hablar en público",
+        "descripcion": "Presenta frente a un grupo sin que los nervios te ganen.",
+        "estado": "muestra",
+        "cursos": [
+          "habla-en-publico-sin-miedo",
+          "presentaciones-claras",
+          "argumentar-y-convencer"
+        ],
+        "ruta": [
+          "habla-en-publico-sin-miedo",
+          "presentaciones-claras"
+        ],
+        "porQueEsteOrden": "Primero controlas los nervios y preparas lo que vas a decir; después aprendes a apoyarte en tus diapositivas."
+      },
+      {
+        "id": "persuasion",
+        "nombre": "Persuasión",
+        "descripcion": "Argumenta, negocia y convence con respeto.",
+        "estado": "proximamente",
+        "cursos": [
+          "hablar-para-vender",
+          "argumentar-y-convencer"
+        ],
+        "ruta": [
+          "hablar-para-vender",
+          "argumentar-y-convencer"
+        ]
+      },
+      {
+        "id": "escritura",
+        "nombre": "Escritura",
+        "descripcion": "Escribe correos, trabajos y textos que se entienden a la primera.",
+        "estado": "proximamente",
+        "cursos": [
+          "correos-que-se-leen",
+          "redaccion-clara"
+        ],
+        "ruta": [
+          "correos-que-se-leen",
+          "redaccion-clara"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "habilidades",
+    "nombre": "Habilidades personales",
+    "descripcion": "Organiza tu tiempo, tu dinero y tus hábitos de estudio.",
+    "estado": "muestra",
+    "color": "habilidades",
+    "areas": [
+      {
+        "id": "productividad",
+        "nombre": "Productividad",
+        "descripcion": "Organiza tu semana y estudia mejor en menos tiempo.",
+        "estado": "muestra",
+        "cursos": [
+          "tu-semana-en-orden",
+          "estudia-mejor"
+        ],
+        "ruta": [
+          "tu-semana-en-orden",
+          "estudia-mejor"
+        ],
+        "porQueEsteOrden": "Primero ordenas tu semana; con tiempo libre de verdad, después aprendes a estudiar mejor."
+      },
+      {
+        "id": "finanzas-personales",
+        "nombre": "Finanzas personales",
+        "descripcion": "Haz un presupuesto, ahorra y evita deudas siendo estudiante.",
+        "estado": "proximamente",
+        "cursos": [
+          "tu-primer-presupuesto",
+          "ahorra-siendo-estudiante"
+        ],
+        "ruta": [
+          "tu-primer-presupuesto",
+          "ahorra-siendo-estudiante"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "diseno",
+    "nombre": "Diseño y Creatividad",
+    "descripcion": "Comunica con imágenes: diseño básico, presentaciones y fotografía con tu celular.",
+    "estado": "proximamente",
+    "color": "diseno",
+    "areas": [
+      {
+        "id": "diseno-grafico",
+        "nombre": "Diseño gráfico básico",
+        "descripcion": "Usa color, tipografía y espacio para que tus materiales se vean profesionales.",
+        "estado": "proximamente",
+        "cursos": [
+          "diseno-para-no-disenadores",
+          "presentaciones-que-lucen"
+        ],
+        "ruta": [
+          "diseno-para-no-disenadores",
+          "presentaciones-que-lucen"
+        ]
+      },
+      {
+        "id": "contenido-visual",
+        "nombre": "Contenido visual",
+        "descripcion": "Haz fotos y videos cortos con tu celular para redes y proyectos.",
+        "estado": "proximamente",
+        "cursos": [
+          "fotos-con-tu-celular",
+          "video-corto-para-redes"
+        ],
+        "ruta": [
+          "fotos-con-tu-celular",
+          "video-corto-para-redes"
+        ]
+      }
+    ]
+  }
+]

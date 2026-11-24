@@ -1,0 +1,32 @@
+---
+/**
+ * TarjetaOrden — la tarjeta «¿Por qué este orden?» de «Tu ruta» (pantalla 07).
+ *
+ * El texto sale de `datos/escuelas.json` → `porQueEsteOrden` del área. Si el área no lo tiene, se arma uno con
+ * los nombres de los cursos de la ruta (`textoOrdenCursos` en `lib/formato.ts`).
+ *
+ *   <TarjetaOrden />
+ */
+import Tarjeta from '../ui/Tarjeta.astro';
+---
+
+<div data-tarjeta-orden>
+  <Tarjeta>
+    <h2 class="text-xl sm:text-2xl">¿Por qué este orden?</h2>
+    <p class="mt-2 text-texto-2" data-campo="texto"></p>
+  </Tarjeta>
+</div>
+
+<script>
+  import { textoOrdenCursos } from '../../lib/formato';
+  import { alTenerRuta, ponerTexto } from './vista-ruta';
+
+  const raiz = document.querySelector<HTMLElement>('[data-tarjeta-orden]');
+  if (raiz) {
+    alTenerRuta((vista) => {
+      if (!vista) return;
+      const texto = vista.area.porQueEsteOrden ?? textoOrdenCursos(vista.ruta.cursos.map((id) => vista.cursos[id].titulo));
+      ponerTexto(raiz, 'texto', texto);
+    });
+  }
+</script>

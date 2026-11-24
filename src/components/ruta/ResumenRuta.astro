@@ -1,0 +1,38 @@
+---
+/**
+ * ResumenRuta — el encabezado de «Tu ruta» (pantalla 07): «Tu ruta: Conseguir clientes» y
+ * «4 semanas · 1 h por semana · empiezas el lunes 23 de noviembre».
+ *
+ * Lo llena el navegador con la ruta calculada (`vista-ruta.ts`). El lunes es el siguiente a hoy.
+ *
+ *   <ResumenRuta />
+ */
+---
+
+<div data-resumen-ruta>
+  <p class="text-sm text-texto-2">Resultado de tu diagnóstico</p>
+  <h1 class="mt-1 text-4xl sm:text-5xl">Tu ruta: <span data-campo="area"></span></h1>
+  <p class="mt-3 text-lg" data-campo="ritmo"></p>
+</div>
+
+<script>
+  import { formatoFechaInicio, formatoHorasSemana, plural } from '../../lib/formato';
+  import { alTenerRuta, ponerTexto } from './vista-ruta';
+
+  const raiz = document.querySelector<HTMLElement>('[data-resumen-ruta]');
+  if (raiz) {
+    alTenerRuta((vista) => {
+      if (!vista) return;
+      ponerTexto(raiz, 'area', vista.area.nombre);
+      ponerTexto(
+        raiz,
+        'ritmo',
+        [
+          plural(vista.ruta.totalSemanas, 'semana'),
+          formatoHorasSemana(vista.ruta.horasSemana),
+          `empiezas el ${formatoFechaInicio(vista.inicio)}`,
+        ].join(' · '),
+      );
+    });
+  }
+</script>

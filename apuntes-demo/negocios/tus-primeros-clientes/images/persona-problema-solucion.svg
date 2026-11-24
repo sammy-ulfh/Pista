@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" width="900" height="506" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Persona, problema y solución</title>
+<desc id="d">Tres cajas unidas por flechas: la persona a la que ayudas, el problema concreto que tiene y lo que tú haces para resolverlo. Abajo, la frase que las une.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="506" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">Persona → problema → solución</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Tu cliente ideal se describe con tres piezas, en este orden.</tspan></text>
+<rect x="40" y="120" width="240" height="250" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M40,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="56" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="56" dy="0">1. Persona</tspan></text>
+<text x="56" y="192" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="56" dy="0">¿Quién es? Una persona</tspan><tspan x="56" dy="20.8">concreta, no «todo el</tspan><tspan x="56" dy="20.8">mundo».</tspan></text>
+<line x1="56" y1="262" x2="264" y2="262" stroke="#D9D5CC" stroke-width="2"/>
+<text x="56" y="290" font-size="15" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="56" dy="0">Ej.: dueños de tienditas y</tspan><tspan x="56" dy="19.5">fondas de mi colonia</tspan></text>
+<line x1="284" y1="245" x2="324" y2="245" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+<rect x="330" y="120" width="240" height="250" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M330,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="346" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="346" dy="0">2. Problema</tspan></text>
+<text x="346" y="192" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="346" dy="0">¿Qué le quita tiempo,</tspan><tspan x="346" dy="20.8">dinero o tranquilidad?</tspan></text>
+<line x1="346" y1="262" x2="554" y2="262" stroke="#D9D5CC" stroke-width="2"/>
+<text x="346" y="290" font-size="15" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="346" dy="0">Ej.: anotan sus ventas en</tspan><tspan x="346" dy="19.5">un cuaderno y no saben si</tspan><tspan x="346" dy="19.5">ganan</tspan></text>
+<line x1="574" y1="245" x2="614" y2="245" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+<rect x="620" y="120" width="240" height="250" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M620,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="636" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="636" dy="0">3. Solución</tspan></text>
+<text x="636" y="192" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="636" dy="0">¿Qué haces tú para que ese</tspan><tspan x="636" dy="20.8">problema sea más pequeño?</tspan></text>
+<line x1="636" y1="262" x2="844" y2="262" stroke="#D9D5CC" stroke-width="2"/>
+<text x="636" y="290" font-size="15" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="636" dy="0">Ej.: les armo una hoja de</tspan><tspan x="636" dy="19.5">cálculo sencilla y les</tspan><tspan x="636" dy="19.5">enseño a usarla</tspan></text>
+<rect x="40" y="400" width="820" height="70" rx="12" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="442" font-size="22" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">«Ayudo a ______ que tienen problemas con ______.»</tspan></text>
+</svg>

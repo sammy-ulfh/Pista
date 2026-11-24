@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 366" width="900" height="366" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Esquema para responder una pregunta difícil en 3 pasos</title>
+<desc id="d">Tres pasos: escucha completa y agradece, repite o aclara la pregunta, y responde corto. Si no sabes, dilo y ofrece averiguarlo.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="366" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">Una pregunta difícil en 3 pasos</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">No necesitas saberlo todo; necesitas responder con calma.</tspan></text>
+<rect x="40" y="120" width="240" height="210" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M40,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="56" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="56" dy="0">1. Escucha y agradece</tspan></text>
+<text x="56" y="192" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="56" dy="0">Deja que terminen.</tspan><tspan x="56" dy="22.1">«Gracias por la</tspan><tspan x="56" dy="22.1">pregunta.»</tspan></text>
+<line x1="284" y1="225" x2="324" y2="225" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+<rect x="330" y="120" width="240" height="210" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M330,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="346" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="346" dy="0">2. Repite o aclara</tspan></text>
+<text x="346" y="192" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="346" dy="0">«Si entendí bien, me</tspan><tspan x="346" dy="22.1">pregunta si… ¿es así?»</tspan><tspan x="346" dy="22.1">Te da unos segundos para</tspan><tspan x="346" dy="22.1">pensar.</tspan></text>
+<line x1="574" y1="225" x2="614" y2="225" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+<rect x="620" y="120" width="240" height="210" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M620,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="636" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="636" dy="0">3. Responde corto</tspan></text>
+<text x="636" y="192" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="636" dy="0">Una idea y un ejemplo.</tspan><tspan x="636" dy="22.1">Si no sabes: «No lo sé,</tspan><tspan x="636" dy="22.1">lo reviso y se lo</tspan><tspan x="636" dy="22.1">comparto.»</tspan></text>
+</svg>

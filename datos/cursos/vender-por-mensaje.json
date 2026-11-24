@@ -1,0 +1,20 @@
+{
+  "id": "vender-por-mensaje",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Vender por WhatsApp y redes",
+  "subtitulo": "Conversaciones por mensaje que terminan en venta.",
+  "escuela": "negocios",
+  "areas": [
+    "ventas"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 60,
+  "modulos": []
+}

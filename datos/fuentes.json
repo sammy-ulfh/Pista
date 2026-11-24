@@ -1,0 +1,15 @@
+[
+  {
+    "id": "notes-tecnologia",
+    "repositorio": "https://github.com/sammy-ulfh/Notes",
+    "commit": "a3438f4",
+    "carpeta": "fuentes/Notes",
+    "escuela": "tecnologia"
+  },
+  {
+    "id": "demo",
+    "repositorio": null,
+    "carpeta": "apuntes-demo",
+    "escuela": null
+  }
+]

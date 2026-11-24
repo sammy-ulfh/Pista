@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 442" width="900" height="442" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Partitura de pausas sobre un párrafo de ejemplo</title>
+<desc id="d">Un párrafo corto marcado como partitura: una barra para pausa corta, dos barras para pausa larga, palabras subrayadas para enfatizar y una flecha para bajar el ritmo.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="442" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">Partitura de pausas</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Marca tu texto como si fuera una canción.</tspan></text>
+<rect x="40" y="110" width="820" height="200" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="64" y="160" font-size="22" fill="#1F1E1C">Todos hemos dejado una tarea para el <tspan font-weight="700" fill="#177A62" text-decoration="underline">último día</tspan>. /</text>
+<text x="64" y="205" font-size="22" fill="#1F1E1C">Hoy les quiero contar qué hice yo // para <tspan font-weight="700" fill="#177A62" text-decoration="underline">dejar de hacerlo</tspan>.</text>
+<text x="64" y="260" font-size="22" fill="#1F1E1C">Fueron <tspan font-weight="700" fill="#177A62" text-decoration="underline">tres cambios</tspan> / muy pequeños. ↓</text>
+<text x="40" y="350" font-size="22" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">/</tspan></text>
+<text x="100" y="350" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="100" dy="0">pausa corta (respira)</tspan></text>
+<text x="460" y="350" font-size="22" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="460" dy="0">//</tspan></text>
+<text x="520" y="350" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">pausa larga (deja que piensen)</tspan></text>
+<text x="40" y="400" font-size="22" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">___</tspan></text>
+<text x="100" y="400" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="100" dy="0">subrayado: enfatiza esas palabras</tspan></text>
+<text x="460" y="400" font-size="22" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="460" dy="0">↓</tspan></text>
+<text x="520" y="400" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">baja el ritmo y el volumen</tspan></text>
+</svg>

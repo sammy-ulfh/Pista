@@ -1,0 +1,394 @@
+{
+  "id": "terminal-y-bash",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Automatiza tareas con la terminal (Bash)",
+  "subtitulo": "Escribe pequeños programas de terminal que hacen por ti las tareas repetitivas.",
+  "escuela": "tecnologia",
+  "areas": [
+    "linux",
+    "cloud-devops",
+    "ciberseguridad"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [
+    "linux-desde-cero"
+  ],
+  "aprenderas": [
+    "Qué es una terminal y qué tipos existen",
+    "Escribir tu primer script con variables, condiciones y repeticiones",
+    "Guardar y reutilizar resultados de comandos (redirecciones y tuberías)",
+    "Buscar y transformar texto con AWK y SED",
+    "Seguir una guía de estilo para que otros entiendan tus scripts"
+  ],
+  "idiomas": [
+    "en"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "factorPractica": 2.5,
+  "modulos": [
+    {
+      "id": "terminal-y-bash/que-es-la-terminal",
+      "titulo": "Qué es la terminal",
+      "lecciones": [
+        {
+          "id": "terminal-y-bash/que-es-una-terminal-shell",
+          "slug": "que-es-una-terminal-shell",
+          "titulo": "¿Qué es una terminal (shell)?",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/What is Shell.md",
+          "seccion": null,
+          "minutos": 1.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/tipos-de-terminal",
+          "slug": "tipos-de-terminal",
+          "titulo": "Tipos de terminal",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Shell type.md",
+          "seccion": null,
+          "minutos": 1.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/archivos-de-arranque-de-bash",
+          "slug": "archivos-de-arranque-de-bash",
+          "titulo": "Archivos de arranque de Bash",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Bash startup files.md",
+          "seccion": null,
+          "minutos": 0.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/programar-en-la-terminal",
+          "slug": "programar-en-la-terminal",
+          "titulo": "Programar en la terminal",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Shell programming.md",
+          "seccion": null,
+          "minutos": 0.6,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/que-si-y-que-no-hacer-con-bash",
+          "slug": "que-si-y-que-no-hacer-con-bash",
+          "titulo": "Qué sí y qué no hacer con Bash",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Do's and Don'ts.md",
+          "seccion": null,
+          "minutos": 1.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "terminal-y-bash/sintaxis",
+      "titulo": "Tu primer script",
+      "lecciones": [
+        {
+          "id": "terminal-y-bash/crear-y-ejecutar-un-script",
+          "slug": "crear-y-ejecutar-un-script",
+          "titulo": "Crear y ejecutar un script",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Script Development and Invocation.md",
+          "seccion": null,
+          "minutos": 0.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/opciones-de-bash",
+          "slug": "opciones-de-bash",
+          "titulo": "Opciones de Bash",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Bash options.md",
+          "seccion": null,
+          "minutos": 1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/codigos-de-salida",
+          "slug": "codigos-de-salida",
+          "titulo": "Códigos de salida",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Exit Codes.md",
+          "seccion": null,
+          "minutos": 0.3,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/caracteres-especiales",
+          "slug": "caracteres-especiales",
+          "titulo": "Caracteres especiales",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Special characters.md",
+          "seccion": null,
+          "minutos": 0.4,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/variables",
+          "slug": "variables",
+          "titulo": "Variables",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Variables.md",
+          "seccion": null,
+          "minutos": 6.4,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/condiciones",
+          "slug": "condiciones",
+          "titulo": "Condiciones",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Conditions.md",
+          "seccion": null,
+          "minutos": 4,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/ciclos-repeticiones",
+          "slug": "ciclos-repeticiones",
+          "titulo": "Ciclos (repeticiones)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Loops.md",
+          "seccion": null,
+          "minutos": 1.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/redirecciones-y-tuberias",
+          "slug": "redirecciones-y-tuberias",
+          "titulo": "Redirecciones y tuberías",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/I-O Recirection.md",
+          "seccion": null,
+          "minutos": 4.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/funciones",
+          "slug": "funciones",
+          "titulo": "Funciones",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Functions.md",
+          "seccion": null,
+          "minutos": 1.4,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "terminal-y-bash/estilo",
+      "titulo": "Guía de estilo",
+      "lecciones": [
+        {
+          "id": "terminal-y-bash/entorno-y-salida-de-errores",
+          "slug": "entorno-y-salida-de-errores",
+          "titulo": "Entorno y salida de errores",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Environment.md",
+          "seccion": null,
+          "minutos": 0.3,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/comentarios",
+          "slug": "comentarios",
+          "titulo": "Comentarios",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Comments.md",
+          "seccion": null,
+          "minutos": 1.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/formato",
+          "slug": "formato",
+          "titulo": "Formato",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Formating.md",
+          "seccion": null,
+          "minutos": 6.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/como-nombrar-las-cosas",
+          "slug": "como-nombrar-las-cosas",
+          "titulo": "Cómo nombrar las cosas",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Naming conventions.md",
+          "seccion": null,
+          "minutos": 3.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/llamar-comandos",
+          "slug": "llamar-comandos",
+          "titulo": "Llamar comandos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Calling commands.md",
+          "seccion": null,
+          "minutos": 1.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "terminal-y-bash/procesar-texto",
+      "titulo": "Procesar texto con AWK y SED",
+      "lecciones": [
+        {
+          "id": "terminal-y-bash/awk-vision-general",
+          "slug": "awk-vision-general",
+          "titulo": "AWK: visión general",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/AWK Overview.md",
+          "seccion": null,
+          "minutos": 1.4,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/variables-integradas-de-awk",
+          "slug": "variables-integradas-de-awk",
+          "titulo": "Variables integradas de AWK",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/AWK Built-in Variables.md",
+          "seccion": null,
+          "minutos": 1.3,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/awk-con-ejemplos",
+          "slug": "awk-con-ejemplos",
+          "titulo": "AWK con ejemplos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/AWK Examples.md",
+          "seccion": null,
+          "minutos": 1.6,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/sed-vision-general",
+          "slug": "sed-vision-general",
+          "titulo": "SED: visión general",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed overview.md",
+          "seccion": null,
+          "minutos": 1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/scripts-de-sed",
+          "slug": "scripts-de-sed",
+          "titulo": "Scripts de SED",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed script overview.md",
+          "seccion": null,
+          "minutos": 1.3,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/direcciones-en-sed",
+          "slug": "direcciones-en-sed",
+          "titulo": "Direcciones en SED",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed address overview.md",
+          "seccion": null,
+          "minutos": 1.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "terminal-y-bash/comandos-de-sed",
+          "slug": "comandos-de-sed",
+          "titulo": "Comandos de SED",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed command overview.md",
+          "seccion": null,
+          "minutos": 1.8,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+---
+/**
+ * Pantalla 03 · Área. Catálogo de los cursos visibles de un área, todos «Incluidos en el plan».
+ * Se genera una página por área con estado `disponible` o `muestra` (las «próximamente» no tienen página).
+ * La caja «Personalizar mi ruta» lleva al diagnóstico del área (parte 3.6).
+ */
+import type { GetStaticPaths } from 'astro';
+import {
+  numeroPreguntasDiagnostico,
+  obtenerAreasConPagina,
+  obtenerCursosDeArea,
+  resumenArea,
+  type AreaConEscuela,
+} from '../../lib/catalogo';
+import { plural } from '../../lib/formato';
+import LayoutBase from '../../layouts/LayoutBase.astro';
+import MigasDePan from '../../components/catalogo/MigasDePan.astro';
+import TarjetaCurso from '../../components/catalogo/TarjetaCurso.astro';
+import Boton from '../../components/ui/Boton.astro';
+
+export const getStaticPaths = (async () => {
+  return (await obtenerAreasConPagina()).map((area) => ({ params: { area: area.id }, props: { area } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  area: AreaConEscuela;
+}
+
+const { area } = Astro.props;
+const cursos = await obtenerCursosDeArea(area.id);
+const preguntas = await numeroPreguntasDiagnostico(area.id);
+const resumen = await resumenArea(area.id);
+---
+
+<LayoutBase titulo={area.nombre} descripcion={area.descripcion}>
+  <div class="contenedor pt-6 lg:pt-10">
+    <MigasDePan
+      tramos={[
+        { texto: 'Escuelas', href: '/escuelas' },
+        { texto: area.nombreEscuela, href: `/escuelas#${area.escuela}` },
+      ]}
+    />
+    <h1 class="mt-1 text-4xl sm:text-5xl">{area.nombre}</h1>
+    <p class="mt-3 max-w-3xl text-lg">{area.descripcion}</p>
+    <p class="mt-1 text-sm text-texto-2">{resumen}</p>
+
+    {
+      preguntas > 0 && (
+        <div class="mt-6 flex flex-col gap-4 rounded-cuaderno border-2 border-tinta bg-suave px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:py-3 sm:pr-3 sm:pl-6">
+          <p>¿Quieres saber por dónde empezar? Responde {plural(preguntas, 'pregunta')} y armamos tu ruta.</p>
+          <Boton variante="principal" tamano="chico" href={`/areas/${area.id}/diagnostico`} class="shrink-0">
+            Personalizar mi ruta
+          </Boton>
+        </div>
+      )
+    }
+
+    <h2 class="sr-only">Cursos del área</h2>
+    <ul class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {cursos.map((curso) => <TarjetaCurso curso={curso} escuelaDelArea={area.escuela} />)}
+    </ul>
+  </div>
+</LayoutBase>

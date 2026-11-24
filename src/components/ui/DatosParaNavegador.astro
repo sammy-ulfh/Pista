@@ -1,0 +1,18 @@
+---
+/**
+ * DatosParaNavegador — incrusta datos en la página como JSON, para que los scripts del navegador los lean
+ * con `leerDatosDePagina(id)` (`lib/datos-en-pagina.ts`). Se generan en el build: no hay peticiones de red.
+ *
+ *   <DatosParaNavegador id="datos-ruta" datos={await datosRuta()} />
+ */
+interface Props {
+  id: string;
+  datos: unknown;
+}
+
+const { id, datos } = Astro.props;
+// `<` se escapa para que un texto como «</script>» dentro de los datos no cierre la etiqueta.
+const json = JSON.stringify(datos).replace(/</g, '\\u003c');
+---
+
+<script type="application/json" id={id} set:html={json} is:inline />

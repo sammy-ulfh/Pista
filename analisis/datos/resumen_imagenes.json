@@ -1,0 +1,955 @@
+{
+ "total_imagenes": 2243,
+ "mb_total": 207.74,
+ "formatos": {
+  ".png": {
+   "n": 1852,
+   "mb": 158.96
+  },
+  ".PNG": {
+   "n": 370,
+   "mb": 46.38
+  },
+  ".svg": {
+   "n": 16,
+   "mb": 1.4
+  },
+  ".jpeg": {
+   "n": 4,
+   "mb": 0.12
+  },
+  ".gif": {
+   "n": 1,
+   "mb": 0.87
+  }
+ },
+ "mayor_a_1mb": 4,
+ "mayor_a_500kb": 46,
+ "promedio_kb": 94.8,
+ "top20": [
+  {
+   "ruta": "Python_ofensivo/Offensive/https_sniffer/images/019.PNG",
+   "kb": 1155.2
+  },
+  {
+   "ruta": "Python_ofensivo/images/IMG_543.png",
+   "kb": 1131.3
+  },
+  {
+   "ruta": "Linux_Introduction/Introduction/images/22.PNG",
+   "kb": 1070.6
+  },
+  {
+   "ruta": "Linux_Introduction/Introduction/images/33.PNG",
+   "kb": 1064.4
+  },
+  {
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/images/quality_gates.png",
+   "kb": 978.8
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/Subdominios/imagenes/009.png",
+   "kb": 954.1
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/images/006.png",
+   "kb": 922.8
+  },
+  {
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/images/testing.gif",
+   "kb": 888.8
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/images/005.png",
+   "kb": 824.4
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/images/012.PNG",
+   "kb": 821.5
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/images/002.png",
+   "kb": 805.8
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/Correos/images/010.png",
+   "kb": 800.8
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/images/013.PNG",
+   "kb": 791.5
+  },
+  {
+   "ruta": "Python_ofensivo/Offensive/https_sniffer/images/022.PNG",
+   "kb": 780.1
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/TecnologiasWeb/images/003.png",
+   "kb": 775.0
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/GoogleDorks/images/006.png",
+   "kb": 770.0
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/images/014.PNG",
+   "kb": 767.5
+  },
+  {
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/images/011.PNG",
+   "kb": 755.7
+  },
+  {
+   "ruta": "Python_ofensivo/Offensive/Keylogger/images/005.PNG",
+   "kb": 752.9
+  },
+  {
+   "ruta": "Python_ofensivo/Offensive/https_sniffer/images/020.PNG",
+   "kb": 737.6
+  }
+ ],
+ "sin_usar": {
+  "n": 18,
+  "mb": 1.16,
+  "por_vault": {
+   "Hacking_introduction": 6,
+   "Linux_Introduction": 2,
+   "Personalizacion_entrono": 2,
+   "Python_ofensivo": 7,
+   "images": 1
+  },
+  "lista": [
+   "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/images/007.png",
+   "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/images/008.png",
+   "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/images/034.png",
+   "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/042.png",
+   "Hacking_introduction/EnumServComunes/SSH/images/003.png",
+   "Hacking_introduction/Reconocimiento/OS/images/002.png",
+   "Linux_Introduction/Introduction/images/10.PNG",
+   "Linux_Introduction/Introduction/images/13.PNG",
+   "Personalizacion_entrono/images/IMG_0026.png",
+   "Personalizacion_entrono/images/IMG_0040.png",
+   "Python_ofensivo/Offensive/dns_spoofer/images/009.PNG",
+   "Python_ofensivo/Offensive/forward_shell/images/047.PNG",
+   "Python_ofensivo/Offensive/http_sniffer/images/006.png",
+   "Python_ofensivo/images/IMG_116.png",
+   "Python_ofensivo/images/IMG_1169.png",
+   "Python_ofensivo/images/IMG_617.png",
+   "Python_ofensivo/images/IMG_701.png",
+   "images/IMG_001.png"
+  ]
+ },
+ "incrustaciones_total": 2231,
+ "incrustaciones_no_imagen": [
+  {
+   "nota": "Linux_Introduction/Temario/Comandos b sicos 2-2.md",
+   "linea": 203,
+   "original": "![[basic_commands.pdf]]",
+   "estado": "ok",
+   "resuelta": "Temario/files/basic_commands.pdf"
+  },
+  {
+   "nota": "Linux_Introduction/Temario/Control de flujo, operadores y procesos en segundo plano.md",
+   "linea": 109,
+   "original": "![[bash_redirections.pdf]]",
+   "estado": "ok",
+   "resuelta": "Temario/files/bash_redirections.pdf"
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Módulos_y_paquetes_en_Python.md",
+   "linea": 452,
+   "original": "![[README]]",
+   "estado": "ok",
+   "resuelta": "Introduction/README.md"
+  }
+ ],
+ "rotas": [],
+ "ambiguas": [
+  {
+   "nota": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Bash options.md",
+   "linea": 22,
+   "original": "![[001.png]]",
+   "candidatos": [
+    "Bash/Bash_syntax/images/001.png",
+    "Bash/Text processors - AWK y SED/images/001.png"
+   ],
+   "propuesta": "Bash/Bash_syntax/images/001.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+   "linea": 41,
+   "original": "![[017.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/017.png",
+    "Conceptos básicos de enumeración y explotación/Shells/images/017.png",
+    "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/017.png",
+    "Conceptos básicos/images/017.png",
+    "Docker/Construccion/images/017.png",
+    "Docker/MaquinasVulnerbales/images/017.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/017.png",
+    "Reconocimiento/Fuzzing/images/017.png"
+   ],
+   "propuesta": "Conceptos básicos/images/017.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 370,
+   "original": "![[034.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/034.png",
+    "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/034.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/034.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/034.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 382,
+   "original": "![[035.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/035.png",
+    "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/035.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/035.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/035.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 386,
+   "original": "![[036.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/036.png",
+    "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/036.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/036.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/036.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 420,
+   "original": "![[038.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/038.png",
+    "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/038.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/038.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/038.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 424,
+   "original": "![[039.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/039.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/039.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/039.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 428,
+   "original": "![[040.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/040.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/040.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/040.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "linea": 444,
+   "original": "![[041.png]]",
+   "candidatos": [
+    "Conceptos básicos de enumeración y explotación/Burpsuite/images/041.png",
+    "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/041.png"
+   ],
+   "propuesta": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/041.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+   "linea": 176,
+   "original": "![[018.PNG]]",
+   "candidatos": [
+    "Reconocimiento/EvasionFirewall/images/018.PNG",
+    "Reconocimiento/ScriptsNmap/images/018.PNG"
+   ],
+   "propuesta": "Reconocimiento/EvasionFirewall/images/018.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+   "linea": 214,
+   "original": "![[019.PNG]]",
+   "candidatos": [
+    "Reconocimiento/EvasionFirewall/images/019.PNG",
+    "Reconocimiento/ScriptsNmap/images/019.PNG"
+   ],
+   "propuesta": "Reconocimiento/EvasionFirewall/images/019.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 8,
+   "original": "![[6.PNG]]",
+   "candidatos": [
+    "Introduction/images/6.PNG",
+    "Temario/images/6.PNG"
+   ],
+   "propuesta": "Introduction/images/6.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 12,
+   "original": "![[7.PNG]]",
+   "candidatos": [
+    "Introduction/images/7.PNG",
+    "Temario/images/7.PNG"
+   ],
+   "propuesta": "Introduction/images/7.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 16,
+   "original": "![[8.PNG]]",
+   "candidatos": [
+    "Introduction/images/8.PNG",
+    "Temario/images/8.PNG"
+   ],
+   "propuesta": "Introduction/images/8.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 20,
+   "original": "![[9.PNG]]",
+   "candidatos": [
+    "Introduction/images/9.PNG",
+    "Temario/images/9.PNG"
+   ],
+   "propuesta": "Introduction/images/9.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 28,
+   "original": "![[11.PNG]]",
+   "candidatos": [
+    "Introduction/images/11.PNG",
+    "Temario/images/11.PNG"
+   ],
+   "propuesta": "Introduction/images/11.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 35,
+   "original": "![[12.PNG]]",
+   "candidatos": [
+    "Introduction/images/12.PNG",
+    "Temario/images/12.PNG"
+   ],
+   "propuesta": "Introduction/images/12.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 41,
+   "original": "![[14.PNG]]",
+   "candidatos": [
+    "Introduction/images/14.PNG",
+    "Temario/images/14.PNG"
+   ],
+   "propuesta": "Introduction/images/14.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 47,
+   "original": "![[15.PNG]]",
+   "candidatos": [
+    "Introduction/images/15.PNG",
+    "Temario/images/15.PNG"
+   ],
+   "propuesta": "Introduction/images/15.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 51,
+   "original": "![[16.PNG]]",
+   "candidatos": [
+    "Introduction/images/16.PNG",
+    "Temario/images/16.PNG"
+   ],
+   "propuesta": "Introduction/images/16.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 55,
+   "original": "![[17.PNG]]",
+   "candidatos": [
+    "Introduction/images/17.PNG",
+    "Temario/images/17.PNG"
+   ],
+   "propuesta": "Introduction/images/17.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 61,
+   "original": "![[18.PNG]]",
+   "candidatos": [
+    "Introduction/images/18.PNG",
+    "Temario/images/18.PNG"
+   ],
+   "propuesta": "Introduction/images/18.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 65,
+   "original": "![[19.PNG]]",
+   "candidatos": [
+    "Introduction/images/19.PNG",
+    "Temario/images/19.PNG"
+   ],
+   "propuesta": "Introduction/images/19.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 72,
+   "original": "![[20.PNG]]",
+   "candidatos": [
+    "Introduction/images/20.PNG",
+    "Temario/images/20.PNG"
+   ],
+   "propuesta": "Introduction/images/20.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 74,
+   "original": "![[21.PNG]]",
+   "candidatos": [
+    "Introduction/images/21.PNG",
+    "Temario/images/21.PNG"
+   ],
+   "propuesta": "Introduction/images/21.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "linea": 78,
+   "original": "![[22.PNG]]",
+   "candidatos": [
+    "Introduction/images/22.PNG",
+    "Temario/images/22.PNG"
+   ],
+   "propuesta": "Introduction/images/22.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+   "linea": 23,
+   "original": "![[2.PNG]]",
+   "candidatos": [
+    "Introduction/images/2.PNG",
+    "Temario/images/2.PNG"
+   ],
+   "propuesta": "Introduction/images/2.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+   "linea": 27,
+   "original": "![[3.PNG]]",
+   "candidatos": [
+    "Introduction/images/3.PNG",
+    "Temario/images/3.PNG"
+   ],
+   "propuesta": "Introduction/images/3.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+   "linea": 33,
+   "original": "![[4.PNG]]",
+   "candidatos": [
+    "Introduction/images/4.PNG",
+    "Temario/images/4.PNG"
+   ],
+   "propuesta": "Introduction/images/4.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+   "linea": 37,
+   "original": "![[5.PNG]]",
+   "candidatos": [
+    "Introduction/images/5.PNG",
+    "Temario/images/5.PNG"
+   ],
+   "propuesta": "Introduction/images/5.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 3,
+   "original": "![[23.PNG]]",
+   "candidatos": [
+    "Introduction/images/23.PNG",
+    "Temario/images/23.PNG"
+   ],
+   "propuesta": "Introduction/images/23.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 6,
+   "original": "![[24.PNG]]",
+   "candidatos": [
+    "Introduction/images/24.PNG",
+    "Temario/images/24.PNG"
+   ],
+   "propuesta": "Introduction/images/24.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 10,
+   "original": "![[25.PNG]]",
+   "candidatos": [
+    "Introduction/images/25.PNG",
+    "Temario/images/25.PNG"
+   ],
+   "propuesta": "Introduction/images/25.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 15,
+   "original": "![[26.PNG]]",
+   "candidatos": [
+    "Introduction/images/26.PNG",
+    "Temario/images/26.PNG"
+   ],
+   "propuesta": "Introduction/images/26.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 21,
+   "original": "![[27.PNG]]",
+   "candidatos": [
+    "Introduction/images/27.PNG",
+    "Temario/images/27.PNG"
+   ],
+   "propuesta": "Introduction/images/27.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 31,
+   "original": "![[28.PNG]]",
+   "candidatos": [
+    "Introduction/images/28.PNG",
+    "Temario/images/28.PNG"
+   ],
+   "propuesta": "Introduction/images/28.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 39,
+   "original": "![[29.PNG]]",
+   "candidatos": [
+    "Introduction/images/29.PNG",
+    "Temario/images/29.PNG"
+   ],
+   "propuesta": "Introduction/images/29.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 41,
+   "original": "![[30.PNG]]",
+   "candidatos": [
+    "Introduction/images/30.PNG",
+    "Temario/images/30.PNG"
+   ],
+   "propuesta": "Introduction/images/30.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 45,
+   "original": "![[31.PNG]]",
+   "candidatos": [
+    "Introduction/images/31.PNG",
+    "Temario/images/31.PNG"
+   ],
+   "propuesta": "Introduction/images/31.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 49,
+   "original": "![[32.PNG]]",
+   "candidatos": [
+    "Introduction/images/32.PNG",
+    "Temario/images/32.PNG"
+   ],
+   "propuesta": "Introduction/images/32.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Linux_Introduction/Introduction/System_installation.md",
+   "linea": 53,
+   "original": "![[33.PNG]]",
+   "candidatos": [
+    "Introduction/images/33.PNG",
+    "Temario/images/33.PNG"
+   ],
+   "propuesta": "Introduction/images/33.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "linea": 25,
+   "original": "![[IMG_005.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_005.png",
+    "images/IMG_005.png"
+   ],
+   "propuesta": "images/IMG_005.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "linea": 29,
+   "original": "![[IMG_006.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_006.png",
+    "images/IMG_006.png"
+   ],
+   "propuesta": "images/IMG_006.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "linea": 77,
+   "original": "![[IMG_007.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_007.png",
+    "images/IMG_007.png"
+   ],
+   "propuesta": "images/IMG_007.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "linea": 81,
+   "original": "![[IMG_008.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_008.png",
+    "images/IMG_008.png"
+   ],
+   "propuesta": "images/IMG_008.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "linea": 127,
+   "original": "![[IMG_009.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_009.png",
+    "images/IMG_009.png"
+   ],
+   "propuesta": "images/IMG_009.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "linea": 133,
+   "original": "![[IMG_010.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_010.png",
+    "images/IMG_010.png"
+   ],
+   "propuesta": "images/IMG_010.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Introducción_a_Python.md",
+   "linea": 96,
+   "original": "![[IMG_001.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_001.png",
+    "images/IMG_001.png"
+   ],
+   "propuesta": "images/IMG_001.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Introducción_a_Python.md",
+   "linea": 98,
+   "original": "![[IMG_002.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_002.png",
+    "images/IMG_002.png"
+   ],
+   "propuesta": "images/IMG_002.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Introducción_a_Python.md",
+   "linea": 102,
+   "original": "![[IMG_003.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_003.png",
+    "images/IMG_003.png"
+   ],
+   "propuesta": "images/IMG_003.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Introduction/Introducción_a_Python.md",
+   "linea": 104,
+   "original": "![[IMG_004.png]]",
+   "candidatos": [
+    "Offensive/port_scanner/v1_4/images/IMG_004.png",
+    "images/IMG_004.png"
+   ],
+   "propuesta": "images/IMG_004.png",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 178,
+   "original": "![[022.PNG]]",
+   "candidatos": [
+    "Offensive/Keylogger/images/022.PNG",
+    "Offensive/dns_spoofer/images/022.PNG",
+    "Offensive/forward_shell/images/022.PNG",
+    "Offensive/https_sniffer/images/022.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/022.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 186,
+   "original": "![[023.PNG]]",
+   "candidatos": [
+    "Offensive/Keylogger/images/023.PNG",
+    "Offensive/dns_spoofer/images/023.PNG",
+    "Offensive/forward_shell/images/023.PNG",
+    "Offensive/https_sniffer/images/023.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/023.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 202,
+   "original": "![[024.PNG]]",
+   "candidatos": [
+    "Offensive/dns_spoofer/images/024.PNG",
+    "Offensive/forward_shell/images/024.PNG",
+    "Offensive/https_sniffer/images/024.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/024.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 206,
+   "original": "![[025.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/025.PNG",
+    "Offensive/https_sniffer/images/025.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/025.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 214,
+   "original": "![[027.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/027.PNG",
+    "Offensive/https_sniffer/images/027.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/027.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 216,
+   "original": "![[026.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/026.PNG",
+    "Offensive/https_sniffer/images/026.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/026.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 224,
+   "original": "![[029.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/029.PNG",
+    "Offensive/https_sniffer/images/029.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/029.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 226,
+   "original": "![[028.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/028.PNG",
+    "Offensive/https_sniffer/images/028.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/028.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 232,
+   "original": "![[030.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/030.PNG",
+    "Offensive/https_sniffer/images/030.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/030.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 238,
+   "original": "![[032.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/032.PNG",
+    "Offensive/https_sniffer/images/032.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/032.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 242,
+   "original": "![[031.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/031.PNG",
+    "Offensive/https_sniffer/images/031.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/031.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 246,
+   "original": "![[033.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/033.PNG",
+    "Offensive/https_sniffer/images/033.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/033.PNG",
+   "candidatos_identicos": false
+  },
+  {
+   "nota": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "linea": 250,
+   "original": "![[034.PNG]]",
+   "candidatos": [
+    "Offensive/forward_shell/images/034.PNG",
+    "Offensive/https_sniffer/images/034.PNG"
+   ],
+   "propuesta": "Offensive/https_sniffer/images/034.PNG",
+   "candidatos_identicos": false
+  }
+ ],
+ "nombres_repetidos_en_vault": {
+  "n_nombres": 153,
+  "n_archivos": 805
+ },
+ "choque_mayusculas_misma_ruta": [],
+ "notas_con_mas_imagenes": [
+  [
+   "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+   249
+  ],
+  [
+   "Python_ofensivo/Introduction/Programación_Orientada_a_Objetos_en_Python_(POO).md",
+   168
+  ],
+  [
+   "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   148
+  ],
+  [
+   "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+   125
+  ],
+  [
+   "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+   122
+  ],
+  [
+   "Python_ofensivo/Introduction/Colecciones_y_estructuras_de_datos_en_Python.md",
+   121
+  ],
+  [
+   "Python_ofensivo/Introduction/Proyectos_de_POO.md",
+   105
+  ],
+  [
+   "Python_ofensivo/Introduction/Entrada_y_salida_de_datos.md",
+   70
+  ],
+  [
+   "Python_ofensivo/Introduction/Módulos_y_paquetes_en_Python.md",
+   63
+  ],
+  [
+   "Personalizacion_entrono/Personalización_Linux.md",
+   46
+  ],
+  [
+   "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   41
+  ],
+  [
+   "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+   38
+  ],
+  [
+   "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   34
+  ],
+  [
+   "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (1-4).md",
+   30
+  ],
+  [
+   "Linux_Introduction/Temario/Comandos b sicos 2-2.md",
+   29
+  ]
+ ]
+}

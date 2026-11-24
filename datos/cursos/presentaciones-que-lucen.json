@@ -1,0 +1,20 @@
+{
+  "id": "presentaciones-que-lucen",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Presentaciones que lucen",
+  "subtitulo": "Diapositivas limpias con herramientas gratuitas.",
+  "escuela": "diseno",
+  "areas": [
+    "diseno-grafico"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 60,
+  "modulos": []
+}

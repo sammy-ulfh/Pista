@@ -1,0 +1,97 @@
+{
+  "id": "habla-en-publico-sin-miedo",
+  "estado": "muestra",
+  "oculto": false,
+  "titulo": "Habla en público sin miedo",
+  "subtitulo": "Prepara y da una presentación corta con técnicas sencillas para controlar los nervios.",
+  "escuela": "comunicacion",
+  "areas": [
+    "hablar-en-publico"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Calmar los nervios en dos minutos antes de hablar",
+    "Ordenar lo que vas a decir con una estructura de inicio, tres ideas y cierre",
+    "Usar tu voz y tu cuerpo para que te pongan atención",
+    "Ensayar solo y responder preguntas difíciles"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "habla-en-publico-sin-miedo/temario",
+      "titulo": "Temario",
+      "lecciones": [
+        {
+          "id": "habla-en-publico-sin-miedo/por-que-nos-ponemos-nerviosos",
+          "slug": "por-que-nos-ponemos-nerviosos",
+          "titulo": "Por qué nos ponemos nerviosos",
+          "fuente": "demo",
+          "ruta": "comunicacion/habla-en-publico-sin-miedo/01-por-que-nos-ponemos-nerviosos.md",
+          "seccion": null,
+          "minutos": 13.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "habla-en-publico-sin-miedo/estructura-del-discurso",
+          "slug": "estructura-del-discurso",
+          "titulo": "La estructura de un buen discurso",
+          "fuente": "demo",
+          "ruta": "comunicacion/habla-en-publico-sin-miedo/02-estructura-del-discurso.md",
+          "seccion": null,
+          "minutos": 18.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "habla-en-publico-sin-miedo/voz-y-cuerpo",
+          "slug": "voz-y-cuerpo",
+          "titulo": "Tu voz y tu cuerpo",
+          "fuente": "demo",
+          "ruta": "comunicacion/habla-en-publico-sin-miedo/03-voz-y-cuerpo.md",
+          "seccion": null,
+          "minutos": 18.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "habla-en-publico-sin-miedo/ensayar-sin-publico",
+          "slug": "ensayar-sin-publico",
+          "titulo": "Ensayar sin público",
+          "fuente": "demo",
+          "ruta": "comunicacion/habla-en-publico-sin-miedo/04-ensayar-sin-publico.md",
+          "seccion": null,
+          "minutos": 18.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "habla-en-publico-sin-miedo/el-dia-de-la-presentacion",
+          "slug": "el-dia-de-la-presentacion",
+          "titulo": "El día de la presentación y las preguntas",
+          "fuente": "demo",
+          "ruta": "comunicacion/habla-en-publico-sin-miedo/05-el-dia-de-la-presentacion.md",
+          "seccion": null,
+          "minutos": 14.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

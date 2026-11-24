@@ -1,0 +1,30 @@
+---
+/**
+ * OpcionRespuesta — una opción de respuesta con su círculo (pantallas 04 y 06).
+ *
+ * Es un `<input type="radio">` real dentro de su `<label>`: se elige con clic, con la barra espaciadora
+ * o con las flechas del teclado. La opción elegida se pinta con el fondo `relleno`.
+ *
+ *   <OpcionRespuesta nombre="oferta" valor="idea" texto="Todavía no, solo una idea" />
+ */
+interface Props {
+  /** Nombre del grupo (el id de la pregunta). */
+  nombre: string;
+  /** Id de la opción. */
+  valor: string;
+  texto: string;
+}
+
+const { nombre, valor, texto } = Astro.props;
+---
+
+<label
+  class="flex min-h-14 cursor-pointer items-center gap-4 rounded-cuaderno border-2 border-tinta bg-blanco px-5 py-3 text-lg transition-shadow hover:shadow-desplazada has-checked:bg-relleno has-checked:shadow-desplazada has-focus-visible:outline-3 has-focus-visible:outline-offset-3 has-focus-visible:outline-tinta motion-reduce:transition-none"
+>
+  <input type="radio" name={nombre} value={valor} class="peer sr-only" />
+  <span
+    aria-hidden="true"
+    class="flex size-6 shrink-0 items-center justify-center rounded-full border-2 border-tinta bg-blanco after:size-3 after:rounded-full after:bg-tinta after:opacity-0 peer-checked:after:opacity-100"
+  ></span>
+  <span>{texto}</span>
+</label>

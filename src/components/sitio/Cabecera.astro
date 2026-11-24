@@ -1,0 +1,128 @@
+---
+/**
+ * Cabecera — logo y navegación de todas las páginas.
+ *
+ * Tiene dos variantes y la que se ve depende del ESTADO DE LA DEMO, no de la página:
+ * - Sin sesión (pantalla 01): Escuelas · Cómo funciona · Comunidad · botón «Entrar».
+ * - Con sesión (pantalla 08): Mi ruta · Escuelas · Bitácora · círculo del usuario.
+ * Hay sesión si existe `areaElegida`, algún diagnóstico o el plan activo (`haySesion` en `lib/estado-demo.ts`).
+ * Se dibujan las dos y `styles/global.css` muestra una según `<html data-sesion="si|no">`, que el script en
+ * línea de `LayoutBase.astro` pone antes de pintar: no hay parpadeo. «Reiniciar demo» vuelve a la de sin sesión.
+ *
+ * Cuestionario (`salirA="/"`, pantallas 04 a 06): solo el logo y «Salir», para no distraer de las preguntas.
+ *
+ * En pantallas angostas los enlaces se agrupan en un menú desplegable («Menú»), sin JavaScript.
+ * «Comunidad» no existe en la demo: muestra un aviso breve (texto en `datos/ajustes.json`,
+ * `textoFuncionNoDisponible`). «Entrar» lleva a «Mi ruta» sin formulario.
+ *
+ *   <Cabecera />               ← según el estado (lo que usa LayoutBase)
+ *   <Cabecera salirA="/" />    ← cuestionario
+ */
+import { obtenerAjustes } from '../../lib/catalogo';
+import Boton from '../ui/Boton.astro';
+import MenuUsuario from './MenuUsuario.astro';
+
+interface Props {
+  /** Si se da, la cabecera solo muestra «Salir», que lleva a esta dirección (pantallas 04 a 06). */
+  salirA?: string;
+}
+
+const { salirA } = Astro.props;
+
+type EnlaceNav = { texto: string; href?: string; aviso?: string };
+type Variante = 'sin-sesion' | 'con-sesion';
+
+const { textoFuncionNoDisponible } = obtenerAjustes();
+
+const ENLACES: Record<Variante, EnlaceNav[]> = {
+  'con-sesion': [
+    { texto: 'Mi ruta', href: '/mi-ruta' },
+    { texto: 'Escuelas', href: '/escuelas' },
+    { texto: 'Bitácora', href: '/bitacora' },
+  ],
+  'sin-sesion': [
+    { texto: 'Escuelas', href: '/escuelas' },
+    { texto: 'Cómo funciona', href: '/#como-funciona' },
+    { texto: 'Comunidad', aviso: textoFuncionNoDisponible },
+  ],
+};
+
+/** Se dibujan las dos; cada una lleva su atributo (`data-sin-sesion` / `data-con-sesion`) para que el CSS elija. */
+const variantes: Variante[] = ['sin-sesion', 'con-sesion'];
+const marca = (v: Variante) => ({ [`data-${v}`]: '' });
+
+const rutaActual = Astro.url.pathname;
+const claseEnlace =
+  'inline-flex min-h-11 items-center rounded-lg px-2 font-medium underline-offset-4 hover:underline aria-[current=page]:underline aria-[current=page]:decoration-2';
+---
+
+<header class="border-b-2 border-dashed border-linea bg-papel">
+  <div class="contenedor flex h-20 items-center justify-between gap-4">
+    <a href="/" class="inline-flex min-h-11 items-center font-titulo text-3xl font-extrabold tracking-tight" aria-label="Pista, ir al inicio">Pista</a>
+
+    {
+      salirA ? (
+        <nav aria-label="Principal">
+          <a href={salirA} class:list={[claseEnlace, 'text-texto-2']}>
+            Salir
+          </a>
+        </nav>
+      ) : (
+        variantes.map((v) => (
+          <nav aria-label="Principal" class="flex items-center gap-3 md:gap-8" {...marca(v)}>
+            {/* Escritorio */}
+            <ul class="hidden items-center gap-6 md:flex">
+              {ENLACES[v].map((enlace) => (
+                <li>
+                  {enlace.href ? (
+                    <a href={enlace.href} class={claseEnlace} aria-current={rutaActual === enlace.href ? 'page' : undefined}>
+                      {enlace.texto}
+                    </a>
+                  ) : (
+                    <button type="button" class={claseEnlace} data-aviso={enlace.aviso}>
+                      {enlace.texto}
+                    </button>
+                  )}
+                </li>
+              ))}
+            </ul>
+
+            {/* Móvil */}
+            <details class="group relative md:hidden">
+              <summary class="inline-flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-lg px-2 font-medium [&::-webkit-details-marker]:hidden">
+                Menú <span aria-hidden="true" class="transition-transform group-open:rotate-180">▾</span>
+              </summary>
+              <ul class="absolute right-0 z-40 mt-2 flex w-56 flex-col rounded-cuaderno border-2 border-tinta bg-blanco p-2 shadow-desplazada">
+                {ENLACES[v].map((enlace) => (
+                  <li>
+                    {enlace.href ? (
+                      <a
+                        href={enlace.href}
+                        class:list={[claseEnlace, 'w-full']}
+                        aria-current={rutaActual === enlace.href ? 'page' : undefined}
+                      >
+                        {enlace.texto}
+                      </a>
+                    ) : (
+                      <button type="button" class:list={[claseEnlace, 'w-full']} data-aviso={enlace.aviso}>
+                        {enlace.texto}
+                      </button>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </details>
+
+            {v === 'con-sesion' ? (
+              <MenuUsuario />
+            ) : (
+              <Boton href="/mi-ruta" tamano="chico">
+                Entrar
+              </Boton>
+            )}
+          </nav>
+        ))
+      )
+    }
+  </div>
+</header>

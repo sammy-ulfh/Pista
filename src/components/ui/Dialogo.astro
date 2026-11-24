@@ -1,0 +1,69 @@
+---
+/**
+ * Dialogo — ventana modal con <dialog> nativo (p. ej. «Confirmar compra»).
+ *
+ * - Se abre con un botón que tenga `data-abrir-dialogo="<id>"` o con `abrirDialogo(id)` de `lib/dialogo.ts`.
+ * - Se cierra con Esc, con la ✕, con cualquier botón `data-cerrar-dialogo` o con un clic en el fondo.
+ * - Al cerrarse, el foco vuelve al botón que lo abrió.
+ *
+ *   <Boton data-abrir-dialogo="compra">Comprar curso</Boton>
+ *   <Dialogo id="compra" titulo="Confirmar compra">
+ *     …contenido…
+ *     <Fragment slot="acciones">
+ *       <Boton data-cerrar-dialogo>Cancelar</Boton>
+ *       <Boton variante="principal">Sí, compré</Boton>
+ *     </Fragment>
+ *   </Dialogo>
+ */
+interface Props {
+  id: string;
+  titulo: string;
+  /** normal = hasta 640 px · amplio = casi toda la pantalla (para ver imágenes en grande). */
+  ancho?: 'normal' | 'amplio';
+  class?: string;
+}
+
+const { id, titulo, ancho = 'normal', class: claseExtra } = Astro.props;
+const idTitulo = `${id}-titulo`;
+---
+
+<dialog
+  id={id}
+  aria-labelledby={idTitulo}
+  class:list={[
+    'm-auto max-h-[calc(100dvh-2rem)] overflow-y-auto',
+    ancho === 'amplio' ? 'w-[min(80rem,calc(100%-2rem))]' : 'w-[min(40rem,calc(100%-2rem))]',
+    'rounded-cuaderno border-2 border-tinta bg-blanco p-0 text-tinta shadow-desplazada',
+    'backdrop:bg-tinta/55',
+    claseExtra,
+  ]}
+>
+  <div class="p-6 sm:p-8">
+    <div class="flex items-start justify-between gap-4">
+      <h2 id={idTitulo} class="text-2xl sm:text-3xl">{titulo}</h2>
+      <button
+        type="button"
+        data-cerrar-dialogo
+        aria-label="Cerrar"
+        class="-mt-1 -mr-2 inline-flex size-11 shrink-0 items-center justify-center rounded-full text-2xl leading-none hover:bg-relleno"
+      >
+        <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+    <div class="mt-4">
+      <slot />
+    </div>
+    {
+      Astro.slots.has('acciones') && (
+        <div class="mt-6 flex flex-wrap justify-end gap-3">
+          <slot name="acciones" />
+        </div>
+      )
+    }
+  </div>
+</dialog>
+
+<script>
+  import { conectarDialogos } from '../../lib/dialogo';
+  conectarDialogos();
+</script>

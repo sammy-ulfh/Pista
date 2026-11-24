@@ -1,0 +1,41 @@
+---
+/**
+ * NavegacionLeccion — el pie de la lección: «Siguiente: …» y el botón principal «Marcar como vista y seguir →».
+ *
+ * El botón es un enlace a la siguiente lección (o a `/bitacora` en la última). Antes de salir, guarda la lección
+ * como vista y el día de estudio (`marcarLeccionVista` de `lib/estado-demo.ts`).
+ *
+ *   <NavegacionLeccion leccionId="curso/leccion" siguiente={{ titulo: '…', href: '/cursos/curso/otra' }} />
+ *   <NavegacionLeccion leccionId="curso/leccion" siguiente={null} />   ← última lección
+ */
+import Boton from '../ui/Boton.astro';
+
+interface Props {
+  leccionId: string;
+  siguiente: { titulo: string; href: string } | null;
+}
+
+const { leccionId, siguiente } = Astro.props;
+---
+
+<nav
+  aria-label="Siguiente lección"
+  class="mt-10 flex flex-col gap-4 border-t-2 border-dashed border-linea pt-6 sm:flex-row sm:items-center sm:justify-between"
+>
+  <p class="text-sm text-texto-2">
+    {siguiente ? `Siguiente: ${siguiente.titulo}` : 'Es la última lección del curso. Después verás tu bitácora.'}
+  </p>
+  <Boton variante="principal" href={siguiente?.href ?? '/bitacora'} class="shrink-0" data-marcar-vista={leccionId}>
+    Marcar como vista y seguir →
+  </Boton>
+</nav>
+
+<script>
+  import { marcarLeccionVista } from '../../lib/estado-demo';
+
+  // Guardar es inmediato (localStorage), así que el enlace sigue su camino sin esperar.
+  document.addEventListener('click', (evento) => {
+    const boton = evento.target instanceof Element ? evento.target.closest<HTMLElement>('[data-marcar-vista]') : null;
+    if (boton?.dataset.marcarVista) marcarLeccionVista(boton.dataset.marcarVista);
+  });
+</script>

@@ -1,0 +1,33 @@
+---
+/**
+ * Pantalla 02 · Escuelas. Catálogo de escuelas con su estado y sus áreas (`datos/escuelas.json`).
+ * Las áreas con página enlazan a `/areas/<area>`. La caja de arriba lleva a la orientación.
+ */
+import { numeroPreguntasOrientacion, obtenerEscuelas, obtenerPlan, textoPrecioPlan } from '../lib/catalogo';
+import { plural } from '../lib/formato';
+import LayoutBase from '../layouts/LayoutBase.astro';
+import TarjetaEscuela from '../components/catalogo/TarjetaEscuela.astro';
+import Boton from '../components/ui/Boton.astro';
+
+const escuelas = await obtenerEscuelas();
+const preguntas = plural(await numeroPreguntasOrientacion(), 'pregunta');
+const textoPlan = `Todos los cursos de todas las escuelas, en un solo plan de ${textoPrecioPlan(obtenerPlan())}.`;
+---
+
+<LayoutBase titulo="Escuelas" descripcion="Elige qué quieres aprender: tecnología, negocios, comunicación y más.">
+  <div class="contenedor pt-10 lg:pt-14">
+    <h1 class="text-4xl sm:text-5xl">Escuelas</h1>
+    <p class="mt-2 text-lg text-texto-2">Elige qué quieres aprender. {textoPlan}</p>
+
+    <div
+      class="mt-6 flex flex-col gap-4 rounded-cuaderno border-2 border-tinta bg-suave px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:py-3 sm:pr-3 sm:pl-6"
+    >
+      <p>¿No sabes por dónde empezar? Responde {preguntas} y te recomendamos un área.</p>
+      <Boton variante="principal" tamano="chico" href="/orientacion" class="shrink-0">Hacer el test (2 min)</Boton>
+    </div>
+
+    <ul class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {escuelas.map((escuela) => <TarjetaEscuela escuela={escuela} />)}
+    </ul>
+  </div>
+</LayoutBase>

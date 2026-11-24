@@ -1,0 +1,70 @@
+---
+/**
+ * Pantalla 01 · Inicio. Explica qué es Pista y lleva a «Descubre tu ruta» (/orientacion)
+ * o a «Ver escuelas» (/escuelas). El texto del precio sale del plan (`datos/ajustes.json`).
+ */
+import { obtenerPlan, textoPrecioPlan } from '../lib/catalogo';
+import LayoutBase from '../layouts/LayoutBase.astro';
+import Boton from '../components/ui/Boton.astro';
+import Tarjeta from '../components/ui/Tarjeta.astro';
+import Portada from '../components/ui/Portada.astro';
+
+// Portadas de muestra: una por escuela con cursos, para que se note que Pista es para cualquier carrera.
+const portadas = [
+  { titulo: 'Tus primeros clientes', escuela: 'negocios', etiqueta: 'Negocios y Emprendimiento' },
+  { titulo: 'Habla en público sin miedo', escuela: 'comunicacion', etiqueta: 'Comunicación' },
+  { titulo: 'Tu semana en orden', escuela: 'habilidades', etiqueta: 'Habilidades personales' },
+  { titulo: 'Aprende a programar', escuela: 'tecnologia', etiqueta: 'Tecnología' },
+];
+
+// «Todos los cursos por $50 MXN al mes»: nombre y precio se cambian en datos/ajustes.json.
+const textoPlan = `Todos los cursos por ${textoPrecioPlan(obtenerPlan())}`;
+
+const pasos = [
+  {
+    titulo: '1. Elige o descubre tu área',
+    texto: 'Tecnología, negocios, comunicación… o responde 4 preguntas si no sabes cuál.',
+  },
+  { titulo: '2. Recibe tu ruta', texto: 'Te decimos qué curso va primero y cuánto tiempo te toma cada semana.' },
+  { titulo: '3. Aprende con apuntes', texto: 'Lecciones cortas con imágenes y ejercicios, a tu ritmo.' },
+];
+---
+
+<LayoutBase>
+  <section class="contenedor grid items-center gap-10 pt-10 pb-12 lg:grid-cols-[1.15fr_1fr] lg:gap-14 lg:pt-16">
+    <div>
+      <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem]">¿Quieres aprender algo nuevo y no sabes por dónde empezar?</h1>
+      <p class="mt-5 max-w-xl text-lg text-texto-2 sm:text-xl">
+        Elige una escuela o responde unas preguntas: te armamos una ruta con cursos cortos, hechos a partir de apuntes
+        reales.
+      </p>
+      <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+        <Boton variante="principal" href="/orientacion">Descubre tu ruta (3 min)</Boton>
+        <Boton href="/escuelas">Ver escuelas</Boton>
+      </div>
+      <p class="mt-4 text-sm text-texto-2">{textoPlan} · en español · sin experiencia previa</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 sm:gap-4">
+      {
+        portadas.map((portada, i) => (
+          <Portada {...portada} variante="tarjeta" class:list={[i % 2 === 1 && 'translate-y-4 sm:translate-y-6']} />
+        ))
+      }
+    </div>
+  </section>
+
+  <section id="como-funciona" aria-labelledby="titulo-como-funciona" class="contenedor scroll-mt-6 pt-6">
+    <h2 id="titulo-como-funciona" class="sr-only">Cómo funciona</h2>
+    <ol class="grid gap-5 md:grid-cols-3 md:gap-8">
+      {
+        pasos.map((paso) => (
+          <Tarjeta como="li">
+            <h3 class="text-xl sm:text-2xl">{paso.titulo}</h3>
+            <p class="mt-2 text-texto-2">{paso.texto}</p>
+          </Tarjeta>
+        ))
+      }
+    </ol>
+  </section>
+</LayoutBase>

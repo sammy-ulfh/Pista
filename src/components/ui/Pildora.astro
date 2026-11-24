@@ -1,0 +1,40 @@
+---
+/**
+ * Pildora — etiqueta corta y redondeada: área, estado («Curso de muestra», «Próximamente») o idioma («En inglés»).
+ *
+ * Variantes:
+ * - normal: borde de tinta sobre blanco.
+ * - suave: borde gris y texto de apoyo (para lo secundario o bloqueado).
+ * - relleno: fondo gris claro (la opción elegida).
+ * - escuela: fondo con el color de la escuela y texto blanco; requiere `escuela`.
+ *
+ *   <Pildora variante="escuela" escuela="negocios">Negocios</Pildora>
+ */
+import { colorDeEscuela } from '../../lib/catalogo';
+
+interface Props {
+  variante?: 'normal' | 'suave' | 'relleno' | 'escuela';
+  /** Id de la escuela (tecnologia, negocios…); solo para la variante `escuela`. */
+  escuela?: string;
+  class?: string;
+}
+
+const { variante = 'normal', escuela, class: claseExtra } = Astro.props;
+const estilo = variante === 'escuela' && escuela ? `--escuela: ${colorDeEscuela(escuela)}` : undefined;
+---
+
+<span
+  style={estilo}
+  class:list={[
+    'inline-flex min-h-8 items-center rounded-full border-2 px-3 text-sm font-medium whitespace-nowrap',
+    {
+      normal: 'border-tinta bg-blanco text-tinta',
+      suave: 'border-texto-3 bg-blanco text-texto-2',
+      relleno: 'border-tinta bg-relleno text-tinta',
+      escuela: 'border-(--escuela) bg-(--escuela) text-blanco',
+    }[variante],
+    claseExtra,
+  ]}
+>
+  <slot />
+</span>

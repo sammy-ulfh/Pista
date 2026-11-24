@@ -1,0 +1,20 @@
+{
+  "id": "tu-primer-presupuesto",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Tu primer presupuesto",
+  "subtitulo": "Sabe cuánto entra, cuánto sale y cuánto puedes ahorrar.",
+  "escuela": "habilidades",
+  "areas": [
+    "finanzas-personales"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 50,
+  "modulos": []
+}

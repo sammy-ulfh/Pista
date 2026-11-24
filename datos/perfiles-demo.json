@@ -1,0 +1,1043 @@
+[
+  {
+    "id": "sofia",
+    "nombre": "Sofía",
+    "carrera": "Contaduría",
+    "objetivo": "Entender cómo atacan los hackers para proteger sus datos y los de los negocios que algún día va a auditar. Empieza desde cero.",
+    "esTecnologia": true,
+    "respuestasOrientacion": {
+      "carrera": "negocios",
+      "lograr": "protegerme",
+      "disfrutas": "organizar",
+      "primer-paso": "proteger"
+    },
+    "orientacionEsperada": {
+      "escuela": "tecnologia",
+      "area": "ciberseguridad",
+      "areasRecomendadas": [
+        "ciberseguridad"
+      ],
+      "tambienTePuedeServir": {
+        "escuela": "habilidades",
+        "area": "productividad"
+      },
+      "avisoProximamente": null,
+      "puntos": {
+        "escuelas": {
+          "tecnologia": 5,
+          "negocios": 2,
+          "comunicacion": 0,
+          "habilidades": 2,
+          "diseno": 0
+        },
+        "areas": {
+          "emprender": 1,
+          "ciberseguridad": 5,
+          "productividad": 1
+        }
+      }
+    },
+    "area": "ciberseguridad",
+    "respuestasDiagnostico": {
+      "terminal": "nunca",
+      "redes": "no",
+      "programar": "nunca",
+      "virtuales": "nunca",
+      "objetivo": "protegerme",
+      "tiempo": "3-horas"
+    },
+    "resultadoEsperado": {
+      "horasSemana": 3,
+      "cursos": [
+        "linux-desde-cero",
+        "redes-desde-cero",
+        "terminal-y-bash",
+        "docker-desde-cero",
+        "hacking-etico-reconocimiento",
+        "hacking-etico-explotacion",
+        "python-desde-cero",
+        "python-redes",
+        "python-ofensivo-laboratorio"
+      ],
+      "cursosOmitidos": [],
+      "leccionesOmitidas": [],
+      "semanas": [
+        {
+          "numero": 1,
+          "lecciones": [
+            "linux-desde-cero/crear-una-maquina-virtual",
+            "linux-desde-cero/instalar-el-sistema",
+            "linux-desde-cero/comandos-basicos-1-de-2",
+            "linux-desde-cero/comandos-basicos-2-de-2",
+            "linux-desde-cero/control-de-flujo-y-procesos",
+            "linux-desde-cero/permisos",
+            "linux-desde-cero/permisos-especiales",
+            "redes-desde-cero/direcciones-ip-ipv4-e-ipv6",
+            "redes-desde-cero/direcciones-mac-oui-y-nic",
+            "redes-desde-cero/protocolos-tcp-y-udp",
+            "redes-desde-cero/modelo-osi"
+          ],
+          "minutos": 176.7
+        },
+        {
+          "numero": 2,
+          "lecciones": [
+            "redes-desde-cero/introduccion-a-las-subredes",
+            "redes-desde-cero/cidr-y-numero-de-equipos",
+            "redes-desde-cero/mascaras-y-clases-de-red",
+            "redes-desde-cero/interpretar-rangos-de-red",
+            "redes-desde-cero/trucos-para-calcular-rapido",
+            "redes-desde-cero/que-es-una-vlan",
+            "redes-desde-cero/configurar-un-switch",
+            "redes-desde-cero/buenas-practicas"
+          ],
+          "minutos": 61.8
+        },
+        {
+          "numero": 3,
+          "lecciones": [
+            "terminal-y-bash/que-es-una-terminal-shell",
+            "terminal-y-bash/tipos-de-terminal",
+            "terminal-y-bash/archivos-de-arranque-de-bash",
+            "terminal-y-bash/programar-en-la-terminal",
+            "terminal-y-bash/que-si-y-que-no-hacer-con-bash",
+            "terminal-y-bash/crear-y-ejecutar-un-script",
+            "terminal-y-bash/opciones-de-bash",
+            "terminal-y-bash/codigos-de-salida",
+            "terminal-y-bash/caracteres-especiales",
+            "terminal-y-bash/variables",
+            "terminal-y-bash/condiciones",
+            "terminal-y-bash/ciclos-repeticiones",
+            "terminal-y-bash/redirecciones-y-tuberias",
+            "terminal-y-bash/funciones",
+            "terminal-y-bash/entorno-y-salida-de-errores",
+            "terminal-y-bash/comentarios",
+            "terminal-y-bash/formato",
+            "terminal-y-bash/como-nombrar-las-cosas",
+            "terminal-y-bash/llamar-comandos",
+            "terminal-y-bash/awk-vision-general",
+            "terminal-y-bash/variables-integradas-de-awk",
+            "terminal-y-bash/awk-con-ejemplos",
+            "terminal-y-bash/sed-vision-general",
+            "terminal-y-bash/scripts-de-sed",
+            "terminal-y-bash/direcciones-en-sed",
+            "terminal-y-bash/comandos-de-sed",
+            "docker-desde-cero/introduccion-a-docker",
+            "docker-desde-cero/instalacion-de-docker-en-linux",
+            "docker-desde-cero/definiendo-la-estructura-basica-de-dockerfile",
+            "docker-desde-cero/creacion-y-construccion-de-imagenes",
+            "docker-desde-cero/desplegar-tu-primer-contenedor"
+          ],
+          "minutos": 167.1
+        },
+        {
+          "numero": 4,
+          "lecciones": [
+            "docker-desde-cero/comandos-comunes-para-la-gestion-de-contenedores",
+            "docker-desde-cero/puertos-y-carpetas-compartidas",
+            "docker-desde-cero/lo-esencial-de-docker",
+            "docker-desde-cero/trabajar-con-docker",
+            "docker-desde-cero/trabajar-con-dockerfile"
+          ],
+          "minutos": 179.7
+        },
+        {
+          "numero": 5,
+          "lecciones": [
+            "hacking-etico-reconocimiento/antes-de-empezar-un-objetivo-autorizado",
+            "hacking-etico-reconocimiento/nmap-y-sus-modos-de-escaneo",
+            "hacking-etico-reconocimiento/escaneo-frente-a-cortafuegos",
+            "hacking-etico-reconocimiento/scripts-de-nmap",
+            "hacking-etico-reconocimiento/tus-propios-scripts-de-nmap",
+            "hacking-etico-reconocimiento/escanear-puertos-sin-nmap",
+            "hacking-etico-reconocimiento/descubrir-equipos-en-tu-red"
+          ],
+          "minutos": 174.6
+        },
+        {
+          "numero": 6,
+          "lecciones": [
+            "hacking-etico-reconocimiento/identificar-el-sistema-operativo",
+            "hacking-etico-reconocimiento/busqueda-por-imagenes",
+            "hacking-etico-reconocimiento/encontrar-subdominios",
+            "hacking-etico-reconocimiento/busquedas-avanzadas-en-google",
+            "hacking-etico-reconocimiento/que-tecnologias-usa-una-web",
+            "hacking-etico-reconocimiento/buscar-rutas-ocultas-1-de-2",
+            "hacking-etico-reconocimiento/buscar-rutas-ocultas-2-de-2"
+          ],
+          "minutos": 175.8
+        },
+        {
+          "numero": 7,
+          "lecciones": [
+            "hacking-etico-explotacion/laboratorio-con-docker-compose-1-de-2",
+            "hacking-etico-explotacion/laboratorio-con-docker-compose-2-de-2",
+            "hacking-etico-explotacion/servicio-ftp",
+            "hacking-etico-explotacion/servicio-ssh",
+            "hacking-etico-explotacion/servicios-http-y-https"
+          ],
+          "minutos": 144.9
+        },
+        {
+          "numero": 8,
+          "lecciones": [
+            "hacking-etico-explotacion/carpetas-compartidas-smb",
+            "hacking-etico-explotacion/wordpress-1-de-2",
+            "hacking-etico-explotacion/wordpress-2-de-2",
+            "hacking-etico-explotacion/joomla",
+            "hacking-etico-explotacion/drupal"
+          ],
+          "minutos": 160.2
+        },
+        {
+          "numero": 9,
+          "lecciones": [
+            "hacking-etico-explotacion/magento",
+            "hacking-etico-explotacion/introduccion-a-la-explotacion",
+            "hacking-etico-explotacion/introduccion-a-shells",
+            "hacking-etico-explotacion/reverse-shell",
+            "hacking-etico-explotacion/bind-shell",
+            "hacking-etico-explotacion/forward-shell",
+            "hacking-etico-explotacion/tipos-de-payloads",
+            "hacking-etico-explotacion/explotacion-manual-y-automatizada",
+            "hacking-etico-explotacion/revisar-un-sistema-por-dentro"
+          ],
+          "minutos": 180
+        },
+        {
+          "numero": 10,
+          "lecciones": [
+            "hacking-etico-explotacion/introduccion-a-burp-suite",
+            "hacking-etico-explotacion/proxy",
+            "hacking-etico-explotacion/intruder",
+            "hacking-etico-explotacion/comparer",
+            "hacking-etico-explotacion/repeater",
+            "hacking-etico-explotacion/decoder",
+            "hacking-etico-explotacion/extensiones",
+            "hacking-etico-explotacion/introduccion-a-la-inyeccion-sql"
+          ],
+          "minutos": 116.1
+        },
+        {
+          "numero": 11,
+          "lecciones": [
+            "python-desde-cero/caracteristicas-y-ventajas-de-python",
+            "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3",
+            "python-desde-cero/el-interprete-de-python",
+            "python-desde-cero/shebang-y-convenios-en-python",
+            "python-desde-cero/variables-y-tipos-de-datos",
+            "python-desde-cero/operadores-basicos-en-python",
+            "python-desde-cero/string-formatting",
+            "python-desde-cero/control-de-flujo-condicionales-y-bucles",
+            "python-desde-cero/funciones-y-ambito-de-las-variables",
+            "python-desde-cero/funciones-lambda-anonimas"
+          ],
+          "minutos": 166.8
+        },
+        {
+          "numero": 12,
+          "lecciones": [
+            "python-desde-cero/manejo-de-errores-y-excepciones",
+            "python-desde-cero/listas",
+            "python-desde-cero/tuplas",
+            "python-desde-cero/conjuntos",
+            "python-desde-cero/diccionarios",
+            "python-desde-cero/proyecto-de-videojuegos",
+            "python-desde-cero/clases-y-objetos-1-de-2"
+          ],
+          "minutos": 161.6
+        },
+        {
+          "numero": 13,
+          "lecciones": [
+            "python-desde-cero/clases-y-objetos-2-de-2",
+            "python-desde-cero/metodos-estaticos-y-metodos-de-clase",
+            "python-desde-cero/comprendiendo-mejor-el-uso-de-self",
+            "python-desde-cero/herencia-y-polimorfismo",
+            "python-desde-cero/encapsulamiento-y-metodos-especiales",
+            "python-desde-cero/decoradores-y-popiedades",
+            "python-desde-cero/organizacion-del-codigo-en-modulos"
+          ],
+          "minutos": 174.6
+        },
+        {
+          "numero": 14,
+          "lecciones": [
+            "python-desde-cero/importacion-y-uso-de-modulos",
+            "python-desde-cero/creacion-y-distribucion-de-paquetes",
+            "python-desde-cero/entrada-por-teclado-y-salida-por-pantalla",
+            "python-desde-cero/lectura-y-escritura-de-archivos",
+            "python-desde-cero/formateo-de-cadenas-y-manipulacion-de-texto",
+            "python-desde-cero/proyecto-de-gestion-de-biblioteca-de-libros-1-de-2",
+            "python-desde-cero/proyecto-de-gestion-de-biblioteca-de-libros-2-de-2",
+            "python-desde-cero/proyecto-de-gestion-de-animales-en-tienda"
+          ],
+          "minutos": 174
+        },
+        {
+          "numero": 15,
+          "lecciones": [
+            "python-desde-cero/proyecto-de-administracion-de-flota-de-vehiculos",
+            "python-desde-cero/proyecto-de-gestion-de-notas-1-de-2",
+            "python-desde-cero/proyecto-de-gestion-de-notas-2-de-2",
+            "python-redes/creando-un-escaner-de-puertos-1-de-4",
+            "python-redes/creando-un-escaner-de-puertos-2-de-4",
+            "python-redes/creando-un-escaner-de-puertos-3-de-4",
+            "python-redes/creando-un-escaner-de-puertos-4-de-4",
+            "python-redes/cambiar-la-direccion-mac",
+            "python-redes/escaner-de-red-con-icmp",
+            "python-redes/escaner-de-red-con-arp",
+            "python-ofensivo-laboratorio/envenenamiento-arp"
+          ],
+          "minutos": 168.2
+        },
+        {
+          "numero": 16,
+          "lecciones": [
+            "python-ofensivo-laboratorio/rastrear-consultas-dns",
+            "python-ofensivo-laboratorio/rastrear-trafico-http",
+            "python-ofensivo-laboratorio/rastrear-trafico-https",
+            "python-ofensivo-laboratorio/rastrear-imagenes-por-https",
+            "python-ofensivo-laboratorio/suplantar-respuestas-dns"
+          ],
+          "minutos": 177.9
+        },
+        {
+          "numero": 17,
+          "lecciones": [
+            "python-ofensivo-laboratorio/manipular-trafico",
+            "python-ofensivo-laboratorio/keylogger-1-de-2",
+            "python-ofensivo-laboratorio/malware-de-laboratorio-1-de-2",
+            "python-ofensivo-laboratorio/malware-de-laboratorio-2-de-2",
+            "python-ofensivo-laboratorio/puertas-traseras-y-c-y-c-1-de-2",
+            "python-ofensivo-laboratorio/puertas-traseras-y-c-y-c-2-de-2",
+            "python-ofensivo-laboratorio/forward-shell-1-de-4",
+            "python-ofensivo-laboratorio/forward-shell-2-de-4"
+          ],
+          "minutos": 176.4
+        },
+        {
+          "numero": 18,
+          "lecciones": [
+            "python-ofensivo-laboratorio/forward-shell-3-de-4",
+            "python-ofensivo-laboratorio/forward-shell-4-de-4"
+          ],
+          "minutos": 24
+        }
+      ],
+      "totalSemanas": 18,
+      "minutosTotal": 2760.4
+    },
+    "roadmapEsperado": {
+      "etapas": [
+        {
+          "id": "fundamentos",
+          "cursos": [
+            "linux-desde-cero",
+            "redes-desde-cero"
+          ],
+          "semanas": [
+            1,
+            2
+          ],
+          "opcional": false
+        },
+        {
+          "id": "laboratorio",
+          "cursos": [
+            "terminal-y-bash",
+            "docker-desde-cero"
+          ],
+          "semanas": [
+            3,
+            4
+          ],
+          "opcional": false
+        },
+        {
+          "id": "reconocimiento",
+          "cursos": [
+            "hacking-etico-reconocimiento"
+          ],
+          "semanas": [
+            5,
+            6
+          ],
+          "opcional": false
+        },
+        {
+          "id": "explotacion",
+          "cursos": [
+            "hacking-etico-explotacion"
+          ],
+          "semanas": [
+            7,
+            10
+          ],
+          "opcional": false
+        },
+        {
+          "id": "avanzado",
+          "cursos": [
+            "python-desde-cero",
+            "python-redes",
+            "python-ofensivo-laboratorio"
+          ],
+          "semanas": [
+            11,
+            18
+          ],
+          "opcional": true
+        }
+      ],
+      "ajustes": [
+        {
+          "pregunta": "terminal",
+          "texto": "Nunca has usado la terminal: empiezas por lo básico de Linux"
+        },
+        {
+          "pregunta": "redes",
+          "texto": "Todavía no conoces las redes: empiezas por las direcciones IP"
+        },
+        {
+          "pregunta": "programar",
+          "texto": "Nunca has programado: Bash y Python empiezan desde cero"
+        },
+        {
+          "pregunta": "virtuales",
+          "texto": "Nunca has creado una máquina virtual: te enseñamos a preparar tu equipo"
+        },
+        {
+          "pregunta": "objetivo",
+          "texto": "Tu meta es protegerte: la etapa Avanzado es opcional"
+        }
+      ],
+      "totalSemanas": 18,
+      "semanasObligatorias": 10
+    }
+  },
+  {
+    "id": "valeria",
+    "nombre": "Valeria",
+    "carrera": "Ingeniería en Mecatrónica",
+    "objetivo": "Ya usa Linux y sabe qué es una IP; quiere conseguir prácticas en ciberseguridad.",
+    "esTecnologia": true,
+    "respuestasOrientacion": {
+      "carrera": "ingenieria",
+      "lograr": "trabajo-tecnologia",
+      "disfrutas": "computadora",
+      "primer-paso": "proteger"
+    },
+    "orientacionEsperada": {
+      "escuela": "tecnologia",
+      "area": "ciberseguridad",
+      "areasRecomendadas": [
+        "ciberseguridad",
+        "programacion"
+      ],
+      "tambienTePuedeServir": null,
+      "avisoProximamente": null,
+      "puntos": {
+        "escuelas": {
+          "tecnologia": 9,
+          "negocios": 0,
+          "comunicacion": 0,
+          "habilidades": 0,
+          "diseno": 0
+        },
+        "areas": {
+          "programacion": 3,
+          "ciberseguridad": 4,
+          "linux": 1
+        }
+      }
+    },
+    "area": "ciberseguridad",
+    "respuestasDiagnostico": {
+      "terminal": "seguido",
+      "redes": "ip",
+      "programar": "sencillo",
+      "virtuales": "maquina-virtual",
+      "objetivo": "practicas",
+      "tiempo": "5-horas"
+    },
+    "resultadoEsperado": {
+      "horasSemana": 5,
+      "cursos": [
+        "linux-desde-cero",
+        "redes-desde-cero",
+        "terminal-y-bash",
+        "docker-desde-cero",
+        "hacking-etico-reconocimiento",
+        "hacking-etico-explotacion",
+        "python-desde-cero",
+        "python-redes",
+        "python-ofensivo-laboratorio"
+      ],
+      "cursosOmitidos": [],
+      "leccionesOmitidas": [
+        {
+          "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+          "pregunta": "virtuales"
+        },
+        {
+          "leccion": "linux-desde-cero/instalar-el-sistema",
+          "pregunta": "virtuales"
+        },
+        {
+          "leccion": "linux-desde-cero/comandos-basicos-1-de-2",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "linux-desde-cero/comandos-basicos-2-de-2",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "linux-desde-cero/control-de-flujo-y-procesos",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "redes-desde-cero/direcciones-ip-ipv4-e-ipv6",
+          "pregunta": "redes"
+        },
+        {
+          "leccion": "redes-desde-cero/protocolos-tcp-y-udp",
+          "pregunta": "redes"
+        },
+        {
+          "leccion": "terminal-y-bash/que-es-una-terminal-shell",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "terminal-y-bash/tipos-de-terminal",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "terminal-y-bash/archivos-de-arranque-de-bash",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "terminal-y-bash/programar-en-la-terminal",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "terminal-y-bash/que-si-y-que-no-hacer-con-bash",
+          "pregunta": "terminal"
+        },
+        {
+          "leccion": "python-desde-cero/variables-y-tipos-de-datos",
+          "pregunta": "programar"
+        },
+        {
+          "leccion": "python-desde-cero/operadores-basicos-en-python",
+          "pregunta": "programar"
+        },
+        {
+          "leccion": "python-desde-cero/control-de-flujo-condicionales-y-bucles",
+          "pregunta": "programar"
+        }
+      ],
+      "semanas": [
+        {
+          "numero": 1,
+          "lecciones": [
+            "linux-desde-cero/permisos",
+            "linux-desde-cero/permisos-especiales",
+            "redes-desde-cero/direcciones-mac-oui-y-nic",
+            "redes-desde-cero/modelo-osi",
+            "redes-desde-cero/introduccion-a-las-subredes",
+            "redes-desde-cero/cidr-y-numero-de-equipos",
+            "redes-desde-cero/mascaras-y-clases-de-red",
+            "redes-desde-cero/interpretar-rangos-de-red",
+            "redes-desde-cero/trucos-para-calcular-rapido",
+            "redes-desde-cero/que-es-una-vlan",
+            "redes-desde-cero/configurar-un-switch",
+            "redes-desde-cero/buenas-practicas"
+          ],
+          "minutos": 120
+        },
+        {
+          "numero": 2,
+          "lecciones": [
+            "terminal-y-bash/crear-y-ejecutar-un-script",
+            "terminal-y-bash/opciones-de-bash",
+            "terminal-y-bash/codigos-de-salida",
+            "terminal-y-bash/caracteres-especiales",
+            "terminal-y-bash/variables",
+            "terminal-y-bash/condiciones",
+            "terminal-y-bash/ciclos-repeticiones",
+            "terminal-y-bash/redirecciones-y-tuberias",
+            "terminal-y-bash/funciones",
+            "terminal-y-bash/entorno-y-salida-de-errores",
+            "terminal-y-bash/comentarios",
+            "terminal-y-bash/formato",
+            "terminal-y-bash/como-nombrar-las-cosas",
+            "terminal-y-bash/llamar-comandos",
+            "terminal-y-bash/awk-vision-general",
+            "terminal-y-bash/variables-integradas-de-awk",
+            "terminal-y-bash/awk-con-ejemplos",
+            "terminal-y-bash/sed-vision-general",
+            "terminal-y-bash/scripts-de-sed",
+            "terminal-y-bash/direcciones-en-sed",
+            "terminal-y-bash/comandos-de-sed",
+            "docker-desde-cero/introduccion-a-docker",
+            "docker-desde-cero/instalacion-de-docker-en-linux",
+            "docker-desde-cero/definiendo-la-estructura-basica-de-dockerfile",
+            "docker-desde-cero/creacion-y-construccion-de-imagenes",
+            "docker-desde-cero/desplegar-tu-primer-contenedor",
+            "docker-desde-cero/comandos-comunes-para-la-gestion-de-contenedores",
+            "docker-desde-cero/puertos-y-carpetas-compartidas",
+            "docker-desde-cero/lo-esencial-de-docker"
+          ],
+          "minutos": 263.9
+        },
+        {
+          "numero": 3,
+          "lecciones": [
+            "docker-desde-cero/trabajar-con-docker",
+            "docker-desde-cero/trabajar-con-dockerfile"
+          ],
+          "minutos": 69.9
+        },
+        {
+          "numero": 4,
+          "lecciones": [
+            "hacking-etico-reconocimiento/antes-de-empezar-un-objetivo-autorizado",
+            "hacking-etico-reconocimiento/nmap-y-sus-modos-de-escaneo",
+            "hacking-etico-reconocimiento/escaneo-frente-a-cortafuegos",
+            "hacking-etico-reconocimiento/scripts-de-nmap",
+            "hacking-etico-reconocimiento/tus-propios-scripts-de-nmap",
+            "hacking-etico-reconocimiento/escanear-puertos-sin-nmap",
+            "hacking-etico-reconocimiento/descubrir-equipos-en-tu-red",
+            "hacking-etico-reconocimiento/identificar-el-sistema-operativo",
+            "hacking-etico-reconocimiento/busqueda-por-imagenes",
+            "hacking-etico-reconocimiento/encontrar-subdominios",
+            "hacking-etico-reconocimiento/busquedas-avanzadas-en-google",
+            "hacking-etico-reconocimiento/que-tecnologias-usa-una-web",
+            "hacking-etico-reconocimiento/buscar-rutas-ocultas-1-de-2"
+          ],
+          "minutos": 299.7
+        },
+        {
+          "numero": 5,
+          "lecciones": [
+            "hacking-etico-reconocimiento/buscar-rutas-ocultas-2-de-2"
+          ],
+          "minutos": 50.7
+        },
+        {
+          "numero": 6,
+          "lecciones": [
+            "hacking-etico-explotacion/laboratorio-con-docker-compose-1-de-2",
+            "hacking-etico-explotacion/laboratorio-con-docker-compose-2-de-2",
+            "hacking-etico-explotacion/servicio-ftp",
+            "hacking-etico-explotacion/servicio-ssh",
+            "hacking-etico-explotacion/servicios-http-y-https",
+            "hacking-etico-explotacion/carpetas-compartidas-smb",
+            "hacking-etico-explotacion/wordpress-1-de-2",
+            "hacking-etico-explotacion/wordpress-2-de-2",
+            "hacking-etico-explotacion/joomla"
+          ],
+          "minutos": 281.1
+        },
+        {
+          "numero": 7,
+          "lecciones": [
+            "hacking-etico-explotacion/drupal",
+            "hacking-etico-explotacion/magento",
+            "hacking-etico-explotacion/introduccion-a-la-explotacion",
+            "hacking-etico-explotacion/introduccion-a-shells",
+            "hacking-etico-explotacion/reverse-shell",
+            "hacking-etico-explotacion/bind-shell",
+            "hacking-etico-explotacion/forward-shell",
+            "hacking-etico-explotacion/tipos-de-payloads",
+            "hacking-etico-explotacion/explotacion-manual-y-automatizada",
+            "hacking-etico-explotacion/revisar-un-sistema-por-dentro",
+            "hacking-etico-explotacion/introduccion-a-burp-suite",
+            "hacking-etico-explotacion/proxy",
+            "hacking-etico-explotacion/intruder",
+            "hacking-etico-explotacion/comparer",
+            "hacking-etico-explotacion/repeater",
+            "hacking-etico-explotacion/decoder",
+            "hacking-etico-explotacion/extensiones"
+          ],
+          "minutos": 295.5
+        },
+        {
+          "numero": 8,
+          "lecciones": [
+            "hacking-etico-explotacion/introduccion-a-la-inyeccion-sql"
+          ],
+          "minutos": 24.6
+        },
+        {
+          "numero": 9,
+          "lecciones": [
+            "python-desde-cero/caracteristicas-y-ventajas-de-python",
+            "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3",
+            "python-desde-cero/el-interprete-de-python",
+            "python-desde-cero/shebang-y-convenios-en-python",
+            "python-desde-cero/string-formatting",
+            "python-desde-cero/funciones-y-ambito-de-las-variables",
+            "python-desde-cero/funciones-lambda-anonimas",
+            "python-desde-cero/manejo-de-errores-y-excepciones",
+            "python-desde-cero/listas",
+            "python-desde-cero/tuplas",
+            "python-desde-cero/conjuntos",
+            "python-desde-cero/diccionarios",
+            "python-desde-cero/proyecto-de-videojuegos",
+            "python-desde-cero/clases-y-objetos-1-de-2",
+            "python-desde-cero/clases-y-objetos-2-de-2",
+            "python-desde-cero/metodos-estaticos-y-metodos-de-clase",
+            "python-desde-cero/comprendiendo-mejor-el-uso-de-self"
+          ],
+          "minutos": 281.2
+        },
+        {
+          "numero": 10,
+          "lecciones": [
+            "python-desde-cero/herencia-y-polimorfismo",
+            "python-desde-cero/encapsulamiento-y-metodos-especiales",
+            "python-desde-cero/decoradores-y-popiedades",
+            "python-desde-cero/organizacion-del-codigo-en-modulos",
+            "python-desde-cero/importacion-y-uso-de-modulos",
+            "python-desde-cero/creacion-y-distribucion-de-paquetes",
+            "python-desde-cero/entrada-por-teclado-y-salida-por-pantalla",
+            "python-desde-cero/lectura-y-escritura-de-archivos",
+            "python-desde-cero/formateo-de-cadenas-y-manipulacion-de-texto",
+            "python-desde-cero/proyecto-de-gestion-de-biblioteca-de-libros-1-de-2",
+            "python-desde-cero/proyecto-de-gestion-de-biblioteca-de-libros-2-de-2",
+            "python-desde-cero/proyecto-de-gestion-de-animales-en-tienda"
+          ],
+          "minutos": 289.8
+        },
+        {
+          "numero": 11,
+          "lecciones": [
+            "python-desde-cero/proyecto-de-administracion-de-flota-de-vehiculos",
+            "python-desde-cero/proyecto-de-gestion-de-notas-1-de-2",
+            "python-desde-cero/proyecto-de-gestion-de-notas-2-de-2",
+            "python-redes/creando-un-escaner-de-puertos-1-de-4",
+            "python-redes/creando-un-escaner-de-puertos-2-de-4",
+            "python-redes/creando-un-escaner-de-puertos-3-de-4",
+            "python-redes/creando-un-escaner-de-puertos-4-de-4",
+            "python-redes/cambiar-la-direccion-mac",
+            "python-redes/escaner-de-red-con-icmp",
+            "python-redes/escaner-de-red-con-arp",
+            "python-ofensivo-laboratorio/envenenamiento-arp",
+            "python-ofensivo-laboratorio/rastrear-consultas-dns",
+            "python-ofensivo-laboratorio/rastrear-trafico-http",
+            "python-ofensivo-laboratorio/rastrear-trafico-https",
+            "python-ofensivo-laboratorio/rastrear-imagenes-por-https"
+          ],
+          "minutos": 292.1
+        },
+        {
+          "numero": 12,
+          "lecciones": [
+            "python-ofensivo-laboratorio/suplantar-respuestas-dns",
+            "python-ofensivo-laboratorio/manipular-trafico",
+            "python-ofensivo-laboratorio/keylogger-1-de-2",
+            "python-ofensivo-laboratorio/malware-de-laboratorio-1-de-2",
+            "python-ofensivo-laboratorio/malware-de-laboratorio-2-de-2",
+            "python-ofensivo-laboratorio/puertas-traseras-y-c-y-c-1-de-2",
+            "python-ofensivo-laboratorio/puertas-traseras-y-c-y-c-2-de-2",
+            "python-ofensivo-laboratorio/forward-shell-1-de-4",
+            "python-ofensivo-laboratorio/forward-shell-2-de-4",
+            "python-ofensivo-laboratorio/forward-shell-3-de-4",
+            "python-ofensivo-laboratorio/forward-shell-4-de-4"
+          ],
+          "minutos": 254.4
+        }
+      ],
+      "totalSemanas": 12,
+      "minutosTotal": 2522.9
+    },
+    "roadmapEsperado": {
+      "etapas": [
+        {
+          "id": "fundamentos",
+          "cursos": [
+            "linux-desde-cero",
+            "redes-desde-cero"
+          ],
+          "semanas": [
+            1,
+            1
+          ],
+          "opcional": false
+        },
+        {
+          "id": "laboratorio",
+          "cursos": [
+            "terminal-y-bash",
+            "docker-desde-cero"
+          ],
+          "semanas": [
+            2,
+            3
+          ],
+          "opcional": false
+        },
+        {
+          "id": "reconocimiento",
+          "cursos": [
+            "hacking-etico-reconocimiento"
+          ],
+          "semanas": [
+            4,
+            5
+          ],
+          "opcional": false
+        },
+        {
+          "id": "explotacion",
+          "cursos": [
+            "hacking-etico-explotacion"
+          ],
+          "semanas": [
+            6,
+            8
+          ],
+          "opcional": false
+        },
+        {
+          "id": "avanzado",
+          "cursos": [
+            "python-desde-cero",
+            "python-redes",
+            "python-ofensivo-laboratorio"
+          ],
+          "semanas": [
+            9,
+            12
+          ],
+          "opcional": false
+        }
+      ],
+      "ajustes": [
+        {
+          "pregunta": "terminal",
+          "texto": "Ya usas la terminal seguido: omitimos 3 lecciones de «Linux desde cero» y 5 lecciones de «Automatiza tareas con la terminal (Bash)»"
+        },
+        {
+          "pregunta": "redes",
+          "texto": "Ya sabes qué es una IP y un puerto: omitimos 2 lecciones de «Redes desde cero»"
+        },
+        {
+          "pregunta": "programar",
+          "texto": "Ya escribiste algún programa sencillo: omitimos 3 lecciones de «Python desde cero»"
+        },
+        {
+          "pregunta": "virtuales",
+          "texto": "Ya sabes crear una máquina virtual: omitimos 2 lecciones de «Linux desde cero»"
+        },
+        {
+          "pregunta": "objetivo",
+          "texto": "Quieres prácticas o un trabajo en el área: todas las etapas son obligatorias"
+        }
+      ],
+      "totalSemanas": 12,
+      "semanasObligatorias": 12
+    }
+  },
+  {
+    "id": "mariana",
+    "nombre": "Mariana",
+    "carrera": "Administración de empresas",
+    "objetivo": "Conseguir sus primeros clientes para un negocio de pasteles por encargo.",
+    "esTecnologia": false,
+    "respuestasOrientacion": {
+      "carrera": "negocios",
+      "lograr": "emprender",
+      "disfrutas": "gente",
+      "primer-paso": "primer-cliente"
+    },
+    "orientacionEsperada": {
+      "escuela": "negocios",
+      "area": "conseguir-clientes",
+      "areasRecomendadas": [
+        "conseguir-clientes",
+        "emprender"
+      ],
+      "tambienTePuedeServir": {
+        "escuela": "comunicacion",
+        "area": "hablar-en-publico"
+      },
+      "avisoProximamente": null,
+      "puntos": {
+        "escuelas": {
+          "tecnologia": 0,
+          "negocios": 8,
+          "comunicacion": 1,
+          "habilidades": 0,
+          "diseno": 0
+        },
+        "areas": {
+          "conseguir-clientes": 4,
+          "emprender": 2,
+          "ventas": 1,
+          "hablar-en-publico": 1,
+          "persuasion": 1
+        }
+      }
+    },
+    "area": "conseguir-clientes",
+    "respuestasDiagnostico": {
+      "oferta": "no-se-explicar",
+      "cliente-ideal": "mas-o-menos",
+      "has-vendido": "conocidos",
+      "tiempo": "1-2",
+      "meta": "clientes-cada-mes"
+    },
+    "resultadoEsperado": {
+      "horasSemana": 1,
+      "cursos": [
+        "tus-primeros-clientes",
+        "hablar-para-vender",
+        "precios-sin-miedo"
+      ],
+      "cursosOmitidos": [
+        {
+          "curso": "que-es-emprender",
+          "motivo": "cursoInicio",
+          "pregunta": "oferta"
+        }
+      ],
+      "leccionesOmitidas": [],
+      "semanas": [
+        {
+          "numero": 1,
+          "lecciones": [
+            "tus-primeros-clientes/cliente-ideal",
+            "tus-primeros-clientes/donde-encontrarlo",
+            "tus-primeros-clientes/primer-mensaje"
+          ],
+          "minutos": 52
+        },
+        {
+          "numero": 2,
+          "lecciones": [
+            "tus-primeros-clientes/pedir-la-venta",
+            "hablar-para-vender/tu-presentacion-de-un-minuto"
+          ],
+          "minutos": 53.9
+        },
+        {
+          "numero": 3,
+          "lecciones": [
+            "hablar-para-vender/cuenta-lo-que-haces-con-una-historia",
+            "precios-sin-miedo/calcula-cuanto-cobrar"
+          ],
+          "minutos": 60
+        },
+        {
+          "numero": 4,
+          "lecciones": [
+            "precios-sin-miedo/di-tu-precio-con-seguridad"
+          ],
+          "minutos": 25
+        }
+      ],
+      "totalSemanas": 4,
+      "minutosTotal": 190.9
+    }
+  },
+  {
+    "id": "diego",
+    "nombre": "Diego",
+    "carrera": "Derecho",
+    "objetivo": "Perder el miedo a hablar en público antes de sus audiencias simuladas.",
+    "esTecnologia": false,
+    "respuestasOrientacion": {
+      "carrera": "humanidades",
+      "lograr": "hablar",
+      "disfrutas": "gente",
+      "primer-paso": "presentacion"
+    },
+    "orientacionEsperada": {
+      "escuela": "comunicacion",
+      "area": "hablar-en-publico",
+      "areasRecomendadas": [
+        "hablar-en-publico",
+        "persuasion"
+      ],
+      "tambienTePuedeServir": null,
+      "avisoProximamente": null,
+      "puntos": {
+        "escuelas": {
+          "tecnologia": 0,
+          "negocios": 1,
+          "comunicacion": 8,
+          "habilidades": 0,
+          "diseno": 0
+        },
+        "areas": {
+          "ventas": 1,
+          "hablar-en-publico": 7,
+          "persuasion": 1
+        }
+      }
+    },
+    "area": "hablar-en-publico",
+    "respuestasDiagnostico": {
+      "veces": "pocas",
+      "nervios": "bloqueo",
+      "estructura": "lo-leo",
+      "tiempo": "1-2",
+      "meta": "convencer"
+    },
+    "resultadoEsperado": {
+      "horasSemana": 1,
+      "cursos": [
+        "habla-en-publico-sin-miedo",
+        "presentaciones-claras",
+        "argumentar-y-convencer"
+      ],
+      "cursosOmitidos": [],
+      "leccionesOmitidas": [],
+      "semanas": [
+        {
+          "numero": 1,
+          "lecciones": [
+            "habla-en-publico-sin-miedo/por-que-nos-ponemos-nerviosos",
+            "habla-en-publico-sin-miedo/estructura-del-discurso",
+            "habla-en-publico-sin-miedo/voz-y-cuerpo"
+          ],
+          "minutos": 51.4
+        },
+        {
+          "numero": 2,
+          "lecciones": [
+            "habla-en-publico-sin-miedo/ensayar-sin-publico",
+            "habla-en-publico-sin-miedo/el-dia-de-la-presentacion"
+          ],
+          "minutos": 32.6
+        },
+        {
+          "numero": 3,
+          "lecciones": [
+            "curso:presentaciones-claras"
+          ],
+          "minutos": 60
+        },
+        {
+          "numero": 4,
+          "lecciones": [
+            "curso:argumentar-y-convencer"
+          ],
+          "minutos": 40
+        },
+        {
+          "numero": 5,
+          "lecciones": [
+            "curso:argumentar-y-convencer"
+          ],
+          "minutos": 40
+        }
+      ],
+      "totalSemanas": 5,
+      "minutosTotal": 224
+    }
+  }
+]

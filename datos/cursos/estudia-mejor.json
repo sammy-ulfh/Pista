@@ -1,0 +1,20 @@
+{
+  "id": "estudia-mejor",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Estudia mejor en menos tiempo",
+  "subtitulo": "Técnicas de estudio con respaldo: repaso espaciado y autoexamen.",
+  "escuela": "habilidades",
+  "areas": [
+    "productividad"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 60,
+  "modulos": []
+}

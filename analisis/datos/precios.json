@@ -1,0 +1,282 @@
+[
+ {
+  "id": "linux-desde-cero",
+  "estado": "disponible",
+  "minutos": 45.9,
+  "horas": 0.77,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "personaliza-tu-linux",
+  "estado": "disponible",
+  "minutos": 92.2,
+  "horas": 1.54,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "terminal-y-bash",
+  "estado": "disponible",
+  "minutos": 48.6,
+  "horas": 0.81,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "administracion-linux",
+  "estado": "disponible",
+  "minutos": 81.0,
+  "horas": 1.35,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "python-desde-cero",
+  "estado": "disponible",
+  "minutos": 370.8,
+  "horas": 6.18,
+  "precio_regla_propuesta": 50,
+  "precio_regla_original": 35
+ },
+ {
+  "id": "python-practico",
+  "estado": "disponible",
+  "minutos": 265.9,
+  "horas": 4.43,
+  "precio_regla_propuesta": 50,
+  "precio_regla_original": 35
+ },
+ {
+  "id": "python-automatizacion",
+  "estado": "disponible",
+  "minutos": 80.0,
+  "horas": 1.33,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "docker-desde-cero",
+  "estado": "disponible",
+  "minutos": 75.1,
+  "horas": 1.25,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "redes-desde-cero",
+  "estado": "disponible",
+  "minutos": 33.6,
+  "horas": 0.56,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "hacking-etico-reconocimiento",
+  "estado": "disponible",
+  "minutos": 128.5,
+  "horas": 2.14,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "hacking-etico-explotacion",
+  "estado": "disponible",
+  "minutos": 200.4,
+  "horas": 3.34,
+  "precio_regla_propuesta": 50,
+  "precio_regla_original": 35
+ },
+ {
+  "id": "python-redes",
+  "estado": "disponible",
+  "minutos": 34.6,
+  "horas": 0.58,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "python-ofensivo-laboratorio",
+  "estado": "disponible",
+  "minutos": 137.0,
+  "horas": 2.28,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "html-desde-cero",
+  "estado": "disponible",
+  "minutos": 13.5,
+  "horas": 0.23,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "tus-primeros-clientes",
+  "estado": "muestra",
+  "minutos": 83.6,
+  "horas": 1.39,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "habla-en-publico-sin-miedo",
+  "estado": "muestra",
+  "minutos": 96.3,
+  "horas": 1.6,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "tu-semana-en-orden",
+  "estado": "muestra",
+  "minutos": 77.4,
+  "horas": 1.29,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "que-es-emprender",
+  "estado": "proximamente",
+  "minutos": 45,
+  "horas": 0.75,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "valida-tu-idea",
+  "estado": "proximamente",
+  "minutos": 70,
+  "horas": 1.17,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "propuesta-de-valor",
+  "estado": "proximamente",
+  "minutos": 50,
+  "horas": 0.83,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "precios-sin-miedo",
+  "estado": "proximamente",
+  "minutos": 50,
+  "horas": 0.83,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "responder-objeciones",
+  "estado": "proximamente",
+  "minutos": 60,
+  "horas": 1.0,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "vender-por-mensaje",
+  "estado": "proximamente",
+  "minutos": 60,
+  "horas": 1.0,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "hablar-para-vender",
+  "estado": "proximamente",
+  "minutos": 70,
+  "horas": 1.17,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "argumentar-y-convencer",
+  "estado": "proximamente",
+  "minutos": 80,
+  "horas": 1.33,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "presentaciones-claras",
+  "estado": "proximamente",
+  "minutos": 60,
+  "horas": 1.0,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "correos-que-se-leen",
+  "estado": "proximamente",
+  "minutos": 40,
+  "horas": 0.67,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "redaccion-clara",
+  "estado": "proximamente",
+  "minutos": 90,
+  "horas": 1.5,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "estudia-mejor",
+  "estado": "proximamente",
+  "minutos": 60,
+  "horas": 1.0,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "tu-primer-presupuesto",
+  "estado": "proximamente",
+  "minutos": 50,
+  "horas": 0.83,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "ahorra-siendo-estudiante",
+  "estado": "proximamente",
+  "minutos": 45,
+  "horas": 0.75,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "diseno-para-no-disenadores",
+  "estado": "proximamente",
+  "minutos": 70,
+  "horas": 1.17,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "presentaciones-que-lucen",
+  "estado": "proximamente",
+  "minutos": 60,
+  "horas": 1.0,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "fotos-con-tu-celular",
+  "estado": "proximamente",
+  "minutos": 50,
+  "horas": 0.83,
+  "precio_regla_propuesta": 20,
+  "precio_regla_original": 20
+ },
+ {
+  "id": "video-corto-para-redes",
+  "estado": "proximamente",
+  "minutos": 60,
+  "horas": 1.0,
+  "precio_regla_propuesta": 35,
+  "precio_regla_original": 20
+ }
+]

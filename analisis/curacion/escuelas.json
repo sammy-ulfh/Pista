@@ -1,0 +1,637 @@
+{
+  "_comentario": "Taxonomía propuesta (Etapa 1). Todo lo que no es la Escuela de Tecnología es SUPUESTO: no hay apuntes reales todavía. 'ruta' = orden de cursos que se le propone a quien elige el área (puede incluir cursos de otras escuelas). Los minutos de los cursos de muestra y próximamente son ESTIMADOS con la misma fórmula que los apuntes reales: palabras/200 + 0,2 por imagen + minutos de ejercicio.",
+  "escuelas": [
+    {
+      "id": "tecnologia",
+      "nombre": "Tecnología",
+      "estado": "disponible",
+      "descripcion": "Aprende a programar, a cuidar sistemas y a trabajar con servidores.",
+      "fuente_apuntes": "https://github.com/sammy-ulfh/Notes",
+      "areas": [
+        {
+          "id": "programacion",
+          "nombre": "Programación",
+          "descripcion": "Aprende a programar con Python, desde tu primer programa hasta apps con ventanas.",
+          "ruta": [
+            "python-desde-cero",
+            "python-practico"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "ciberseguridad",
+          "nombre": "Ciberseguridad",
+          "descripcion": "Entiende cómo se protege (y cómo se ataca) un sistema, siempre en entornos autorizados.",
+          "ruta": [
+            "linux-desde-cero",
+            "redes-desde-cero",
+            "hacking-etico-reconocimiento",
+            "docker-desde-cero",
+            "hacking-etico-explotacion"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "linux",
+          "nombre": "Linux y terminal",
+          "descripcion": "Usa Linux con confianza: instalarlo, moverte con comandos y administrarlo.",
+          "ruta": [
+            "linux-desde-cero",
+            "terminal-y-bash",
+            "administracion-linux"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "cloud-devops",
+          "nombre": "Cloud y DevOps",
+          "descripcion": "Prepara y automatiza servidores y empaqueta aplicaciones en contenedores.",
+          "ruta": [
+            "linux-desde-cero",
+            "docker-desde-cero",
+            "terminal-y-bash",
+            "python-automatizacion"
+          ],
+          "estado": "disponible",
+          "cobertura_maxima": "basica",
+          "nota": "Por volumen saldría «sólida», pero no hay apuntes de nubes públicas (AWS, Azure, GCP), CI/CD ni Kubernetes: se marca «básica»."
+        },
+        {
+          "id": "redes",
+          "nombre": "Redes",
+          "descripcion": "Entiende cómo se conectan las computadoras y cómo se organiza una red.",
+          "ruta": [
+            "redes-desde-cero"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "desarrollo-web",
+          "nombre": "Desarrollo web",
+          "descripcion": "Crea páginas y aplicaciones web.",
+          "ruta": [
+            "html-desde-cero"
+          ],
+          "estado": "proximamente",
+          "nota": "Solo hay un mini-curso de 4 notas (HTML). Se muestra como próximamente; el mini-curso se puede comprar desde el catálogo."
+        }
+      ]
+    },
+    {
+      "id": "negocios",
+      "nombre": "Negocios y Emprendimiento",
+      "estado": "disponible",
+      "descripcion": "Convierte una idea en algo que se vende y consigue tus primeros clientes.",
+      "fuente_apuntes": "apuntes-demo/negocios",
+      "areas": [
+        {
+          "id": "conseguir-clientes",
+          "nombre": "Conseguir clientes",
+          "descripcion": "Encuentra a quién le sirve lo que haces y consigue tus primeras ventas.",
+          "ruta": [
+            "que-es-emprender",
+            "tus-primeros-clientes",
+            "hablar-para-vender",
+            "precios-sin-miedo"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "emprender",
+          "nombre": "Emprender",
+          "descripcion": "Pasa de una idea a un proyecto que puedes probar con poco dinero.",
+          "ruta": [
+            "que-es-emprender",
+            "valida-tu-idea",
+            "propuesta-de-valor"
+          ],
+          "estado": "proximamente"
+        },
+        {
+          "id": "ventas",
+          "nombre": "Ventas",
+          "descripcion": "Vende con seguridad, responde dudas y cierra acuerdos.",
+          "ruta": [
+            "responder-objeciones",
+            "vender-por-mensaje"
+          ],
+          "estado": "proximamente"
+        }
+      ]
+    },
+    {
+      "id": "comunicacion",
+      "nombre": "Comunicación",
+      "estado": "disponible",
+      "descripcion": "Habla en público con seguridad y explica tus ideas para convencer.",
+      "fuente_apuntes": "apuntes-demo/comunicacion",
+      "areas": [
+        {
+          "id": "hablar-en-publico",
+          "nombre": "Hablar en público",
+          "descripcion": "Presenta frente a un grupo sin que los nervios te ganen.",
+          "ruta": [
+            "habla-en-publico-sin-miedo",
+            "presentaciones-claras"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "persuasion",
+          "nombre": "Persuasión",
+          "descripcion": "Argumenta, negocia y convence con respeto.",
+          "ruta": [
+            "hablar-para-vender",
+            "argumentar-y-convencer"
+          ],
+          "estado": "proximamente"
+        },
+        {
+          "id": "escritura",
+          "nombre": "Escritura",
+          "descripcion": "Escribe correos, trabajos y textos que se entienden a la primera.",
+          "ruta": [
+            "correos-que-se-leen",
+            "redaccion-clara"
+          ],
+          "estado": "proximamente"
+        }
+      ]
+    },
+    {
+      "id": "habilidades",
+      "nombre": "Habilidades personales",
+      "estado": "disponible",
+      "descripcion": "Organiza tu tiempo, tu dinero y tus hábitos de estudio.",
+      "fuente_apuntes": "apuntes-demo/habilidades",
+      "areas": [
+        {
+          "id": "productividad",
+          "nombre": "Productividad",
+          "descripcion": "Organiza tu semana y estudia mejor en menos tiempo.",
+          "ruta": [
+            "tu-semana-en-orden",
+            "estudia-mejor"
+          ],
+          "estado": "disponible"
+        },
+        {
+          "id": "finanzas-personales",
+          "nombre": "Finanzas personales",
+          "descripcion": "Haz un presupuesto, ahorra y evita deudas siendo estudiante.",
+          "ruta": [
+            "tu-primer-presupuesto",
+            "ahorra-siendo-estudiante"
+          ],
+          "estado": "proximamente"
+        }
+      ]
+    },
+    {
+      "id": "diseno",
+      "nombre": "Diseño y Creatividad",
+      "estado": "proximamente",
+      "descripcion": "Comunica con imágenes: diseño básico, presentaciones y fotografía con tu celular.",
+      "fuente_apuntes": null,
+      "areas": [
+        {
+          "id": "diseno-grafico",
+          "nombre": "Diseño gráfico básico",
+          "descripcion": "Usa color, tipografía y espacio para que tus materiales se vean profesionales.",
+          "ruta": [
+            "diseno-para-no-disenadores",
+            "presentaciones-que-lucen"
+          ],
+          "estado": "proximamente"
+        },
+        {
+          "id": "contenido-visual",
+          "nombre": "Contenido visual",
+          "descripcion": "Haz fotos y videos cortos con tu celular para redes y proyectos.",
+          "ruta": [
+            "fotos-con-tu-celular",
+            "video-corto-para-redes"
+          ],
+          "estado": "proximamente"
+        }
+      ]
+    }
+  ],
+  "cursos_muestra": [
+    {
+      "id": "tus-primeros-clientes",
+      "escuela": "negocios",
+      "areas": [
+        "conseguir-clientes"
+      ],
+      "nivel": "basico",
+      "titulo": "Tus primeros clientes",
+      "subtitulo": "Aprende a encontrar a quién le sirve lo que haces y a pedir tu primera venta sin sentirte incómodo.",
+      "prerrequisitos": [],
+      "aprenderas": [
+        "Describir a tu cliente ideal en una frase",
+        "Saber dónde buscarlo, en línea y en persona",
+        "Escribir tu primer mensaje sin sonar a spam",
+        "Pedir la venta y responder a un «lo pienso»"
+      ],
+      "lecciones": [
+        {
+          "slug": "cliente-ideal",
+          "titulo": "¿Quién es tu cliente ideal?",
+          "objetivo": "Describir en una frase a quién ayudas y con qué problema.",
+          "palabras_objetivo": 1300,
+          "imagenes_previstas": [
+            "Esquema persona → problema → solución",
+            "Ejemplo de ficha de cliente ideal llena"
+          ],
+          "ejercicio": "Completa la frase «Ayudo a ___ que tienen problemas con ___».",
+          "ejercicio_min": 10
+        },
+        {
+          "slug": "donde-encontrarlo",
+          "titulo": "Dónde encontrarlo",
+          "objetivo": "Hacer una lista de 10 lugares, en línea y en persona, donde está tu cliente.",
+          "palabras_objetivo": 1400,
+          "imagenes_previstas": [
+            "Mapa de canales: en línea / en persona",
+            "Tabla de ejemplo con 10 lugares y cuántos clientes hay en cada uno"
+          ],
+          "ejercicio": "Llena tu propia tabla de 10 lugares y marca los 3 más prometedores.",
+          "ejercicio_min": 15
+        },
+        {
+          "slug": "primer-mensaje",
+          "titulo": "Tu primer mensaje",
+          "objetivo": "Escribir un mensaje corto, personal y con una pregunta clara.",
+          "palabras_objetivo": 1200,
+          "imagenes_previstas": [
+            "Plantilla de mensaje en 4 partes",
+            "Comparación: mensaje que parece spam vs. mensaje personal"
+          ],
+          "ejercicio": "Escribe 3 mensajes con la plantilla y envía uno.",
+          "ejercicio_min": 15
+        },
+        {
+          "slug": "pedir-la-venta",
+          "titulo": "Cómo pedir la venta",
+          "objetivo": "Pedir la venta sin presionar y responder a las dudas más comunes.",
+          "palabras_objetivo": 1500,
+          "imagenes_previstas": [
+            "Guion de 3 pasos para pedir la venta",
+            "Tabla de objeciones frecuentes y cómo responderlas"
+          ],
+          "ejercicio": "Ensaya en voz alta la respuesta a «lo pienso» y a «está caro».",
+          "ejercicio_min": 15
+        }
+      ]
+    },
+    {
+      "id": "habla-en-publico-sin-miedo",
+      "escuela": "comunicacion",
+      "areas": [
+        "hablar-en-publico"
+      ],
+      "nivel": "basico",
+      "titulo": "Habla en público sin miedo",
+      "subtitulo": "Prepara y da una presentación corta con técnicas sencillas para controlar los nervios.",
+      "prerrequisitos": [],
+      "aprenderas": [
+        "Calmar los nervios en dos minutos antes de hablar",
+        "Ordenar lo que vas a decir con una estructura de inicio, tres ideas y cierre",
+        "Usar tu voz y tu cuerpo para que te pongan atención",
+        "Ensayar solo y responder preguntas difíciles"
+      ],
+      "lecciones": [
+        {
+          "slug": "por-que-nos-ponemos-nerviosos",
+          "titulo": "Por qué nos ponemos nerviosos",
+          "objetivo": "Entender qué le pasa a tu cuerpo y aplicar una respiración que lo calma.",
+          "palabras_objetivo": 1100,
+          "imagenes_previstas": [
+            "Esquema de lo que pasa en el cuerpo con los nervios",
+            "Guía visual de la respiración 4-4-4"
+          ],
+          "ejercicio": "Practica la respiración 4-4-4 y grábate diciendo tu nombre y tu carrera en 30 segundos.",
+          "ejercicio_min": 10
+        },
+        {
+          "slug": "estructura-del-discurso",
+          "titulo": "La estructura de un buen discurso",
+          "objetivo": "Ordenar cualquier presentación en inicio, tres ideas y cierre.",
+          "palabras_objetivo": 1400,
+          "imagenes_previstas": [
+            "Esquema de la estructura de un discurso",
+            "Plantilla de una hoja para preparar tu presentación"
+          ],
+          "ejercicio": "Llena la plantilla para una presentación de 3 minutos sobre un tema de tu carrera.",
+          "ejercicio_min": 15
+        },
+        {
+          "slug": "voz-y-cuerpo",
+          "titulo": "Tu voz y tu cuerpo",
+          "objetivo": "Usar el volumen, las pausas, la mirada y las manos a tu favor.",
+          "palabras_objetivo": 1200,
+          "imagenes_previstas": [
+            "Posturas: sí / no",
+            "Partitura de pausas sobre un párrafo de ejemplo"
+          ],
+          "ejercicio": "Grábate 1 minuto, mira el video y anota dos cosas que mejorarías.",
+          "ejercicio_min": 15
+        },
+        {
+          "slug": "ensayar-sin-publico",
+          "titulo": "Ensayar sin público",
+          "objetivo": "Planear tres ensayos cortos que sí te preparan.",
+          "palabras_objetivo": 1000,
+          "imagenes_previstas": [
+            "Calendario de ensayo de 3 días"
+          ],
+          "ejercicio": "Haz un ensayo completo con cronómetro y ajusta lo que se pase de tiempo.",
+          "ejercicio_min": 15
+        },
+        {
+          "slug": "el-dia-de-la-presentacion",
+          "titulo": "El día de la presentación y las preguntas",
+          "objetivo": "Llegar preparado y responder preguntas aunque no sepas la respuesta.",
+          "palabras_objetivo": 1200,
+          "imagenes_previstas": [
+            "Lista de revisión para el día",
+            "Esquema para responder una pregunta difícil en 3 pasos"
+          ],
+          "ejercicio": "Pide a alguien tres preguntas sobre tu tema y respóndelas con el esquema.",
+          "ejercicio_min": 10
+        }
+      ]
+    },
+    {
+      "id": "tu-semana-en-orden",
+      "escuela": "habilidades",
+      "areas": [
+        "productividad"
+      ],
+      "nivel": "basico",
+      "titulo": "Tu semana en orden",
+      "subtitulo": "Descubre a dónde se va tu tiempo y arma una semana realista para estudiar, trabajar y descansar.",
+      "prerrequisitos": [],
+      "aprenderas": [
+        "Medir a dónde se va tu tiempo durante tres días",
+        "Separar lo urgente de lo importante",
+        "Planear tu semana en 20 minutos",
+        "Estudiar en bloques cortos con descansos"
+      ],
+      "lecciones": [
+        {
+          "slug": "a-donde-se-va-tu-tiempo",
+          "titulo": "¿A dónde se va tu tiempo?",
+          "objetivo": "Registrar tres días y encontrar tus «fugas» de tiempo.",
+          "palabras_objetivo": 1000,
+          "imagenes_previstas": [
+            "Plantilla de registro de tiempo por horas",
+            "Ejemplo de registro lleno con las fugas marcadas"
+          ],
+          "ejercicio": "Llena el registro durante tres días.",
+          "ejercicio_min": 15
+        },
+        {
+          "slug": "prioriza-lo-importante",
+          "titulo": "Prioriza lo importante",
+          "objetivo": "Ordenar tus pendientes en urgente/importante.",
+          "palabras_objetivo": 1100,
+          "imagenes_previstas": [
+            "Matriz urgente / importante",
+            "Ejemplo con pendientes de un estudiante"
+          ],
+          "ejercicio": "Acomoda tus pendientes de esta semana en la matriz.",
+          "ejercicio_min": 10
+        },
+        {
+          "slug": "planea-tu-semana",
+          "titulo": "Planea tu semana en 20 minutos",
+          "objetivo": "Armar un plan semanal por bloques que sí se puede cumplir.",
+          "palabras_objetivo": 1200,
+          "imagenes_previstas": [
+            "Ejemplo de semana por bloques",
+            "Plantilla semanal en blanco"
+          ],
+          "ejercicio": "Planea tu próxima semana con la plantilla.",
+          "ejercicio_min": 20
+        },
+        {
+          "slug": "estudia-en-bloques",
+          "titulo": "Estudia en bloques y descansa",
+          "objetivo": "Usar bloques de 25 minutos con descansos para concentrarte.",
+          "palabras_objetivo": 900,
+          "imagenes_previstas": [
+            "Esquema de un bloque de estudio 25/5"
+          ],
+          "ejercicio": "Haz cuatro bloques de estudio y anota cuántos terminaste sin distraerte.",
+          "ejercicio_min": 10
+        }
+      ]
+    }
+  ],
+  "cursos_proximamente": [
+    {
+      "id": "que-es-emprender",
+      "escuela": "negocios",
+      "areas": [
+        "emprender",
+        "conseguir-clientes"
+      ],
+      "nivel": "basico",
+      "titulo": "Qué es emprender",
+      "subtitulo": "Lo que nadie te cuenta antes de empezar un negocio.",
+      "minutos_estimados": 45
+    },
+    {
+      "id": "valida-tu-idea",
+      "escuela": "negocios",
+      "areas": [
+        "emprender"
+      ],
+      "nivel": "basico",
+      "titulo": "Valida tu idea sin gastar",
+      "subtitulo": "Prueba si alguien pagaría por tu idea antes de invertir.",
+      "minutos_estimados": 70
+    },
+    {
+      "id": "propuesta-de-valor",
+      "escuela": "negocios",
+      "areas": [
+        "emprender"
+      ],
+      "nivel": "basico",
+      "titulo": "Tu propuesta de valor en una hoja",
+      "subtitulo": "Explica en una hoja por qué te deberían elegir.",
+      "minutos_estimados": 50
+    },
+    {
+      "id": "precios-sin-miedo",
+      "escuela": "negocios",
+      "areas": [
+        "conseguir-clientes",
+        "ventas"
+      ],
+      "nivel": "basico",
+      "titulo": "Precios sin miedo",
+      "subtitulo": "Calcula cuánto cobrar y dilo con seguridad.",
+      "minutos_estimados": 50
+    },
+    {
+      "id": "responder-objeciones",
+      "escuela": "negocios",
+      "areas": [
+        "ventas"
+      ],
+      "nivel": "intermedio",
+      "titulo": "Responder objeciones",
+      "subtitulo": "Qué contestar cuando te dicen «está caro» o «lo pienso».",
+      "minutos_estimados": 60
+    },
+    {
+      "id": "vender-por-mensaje",
+      "escuela": "negocios",
+      "areas": [
+        "ventas"
+      ],
+      "nivel": "basico",
+      "titulo": "Vender por WhatsApp y redes",
+      "subtitulo": "Conversaciones por mensaje que terminan en venta.",
+      "minutos_estimados": 60
+    },
+    {
+      "id": "hablar-para-vender",
+      "escuela": "comunicacion",
+      "areas": [
+        "persuasion",
+        "conseguir-clientes"
+      ],
+      "nivel": "basico",
+      "titulo": "Hablar para vender",
+      "subtitulo": "Presenta lo que haces en un minuto y deja con ganas de saber más.",
+      "minutos_estimados": 70
+    },
+    {
+      "id": "argumentar-y-convencer",
+      "escuela": "comunicacion",
+      "areas": [
+        "persuasion",
+        "hablar-en-publico"
+      ],
+      "nivel": "intermedio",
+      "titulo": "Argumentar y convencer",
+      "subtitulo": "Construye argumentos sólidos y responde objeciones con respeto.",
+      "minutos_estimados": 80
+    },
+    {
+      "id": "presentaciones-claras",
+      "escuela": "comunicacion",
+      "areas": [
+        "hablar-en-publico"
+      ],
+      "nivel": "basico",
+      "titulo": "Presentaciones que se entienden",
+      "subtitulo": "Diapositivas simples que acompañan, no que distraen.",
+      "minutos_estimados": 60
+    },
+    {
+      "id": "correos-que-se-leen",
+      "escuela": "comunicacion",
+      "areas": [
+        "escritura"
+      ],
+      "nivel": "basico",
+      "titulo": "Correos que sí se leen",
+      "subtitulo": "Escribe correos cortos y claros a profesores, empresas y clientes.",
+      "minutos_estimados": 40
+    },
+    {
+      "id": "redaccion-clara",
+      "escuela": "comunicacion",
+      "areas": [
+        "escritura"
+      ],
+      "nivel": "intermedio",
+      "titulo": "Redacción clara para trabajos y tesis",
+      "subtitulo": "Ordena tus ideas y escribe sin rodeos.",
+      "minutos_estimados": 90
+    },
+    {
+      "id": "estudia-mejor",
+      "escuela": "habilidades",
+      "areas": [
+        "productividad"
+      ],
+      "nivel": "basico",
+      "titulo": "Estudia mejor en menos tiempo",
+      "subtitulo": "Técnicas de estudio con respaldo: repaso espaciado y autoexamen.",
+      "minutos_estimados": 60
+    },
+    {
+      "id": "tu-primer-presupuesto",
+      "escuela": "habilidades",
+      "areas": [
+        "finanzas-personales"
+      ],
+      "nivel": "basico",
+      "titulo": "Tu primer presupuesto",
+      "subtitulo": "Sabe cuánto entra, cuánto sale y cuánto puedes ahorrar.",
+      "minutos_estimados": 50
+    },
+    {
+      "id": "ahorra-siendo-estudiante",
+      "escuela": "habilidades",
+      "areas": [
+        "finanzas-personales"
+      ],
+      "nivel": "basico",
+      "titulo": "Ahorra siendo estudiante",
+      "subtitulo": "Metas de ahorro realistas y cómo evitar deudas.",
+      "minutos_estimados": 45
+    },
+    {
+      "id": "diseno-para-no-disenadores",
+      "escuela": "diseno",
+      "areas": [
+        "diseno-grafico"
+      ],
+      "nivel": "basico",
+      "titulo": "Diseño para no diseñadores",
+      "subtitulo": "Color, tipografía y espacio para que todo se vea mejor.",
+      "minutos_estimados": 70
+    },
+    {
+      "id": "presentaciones-que-lucen",
+      "escuela": "diseno",
+      "areas": [
+        "diseno-grafico"
+      ],
+      "nivel": "basico",
+      "titulo": "Presentaciones que lucen",
+      "subtitulo": "Diapositivas limpias con herramientas gratuitas.",
+      "minutos_estimados": 60
+    },
+    {
+      "id": "fotos-con-tu-celular",
+      "escuela": "diseno",
+      "areas": [
+        "contenido-visual"
+      ],
+      "nivel": "basico",
+      "titulo": "Fotos con tu celular",
+      "subtitulo": "Luz, encuadre y edición rápida.",
+      "minutos_estimados": 50
+    },
+    {
+      "id": "video-corto-para-redes",
+      "escuela": "diseno",
+      "areas": [
+        "contenido-visual"
+      ],
+      "nivel": "basico",
+      "titulo": "Video corto para redes",
+      "subtitulo": "Graba y edita videos de 30 segundos que se entienden sin sonido.",
+      "minutos_estimados": 60
+    }
+  ]
+}

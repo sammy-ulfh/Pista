@@ -1,0 +1,20 @@
+{
+  "id": "fotos-con-tu-celular",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Fotos con tu celular",
+  "subtitulo": "Luz, encuadre y edición rápida.",
+  "escuela": "diseno",
+  "areas": [
+    "contenido-visual"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 50,
+  "modulos": []
+}

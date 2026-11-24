@@ -1,0 +1,418 @@
+{
+  "id": "hacking-etico-explotacion",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Hacking ético: enumeración y explotación",
+  "subtitulo": "Practica en un laboratorio propio cómo se revisan servicios y sitios web vulnerables.",
+  "escuela": "tecnologia",
+  "areas": [
+    "ciberseguridad"
+  ],
+  "nivel": "avanzado",
+  "prerrequisitos": [
+    "hacking-etico-reconocimiento",
+    "docker-desde-cero"
+  ],
+  "aprenderas": [
+    "Montar un laboratorio con máquinas vulnerables dentro de tu computadora",
+    "Revisar servicios comunes (FTP, SSH, web, carpetas compartidas) en busca de fallas",
+    "Revisar sitios hechos con WordPress, Joomla, Drupal o Magento",
+    "Usar Burp Suite para ver y modificar lo que envía tu navegador",
+    "Entender cómo funcionan las inyecciones SQL para poder prevenirlas"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": true,
+  "minutosEstimados": null,
+  "factorPractica": 3,
+  "modulos": [
+    {
+      "id": "hacking-etico-explotacion/laboratorio",
+      "titulo": "Tu laboratorio",
+      "lecciones": [
+        {
+          "id": "hacking-etico-explotacion/laboratorio-con-docker-compose-1-de-2",
+          "slug": "laboratorio-con-docker-compose-1-de-2",
+          "titulo": "Laboratorio con Docker Compose (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (1-2).md",
+          "seccion": null,
+          "minutos": 10.5,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/laboratorio-con-docker-compose-2-de-2",
+          "slug": "laboratorio-con-docker-compose-2-de-2",
+          "titulo": "Laboratorio con Docker Compose (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (2-2).md",
+          "seccion": null,
+          "minutos": 12.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-explotacion/servicios",
+      "titulo": "Revisar servicios comunes",
+      "lecciones": [
+        {
+          "id": "hacking-etico-explotacion/servicio-ftp",
+          "slug": "servicio-ftp",
+          "titulo": "Servicio FTP",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/FTP/Enumeración del servicio FTP.md",
+          "seccion": null,
+          "minutos": 6.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/servicio-ssh",
+          "slug": "servicio-ssh",
+          "titulo": "Servicio SSH",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/SSH/Enumeración del servicio SSH.md",
+          "seccion": null,
+          "minutos": 8.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/servicios-http-y-https",
+          "slug": "servicios-http-y-https",
+          "titulo": "Servicios HTTP y HTTPS",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/HTTP&HTTPS/Enumeración del servicio HTTP y HTTPS.md",
+          "seccion": null,
+          "minutos": 10.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/carpetas-compartidas-smb",
+          "slug": "carpetas-compartidas-smb",
+          "titulo": "Carpetas compartidas (SMB)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/SMB/Enumeración del servicio SMB.md",
+          "seccion": null,
+          "minutos": 12.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-explotacion/gestores-de-contenido",
+      "titulo": "Gestores de contenido (CMS)",
+      "lecciones": [
+        {
+          "id": "hacking-etico-explotacion/wordpress-1-de-2",
+          "slug": "wordpress-1-de-2",
+          "titulo": "WordPress (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+          "seccion": null,
+          "minutos": 24.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/wordpress-2-de-2",
+          "slug": "wordpress-2-de-2",
+          "titulo": "WordPress (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/2-2/Enumeración de gestores de contenido (CMS) – WordPress (2-2).md",
+          "seccion": null,
+          "minutos": 2.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/joomla",
+          "slug": "joomla",
+          "titulo": "Joomla",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Joomla/Enumeración de gestores de contenido (CMS) – Joomla.md",
+          "seccion": null,
+          "minutos": 4.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/drupal",
+          "slug": "drupal",
+          "titulo": "Drupal",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Drupal/Enumeración de gestores de contenido (CMS) – Drupal.md",
+          "seccion": null,
+          "minutos": 8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/magento",
+          "slug": "magento",
+          "titulo": "Magento",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Magento/Enumeración de gestores de contenido (CMS) – Magento.md",
+          "seccion": null,
+          "minutos": 8.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-explotacion/explotacion",
+      "titulo": "Conceptos de explotación",
+      "lecciones": [
+        {
+          "id": "hacking-etico-explotacion/introduccion-a-la-explotacion",
+          "slug": "introduccion-a-la-explotacion",
+          "titulo": "Introducción a la explotación",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Introducción.md",
+          "seccion": null,
+          "minutos": 0.7,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/introduccion-a-shells",
+          "slug": "introduccion-a-shells",
+          "titulo": "Introducción a Shells",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Introducción a Shells.md",
+          "seccion": null,
+          "minutos": 2.5,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/reverse-shell",
+          "slug": "reverse-shell",
+          "titulo": "Reverse Shell",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Reverse Shell.md",
+          "seccion": null,
+          "minutos": 6.9,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/bind-shell",
+          "slug": "bind-shell",
+          "titulo": "Bind Shell",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Bind Shell.md",
+          "seccion": null,
+          "minutos": 1.5,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/forward-shell",
+          "slug": "forward-shell",
+          "titulo": "Forward Shell",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Forward Shell.md",
+          "seccion": null,
+          "minutos": 4.2,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/tipos-de-payloads",
+          "slug": "tipos-de-payloads",
+          "titulo": "Tipos de payloads",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de payloads/Tipos de payloads (Staged y Non-taged).md",
+          "seccion": null,
+          "minutos": 11,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/explotacion-manual-y-automatizada",
+          "slug": "explotacion-manual-y-automatizada",
+          "titulo": "Explotación manual y automatizada",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+          "seccion": null,
+          "minutos": 19.2,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/revisar-un-sistema-por-dentro",
+          "slug": "revisar-un-sistema-por-dentro",
+          "titulo": "Revisar un sistema por dentro",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Enumeracion del sistema/Enumeracion del sistema.md",
+          "seccion": null,
+          "minutos": 5.6,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-explotacion/burp-suite",
+      "titulo": "Burp Suite",
+      "lecciones": [
+        {
+          "id": "hacking-etico-explotacion/introduccion-a-burp-suite",
+          "slug": "introduccion-a-burp-suite",
+          "titulo": "Introducción a Burp Suite",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Introduccion a Burpsuite.md",
+          "seccion": null,
+          "minutos": 6.1,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/proxy",
+          "slug": "proxy",
+          "titulo": "Proxy",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Proxy.md",
+          "seccion": null,
+          "minutos": 8.4,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/intruder",
+          "slug": "intruder",
+          "titulo": "Intruder",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Intruder.md",
+          "seccion": null,
+          "minutos": 7.6,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/comparer",
+          "slug": "comparer",
+          "titulo": "Comparer",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Comparer.md",
+          "seccion": null,
+          "minutos": 1.3,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/repeater",
+          "slug": "repeater",
+          "titulo": "Repeater",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Repeater.md",
+          "seccion": null,
+          "minutos": 1.7,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/decoder",
+          "slug": "decoder",
+          "titulo": "Decoder",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Decoder.md",
+          "seccion": null,
+          "minutos": 0.8,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-explotacion/extensiones",
+          "slug": "extensiones",
+          "titulo": "Extensiones",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Extensions.md",
+          "seccion": null,
+          "minutos": 4.6,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-explotacion/vulnerabilidades-web",
+      "titulo": "Vulnerabilidades web",
+      "lecciones": [
+        {
+          "id": "hacking-etico-explotacion/introduccion-a-la-inyeccion-sql",
+          "slug": "introduccion-a-la-inyeccion-sql",
+          "titulo": "Introducción a la inyección SQL",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI/Introduccion a SQLI.md",
+          "seccion": null,
+          "minutos": 8.2,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

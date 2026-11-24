@@ -1,0 +1,34 @@
+---
+/**
+ * Insignia — logro circular de «Mi bitácora». Si está `bloqueada`, el borde es punteado y gris.
+ *
+ *   <Insignia texto="Primera lección" />
+ *   <Insignia texto="Racha de 7" bloqueada />
+ *
+ * El aspecto depende del atributo `data-bloqueada`, así que el navegador puede cambiarlo: la bitácora lo hace
+ * en `components/bitacora/Insignias.astro`, buscando cada una por su `data-insignia` (el `id`).
+ */
+interface Props {
+  texto: string;
+  bloqueada?: boolean;
+  /** Id de la insignia (`lib/insignias.ts`), para encontrarla desde un script. */
+  id?: string;
+  class?: string;
+}
+
+const { texto, bloqueada = false, id, class: claseExtra } = Astro.props;
+---
+
+<span
+  data-insignia={id}
+  data-bloqueada={bloqueada ? '' : undefined}
+  class:list={[
+    'inline-flex size-26 shrink-0 items-center justify-center rounded-full border-2 p-2 text-center text-sm leading-tight font-medium',
+    'border-tinta bg-blanco text-tinta',
+    'data-bloqueada:border-dashed data-bloqueada:border-texto-3 data-bloqueada:bg-papel data-bloqueada:text-texto-3',
+    claseExtra,
+  ]}
+>
+  {texto}
+  <span class="sr-only" data-texto-bloqueada>{bloqueada ? '(todavía no la consigues)' : ''}</span>
+</span>

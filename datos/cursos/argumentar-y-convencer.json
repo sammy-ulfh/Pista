@@ -1,0 +1,21 @@
+{
+  "id": "argumentar-y-convencer",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Argumentar y convencer",
+  "subtitulo": "Construye argumentos sólidos y responde objeciones con respeto.",
+  "escuela": "comunicacion",
+  "areas": [
+    "persuasion",
+    "hablar-en-publico"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 80,
+  "modulos": []
+}

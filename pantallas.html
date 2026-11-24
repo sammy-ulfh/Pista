@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Pista · Tablero de pantallas (prototipo de baja fidelidad)</title>
+<style>
+/* =====================================================================
+   0. GUÍA DE ESTILO (variables CSS)
+   Basada en los wireframes del documento original (Figs. 2–6).
+   Valores marcados SUPUESTO = no se pueden deducir con certeza del boceto.
+   En la construcción con Astro + Tailwind, estos tokens pasan al tema de Tailwind.
+   ===================================================================== */
+:root{
+  /* --- Paleta del diseño (wireframe en blanco y negro) --- */
+  --ink:          #262626;   /* trazo y texto principal */
+  --paper:        #ffffff;   /* fondo de las pantallas */
+  --fill-muted:   #e9e9e9;   /* botón secundario, opción elegida, elemento actual */
+  --fill-soft:    #f4f4f4;   /* cajas de nota y avisos */
+  --line-soft:    #cfcfcf;   /* X de los placeholders de imagen, divisores suaves */
+  --text-muted:   #555555;   /* metadatos, textos de apoyo */
+  --text-faint:   #8a8a8a;   /* elementos bloqueados o "próximamente", placeholders */
+  --dash:         #9a9a9a;   /* separador discontinuo bajo la cabecera */
+  --overlay:      rgba(38,38,38,.55); /* fondo del diálogo de suscripción (SUPUESTO) */
+
+  /* --- Tipografía (SUPUESTO: manuscrita del sistema; no se permiten fuentes externas) --- */
+  --font-hand: "Chalkboard SE", "Comic Sans MS", "Comic Neue", "Segoe Print", "Bradley Hand", cursive;
+
+  /* --- Tamaños (SUPUESTO: escalados ×0,72 del boceto a un marco de 1440 px) --- */
+  --fs-logo:    38px;
+  --fs-display: 44px;   /* titular de inicio */
+  --fs-h1:      46px;   /* título principal de pantalla */
+  --fs-h2:      28px;   /* títulos de sección */
+  --fs-h3:      24px;   /* títulos de tarjeta */
+  --fs-body:    21px;
+  --fs-nav:     22px;
+  --fs-btn:     22px;
+  --fs-small:   18px;
+  --fs-url:     18px;
+
+  /* --- Bordes "a mano" --- */
+  --stroke:      2px;
+  --r-sketch:    3px 7px 4px 8px / 7px 3px 8px 4px;
+  --r-sketch-2:  6px 3px 8px 4px / 3px 8px 4px 6px;
+  --r-btn:       2px 4px 2px 3px / 4px 2px 3px 2px;
+
+  /* --- Lienzo (no forma parte del diseño) --- */
+  --canvas-bg:   #efefec;
+  --canvas-dot:  #c3c3be;
+  --select:      #2f6fed;   /* SUPUESTO: color de selección del tablero */
+  --ui-font:     system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* =====================================================================
+   1. ESTILOS DEL LIENZO
+   ===================================================================== */
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--canvas-bg);font-family:var(--ui-font);-webkit-font-smoothing:antialiased}
+
+#viewport{
+  position:fixed;inset:0;overflow:hidden;touch-action:none;cursor:default;
+  background-image:radial-gradient(circle at 1px 1px, var(--canvas-dot) 1px, transparent 1.6px);
+}
+#viewport.space, #viewport.space .frame{cursor:grab}
+#viewport.panning, #viewport.panning .frame{cursor:grabbing}
+
+#world{position:absolute;left:0;top:0;transform-origin:0 0;--inv:1}
+#arrows{position:absolute;left:0;top:0;width:1px;height:1px;overflow:visible;pointer-events:none}
+#arrows path{fill:none;stroke:#5b5b5b;stroke-width:2;vector-effect:non-scaling-stroke}
+#arrows path.dashed{stroke-dasharray:7 6}
+#arrows polygon{fill:#5b5b5b}
+#arrows .lbl rect{fill:#fff;stroke:#bdbdb8;vector-effect:non-scaling-stroke}
+#arrows .lbl text{font-family:var(--ui-font);fill:#3a3a3a;font-weight:600}
+
+.frame{position:absolute;left:0;top:0;cursor:move;user-select:none;-webkit-user-select:none}
+.frame .screen, .frame .screen *{pointer-events:none}   /* el marco entero es la zona de arrastre */
+.frame-label{
+  position:absolute;left:0;bottom:100%;
+  margin-bottom:calc(8px * var(--inv));
+  font-size:min(calc(12px * var(--inv)), 66px);
+  max-width:1440px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  color:#55554f;font-weight:600;display:flex;gap:.6em;align-items:baseline;
+}
+.frame-label .tag{font-weight:500;color:#8a8a84}
+.frame-label .tag.new{color:#b5520f}
+.frame .screen{box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.frame.selected .frame-label{color:var(--select)}
+.frame.selected .screen{outline:calc(3px * var(--inv)) solid var(--select);outline-offset:calc(4px * var(--inv))}
+
+/* Paneles del tablero */
+.panel{
+  position:fixed;z-index:10;background:#fff;border:1px solid #d9d9d4;border-radius:10px;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);font-size:13px;color:#333;
+}
+#info{left:16px;top:16px;padding:10px 14px;max-width:min(560px, calc(100vw - 32px))}
+#info b{font-size:14px}
+#info p{margin:4px 0 0;color:#666;line-height:1.4}
+#toolbar{left:50%;bottom:16px;transform:translateX(-50%);display:flex;align-items:center;gap:4px;padding:6px;flex-wrap:wrap;justify-content:center;max-width:calc(100vw - 24px)}
+#toolbar button{
+  font:inherit;font-size:13px;min-width:36px;height:36px;padding:0 12px;border:1px solid transparent;border-radius:7px;
+  background:transparent;color:#222;cursor:pointer
+}
+#toolbar button:hover{background:#f1f1ee}
+#toolbar button:focus-visible{outline:2px solid var(--select);outline-offset:1px}
+#toolbar .sep{width:1px;height:22px;background:#e2e2dd;margin:0 4px}
+#zoomPct{min-width:58px;text-align:center;font-variant-numeric:tabular-nums;color:#444}
+
+/* =====================================================================
+   2. ESTILOS DEL DISEÑO (componentes del wireframe)
+   ===================================================================== */
+.screen{
+  width:1440px;height:900px;position:relative;overflow:hidden;
+  background:var(--paper);color:var(--ink);
+  font-family:var(--font-hand);font-size:var(--fs-body);line-height:1.45;
+  border:var(--stroke) solid var(--ink);border-radius:6px 12px 8px 14px / 12px 6px 14px 8px;
+}
+.screen p{margin:0}
+.screen ul{margin:0;padding:0;list-style:none}
+.screen .abs{position:absolute}
+.muted{color:var(--text-muted)}
+.faint{color:var(--text-faint)}
+.small{font-size:var(--fs-small)}
+
+/* Ventana de navegador */
+.browser{height:52px;display:flex;align-items:center;gap:26px;padding:0 20px;border-bottom:var(--stroke) solid var(--ink)}
+.browser .dots{display:flex;gap:9px}
+.browser .dots i{width:16px;height:16px;border:2px solid var(--ink);border-radius:50%;display:block}
+.browser .url{flex:1;height:32px;border:2px solid var(--ink);border-radius:2px 3px 2px 2px;display:flex;align-items:center;padding:0 16px;font-size:var(--fs-url)}
+
+/* Cabecera del sitio */
+.site-header{height:104px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;border-bottom:2px dashed var(--dash)}
+.logo{font-weight:700;font-style:italic;font-size:var(--fs-logo);letter-spacing:.01em}
+.nav{display:flex;align-items:center;gap:42px;font-size:var(--fs-nav)}
+.avatar{width:52px;height:52px;border:2px solid var(--ink);border-radius:50%;display:block}
+
+/* Títulos */
+.display,.h1,.h2,.h3{font-weight:700;font-style:italic;margin:0;line-height:1.22;letter-spacing:.01em}
+.display{font-size:var(--fs-display);line-height:1.3}
+.h1{font-size:var(--fs-h1)}
+.h2{font-size:var(--fs-h2)}
+.h3{font-size:var(--fs-h3)}
+
+/* Trazo a mano: borde principal + segundo trazo fino ligeramente girado */
+.sk{position:relative;border:var(--stroke) solid var(--ink);border-radius:var(--r-sketch);background:var(--paper)}
+.sk::after{
+  content:"";position:absolute;inset:-3px -2px -2px -3px;border:1px solid var(--ink);
+  border-radius:var(--r-sketch-2);opacity:.4;transform:rotate(-.25deg);pointer-events:none
+}
+.sk.dashed{border-style:dashed;border-color:var(--text-faint)}
+.sk.dashed::after{display:none}
+.sk.current{border-width:3px;box-shadow:5px 5px 0 var(--ink)}
+
+/* Botones */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;height:64px;padding:0 34px;
+  font:inherit;font-size:var(--fs-btn);color:var(--ink);background:var(--fill-muted);
+  border:var(--stroke) solid var(--ink);border-radius:var(--r-btn);white-space:nowrap
+}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-sm{height:52px;padding:0 24px;font-size:19px}
+.btn-xs{height:42px;padding:0 18px;font-size:17px}
+
+/* Etiquetas tipo píldora (áreas, estados) */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;height:32px;padding:0 14px;border:2px solid var(--ink);border-radius:999px;font-size:16px;white-space:nowrap;background:var(--paper)}
+.chip.soft{border-color:var(--text-faint);color:var(--text-muted)}
+.chip.fill{background:var(--fill-muted)}
+
+/* Tarjetas y cajas */
+.card{padding:22px 26px}
+.note-box.sk{background:var(--fill-soft)}
+
+/* Placeholder de imagen */
+.img-ph{display:flex;align-items:center;justify-content:center}
+.img-ph svg{position:absolute;inset:0;width:100%;height:100%}
+.img-ph svg line{stroke:var(--line-soft);stroke-width:2}
+.img-ph span{position:relative;background:#fff;padding:2px 14px;color:var(--text-faint);font-size:var(--fs-small)}
+
+/* Barra de avance */
+.progress{height:28px;border:2px solid var(--ink);border-radius:1px 3px 1px 2px;padding:4px}
+.progress i{display:block;height:100%;background:var(--ink);border-radius:10px}
+.progress.thin{height:20px;padding:3px}
+
+/* Opciones de respuesta */
+.option{display:flex;align-items:center;gap:18px;height:72px;padding:0 22px;font-size:var(--fs-body)}
+.option.compact{height:64px}
+.option.selected.sk{background:var(--fill-muted)}
+.radio{width:26px;height:26px;border:2px solid var(--ink);border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center}
+.selected .radio::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--ink)}
+
+/* Semanas de la ruta */
+.weeks{display:grid;grid-template-columns:repeat(5,148px);gap:16px}
+.week{height:126px;padding:12px 14px;font-size:17px;line-height:1.35}
+.week b{display:block;font-style:italic;font-size:22px;margin-bottom:4px}
+
+/* Filas de lista (temario, cursos de la ruta, mis cursos) */
+.rows > li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:2px dashed var(--line-soft)}
+.rows > li:last-child{border-bottom:0}
+.rows .skip{color:var(--text-faint);text-decoration:line-through}
+
+/* Lista de "Lo que aprenderás" */
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;font-size:19px}
+.checks li::before{content:"✓  ";font-weight:700}
+
+/* Precio */
+.price{font-size:52px;font-weight:700;font-style:italic;line-height:1}
+
+/* Terminal / bloque de código */
+.terminal{background:var(--ink);color:#f2f2f2;border-radius:2px 6px 2px 4px / 4px 2px 6px 2px;padding:20px 28px;font-size:19px;line-height:1.6;display:flex;flex-direction:column}
+
+/* Lector de lecciones: barra lateral */
+.sidebar{position:absolute;left:0;top:156px;bottom:0;width:340px;border-right:2px dashed var(--dash);padding:32px 30px}
+.lessons{margin-top:22px;display:flex;flex-direction:column;gap:6px;font-size:18px}
+.lessons li{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:4px}
+.lessons li i{width:18px;height:18px;border:2px solid var(--ink);border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px}
+.lessons li.done i{background:var(--ink);color:#fff}
+.lessons li.now{background:var(--fill-muted);font-weight:700}
+
+/* Estadísticas */
+.stat{height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.stat .num{font-size:52px;font-weight:700;font-style:italic;line-height:1}
+.stat .lbl{font-size:19px;color:var(--text-muted)}
+
+/* Calendario */
+.cal{display:grid;grid-template-columns:repeat(7,55px);gap:10px}
+.cal i{display:block;height:55px;border:2px solid var(--ink);border-radius:8px;background:var(--paper)}
+.cal i.c{background:var(--ink)}
+
+/* Insignias */
+.badges{display:flex;gap:22px}
+.badge{width:102px;height:102px;border:2px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:15px;line-height:1.3;padding:8px}
+.badge.locked{border-style:dashed;color:var(--text-faint)}
+
+/* Roadmap por etapas */
+.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:28px}
+.stage{position:relative;height:262px;padding:16px 18px;font-size:17px;line-height:1.35;display:flex;flex-direction:column}
+.stage:not(:last-child)::before{content:"";position:absolute;right:-28px;top:50%;width:28px;border-top:3px solid var(--ink)}
+.stage .n{font-size:15px;color:var(--text-muted)}
+.stage h3{font-size:22px;margin:2px 0 6px}
+.stage ul li{font-size:16px}
+.stage ul li::before{content:"· "}
+.stage .fin{margin-top:auto;font-size:15px;color:var(--text-muted)}
+.stage .fin b{color:var(--ink);font-weight:700}
+
+/* Diálogo (suscripción simulada) */
+.overlay{position:absolute;left:0;right:0;top:52px;bottom:0;background:var(--overlay)}
+.modal{position:absolute;left:400px;top:230px;width:640px;padding:34px 38px}
+</style>
+</head>
+<body>
+
+<div id="viewport" aria-label="Lienzo de pantallas de Pista">
+  <div id="world">
+    <svg id="arrows" aria-hidden="true"></svg>
+
+<!-- =====================================================================
+     3. PANTALLAS
+     Arriba: orientación · Centro: descubrir y planear · Abajo: suscribirse y estudiar
+     Perfil de ejemplo: estudiante de Administración que quiere conseguir clientes.
+     ===================================================================== -->
+
+    <!-- ============ 01 · INICIO (adaptada de Fig. 2) ============ -->
+    <div class="frame" data-id="inicio">
+      <div class="frame-label">01 · Inicio <span class="tag">Fig. 2</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav">
+            <span>Escuelas</span><span>Cómo funciona</span><span>Comunidad</span>
+            <span class="btn sk btn-sm" style="padding:0 34px;height:58px;font-size:22px">Entrar</span>
+          </nav>
+        </header>
+
+        <div class="abs" style="left:62px;top:196px;width:720px">
+          <h1 class="display">¿Quieres aprender algo nuevo<br>y no sabes por dónde<br>empezar?</h1>
+          <p style="margin-top:22px;line-height:1.55">Elige una escuela o responde unas preguntas: te armamos una ruta con cursos cortos, hechos a partir de apuntes reales.</p>
+          <div style="margin-top:28px;display:flex;align-items:center;gap:20px">
+            <span class="btn btn-primary" style="height:66px;padding:0 32px">Descubre tu ruta (3 min)</span>
+            <span class="btn sk" style="height:66px;padding:0 28px">Ver escuelas</span>
+          </div>
+          <p class="small muted" style="margin-top:14px">Todos los cursos por $50 MXN al mes · en español · sin experiencia previa</p>
+        </div>
+
+        <div class="abs sk img-ph" style="left:820px;top:206px;width:556px;height:356px">
+          <svg viewBox="0 0 556 356" preserveAspectRatio="none" aria-hidden="true"><line x1="6" y1="6" x2="550" y2="350"/><line x1="550" y1="6" x2="6" y2="350"/></svg>
+          <span>Imagen</span>
+        </div>
+
+        <div class="abs" style="left:64px;top:650px;width:1312px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px">
+          <div class="sk card" style="height:148px">
+            <h3 class="h3">1. Elige o descubre tu área</h3>
+            <p class="small muted" style="margin-top:10px">Tecnología, negocios, comunicación… o responde 4 preguntas si no sabes cuál.</p>
+          </div>
+          <div class="sk card" style="height:148px">
+            <h3 class="h3">2. Recibe tu ruta</h3>
+            <p class="small muted" style="margin-top:10px">Te decimos qué curso va primero y cuánto tiempo te toma cada semana.</p>
+          </div>
+          <div class="sk card" style="height:148px">
+            <h3 class="h3">3. Aprende con apuntes</h3>
+            <p class="small muted" style="margin-top:10px">Lecciones cortas con imágenes y ejercicios, a tu ritmo.</p>
+          </div>
+        </div>
+
+        <div class="abs" style="left:0;right:0;top:830px;border-top:2px dashed var(--dash)"></div>
+        <p class="abs small muted" style="left:62px;top:848px">Hecho por estudiantes, para estudiantes</p>
+      </div>
+    </div>
+
+    <!-- ============ 02 · ESCUELAS (nueva) ============ -->
+    <div class="frame" data-id="escuelas">
+      <div class="frame-label">02 · Escuelas <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/escuelas</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav">
+            <span>Escuelas</span><span>Cómo funciona</span><span>Comunidad</span>
+            <span class="btn sk btn-sm" style="padding:0 34px;height:58px;font-size:22px">Entrar</span>
+          </nav>
+        </header>
+
+        <div class="abs" style="left:64px;top:186px;width:1312px">
+          <h1 class="h1">Escuelas</h1>
+          <p class="muted" style="margin-top:4px">Elige qué quieres aprender. Todos los cursos de todas las escuelas, en un solo plan de $50 MXN al mes.</p>
+
+          <div class="sk note-box" style="margin-top:18px;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 26px">
+            <p>¿No sabes por dónde empezar? Responde 4 preguntas y te recomendamos un área.</p>
+            <span class="btn btn-primary btn-sm" style="height:56px;font-size:21px">Hacer el test (2 min)</span>
+          </div>
+
+          <div style="margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px 28px">
+            <div class="sk card" style="height:232px;padding:20px 24px">
+              <span class="chip fill">Disponible</span>
+              <h3 class="h3" style="margin-top:10px">Tecnología</h3>
+              <p class="small muted" style="margin-top:4px">Programa, cuida sistemas y trabaja con servidores.</p>
+              <div class="chips" style="margin-top:12px"><span class="chip">Programación</span><span class="chip">Ciberseguridad</span><span class="chip">Linux</span><span class="chip">Cloud</span><span class="chip">Redes</span></div>
+            </div>
+            <div class="sk card" style="height:232px;padding:20px 24px">
+              <span class="chip">Curso de muestra</span>
+              <h3 class="h3" style="margin-top:10px">Negocios y Emprendimiento</h3>
+              <p class="small muted" style="margin-top:4px">Convierte una idea en algo que se vende.</p>
+              <div class="chips" style="margin-top:12px"><span class="chip">Conseguir clientes</span><span class="chip">Emprender</span><span class="chip">Ventas</span></div>
+            </div>
+            <div class="sk card" style="height:232px;padding:20px 24px">
+              <span class="chip">Curso de muestra</span>
+              <h3 class="h3" style="margin-top:10px">Comunicación</h3>
+              <p class="small muted" style="margin-top:4px">Habla en público y explica tus ideas para convencer.</p>
+              <div class="chips" style="margin-top:12px"><span class="chip">Hablar en público</span><span class="chip">Persuasión</span><span class="chip">Escritura</span></div>
+            </div>
+            <div class="sk card" style="height:232px;padding:20px 24px">
+              <span class="chip">Curso de muestra</span>
+              <h3 class="h3" style="margin-top:10px">Habilidades personales</h3>
+              <p class="small muted" style="margin-top:4px">Organiza tu tiempo, tu dinero y tus hábitos de estudio.</p>
+              <div class="chips" style="margin-top:12px"><span class="chip">Productividad</span><span class="chip">Finanzas personales</span></div>
+            </div>
+            <div class="sk card dashed" style="height:232px;padding:20px 24px">
+              <span class="chip soft">Próximamente</span>
+              <h3 class="h3 faint" style="margin-top:10px">Diseño y Creatividad</h3>
+              <p class="small faint" style="margin-top:4px">Crea piezas visuales para tus proyectos y redes.</p>
+              <div class="chips" style="margin-top:12px"><span class="chip soft">Diseño gráfico básico</span><span class="chip soft">Contenido visual</span></div><span class="btn sk btn-xs" style="position:absolute;right:22px;bottom:20px">Avisarme</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 03 · ÁREA (nueva: catálogo de cursos de un área) ============ -->
+    <div class="frame" data-id="area">
+      <div class="frame-label">03 · Área <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/areas/conseguir-clientes</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav">
+            <span>Escuelas</span><span>Cómo funciona</span><span>Comunidad</span>
+            <span class="btn sk btn-sm" style="padding:0 34px;height:58px;font-size:22px">Entrar</span>
+          </nav>
+        </header>
+
+        <div class="abs" style="left:64px;top:186px;width:1312px">
+          <p class="small muted">Escuelas › Negocios y Emprendimiento</p>
+          <h1 class="h1" style="margin-top:4px">Conseguir clientes</h1>
+          <p style="margin-top:6px">Aprende a encontrar a quién venderle, cómo decírselo y cuánto cobrar.</p>
+          <p class="small muted" style="margin-top:4px">3 cursos · ~3 h 45 min en total · incluidos en Pista completo</p>
+
+          <div class="sk note-box" style="margin-top:20px;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 26px">
+            <p>¿Quieres saber por dónde empezar? Responde 5 preguntas y armamos tu ruta.</p>
+            <span class="btn btn-primary btn-sm" style="height:56px;font-size:21px">Personalizar mi ruta</span>
+          </div>
+
+          <div style="margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+            <div class="sk" style="height:356px;display:flex;flex-direction:column">
+              <div class="img-ph" style="position:relative;height:150px;border-bottom:2px solid var(--ink)">
+                <svg viewBox="0 0 418 150" preserveAspectRatio="none" aria-hidden="true"><line x1="4" y1="4" x2="414" y2="146"/><line x1="414" y1="4" x2="4" y2="146"/></svg>
+                <span>Imagen</span>
+              </div>
+              <div style="padding:16px 22px;display:flex;flex-direction:column;flex:1">
+                <span class="chip" style="align-self:flex-start">Curso de muestra</span>
+                <h3 class="h3" style="margin-top:8px">Tus primeros clientes</h3>
+                <p class="small muted">Básico · 4 lecciones · ~1 h 25 min</p>
+                <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                  <span class="small muted">Incluido en el plan</span><span class="btn sk btn-xs">Ver curso</span>
+                </div>
+              </div>
+            </div>
+            <div class="sk" style="height:356px;display:flex;flex-direction:column">
+              <div class="img-ph" style="position:relative;height:150px;border-bottom:2px solid var(--ink)">
+                <svg viewBox="0 0 418 150" preserveAspectRatio="none" aria-hidden="true"><line x1="4" y1="4" x2="414" y2="146"/><line x1="414" y1="4" x2="4" y2="146"/></svg>
+                <span>Imagen</span>
+              </div>
+              <div style="padding:16px 22px;display:flex;flex-direction:column;flex:1">
+                <span class="chip" style="align-self:flex-start">Lecciones en preparación</span>
+                <h3 class="h3" style="margin-top:8px">Hablar para vender</h3>
+                <p class="small muted">Comunicación · ~1 h 30 min</p>
+                <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                  <span class="small muted">Incluido en el plan</span><span class="btn sk btn-xs">Ver curso</span>
+                </div>
+              </div>
+            </div>
+            <div class="sk" style="height:356px;display:flex;flex-direction:column">
+              <div class="img-ph" style="position:relative;height:150px;border-bottom:2px solid var(--ink)">
+                <svg viewBox="0 0 418 150" preserveAspectRatio="none" aria-hidden="true"><line x1="4" y1="4" x2="414" y2="146"/><line x1="414" y1="4" x2="4" y2="146"/></svg>
+                <span>Imagen</span>
+              </div>
+              <div style="padding:16px 22px;display:flex;flex-direction:column;flex:1">
+                <span class="chip" style="align-self:flex-start">Lecciones en preparación</span>
+                <h3 class="h3" style="margin-top:8px">Precios sin miedo</h3>
+                <p class="small muted">Básico · ~50 min</p>
+                <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center">
+                  <span class="small muted">Incluido en el plan</span><span class="btn sk btn-xs">Ver curso</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 04 · ORIENTACIÓN (adaptada de Fig. 3) ============ -->
+    <div class="frame" data-id="orientacion">
+      <div class="frame-label">04 · Orientación <span class="tag">Fig. 3</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/orientacion</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span class="muted">Salir</span></nav>
+        </header>
+
+        <div class="abs" style="left:243px;top:196px;width:954px">
+          <p class="small muted">Pregunta 2 de 4</p>
+          <div class="progress" style="margin-top:8px"><i style="width:50%"></i></div>
+
+          <h1 class="h1" style="font-size:38px;margin-top:36px">¿Qué te gustaría lograr en los próximos meses?</h1>
+
+          <div style="margin-top:24px;display:flex;flex-direction:column;gap:14px">
+            <div class="option compact sk"><span class="radio"></span>Conseguir trabajo o prácticas en tecnología</div>
+            <div class="option compact sk selected"><span class="radio"></span>Emprender o conseguir mis primeros clientes</div>
+            <div class="option compact sk"><span class="radio"></span>Hablar en público sin ponerme nervioso</div>
+            <div class="option compact sk"><span class="radio"></span>Organizar mejor mi tiempo y mi dinero</div>
+          </div>
+
+          <div class="sk note-box" style="margin-top:28px;height:64px;display:flex;align-items:center;padding:0 22px">
+            No hay respuestas malas: solo queremos saber qué te interesa.
+          </div>
+
+          <div style="margin-top:30px;display:flex;justify-content:space-between">
+            <span class="btn sk" style="padding:0 34px">← Atrás</span>
+            <span class="btn btn-primary" style="padding:0 40px">Siguiente →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 05 · RECOMENDACIÓN (nueva) ============ -->
+    <div class="frame" data-id="recomendacion">
+      <div class="frame-label">05 · Recomendación <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/orientacion/resultado</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span class="muted">Salir</span></nav>
+        </header>
+
+        <div class="abs" style="left:243px;top:196px;width:954px">
+          <p class="small muted">Pregunta 4 de 4 · listo</p>
+          <div class="progress" style="margin-top:8px"><i style="width:100%"></i></div>
+
+          <h1 class="h1" style="font-size:38px;margin-top:36px">Te recomendamos: Conseguir clientes</h1>
+          <p style="margin-top:10px">Por tus respuestas, es el área que más te sirve ahora.</p>
+
+          <div class="sk card current" style="margin-top:22px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <span class="chip">Negocios y Emprendimiento</span>
+              <h3 class="h3" style="margin-top:10px">Conseguir clientes</h3>
+              <p class="small muted">3 cursos · ~3 h 45 min en total · incluidos en Pista completo</p>
+            </div>
+            <span class="chip fill">Recomendada</span>
+          </div>
+
+          <div class="sk card" style="margin-top:20px;display:flex;justify-content:space-between;align-items:center;padding:18px 26px">
+            <div>
+              <p class="small muted">También te puede servir</p>
+              <p style="margin-top:2px"><b>Hablar en público</b> · Escuela de Comunicación</p>
+            </div>
+            <span class="btn sk btn-xs">Ver área</span>
+          </div>
+
+          <div class="sk note-box" style="margin-top:22px;height:64px;display:flex;align-items:center;padding:0 22px">
+            Antes de armar tu ruta te haremos 5 preguntas sobre lo que ya sabes.
+          </div>
+
+          <div style="margin-top:28px;display:flex;justify-content:space-between">
+            <span class="btn sk" style="padding:0 30px">← Ver todas las escuelas</span>
+            <span class="btn btn-primary" style="padding:0 36px">Personalizar mi ruta →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 06 · DIAGNÓSTICO DEL ÁREA (adaptada de Fig. 3) ============ -->
+    <div class="frame" data-id="diagnostico">
+      <div class="frame-label">06 · Diagnóstico del área <span class="tag">Fig. 3</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/conseguir-clientes/diagnostico</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span class="muted">Salir</span></nav>
+        </header>
+
+        <div class="abs" style="left:243px;top:196px;width:954px">
+          <p class="small muted">Conseguir clientes · Pregunta 3 de 5</p>
+          <div class="progress" style="margin-top:8px"><i style="width:60%"></i></div>
+
+          <h1 class="h1" style="font-size:38px;margin-top:44px">¿Alguna vez le has vendido algo a alguien?</h1>
+
+          <div style="margin-top:26px;display:flex;flex-direction:column;gap:18px">
+            <div class="option sk"><span class="radio"></span>Nunca</div>
+            <div class="option sk selected"><span class="radio"></span>Sí, a amigos o familia</div>
+            <div class="option sk"><span class="radio"></span>Sí, tengo clientes de vez en cuando</div>
+          </div>
+
+          <div class="sk note-box" style="margin-top:36px;height:72px;display:flex;align-items:center;padding:0 22px">
+            No hay respuestas malas: esto solo sirve para saber dónde empezar tu ruta.
+          </div>
+
+          <div style="margin-top:38px;display:flex;justify-content:space-between">
+            <span class="btn sk" style="padding:0 34px">← Atrás</span>
+            <span class="btn btn-primary" style="padding:0 40px">Siguiente →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 07 · ROADMAP DE CIBERSEGURIDAD (nueva: ruta por etapas) ============ -->
+    <div class="frame" data-id="roadmap">
+      <div class="frame-label">07 · Roadmap (Ciberseguridad) <span class="tag new">Nueva · demo</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/mi-ruta</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+
+        <div class="abs" style="left:64px;top:182px;width:1312px">
+          <p class="small muted">Resultado de tu diagnóstico · Tecnología › Ciberseguridad</p>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end">
+            <h1 class="h1" style="margin-top:2px">Tu roadmap: Ciberseguridad</h1>
+            <p class="small muted" style="text-align:right">5 etapas · ~10 semanas · 3 h por semana<br>Incluye tiempo de práctica en tu laboratorio</p>
+          </div>
+
+          <div class="stages" style="margin-top:22px">
+            <div class="sk stage current">
+              <span class="n">Etapa 1 · Sem 1–3</span><h3 class="h3">Fundamentos</h3>
+              <ul><li>Linux desde cero</li><li>Redes desde cero</li></ul>
+              <span class="chip fill" style="align-self:flex-start;margin-top:8px">Estás aquí</span>
+              <p class="fin"><b>Al terminar:</b> te mueves en la terminal y entiendes cómo viaja la información.</p>
+            </div>
+            <div class="sk stage">
+              <span class="n">Etapa 2 · Sem 4–5</span><h3 class="h3">Tu laboratorio</h3>
+              <ul><li>Automatiza tareas con Bash</li><li>Docker desde cero</li></ul>
+              <p class="fin"><b>Al terminar:</b> automatizas tareas y montas un laboratorio seguro.</p>
+            </div>
+            <div class="sk stage">
+              <span class="n">Etapa 3 · Sem 6–7</span><h3 class="h3">Reconocimiento</h3>
+              <ul><li>Hacking ético: reconocimiento</li></ul>
+              <p class="fin"><b>Al terminar:</b> descubres qué expone una máquina de práctica.</p>
+            </div>
+            <div class="sk stage">
+              <span class="n">Etapa 4 · Sem 8–9</span><h3 class="h3">Explotación</h3>
+              <ul><li>Hacking ético: enumeración y explotación</li></ul>
+              <p class="fin"><b>Al terminar:</b> encuentras y aprovechas fallas en máquinas de práctica.</p>
+            </div>
+            <div class="sk stage">
+              <span class="n">Etapa 5 · Sem 10+</span><h3 class="h3">Avanzado</h3>
+              <ul><li>Python ofensivo</li></ul>
+              <span class="chip" style="align-self:flex-start;margin-top:8px">Solo en laboratorio</span>
+              <p class="fin"><b>Al terminar:</b> creas tus propias herramientas de prueba.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:26px;display:grid;grid-template-columns:560px 1fr 330px;gap:24px">
+            <div class="sk card" style="padding:16px 22px">
+              <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 class="h2" style="font-size:24px">Esta semana</h2><span class="small muted">Semana 1 de 10</span></div>
+              <ul class="rows" style="font-size:18px;margin-top:2px">
+                <li style="padding:5px 0"><span>Crear una máquina virtual</span><span class="muted">~25 min</span></li>
+                <li style="padding:5px 0"><span>Instalar el sistema</span><span class="muted">~25 min</span></li>
+                <li style="padding:5px 0"><span>Comandos básicos (1 de 2)</span><span class="muted">~20 min</span></li>
+              </ul>
+              <span class="btn btn-primary btn-sm" style="margin-top:8px;height:54px">Empezar semana 1 →</span>
+            </div>
+            <div class="sk card" style="padding:16px 22px">
+              <h3 class="h3" style="font-size:22px">Lo que ajustamos por tus respuestas</h3>
+              <ul class="checks" style="grid-template-columns:1fr;font-size:17px;margin-top:8px;gap:4px">
+                <li>Nunca has usado la terminal: empiezas por Linux</li>
+                <li>Ya sabes qué es una IP: omitimos 2 lecciones de redes</li>
+                <li>Tu meta es protegerte: la etapa 5 es opcional</li>
+              </ul>
+            </div>
+            <div class="sk card" style="padding:16px 22px">
+              <p class="small muted">Todo el roadmap incluido en</p>
+              <h3 class="h3" style="font-size:22px">Pista completo</h3>
+              <p class="price" style="margin-top:6px;font-size:36px">$50 <span style="font-size:20px">MXN al mes</span></p>
+              <span class="btn sk btn-xs" style="margin-top:12px">Suscribirme</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 07b · TU RUTA (adaptada de Fig. 4) ============ -->
+    <div class="frame" data-id="ruta">
+      <div class="frame-label">07b · Tu ruta (otras áreas) <span class="tag">Fig. 4</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/mi-ruta</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+
+        <div class="abs" style="left:96px;top:190px;width:804px">
+          <p class="small muted">Resultado de tu diagnóstico</p>
+          <h1 class="h1" style="font-size:48px;margin-top:2px">Tu ruta: Conseguir clientes</h1>
+          <p style="margin-top:8px">5 semanas · 1 h por semana · empiezas el lunes</p>
+
+          <div class="weeks" style="margin-top:22px">
+            <div class="sk week current"><b>Sem 1</b>Tu cliente ideal</div>
+            <div class="sk week"><b>Sem 2</b>Tu primer mensaje</div>
+            <div class="sk week"><b>Sem 3</b>Hablar para vender</div>
+            <div class="sk week"><b>Sem 4</b>Responder objeciones</div>
+            <div class="sk week"><b>Sem 5</b>Precios sin miedo</div>
+          </div>
+
+          <h2 class="h2" style="margin-top:26px">Cursos de tu ruta</h2>
+          <ul class="rows sk" style="margin-top:12px;padding:6px 24px">
+            <li><span>1. Tus primeros clientes <span class="small muted">· Negocios · ~1 h 25 min</span></span><span class="chip">Curso de muestra</span></li>
+            <li><span>2. Hablar para vender <span class="small muted">· Comunicación · ~1 h 30 min</span></span><span class="chip soft">Lecciones en preparación</span></li>
+            <li><span>3. Precios sin miedo <span class="small muted">· Negocios · ~50 min</span></span><span class="chip soft">Lecciones en preparación</span></li>
+            <li class="small"><span class="skip">Qué es emprender</span><span class="faint">Omitido: ya le vendes a conocidos</span></li>
+          </ul>
+
+          <span class="btn btn-primary" style="margin-top:20px;height:62px;padding:0 34px">Ver el primer curso →</span>
+        </div>
+
+        <div class="abs sk card" style="left:995px;top:198px;width:391px">
+          <p class="small muted">Tu plan</p>
+          <h2 class="h2" style="margin-top:2px">Pista completo</h2>
+          <p class="price" style="margin-top:12px;font-size:44px">$50 <span style="font-size:22px">MXN al mes</span></p>
+          <ul class="checks" style="margin-top:14px;grid-template-columns:1fr;font-size:18px">
+            <li>Los 3 cursos de tu ruta</li>
+            <li>Todos los cursos de todas las escuelas</li>
+            <li>Cambia de área cuando quieras</li>
+          </ul>
+          <span class="btn sk btn-sm" style="margin-top:18px">Suscribirme</span>
+        </div>
+        <div class="abs sk card" style="left:995px;top:582px;width:391px">
+          <h3 class="h3">¿Por qué este orden?</h3>
+          <p class="small muted" style="margin-top:8px">Primero defines a quién le vendes, luego practicas cómo decirlo y al final pones tu precio.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 08 · CURSO (nueva) ============ -->
+    <div class="frame" data-id="curso">
+      <div class="frame-label">08 · Curso <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/cursos/tus-primeros-clientes</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+
+        <div class="abs" style="left:96px;top:190px;width:820px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <p class="small muted">Negocios y Emprendimiento › Conseguir clientes</p><span class="chip">Curso de muestra</span>
+          </div>
+          <h1 class="h1" style="margin-top:8px">Tus primeros clientes</h1>
+          <p style="margin-top:10px">Aprende a encontrar a quién le sirve lo que haces y a pedir tu primera venta sin sentirte incómodo.</p>
+          <p class="small muted" style="margin-top:8px">Básico · 4 lecciones · ~1 h 25 min · un ejercicio en cada lección</p>
+
+          <h2 class="h2" style="margin-top:22px">Lo que aprenderás</h2>
+          <ul class="checks" style="margin-top:10px">
+            <li>Describir a tu cliente ideal en una frase</li>
+            <li>Saber dónde buscarlo, en línea y en persona</li>
+            <li>Escribir tu primer mensaje sin sonar a spam</li>
+            <li>Pedir la venta y responder a un «lo pienso»</li>
+          </ul>
+
+          <h2 class="h2" style="margin-top:22px">Temario</h2>
+          <ul class="rows sk" style="margin-top:10px;padding:4px 24px;font-size:19px">
+            <li><span>1. ¿Quién es tu cliente ideal?</span><span class="muted">20 min</span></li>
+            <li><span>2. Dónde encontrarlo</span><span class="muted">22 min</span></li>
+            <li><span>3. Tu primer mensaje</span><span class="muted">18 min</span></li>
+            <li><span>4. Cómo pedir la venta</span><span class="muted">24 min</span></li>
+          </ul>
+        </div>
+
+        <div class="abs sk img-ph" style="left:995px;top:198px;width:391px;height:220px">
+          <svg viewBox="0 0 391 220" preserveAspectRatio="none" aria-hidden="true"><line x1="6" y1="6" x2="385" y2="214"/><line x1="385" y1="6" x2="6" y2="214"/></svg>
+          <span>Imagen</span>
+        </div>
+        <div class="abs sk card" style="left:995px;top:446px;width:391px">
+          <p class="small muted">Este curso está incluido en</p>
+          <h3 class="h3" style="margin-top:2px">Pista completo</h3>
+          <p class="price" style="margin-top:10px;font-size:44px">$50 <span style="font-size:22px">MXN al mes</span></p>
+          <p class="small muted" style="margin-top:6px">Acceso a todos los cursos de todas las escuelas</p>
+          <span class="btn btn-primary" style="margin-top:16px;width:100%">Suscribirme</span>
+          <p class="small muted" style="margin-top:10px">La primera lección se puede ver gratis</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 09 · SUSCRIPCIÓN SIMULADA (nueva: diálogo sobre la pantalla del curso) ============ -->
+    <div class="frame" data-id="compra">
+      <div class="frame-label">09 · Suscripción simulada <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/cursos/tus-primeros-clientes</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+        <!-- Fondo: versión simplificada de la pantalla 08 -->
+        <div class="abs" style="left:96px;top:190px;width:820px">
+          <p class="small muted">Negocios y Emprendimiento › Conseguir clientes</p>
+          <h1 class="h1" style="margin-top:8px">Tus primeros clientes</h1>
+          <p style="margin-top:10px">Aprende a encontrar a quién le sirve lo que haces y a pedir tu primera venta sin sentirte incómodo.</p>
+          <h2 class="h2" style="margin-top:60px">Temario</h2>
+          <div class="sk" style="margin-top:10px;height:200px"></div>
+        </div>
+        <div class="abs sk" style="left:995px;top:198px;width:391px;height:220px"></div>
+        <div class="abs sk card" style="left:995px;top:446px;width:391px;height:230px">
+          <h3 class="h3">Pista completo</h3>
+          <p class="price" style="margin-top:10px;font-size:44px">$50 <span style="font-size:22px">MXN al mes</span></p>
+          <span class="btn btn-primary" style="margin-top:30px;width:100%">Suscribirme</span>
+        </div>
+
+        <div class="overlay"></div>
+        <div class="modal sk">
+          <h2 class="h2" style="font-size:32px">Confirmar suscripción</h2>
+          <div style="margin-top:20px;display:flex;justify-content:space-between;align-items:baseline">
+            <b>Pista completo</b><b style="font-size:26px">$50 MXN al mes</b>
+          </div>
+          <p class="small muted">Acceso a todos los cursos de todas las escuelas, incluido «Tus primeros clientes».</p>
+          <div style="border-top:2px dashed var(--line-soft);margin:20px 0"></div>
+          <div class="sk note-box" style="padding:16px 20px">Esto es una demo: no se hará ningún cobro.</div>
+          <div style="margin-top:26px;display:flex;justify-content:flex-end;gap:16px">
+            <span class="btn sk" style="padding:0 28px">Cancelar</span>
+            <span class="btn btn-primary" style="padding:0 34px">Sí, compré</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 10 · LECCIÓN (nueva: curso guiado) ============ -->
+    <div class="frame" data-id="leccion">
+      <div class="frame-label">10 · Lección <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/cursos/tus-primeros-clientes/cliente-ideal</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+
+        <aside class="sidebar">
+          <p class="small muted">Tu ruta · Curso 1 de 3</p>
+          <h3 class="h3" style="margin-top:4px">Tus primeros clientes</h3>
+          <p class="small muted" style="margin-top:14px">Lección 1 de 4</p>
+          <div class="progress thin" style="margin-top:6px"><i style="width:25%"></i></div>
+          <ul class="lessons">
+            <li class="now"><i></i>¿Quién es tu cliente ideal?</li>
+            <li><i></i>Dónde encontrarlo</li>
+            <li><i></i>Tu primer mensaje</li>
+            <li><i></i>Cómo pedir la venta</li>
+          </ul>
+          <span class="btn sk btn-sm" style="margin-top:28px">← Volver a mi ruta</span>
+        </aside>
+
+        <div class="abs" style="left:400px;top:190px;width:960px">
+          <p class="small muted">Lección 1 · ~20 min · 2 imágenes · 1 ejercicio</p>
+          <h1 class="h1" style="font-size:42px;margin-top:6px">¿Quién es tu cliente ideal?</h1>
+          <p style="margin-top:12px">Tu cliente ideal no es «todo el mundo». Es una persona concreta, con un problema que tú puedes resolver y que está dispuesta a pagar por ello.</p>
+          <h3 class="h3" style="margin-top:18px">1. Empieza por un problema</h3>
+          <p style="margin-top:6px">Piensa en las últimas tres personas que te pidieron ayuda con algo que sabes hacer. ¿Qué tenían en común?</p>
+          <div class="sk img-ph" style="margin-top:16px;height:190px">
+            <svg viewBox="0 0 960 190" preserveAspectRatio="none" aria-hidden="true"><line x1="6" y1="6" x2="954" y2="184"/><line x1="954" y1="6" x2="6" y2="184"/></svg>
+            <span>Imagen</span>
+          </div>
+          <div class="sk note-box" style="margin-top:18px;padding:14px 20px">Ejercicio: completa la frase «Ayudo a ___ que tienen problemas con ___».</div>
+          <div style="margin-top:20px;display:flex;justify-content:space-between;align-items:center">
+            <p class="small muted">Siguiente: Dónde encontrarlo</p>
+            <span class="btn btn-primary" style="padding:0 30px;height:60px">Marcar como vista y seguir →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 11 · LECCIÓN CON APUNTES REALES (nueva: ejemplo de Tecnología) ============ -->
+    <div class="frame" data-id="leccion-real">
+      <div class="frame-label">11 · Lección (apuntes reales) <span class="tag new">Nueva</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/cursos/linux-desde-cero/comandos-basicos-1</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+
+        <aside class="sidebar">
+          <p class="small muted">Tecnología · Linux</p>
+          <h3 class="h3" style="margin-top:4px">Linux desde cero</h3>
+          <p class="small muted" style="margin-top:14px">Lección 3 de 7</p>
+          <div class="progress thin" style="margin-top:6px"><i style="width:43%"></i></div>
+          <ul class="lessons">
+            <li class="done"><i>✓</i>Crear una máquina virtual</li>
+            <li class="done"><i>✓</i>Instalar el sistema</li>
+            <li class="now"><i></i>Comandos básicos (1 de 2)</li>
+            <li><i></i>Comandos básicos (2 de 2)</li>
+            <li><i></i>Control de flujo y procesos</li>
+            <li><i></i>Permisos</li>
+            <li><i></i>Permisos especiales</li>
+          </ul>
+        </aside>
+
+        <div class="abs" style="left:400px;top:190px;width:960px">
+          <p class="small muted">Lección 3 · ~5 min · 14 imágenes</p>
+          <h1 class="h1" style="font-size:42px;margin-top:6px">Comandos básicos (1 de 2)</h1>
+          <p style="margin-top:12px">Para movernos por el sistema usamos unos pocos comandos. Primero, saber en qué carpeta estamos y qué hay dentro.</p>
+          <div class="terminal" style="margin-top:16px">
+            <span>$ pwd</span>
+            <span>/home/ana</span>
+            <span>$ ls</span>
+            <span>Descargas&nbsp;&nbsp;Documentos&nbsp;&nbsp;Escritorio</span>
+          </div>
+          <div style="margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="sk img-ph" style="height:190px">
+              <svg viewBox="0 0 470 190" preserveAspectRatio="none" aria-hidden="true"><line x1="6" y1="6" x2="464" y2="184"/><line x1="464" y1="6" x2="6" y2="184"/></svg>
+              <span>Imagen</span>
+            </div>
+            <div class="sk img-ph" style="height:190px">
+              <svg viewBox="0 0 470 190" preserveAspectRatio="none" aria-hidden="true"><line x1="6" y1="6" x2="464" y2="184"/><line x1="464" y1="6" x2="6" y2="184"/></svg>
+              <span>Imagen</span>
+            </div>
+          </div>
+          <div style="margin-top:20px;display:flex;justify-content:space-between;align-items:center">
+            <p class="small muted">Siguiente: Comandos básicos (2 de 2)</p>
+            <span class="btn btn-primary" style="padding:0 30px;height:60px">Marcar como vista y seguir →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 12 · MI BITÁCORA (adaptada de Fig. 6) ============ -->
+    <div class="frame" data-id="bitacora">
+      <div class="frame-label">12 · Mi bitácora <span class="tag">Fig. 6</span></div>
+      <div class="screen">
+        <div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="url">pista.mx/bitacora</div></div>
+        <header class="site-header">
+          <div class="logo">Pista</div>
+          <nav class="nav"><span>Mi ruta</span><span>Escuelas</span><span>Bitácora</span><span class="avatar"></span></nav>
+        </header>
+
+        <div class="abs" style="left:96px;top:200px;width:620px">
+          <h1 class="h1" style="font-size:36px">Mi bitácora</h1>
+          <div style="display:flex;gap:22px;margin-top:30px">
+            <div class="sk stat" style="width:162px"><span class="num">4</span><span class="lbl">días de racha</span></div>
+            <div class="sk stat" style="width:180px"><span class="num">2</span><span class="lbl">lecciones vistas</span></div>
+            <div class="sk stat" style="width:132px"><span class="num">1/5</span><span class="lbl">semanas</span></div>
+          </div>
+
+          <h2 class="h2" style="margin-top:34px">Días que estudiaste</h2>
+          <div class="cal" style="margin-top:16px">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i><i class="c"></i><i></i>
+            <i class="c"></i><i class="c"></i><i class="c"></i><i class="c"></i><i></i><i></i><i></i>
+          </div>
+          <p class="small muted" style="margin-top:14px">Negro = estudiaste ese día</p>
+        </div>
+
+        <div class="abs" style="left:758px;top:200px;width:630px">
+          <h2 class="h2">Insignias</h2>
+          <div class="badges" style="margin-top:20px">
+            <span class="badge">Primera lección</span>
+            <span class="badge">Racha de 3</span>
+            <span class="badge locked">Primer curso</span>
+            <span class="badge locked">Racha de 7</span>
+            <span class="badge locked">Ruta completa</span>
+          </div>
+          <div class="sk card" style="margin-top:28px;width:625px;padding:18px 26px">
+            <div style="display:flex;justify-content:space-between;align-items:center"><h3 class="h3">Mis cursos</h3><span class="chip fill">Pista completo · activo</span></div>
+            <ul class="rows" style="margin-top:6px">
+              <li>
+                <div style="flex:1">
+                  <p>Tus primeros clientes</p>
+                  <div style="display:flex;align-items:center;gap:12px;margin-top:4px">
+                    <div class="progress thin" style="width:220px"><i style="width:50%"></i></div><span class="small muted">2 de 4</span>
+                  </div>
+                </div>
+                <span class="btn sk btn-xs">Seguir</span>
+              </li>
+              <li><span>Hablar para vender <span class="small muted">· en preparación</span></span><span class="btn sk btn-xs">Ver</span></li>
+              <li><span>Precios sin miedo <span class="small muted">· en preparación</span></span><span class="btn sk btn-xs">Ver</span></li>
+            </ul>
+          </div>
+          <span class="btn btn-primary" style="margin-top:26px;height:64px;padding:0 34px">Descargar mi avance (PDF)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Paneles del tablero -->
+<div id="info" class="panel">
+  <b>Pista · Prototipo de baja fidelidad · 13 pantallas</b>
+  <p>Arriba: orientación y roadmap de Ciberseguridad (demo) · Centro: descubrir y planear · Abajo: suscribirse y estudiar. Arrastra los marcos · Mueve el lienzo arrastrando el fondo o con Espacio + arrastre · Zoom con la rueda o Ctrl/Cmd + rueda</p>
+</div>
+<div id="toolbar" class="panel" role="toolbar" aria-label="Controles del lienzo">
+  <button id="zoomOut" aria-label="Alejar">−</button>
+  <span id="zoomPct">100%</span>
+  <button id="zoomIn" aria-label="Acercar">+</button>
+  <span class="sep"></span>
+  <button id="fit">Ajustar a la pantalla</button>
+  <button id="reset">Restablecer posiciones</button>
+</div>
+
+<script>
+/* =====================================================================
+   4. LÓGICA DE INTERACCIÓN
+   ===================================================================== */
+(function(){
+  'use strict';
+
+  /* ---------- Datos: tamaño de marco, disposición y flujo ---------- */
+  const FRAME_W = 1440, FRAME_H = 900;
+  const GAP_X = 420;          // separación horizontal entre marcos
+  const GAP_Y = 640;          // separación entre filas
+  const ZMIN = 0.03, ZMAX = 4;
+
+  // Disposición inicial: cada fila se lee de izquierda a derecha; null = hueco.
+  // Fila superior: orientación · Fila central: descubrir y planear · Fila inferior: comprar y estudiar
+  const ROWS = [
+    [null,     'orientacion', 'recomendacion', null,           'roadmap'],
+    ['inicio', 'escuelas',    'area',          'diagnostico',  'ruta'],
+    ['curso',  'compra',      'leccion',       'leccion-real', 'bitacora']
+  ];
+
+  // Conexiones del flujo de usuario.
+  // route: (vacío) = automática · 'above' = por encima · 'below' = por debajo · 'wrap' = salto de fila
+  // dashed: flecha discontinua (camino alternativo o de regreso)
+  const FLOW = [
+    { from:'inicio',        to:'escuelas',      label:['Ver escuelas'] },
+    { from:'inicio',        to:'orientacion',   label:['Descubre tu ruta','(3 min)'] },
+    { from:'escuelas',      to:'orientacion',   label:['Hacer el test'] },
+    { from:'escuelas',      to:'area',          label:['Elige','un área'] },
+    { from:'orientacion',   to:'recomendacion', label:['Responde','4 preguntas'] },
+    { from:'recomendacion', to:'diagnostico',   label:['Personalizar','mi ruta'] },
+    { from:'area',          to:'diagnostico',   label:['Personalizar','mi ruta'] },
+    { from:'diagnostico',   to:'roadmap',       label:['Ciberseguridad:','roadmap por etapas'] },
+    { from:'diagnostico',   to:'ruta',          label:['Otras áreas:','ruta por semanas'] },
+    { from:'ruta',          to:'curso',         label:['Ver el primer curso'], route:'wrap' },
+    { from:'curso',         to:'compra',        label:['Suscribirme','($50 MXN al mes)'] },
+    { from:'compra',        to:'leccion',       label:['Sí, compré'] },
+    { from:'leccion',       to:'leccion-real',  label:['Mismo lector con','apuntes de Obsidian'], dashed:true },
+    { from:'leccion',       to:'bitacora',      label:['Ver mi avance'], route:'below' },
+    { from:'bitacora',      to:'ruta',          label:['Regresa la','siguiente semana'], dashed:true }
+  ];
+
+  /* ---------- Estado en memoria (sin localStorage) ---------- */
+  const viewport = document.getElementById('viewport');
+  const world    = document.getElementById('world');
+  const svg      = document.getElementById('arrows');
+  const frames   = Array.from(document.querySelectorAll('.frame'));
+
+  const initial = {};
+  ROWS.forEach((row, r) => row.forEach((id, i) => {
+    if (id) initial[id] = { x: i * (FRAME_W + GAP_X), y: r * (FRAME_H + GAP_Y) };
+  }));
+
+  const view = { x: 0, y: 0, z: 1 };
+  let pos = clonePos(initial);
+  let zTop = 1;
+  let selected = null;
+
+  function clonePos(p){ const o = {}; for (const k in p) o[k] = { x: p[k].x, y: p[k].y }; return o; }
+  function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+
+  /* ---------- Render ---------- */
+  function applyFrame(f){
+    const p = pos[f.dataset.id];
+    f.style.transform = `translate(${p.x}px, ${p.y}px)`;
+  }
+  function applyAllFrames(){ frames.forEach(applyFrame); }
+
+  function applyView(){
+    world.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.z})`;
+    world.style.setProperty('--inv', (1 / view.z).toFixed(4));
+    // Cuadrícula de puntos: se escala con el zoom y se duplica si queda demasiado densa
+    let g = 24 * view.z;
+    while (g < 12) g *= 2;
+    viewport.style.backgroundSize = `${g}px ${g}px`;
+    viewport.style.backgroundPosition = `${view.x}px ${view.y}px`;
+    document.getElementById('zoomPct').textContent = Math.round(view.z * 100) + '%';
+    renderArrows();
+  }
+
+  /* ---------- Flechas (SVG en coordenadas del mundo) ---------- */
+  const DIR = { r:[1,0], l:[-1,0], t:[0,-1], b:[0,1] };
+
+  function rectOf(id){ const p = pos[id]; return { x:p.x, y:p.y, w:FRAME_W, h:FRAME_H }; }
+  function anchor(r, s){
+    if (s === 'r') return [r.x + r.w, r.y + r.h/2];
+    if (s === 'l') return [r.x,       r.y + r.h/2];
+    if (s === 't') return [r.x + r.w*0.82, r.y];   // a la derecha del nombre del marco
+    return [r.x + r.w/2, r.y + r.h];
+  }
+  // Elige los lados a conectar según la posición relativa de los marcos
+  function sides(a, b, route){
+    if (route === 'above') return ['t','t'];
+    if (route === 'below') return ['b','b'];
+    if (route === 'wrap')  return b.y >= a.y ? ['b','t'] : ['t','b'];
+    const gx = Math.max(b.x - (a.x + a.w), a.x - (b.x + b.w));
+    const gy = Math.max(b.y - (a.y + a.h), a.y - (b.y + b.h));
+    if (gy > gx) return b.y > a.y ? ['b','t'] : ['t','b'];
+    if (b.x >= a.x + a.w) return ['r','l'];
+    if (b.x + b.w <= a.x) return ['l','r'];
+    return b.y > a.y ? ['b','t'] : ['t','b'];
+  }
+  function bez(p0, p1, p2, p3, t){
+    const u = 1 - t;
+    return [
+      u*u*u*p0[0] + 3*u*u*t*p1[0] + 3*u*t*t*p2[0] + t*t*t*p3[0],
+      u*u*u*p0[1] + 3*u*u*t*p1[1] + 3*u*t*t*p2[1] + t*t*t*p3[1]
+    ];
+  }
+
+  function renderArrows(){
+    const z = view.z;
+    const head = clamp(12 / z, 14, 170);
+    const fs   = clamp(13 / z, 14, 32);
+    let html = '';
+    for (const c of FLOW){
+      const a = rectOf(c.from), b = rectOf(c.to);
+      const [sa, sb] = sides(a, b, c.route);
+      const p0 = anchor(a, sa), p3 = anchor(b, sb);
+      const dist = Math.hypot(p3[0]-p0[0], p3[1]-p0[1]);
+      let k;
+      if (c.route === 'above' || c.route === 'below') k = clamp(dist * 0.1, 260, 520);
+      else if (sa === 'b' || sa === 't') k = clamp(Math.abs(p3[1]-p0[1]) * 0.5, 120, 600);
+      else k = clamp(dist * 0.4, 80, 600);
+      const p1 = [p0[0] + DIR[sa][0]*k, p0[1] + DIR[sa][1]*k];
+      const p2 = [p3[0] + DIR[sb][0]*k, p3[1] + DIR[sb][1]*k];
+
+      // Recorta el final para que la punta no se monte sobre el marco
+      const ux = p3[0] - p2[0], uy = p3[1] - p2[1], ul = Math.hypot(ux, uy) || 1;
+      const nx = ux / ul, ny = uy / ul;
+      const tip = [p3[0] - nx*2/z, p3[1] - ny*2/z];
+      const end = [tip[0] - nx*head*0.8, tip[1] - ny*head*0.8];
+
+      html += `<path class="${c.dashed ? 'dashed' : ''}" d="M${p0[0]},${p0[1]} C${p1[0]},${p1[1]} ${p2[0]},${p2[1]} ${end[0]},${end[1]}"/>`;
+      const px = -ny, py = nx;
+      html += `<polygon points="${tip[0]},${tip[1]} ${tip[0]-nx*head+px*head*0.5},${tip[1]-ny*head+py*head*0.5} ${tip[0]-nx*head-px*head*0.5},${tip[1]-ny*head-py*head*0.5}"/>`;
+
+      // Etiqueta en el punto medio de la curva (encima de la línea si es horizontal)
+      const m = bez(p0, p1, p2, p3, 0.5);
+      const lines = c.label;
+      const lh = fs * 1.25;
+      const w = Math.max(...lines.map(s => s.length)) * fs * 0.56 + fs * 1.2;
+      const h = lines.length * lh + fs * 0.7;
+      const horizontal = (sa === 'r' || sa === 'l') && (sb === 'r' || sb === 'l');
+      const cx = m[0], cy = horizontal ? m[1] - h/2 - fs*0.9 : m[1];
+      html += `<g class="lbl"><rect x="${cx - w/2}" y="${cy - h/2}" width="${w}" height="${h}" rx="${fs*0.4}"/>`;
+      lines.forEach((s, i) => {
+        const ty = cy - h/2 + fs*0.35 + lh*(i + 0.5) + fs*0.33;
+        html += `<text x="${cx}" y="${ty}" text-anchor="middle" font-size="${fs}">${s}</text>`;
+      });
+      html += `</g>`;
+    }
+    svg.innerHTML = html;
+  }
+
+  /* ---------- Zoom ---------- */
+  function vpPoint(clientX, clientY){
+    const r = viewport.getBoundingClientRect();
+    return [clientX - r.left, clientY - r.top];
+  }
+  function zoomAt(sx, sy, newZ){
+    newZ = clamp(newZ, ZMIN, ZMAX);
+    const wx = (sx - view.x) / view.z, wy = (sy - view.y) / view.z;
+    view.z = newZ;
+    view.x = sx - wx * newZ;
+    view.y = sy - wy * newZ;
+    applyView();
+  }
+  function zoomCenter(f){
+    const r = viewport.getBoundingClientRect();
+    zoomAt(r.width/2, r.height/2, view.z * f);
+  }
+  function fit(){
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (const id in pos){
+      x0 = Math.min(x0, pos[id].x); y0 = Math.min(y0, pos[id].y);
+      x1 = Math.max(x1, pos[id].x + FRAME_W); y1 = Math.max(y1, pos[id].y + FRAME_H);
+    }
+    // margen para etiquetas y flechas que pasan por encima o por debajo
+    y0 -= 460; y1 += 460;
+    const r = viewport.getBoundingClientRect();
+    const padX = 40, padTop = 100, padBottom = 80;
+    const z = clamp(Math.min((r.width - padX*2) / (x1 - x0), (r.height - padTop - padBottom) / (y1 - y0)), ZMIN, 1);
+    view.z = z;
+    view.x = padX + ((r.width - padX*2) - (x1 - x0) * z) / 2 - x0 * z;
+    view.y = padTop + ((r.height - padTop - padBottom) - (y1 - y0) * z) / 2 - y0 * z;
+    applyView();
+  }
+
+  viewport.addEventListener('wheel', e => {
+    e.preventDefault();
+    let dy = e.deltaY;
+    if (e.deltaMode === 1) dy *= 16; else if (e.deltaMode === 2) dy *= 400;
+    const k = (e.ctrlKey || e.metaKey) ? 0.01 : 0.0018;
+    const [sx, sy] = vpPoint(e.clientX, e.clientY);
+    zoomAt(sx, sy, view.z * Math.exp(-dy * k));
+  }, { passive:false });
+
+  /* ---------- Selección ---------- */
+  function select(f){
+    if (selected && selected !== f) selected.classList.remove('selected');
+    selected = f;
+    if (f){
+      f.classList.add('selected');
+      f.style.zIndex = ++zTop;
+    }
+  }
+
+  /* ---------- Arrastre de marcos, desplazamiento y pellizco (ratón + táctil) ---------- */
+  const pointers = new Map();
+  let mode = null;         // 'pan' | 'drag' | 'pinch'
+  let start = null;
+  let dragEl = null;
+  let moved = false;
+  let spaceDown = false;
+
+  function beginPan(px, py){
+    mode = 'pan';
+    start = { px, py, vx: view.x, vy: view.y };
+    viewport.classList.add('panning');
+  }
+  function beginPinch(){
+    const [a, b] = Array.from(pointers.values());
+    mode = 'pinch';
+    dragEl = null;
+    const mid = [(a.x + b.x)/2, (a.y + b.y)/2];
+    start = {
+      d: Math.hypot(a.x - b.x, a.y - b.y) || 1,
+      z: view.z,
+      wx: (mid[0] - view.x) / view.z,
+      wy: (mid[1] - view.y) / view.z
+    };
+  }
+
+  viewport.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0 && e.button !== 1) return;
+    const [px, py] = vpPoint(e.clientX, e.clientY);
+    pointers.set(e.pointerId, { x: px, y: py });
+    try { viewport.setPointerCapture(e.pointerId); } catch(_) {}
+    moved = false;
+
+    if (pointers.size === 2){ beginPinch(); return; }
+    if (pointers.size > 2) return;
+
+    const f = e.target.closest('.frame');
+    if (e.button === 1 || spaceDown || !f){
+      e.preventDefault();
+      beginPan(px, py);
+      start.background = !f;
+    } else {
+      mode = 'drag';
+      dragEl = f;
+      select(f);
+      const p = pos[f.dataset.id];
+      start = { px, py, fx: p.x, fy: p.y };
+    }
+  });
+
+  viewport.addEventListener('pointermove', e => {
+    if (!pointers.has(e.pointerId)) return;
+    const [px, py] = vpPoint(e.clientX, e.clientY);
+    pointers.set(e.pointerId, { x: px, y: py });
+
+    if (mode === 'pinch' && pointers.size >= 2){
+      const [a, b] = Array.from(pointers.values());
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      const mid = [(a.x + b.x)/2, (a.y + b.y)/2];
+      view.z = clamp(start.z * d / start.d, ZMIN, ZMAX);
+      view.x = mid[0] - start.wx * view.z;
+      view.y = mid[1] - start.wy * view.z;
+      applyView();
+      return;
+    }
+    if (!start) return;
+    const dx = px - start.px, dy = py - start.py;
+    if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
+
+    if (mode === 'pan'){
+      view.x = start.vx + dx;
+      view.y = start.vy + dy;
+      applyView();
+    } else if (mode === 'drag' && dragEl){
+      const p = pos[dragEl.dataset.id];
+      p.x = start.fx + dx / view.z;
+      p.y = start.fy + dy / view.z;
+      applyFrame(dragEl);
+      renderArrows();
+    }
+  });
+
+  function endPointer(e){
+    if (!pointers.has(e.pointerId)) return;
+    pointers.delete(e.pointerId);
+    if (mode === 'pinch'){
+      if (pointers.size === 1){
+        const [p] = Array.from(pointers.values());
+        beginPan(p.x, p.y);
+        moved = true;
+      } else if (pointers.size === 0){ mode = null; start = null; }
+      return;
+    }
+    if (pointers.size === 0){
+      if (mode === 'pan' && start && start.background && !moved) select(null);
+      mode = null; start = null; dragEl = null;
+      viewport.classList.remove('panning');
+    }
+  }
+  viewport.addEventListener('pointerup', endPointer);
+  viewport.addEventListener('pointercancel', endPointer);
+
+  /* ---------- Teclado: barra espaciadora para desplazar ---------- */
+  window.addEventListener('keydown', e => {
+    if (e.code === 'Space' && !e.repeat && !/INPUT|TEXTAREA|BUTTON/.test(document.activeElement.tagName)){
+      e.preventDefault();
+      spaceDown = true;
+      viewport.classList.add('space');
+    }
+  });
+  window.addEventListener('keyup', e => {
+    if (e.code === 'Space'){
+      spaceDown = false;
+      viewport.classList.remove('space');
+    }
+  });
+  window.addEventListener('blur', () => { spaceDown = false; viewport.classList.remove('space'); });
+
+  /* ---------- Barra de herramientas ---------- */
+  document.getElementById('zoomIn').onclick  = () => zoomCenter(1.25);
+  document.getElementById('zoomOut').onclick = () => zoomCenter(1/1.25);
+  document.getElementById('fit').onclick     = fit;
+  document.getElementById('reset').onclick   = () => {
+    pos = clonePos(initial);
+    frames.forEach(f => { f.style.zIndex = ''; });
+    zTop = 1;
+    select(null);
+    applyAllFrames();
+    fit();
+  };
+
+  /* ---------- Inicio ---------- */
+  applyAllFrames();
+  fit();
+  window.addEventListener('resize', () => applyView());
+})();
+</script>
+</body>
+</html>

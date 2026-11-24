@@ -1,0 +1,179 @@
+{
+  "id": "docker-desde-cero",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Docker desde cero",
+  "subtitulo": "Empaqueta programas en contenedores para que funcionen igual en cualquier computadora.",
+  "escuela": "tecnologia",
+  "areas": [
+    "cloud-devops",
+    "ciberseguridad"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [
+    "linux-desde-cero"
+  ],
+  "aprenderas": [
+    "Qué es un contenedor y por qué todos los usan",
+    "Instalar Docker y levantar tu primer contenedor",
+    "Crear tu propia imagen con un Dockerfile",
+    "Conectar el contenedor con tu computadora (puertos y carpetas compartidas)"
+  ],
+  "idiomas": [
+    "es",
+    "en"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "factorPractica": 3,
+  "modulos": [
+    {
+      "id": "docker-desde-cero/introduccion",
+      "titulo": "Introducción",
+      "lecciones": [
+        {
+          "id": "docker-desde-cero/introduccion-a-docker",
+          "slug": "introduccion-a-docker",
+          "titulo": "Introducción a Docker",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Introduccion/Introducción a Docker.md",
+          "seccion": null,
+          "minutos": 2.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/instalacion-de-docker-en-linux",
+          "slug": "instalacion-de-docker-en-linux",
+          "titulo": "Instalación de Docker en Linux",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Introduccion/Instalación de Docker en Linux.md",
+          "seccion": null,
+          "minutos": 1.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/definiendo-la-estructura-basica-de-dockerfile",
+          "slug": "definiendo-la-estructura-basica-de-dockerfile",
+          "titulo": "Definiendo la estructura básica de Dockerfile",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Introduccion/Definiendo la estructura básica de Dockerfile.md",
+          "seccion": null,
+          "minutos": 1.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "docker-desde-cero/construccion",
+      "titulo": "Tu primer contenedor",
+      "lecciones": [
+        {
+          "id": "docker-desde-cero/creacion-y-construccion-de-imagenes",
+          "slug": "creacion-y-construccion-de-imagenes",
+          "titulo": "Creación y construcción de imágenes",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Construccion/Creación y construcción de imágenes.md",
+          "seccion": null,
+          "minutos": 3.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/desplegar-tu-primer-contenedor",
+          "slug": "desplegar-tu-primer-contenedor",
+          "titulo": "Desplegar tu primer contenedor",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Construccion/Carga de instrucciones en Docker y desplegando nuestro primer contenedor.md",
+          "seccion": null,
+          "minutos": 6.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/comandos-comunes-para-la-gestion-de-contenedores",
+          "slug": "comandos-comunes-para-la-gestion-de-contenedores",
+          "titulo": "Comandos comunes para la gestión de contenedores",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Construccion/Comandos comunes para la gestión de contenedores.md",
+          "seccion": null,
+          "minutos": 6.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/puertos-y-carpetas-compartidas",
+          "slug": "puertos-y-carpetas-compartidas",
+          "titulo": "Puertos y carpetas compartidas",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Docker/Construccion/Port Forwarding en Docker y uso de monturas.md",
+          "seccion": null,
+          "minutos": 12.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "docker-desde-cero/a-fondo",
+      "titulo": "Docker a fondo",
+      "lecciones": [
+        {
+          "id": "docker-desde-cero/lo-esencial-de-docker",
+          "slug": "lo-esencial-de-docker",
+          "titulo": "Lo esencial de Docker",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Docker essentials.md",
+          "seccion": null,
+          "minutos": 17.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/trabajar-con-docker",
+          "slug": "trabajar-con-docker",
+          "titulo": "Trabajar con Docker",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Working with Docker.md",
+          "seccion": null,
+          "minutos": 12.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "docker-desde-cero/trabajar-con-dockerfile",
+          "slug": "trabajar-con-dockerfile",
+          "titulo": "Trabajar con Dockerfile",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Working with Dockerfile.md",
+          "seccion": null,
+          "minutos": 11.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

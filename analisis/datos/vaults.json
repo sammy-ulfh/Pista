@@ -1,0 +1,142 @@
+[
+ {
+  "vault": "Cloud&DevOps_Fundamentals",
+  "tiene_obsidian": true,
+  "obsidian_anidados": [],
+  "notas": 113,
+  "imagenes": 108,
+  "imagenes_bytes": 13395182,
+  "palabras": 45946,
+  "minutos": 250.8,
+  "mb": 13.2,
+  "carpetas_primer_nivel": [
+   "Bash",
+   "Docker",
+   "Linux",
+   "Python"
+  ]
+ },
+ {
+  "vault": "Fixes",
+  "tiene_obsidian": true,
+  "obsidian_anidados": [
+   "Fixes/Vmware"
+  ],
+  "notas": 3,
+  "imagenes": 0,
+  "imagenes_bytes": 0,
+  "palabras": 241,
+  "minutos": 1.2,
+  "mb": 0.01,
+  "carpetas_primer_nivel": [
+   "ArchFailures",
+   "Python2_Install",
+   "Vmware"
+  ]
+ },
+ {
+  "vault": "Full-Stack",
+  "tiene_obsidian": true,
+  "obsidian_anidados": [],
+  "notas": 4,
+  "imagenes": 19,
+  "imagenes_bytes": 968408,
+  "palabras": 1937,
+  "minutos": 13.5,
+  "mb": 0.94,
+  "carpetas_primer_nivel": [
+   "HTML"
+  ]
+ },
+ {
+  "vault": "Hacking_introduction",
+  "tiene_obsidian": true,
+  "obsidian_anidados": [
+   "Hacking_introduction/Conceptos básicos",
+   "Hacking_introduction/Conceptos básicos/images"
+  ],
+  "notas": 63,
+  "imagenes": 492,
+  "imagenes_bytes": 72605561,
+  "palabras": 59502,
+  "minutos": 395.0,
+  "mb": 69.68,
+  "carpetas_primer_nivel": [
+   "Conceptos básicos",
+   "Conceptos básicos de enumeración y explotación",
+   "Docker",
+   "EnumServComunes",
+   "OWASP TOP 10 y Vulnerabilidades Web",
+   "Reconocimiento",
+   "Tools"
+  ]
+ },
+ {
+  "vault": "Linux_Introduction",
+  "tiene_obsidian": false,
+  "obsidian_anidados": [],
+  "notas": 8,
+  "imagenes": 107,
+  "imagenes_bytes": 16037478,
+  "palabras": 5422,
+  "minutos": 48.0,
+  "mb": 16.19,
+  "carpetas_primer_nivel": [
+   "Introduction",
+   "Temario"
+  ]
+ },
+ {
+  "vault": "Personalizacion_entrono",
+  "tiene_obsidian": false,
+  "obsidian_anidados": [],
+  "notas": 1,
+  "imagenes": 48,
+  "imagenes_bytes": 1584321,
+  "palabras": 16673,
+  "minutos": 92.6,
+  "mb": 1.62,
+  "carpetas_primer_nivel": []
+ },
+ {
+  "vault": "Python_ofensivo",
+  "tiene_obsidian": true,
+  "obsidian_anidados": [],
+  "notas": 35,
+  "imagenes": 1468,
+  "imagenes_bytes": 113068467,
+  "palabras": 103979,
+  "minutos": 812.5,
+  "mb": 108.57,
+  "carpetas_primer_nivel": [
+   "Introduction",
+   "Offensive"
+  ]
+ },
+ {
+  "vault": "VLANS",
+  "tiene_obsidian": true,
+  "obsidian_anidados": [],
+  "notas": 3,
+  "imagenes": 0,
+  "imagenes_bytes": 0,
+  "palabras": 448,
+  "minutos": 2.2,
+  "mb": 0.02,
+  "carpetas_primer_nivel": [
+   "Base"
+  ]
+ },
+ {
+  "vault": "images",
+  "tiene_obsidian": false,
+  "obsidian_anidados": [],
+  "notas": 0,
+  "imagenes": 1,
+  "imagenes_bytes": 168701,
+  "palabras": 0,
+  "minutos": 0,
+  "mb": 0.16,
+  "carpetas_primer_nivel": []
+ }
+]

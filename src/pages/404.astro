@@ -1,0 +1,17 @@
+---
+/**
+ * Página no encontrada (`/404`, CONSTRUCCION.md, sección 6). Los hostings estáticos la muestran sola cuando una
+ * dirección no existe.
+ */
+import LayoutBase from '../layouts/LayoutBase.astro';
+import Boton from '../components/ui/Boton.astro';
+---
+
+<LayoutBase titulo="Página no encontrada" ocultarDeBuscadores>
+  <div class="contenedor max-w-2xl py-16 text-center lg:py-24">
+    <p class="font-titulo text-6xl font-extrabold text-texto-2" aria-hidden="true">404</p>
+    <h1 class="mt-4 text-4xl">No encontramos esta página</h1>
+    <p class="mt-3 text-lg">Puede que la dirección esté mal escrita o que la página ya no exista.</p>
+    <Boton variante="principal" href="/" class="mt-8">Ir al inicio</Boton>
+  </div>
+</LayoutBase>

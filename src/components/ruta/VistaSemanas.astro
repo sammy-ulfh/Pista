@@ -1,0 +1,29 @@
+---
+/**
+ * VistaSemanas — «Tu ruta» de un área sin etapas (pantalla 07b): resumen, tarjetas de semana, cursos en orden,
+ * el botón principal «Ver el primer curso →», la tarjeta del plan y «¿Por qué este orden?».
+ *
+ * La página la muestra solo si el área elegida NO tiene `etapas` (`data-vista-semanas`, lo conecta `vista-ruta.ts`).
+ *
+ *   <VistaSemanas />
+ */
+import TarjetaPlan from '../catalogo/TarjetaPlan.astro';
+import Boton from '../ui/Boton.astro';
+import CursosRuta from './CursosRuta.astro';
+import ResumenRuta from './ResumenRuta.astro';
+import SemanasRuta from './SemanasRuta.astro';
+import TarjetaOrden from './TarjetaOrden.astro';
+---
+
+<div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_24rem] lg:gap-14" data-vista-semanas hidden>
+  <div>
+    <ResumenRuta />
+    <SemanasRuta />
+    <CursosRuta />
+    <Boton variante="principal" href="/escuelas" class="mt-6" data-enlace-primer-curso="">Ver el primer curso →</Boton>
+  </div>
+  <aside class="flex flex-col gap-6 lg:pt-8" aria-label="Tu plan">
+    <TarjetaPlan variante="ruta" />
+    <TarjetaOrden />
+  </aside>
+</div>

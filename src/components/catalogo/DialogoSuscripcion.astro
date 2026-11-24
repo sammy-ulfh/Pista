@@ -1,0 +1,43 @@
+---
+/**
+ * DialogoSuscripcion — el diálogo «Confirmar suscripción» (pantalla 09): plan, precio, aviso de demo,
+ * «Cancelar» y «Sí, compré» (activa el plan en el navegador; ver `lib/estado-en-pagina.ts`).
+ *
+ * Lo incluye `TarjetaPlan`. Úsalo solo si la página no tiene tarjeta del plan (por ejemplo, «Mi bitácora»)
+ * y ábrelo con un botón `data-abrir-dialogo="<id>"`. Textos: `datos/ajustes.json` → `plan` y `suscripcion`.
+ *
+ *   <DialogoSuscripcion id="dialogo-suscripcion" />
+ */
+import { obtenerPlan, obtenerTextosSuscripcion, textoPrecioPlan, type Curso } from '../../lib/catalogo';
+import { rellenar } from '../../lib/formato';
+import Boton from '../ui/Boton.astro';
+import CajaAviso from '../ui/CajaAviso.astro';
+import Dialogo from '../ui/Dialogo.astro';
+
+interface Props {
+  id: string;
+  /** Si se da, el diálogo dice que el plan incluye este curso. */
+  curso?: Curso;
+}
+
+const { id, curso } = Astro.props;
+const plan = obtenerPlan();
+const textos = obtenerTextosSuscripcion();
+const textoIncluye = curso ? rellenar(textos.incluyeEnDialogo, { curso: curso.titulo }) : textos.acceso;
+---
+
+<Dialogo id={id} titulo={textos.tituloDialogo}>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+    <p class="font-semibold">{plan.nombre}</p>
+    <p class="font-titulo text-2xl font-bold">{textoPrecioPlan(plan)}</p>
+  </div>
+  <p class="mt-1 text-sm text-texto-2">{textoIncluye}</p>
+  <hr class="my-5 border-t-2 border-dashed border-linea" />
+  <CajaAviso>{textos.avisoDemo}</CajaAviso>
+  <Fragment slot="acciones">
+    <Boton data-cerrar-dialogo>{textos.botonCancelar}</Boton>
+    <Boton variante="principal" data-activar-plan="" data-aviso-al-activar={textos.avisoActivado}>
+      {textos.botonConfirmar}
+    </Boton>
+  </Fragment>
+</Dialogo>

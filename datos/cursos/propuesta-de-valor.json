@@ -1,0 +1,20 @@
+{
+  "id": "propuesta-de-valor",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Tu propuesta de valor en una hoja",
+  "subtitulo": "Explica en una hoja por qué te deberían elegir.",
+  "escuela": "negocios",
+  "areas": [
+    "emprender"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 50,
+  "modulos": []
+}

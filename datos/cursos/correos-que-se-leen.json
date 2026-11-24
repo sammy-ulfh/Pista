@@ -1,0 +1,20 @@
+{
+  "id": "correos-que-se-leen",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Correos que sí se leen",
+  "subtitulo": "Escribe correos cortos y claros a profesores, empresas y clientes.",
+  "escuela": "comunicacion",
+  "areas": [
+    "escritura"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 40,
+  "modulos": []
+}

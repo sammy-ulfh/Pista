@@ -1,0 +1,139 @@
+{
+  "id": "linux-desde-cero",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Linux desde cero",
+  "subtitulo": "Instala Linux en una máquina virtual, sin tocar tu sistema, y aprende a moverte con comandos.",
+  "escuela": "tecnologia",
+  "areas": [
+    "linux",
+    "ciberseguridad",
+    "cloud-devops"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Crear una computadora virtual para practicar sin riesgo de romper la tuya",
+    "Instalar Linux paso a paso",
+    "Moverte entre carpetas y crear, copiar y buscar archivos escribiendo comandos",
+    "Encadenar comandos y dejar tareas trabajando en segundo plano",
+    "Decidir quién puede ver o cambiar cada archivo (permisos)"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "factorPractica": 3,
+  "modulos": [
+    {
+      "id": "linux-desde-cero/preparar-equipo",
+      "titulo": "Prepara tu equipo",
+      "lecciones": [
+        {
+          "id": "linux-desde-cero/crear-una-maquina-virtual",
+          "slug": "crear-una-maquina-virtual",
+          "titulo": "Crear una máquina virtual",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+          "seccion": null,
+          "minutos": 5.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "linux-desde-cero/instalar-el-sistema",
+          "slug": "instalar-el-sistema",
+          "titulo": "Instalar el sistema",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Introduction/System_installation.md",
+          "seccion": null,
+          "minutos": 3.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "linux-desde-cero/comandos",
+      "titulo": "Comandos esenciales",
+      "lecciones": [
+        {
+          "id": "linux-desde-cero/comandos-basicos-1-de-2",
+          "slug": "comandos-basicos-1-de-2",
+          "titulo": "Comandos básicos (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Temario/Comandos b sicos 1-2.md",
+          "seccion": null,
+          "minutos": 5.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "linux-desde-cero/comandos-basicos-2-de-2",
+          "slug": "comandos-basicos-2-de-2",
+          "titulo": "Comandos básicos (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Temario/Comandos b sicos 2-2.md",
+          "seccion": null,
+          "minutos": 11.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "linux-desde-cero/control-de-flujo-y-procesos",
+          "slug": "control-de-flujo-y-procesos",
+          "titulo": "Control de flujo y procesos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Temario/Control de flujo, operadores y procesos en segundo plano.md",
+          "seccion": null,
+          "minutos": 6.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "linux-desde-cero/permisos",
+      "titulo": "Permisos",
+      "lecciones": [
+        {
+          "id": "linux-desde-cero/permisos",
+          "slug": "permisos",
+          "titulo": "Permisos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Temario/permisos.md",
+          "seccion": null,
+          "minutos": 6.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "linux-desde-cero/permisos-especiales",
+          "slug": "permisos-especiales",
+          "titulo": "Permisos especiales",
+          "fuente": "notes-tecnologia",
+          "ruta": "Linux_Introduction/Temario/Permisos especiales.md",
+          "seccion": null,
+          "minutos": 6.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

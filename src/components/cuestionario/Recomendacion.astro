@@ -1,0 +1,140 @@
+---
+/**
+ * Recomendacion — el resultado de la orientación (pantalla 05).
+ *
+ * El área se calcula en el navegador con `recomendarArea()` (`lib/orientacion.ts`) a partir de las respuestas
+ * guardadas. Muestra el área recomendada en una tarjeta destacada, la alternativa («También te puede servir»),
+ * el aviso si el área con más puntos todavía no está disponible, y los botones «← Ver todas las escuelas» y
+ * «Personalizar mi ruta →». Sin respuestas completas, invita a hacer la orientación.
+ *
+ * Los textos fijos están aquí; los datos (preguntas, puntos, áreas y el aviso) en `datos/`.
+ *
+ *   <Recomendacion datos={await datosOrientacion()} areas={await areasParaNavegador()} />
+ */
+import type { AreaParaNavegador } from '../../lib/catalogo';
+import type { DatosOrientacion } from '../../lib/orientacion';
+import BarraAvance from '../ui/BarraAvance.astro';
+import Boton from '../ui/Boton.astro';
+import CajaAviso from '../ui/CajaAviso.astro';
+import DatosParaNavegador from '../ui/DatosParaNavegador.astro';
+import Pildora from '../ui/Pildora.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+
+interface Props {
+  datos: DatosOrientacion;
+  areas: AreaParaNavegador[];
+}
+
+const { datos, areas } = Astro.props;
+const total = datos.preguntas.length;
+// Solo lo que usa la regla: sin los textos de las preguntas.
+const datosRegla: DatosOrientacion = {
+  preguntas: datos.preguntas.map((p) => ({ id: p.id, opciones: p.opciones.map(({ id, suma }) => ({ id, suma })) })),
+  escuelas: datos.escuelas,
+  avisoProximamente: datos.avisoProximamente,
+};
+---
+
+<DatosParaNavegador id="datos-orientacion" datos={{ regla: datosRegla, areas }} />
+
+<div class="mx-auto max-w-3xl" data-recomendacion>
+  <!-- Sin respuestas -->
+  <div data-sin-respuestas hidden>
+    <h1 class="text-3xl sm:text-4xl">Todavía no sabemos qué te interesa</h1>
+    <p class="mt-3 text-lg text-texto-2">Responde {total} preguntas rápidas y te recomendamos un área para empezar.</p>
+    <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
+      <Boton href="/escuelas">← Ver todas las escuelas</Boton>
+      <Boton variante="principal" href="/orientacion">Responder las preguntas →</Boton>
+    </div>
+  </div>
+
+  <!-- Con respuestas -->
+  <div data-con-respuestas hidden>
+    <p class="text-sm text-texto-2">Pregunta {total} de {total} · listo</p>
+    <BarraAvance valor={total} maximo={total} etiqueta="Avance de las preguntas" grosor="delgada" class="mt-2" />
+
+    <h1 class="mt-8 text-3xl sm:mt-10 sm:text-4xl">Te recomendamos: <span data-campo="nombre-area"></span></h1>
+    <p class="mt-2 text-lg">Por tus respuestas, es el área que más te sirve ahora.</p>
+
+    <div data-aviso-proximamente hidden>
+      <CajaAviso tono="atencion" class="mt-6"><span data-campo="aviso"></span></CajaAviso>
+    </div>
+
+    <Tarjeta destacada class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <!-- El color de la escuela llega por la variable --escuela del contenedor. -->
+        <span data-campo="escuela">
+          <Pildora variante="escuela"><span data-campo="nombre-escuela"></span></Pildora>
+        </span>
+        <h2 class="mt-3 text-2xl sm:text-3xl" data-campo="nombre-area"></h2>
+        <p class="mt-1 text-sm text-texto-2" data-campo="resumen"></p>
+      </div>
+      <Pildora variante="relleno" class="self-start sm:self-center">Recomendada</Pildora>
+    </Tarjeta>
+
+    <div data-alternativa hidden>
+      <Tarjeta class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between" relleno="compacto">
+        <div class="sm:pl-2">
+          <p class="text-sm text-texto-2">También te puede servir</p>
+          <p class="mt-0.5">
+            <b data-campo="nombre-alternativa"></b> · <span data-campo="escuela-alternativa"></span>
+          </p>
+        </div>
+        <Boton tamano="mini" href="/escuelas" data-campo="enlace-alternativa">Ver área</Boton>
+      </Tarjeta>
+    </div>
+
+    <CajaAviso class="mt-6">
+      Antes de armar tu ruta te haremos <span data-campo="preguntas-diagnostico"></span> sobre lo que ya sabes.
+    </CajaAviso>
+
+    <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between">
+      <Boton href="/escuelas">← Ver todas las escuelas</Boton>
+      <Boton variante="principal" href="/escuelas" data-campo="enlace-diagnostico">Personalizar mi ruta →</Boton>
+    </div>
+  </div>
+</div>
+
+<script>
+  import type { AreaParaNavegador } from '../../lib/catalogo';
+  import { leerDatosDePagina } from '../../lib/datos-en-pagina';
+  import { leerEstado } from '../../lib/estado-demo';
+  import { plural } from '../../lib/formato';
+  import { orientacionCompleta, recomendarArea, type DatosOrientacion } from '../../lib/orientacion';
+
+  const raiz = document.querySelector<HTMLElement>('[data-recomendacion]');
+  const datos = leerDatosDePagina<{ regla: DatosOrientacion; areas: AreaParaNavegador[] }>('datos-orientacion');
+
+  if (raiz && datos) {
+    const respuestas = leerEstado().orientacion;
+    const completa = orientacionCompleta(respuestas, datos.regla);
+    raiz.querySelector<HTMLElement>('[data-sin-respuestas]')!.hidden = completa;
+    raiz.querySelector<HTMLElement>('[data-con-respuestas]')!.hidden = !completa;
+
+    if (completa) {
+      const r = recomendarArea(respuestas, datos.regla);
+      const area = datos.areas.find((a) => a.id === r.area)!;
+      const campos = (nombre: string) => raiz.querySelectorAll<HTMLElement>(`[data-campo="${nombre}"]`);
+      const poner = (nombre: string, texto: string) => campos(nombre).forEach((el) => (el.textContent = texto));
+
+      poner('nombre-area', area.nombre);
+      poner('nombre-escuela', area.nombreEscuela);
+      campos('escuela').forEach((el) => el.style.setProperty('--escuela', area.colorEscuela));
+      poner('resumen', area.resumen);
+      poner('preguntas-diagnostico', plural(area.preguntasDiagnostico, 'pregunta'));
+      campos('enlace-diagnostico').forEach((el) => el.setAttribute('href', `/areas/${area.id}/diagnostico`));
+
+      const aviso = raiz.querySelector<HTMLElement>('[data-aviso-proximamente]')!;
+      aviso.hidden = !r.avisoProximamente;
+      poner('aviso', r.avisoProximamente ?? '');
+
+      const alternativa = r.alternativa && datos.areas.find((a) => a.id === r.alternativa!.area);
+      raiz.querySelector<HTMLElement>('[data-alternativa]')!.hidden = !alternativa;
+      if (alternativa) {
+        poner('nombre-alternativa', alternativa.nombre);
+        poner('escuela-alternativa', `Escuela de ${alternativa.nombreEscuela}`);
+        campos('enlace-alternativa').forEach((el) => el.setAttribute('href', `/areas/${alternativa.id}`));
+      }
+    }
+  }
+</script>

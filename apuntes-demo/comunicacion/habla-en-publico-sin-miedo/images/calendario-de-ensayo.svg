@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 441" width="900" height="441" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Calendario de ensayo de 3 días</title>
+<desc id="d">Tres columnas, una por día. Día 1: decir la presentación en voz alta con tus notas. Día 2: de pie, con cronómetro y grabándote. Día 3: ensayo general sin notas, si puedes frente a alguien.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="441" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">Tres ensayos cortos</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Mejor tres ensayos de 15 minutos que uno de dos horas la noche anterior.</tspan></text>
+<rect x="40" y="115" width="260" height="290" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M40,159 v-32 a12,12 0 0 1 12,-12 h236 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="56" y="144" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="56" dy="0">Día 1 · En voz alta</tspan></text>
+<text x="56" y="187" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="56" dy="0">Di toda la presentación con</tspan><tspan x="56" dy="20.8">tus notas en la mano. No te</tspan><tspan x="56" dy="20.8">detengas si te equivocas:</tspan><tspan x="56" dy="20.8">márcalo y sigue.</tspan><tspan x="56" dy="20.8"> </tspan><tspan x="56" dy="20.8">Objetivo: que el orden se</tspan><tspan x="56" dy="20.8">sienta natural.</tspan></text>
+<rect x="320" y="115" width="260" height="290" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M320,159 v-32 a12,12 0 0 1 12,-12 h236 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="336" y="144" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="336" dy="0">Día 2 · De pie y con tiempo</tspan></text>
+<text x="336" y="187" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="336" dy="0">Ensaya de pie, con</tspan><tspan x="336" dy="20.8">cronómetro y grabándote con</tspan><tspan x="336" dy="20.8">el celular. Recorta lo que</tspan><tspan x="336" dy="20.8">se pase de tiempo.</tspan><tspan x="336" dy="20.8"> </tspan><tspan x="336" dy="20.8">Objetivo: ajustar duración y</tspan><tspan x="336" dy="20.8">voz.</tspan></text>
+<rect x="600" y="115" width="260" height="290" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M600,159 v-32 a12,12 0 0 1 12,-12 h236 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="616" y="144" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="616" dy="0">Día 3 · Ensayo general</tspan></text>
+<text x="616" y="187" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="616" dy="0">Sin notas (o con una tarjeta</tspan><tspan x="616" dy="20.8">de palabras clave). Si</tspan><tspan x="616" dy="20.8">puedes, frente a alguien de</tspan><tspan x="616" dy="20.8">confianza.</tspan><tspan x="616" dy="20.8"> </tspan><tspan x="616" dy="20.8">Objetivo: practicar inicio y</tspan><tspan x="616" dy="20.8">cierre de memoria.</tspan></text>
+</svg>

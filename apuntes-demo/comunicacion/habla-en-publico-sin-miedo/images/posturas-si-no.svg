@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 564" width="900" height="564" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Posturas: sí y no</title>
+<desc id="d">Dos columnas. Sí: pies firmes al ancho de los hombros, manos visibles a la altura de la cintura, mirada repartida, hombros relajados. No: balancearte, manos en los bolsillos o cruzadas, mirar solo la pantalla o el piso, encorvarte.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="564" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">Tu cuerpo también habla</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Cuatro cosas que ayudan y cuatro que distraen.</tspan></text>
+<rect x="40" y="115" width="400" height="50" rx="12" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="148" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="60" dy="0">✓  Sí</tspan></text>
+<rect x="460" y="115" width="400" height="50" rx="12" fill="#1F1E1C" stroke="#1F1E1C" stroke-width="2"/>
+<text x="480" y="148" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="480" dy="0">✗  Mejor no</tspan></text>
+<rect x="40" y="180" width="400" height="78" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="212" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">Pies firmes, separados al ancho de los</tspan><tspan x="60" dy="22.1">hombros</tspan></text>
+<rect x="460" y="180" width="400" height="78" rx="12" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="480" y="212" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="480" dy="0">Balancearte o caminar sin rumbo</tspan></text>
+<rect x="40" y="270" width="400" height="78" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="302" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">Manos visibles, a la altura de la cintura</tspan></text>
+<rect x="460" y="270" width="400" height="78" rx="12" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="480" y="302" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="480" dy="0">Manos en los bolsillos o brazos cruzados</tspan><tspan x="480" dy="22.1">todo el tiempo</tspan></text>
+<rect x="40" y="360" width="400" height="78" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="392" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">Mirada repartida: una frase a cada zona</tspan><tspan x="60" dy="22.1">del salón</tspan></text>
+<rect x="460" y="360" width="400" height="78" rx="12" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="480" y="392" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="480" dy="0">Mirar solo la pantalla, tus notas o el</tspan><tspan x="480" dy="22.1">piso</tspan></text>
+<rect x="40" y="450" width="400" height="78" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="482" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">Hombros relajados y espalda recta</tspan></text>
+<rect x="460" y="450" width="400" height="78" rx="12" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="480" y="482" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="480" dy="0">Encorvarte o esconderte detrás de la mesa</tspan></text>
+</svg>

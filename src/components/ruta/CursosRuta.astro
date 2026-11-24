@@ -1,0 +1,105 @@
+---
+/**
+ * CursosRuta — «Cursos de tu ruta» (pantalla 07): los cursos en orden, con su escuela, su duración dentro de la
+ * ruta y su estado («Curso de muestra», «Lecciones en preparación», «Próximamente»). Lo que el diagnóstico
+ * omitió aparece tachado con su motivo («Omitido: ya le vendes a conocidos»).
+ *
+ * La lista y los motivos salen de `lib/ruta.ts`; los textos de los motivos, de `datos/diagnosticos/<area>.json`
+ * (campo `motivo` de cada opción).
+ *
+ *   <CursosRuta />
+ */
+import Pildora from '../ui/Pildora.astro';
+---
+
+<section aria-labelledby="titulo-cursos-ruta" class="mt-10" data-cursos-ruta>
+  <h2 id="titulo-cursos-ruta" class="text-2xl sm:text-3xl">Cursos de tu ruta</h2>
+  <ol class="mt-4 rounded-cuaderno border-2 border-tinta bg-blanco px-4 sm:px-6" data-lista></ol>
+
+  <template data-plantilla-curso>
+    <li class="border-b-2 border-dashed border-linea py-4 last:border-b-0">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>
+          <span class="mr-1" data-campo="numero"></span>
+          <a class="font-semibold underline-offset-4 hover:underline" data-campo="titulo"></a>
+          <span class="text-sm text-texto-2" data-campo="detalle"></span>
+        </p>
+        <span data-pildora hidden><Pildora><span data-campo="pildora"></span></Pildora></span>
+      </div>
+      <p class="mt-1 text-sm text-texto-2" data-campo="agregado" hidden></p>
+      <ul class="mt-2 flex flex-col gap-1 text-sm" data-omitidas hidden></ul>
+    </li>
+  </template>
+
+  <template data-plantilla-omitido>
+    <li class="flex flex-col gap-x-3 sm:flex-row sm:flex-wrap sm:justify-between">
+      <s class="text-texto-2" data-campo="titulo"></s>
+      <span class="text-texto-2" data-campo="motivo"></span>
+    </li>
+  </template>
+</section>
+
+<script>
+  import { formatoDuracion } from '../../lib/formato';
+  import { alTenerRuta, copiarPlantilla, ponerTexto } from './vista-ruta';
+
+  const raiz = document.querySelector<HTMLElement>('[data-cursos-ruta]');
+  const lista = raiz?.querySelector<HTMLOListElement>('[data-lista]');
+  const plantillaCurso = raiz?.querySelector<HTMLTemplateElement>('[data-plantilla-curso]');
+  const plantillaOmitido = raiz?.querySelector<HTMLTemplateElement>('[data-plantilla-omitido]');
+
+  const AGREGADO = {
+    diagnostico: 'Se agregó por tus respuestas.',
+    prerrequisito: 'Se agregó porque otro curso de tu ruta lo necesita.',
+  } as const;
+
+  if (lista && plantillaCurso && plantillaOmitido) {
+    const omitido = (titulo: string, motivo: string, palabra: 'Omitido' | 'Omitida') => {
+      const fila = copiarPlantilla(plantillaOmitido);
+      ponerTexto(fila, 'titulo', titulo);
+      ponerTexto(fila, 'motivo', `${palabra}: ${motivo}`);
+      return fila;
+    };
+
+    alTenerRuta((vista) => {
+      lista.replaceChildren();
+      if (!vista) return;
+      const titulosDeLeccion = new Map(
+        Object.values(vista.cursos).flatMap((c) => c.modulos.flatMap((m) => m.lecciones.map((l) => [l.id, l.titulo] as const))),
+      );
+
+      vista.ruta.detalleCursos.forEach((detalle, i) => {
+        const curso = vista.cursos[detalle.curso];
+        const fila = copiarPlantilla(plantillaCurso);
+        ponerTexto(fila, 'numero', `${i + 1}.`);
+        ponerTexto(fila, 'titulo', curso.titulo);
+        fila.querySelector<HTMLAnchorElement>('[data-campo="titulo"]')!.href = `/cursos/${curso.id}`;
+        ponerTexto(fila, 'detalle', ` · ${curso.nombreEscuela} · ${formatoDuracion(detalle.minutos)}`);
+        if (curso.etiqueta) {
+          ponerTexto(fila, 'pildora', curso.etiqueta);
+          fila.querySelector<HTMLElement>('[data-pildora]')!.hidden = false;
+        }
+        if (detalle.agregadoPor) {
+          const agregado = fila.querySelector<HTMLElement>('[data-campo="agregado"]')!;
+          agregado.textContent = AGREGADO[detalle.agregadoPor];
+          agregado.hidden = false;
+        }
+        if (detalle.leccionesOmitidas.length > 0) {
+          const omitidas = fila.querySelector<HTMLElement>('[data-omitidas]')!;
+          for (const l of detalle.leccionesOmitidas) {
+            omitidas.append(omitido(titulosDeLeccion.get(l.leccion) ?? l.leccion, l.texto, 'Omitida'));
+          }
+          omitidas.hidden = false;
+        }
+        lista.append(fila);
+      });
+
+      // Cursos que el diagnóstico quitó, al final y tachados.
+      for (const o of vista.ruta.cursosOmitidos) {
+        const fila = omitido(vista.cursos[o.curso]?.titulo ?? o.curso, o.texto, 'Omitido');
+        fila.classList.add('border-b-2', 'border-dashed', 'border-linea', 'py-3', 'text-sm', 'last:border-b-0');
+        lista.append(fila);
+      }
+    });
+  }
+</script>

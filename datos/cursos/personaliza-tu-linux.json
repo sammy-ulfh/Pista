@@ -1,0 +1,248 @@
+{
+  "id": "personaliza-tu-linux",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Personaliza tu escritorio Linux",
+  "subtitulo": "Convierte un Linux recién instalado en un escritorio rápido, bonito y a tu gusto.",
+  "escuela": "tecnologia",
+  "areas": [
+    "linux"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [
+    "linux-desde-cero"
+  ],
+  "aprenderas": [
+    "Cambiar el escritorio por un gestor de ventanas ligero que se maneja con el teclado",
+    "Agregar una barra superior con la hora, la red y tus atajos",
+    "Elegir fuentes, colores, transparencias y fondo de pantalla",
+    "Dejar la terminal con colores, autocompletado e íconos"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "personaliza-tu-linux/escritorio",
+      "titulo": "Tu escritorio paso a paso",
+      "lecciones": [
+        {
+          "id": "personaliza-tu-linux/iniciando-la-configuracion-del-sistema",
+          "slug": "iniciando-la-configuracion-del-sistema",
+          "titulo": "Iniciando la configuración del sistema",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Iniciando la configuración del sistema",
+          "minutos": 1.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/instalacion-y-configuracion-de-bspwm-y-sxhkd",
+          "slug": "instalacion-y-configuracion-de-bspwm-y-sxhkd",
+          "titulo": "Instalación y configuración de Bspwm y Sxhkd",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Instalación y configuración de *Bspwm* y *Sxhkd*",
+          "minutos": 10.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/instalacion-de-la-polybar-picom-y-rofi",
+          "slug": "instalacion-de-la-polybar-picom-y-rofi",
+          "titulo": "Instalación de la Polybar, Picom y Rofi",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Instalación de la *Polybar*, *Picom* y *Rofi*",
+          "minutos": 4.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/configurando-las-fuentes-la-kitty-e-instalacion-de-feh",
+          "slug": "configurando-las-fuentes-la-kitty-e-instalacion-de-feh",
+          "titulo": "Configurando las fuentes, la kitty e instalación de Feh",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configurando las fuentes, la kitty e instalación de Feh",
+          "minutos": 11.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/despliegue-de-la-polybar",
+          "slug": "despliegue-de-la-polybar",
+          "titulo": "Despliegue de la Polybar",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Despliegue de la Polybar",
+          "minutos": 2.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/configurando-los-bordeados-las-sombras-y-los-difuminados-con-picom",
+          "slug": "configurando-los-bordeados-las-sombras-y-los-difuminados-con-picom",
+          "titulo": "Configurando los bordeados, las sombras y los difuminados con Picom",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configurando los bordeados, las sombras y los difuminados con *Picom*",
+          "minutos": 13.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/configurando-la-zsh-e-instalando-la-powerlevel10k",
+          "slug": "configurando-la-zsh-e-instalando-la-powerlevel10k",
+          "titulo": "Configurando la ZSH e instalando la Powerlevel10k",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configurando la ZSH e instalando la Powerlevel10k",
+          "minutos": 17.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/instalacion-de-batcat-y-lsd",
+          "slug": "instalacion-de-batcat-y-lsd",
+          "titulo": "Instalación de Batcat y Lsd",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Instalación de *Batcat* y *Lsd*",
+          "minutos": 4.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/configurando-la-polybar",
+          "slug": "configurando-la-polybar",
+          "titulo": "Configurando la polybar",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configurando la polybar",
+          "minutos": 5.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/creando-nuevos-modulos-en-la-polybar",
+          "slug": "creando-nuevos-modulos-en-la-polybar",
+          "titulo": "Creando nuevos módulos en la polybar",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Creando nuevos módulos en la *polybar*",
+          "minutos": 3.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/configuracion-e-integracion-de-nvchad-en-neovim",
+          "slug": "configuracion-e-integracion-de-nvchad-en-neovim",
+          "titulo": "Configuración e integración de NVChad en Neovim",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configuración e integración de *NVChad* en *Neovim*",
+          "minutos": 7.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/ultimo-detalle-con-nvim",
+          "slug": "ultimo-detalle-con-nvim",
+          "titulo": "Último detalle con nvim",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Último detalle con nvim",
+          "minutos": 1.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/tema-de-rofi-y-bloqueo-de-pantalla",
+          "slug": "tema-de-rofi-y-bloqueo-de-pantalla",
+          "titulo": "Tema de rofi y bloqueo de pantalla",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configurando el tema para el *rofi*",
+          "bloquesExtra": [
+            "Bloqueando la pantalla con *i3lock*"
+          ],
+          "minutos": 2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/configuracion-en-firefox",
+          "slug": "configuracion-en-firefox",
+          "titulo": "Configuración en Firefox",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Configuración en Firefox",
+          "minutos": 4.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/repaso-por-los-atajos-de-teclado-definidos",
+          "slug": "repaso-por-los-atajos-de-teclado-definidos",
+          "titulo": "Repaso por los atajos de teclado definidos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "Repaso por los atajos de teclado definidos",
+          "minutos": 1.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "personaliza-tu-linux/extra-problemas-con-java-en-burp-suite",
+          "slug": "extra-problemas-con-java-en-burp-suite",
+          "titulo": "Extra: problemas con Java en Burp Suite",
+          "fuente": "notes-tecnologia",
+          "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+          "seccion": "¿Problemas con *java* para el *Burpsuite*?",
+          "bloquesExtra": [
+            "¿Problemas con el tamaño de la ventana *burpsuite*?"
+          ],
+          "minutos": 1.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

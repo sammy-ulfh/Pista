@@ -1,0 +1,39 @@
+---
+/**
+ * Pantalla 07 · Mi ruta. Se calcula en el navegador a partir del diagnóstico guardado (`areaElegida`):
+ *   - si el área tiene `etapas` (Ciberseguridad), el roadmap por etapas (`lib/roadmap.ts`) → `VistaRoadmap`;
+ *   - si no, la ruta por semanas (`lib/ruta.ts`) → `VistaSemanas` (pantalla 07b).
+ * Sin diagnóstico, invita a ir a Escuelas o a la Orientación.
+ *
+ * Aquí solo se arman los datos y las vistas: cada parte se pinta en `components/ruta/`.
+ */
+import { areasParaNavegador, datosRuta } from '../lib/catalogo';
+import LayoutBase from '../layouts/LayoutBase.astro';
+import InvitacionRuta from '../components/ruta/InvitacionRuta.astro';
+import VistaRoadmap from '../components/ruta/VistaRoadmap.astro';
+import VistaSemanas from '../components/ruta/VistaSemanas.astro';
+import DatosParaNavegador from '../components/ui/DatosParaNavegador.astro';
+
+const datos = { ...(await datosRuta()), areas: await areasParaNavegador() };
+---
+
+<LayoutBase titulo="Mi ruta">
+  <DatosParaNavegador id="datos-ruta" datos={datos} />
+
+  <div class="contenedor pt-6 lg:pt-10">
+    <div data-sin-ruta hidden>
+      <InvitacionRuta />
+    </div>
+
+    <div data-con-ruta hidden>
+      <VistaRoadmap />
+      <VistaSemanas />
+    </div>
+  </div>
+</LayoutBase>
+
+<script>
+  // Conecta `data-con-ruta`, `data-sin-ruta`, la vista que toca y el enlace al primer curso (components/ruta/vista-ruta.ts).
+  import { alTenerRuta } from '../components/ruta/vista-ruta';
+  alTenerRuta(() => {});
+</script>

@@ -1,0 +1,256 @@
+{
+  "id": "hacking-etico-reconocimiento",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Hacking ético: reconocimiento",
+  "subtitulo": "La primera fase de una auditoría autorizada: descubrir qué equipos, servicios y datos públicos existen.",
+  "escuela": "tecnologia",
+  "areas": [
+    "ciberseguridad"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [
+    "linux-desde-cero",
+    "redes-desde-cero"
+  ],
+  "aprenderas": [
+    "Elegir un objetivo con permiso (programas de recompensas como HackerOne)",
+    "Descubrir qué equipos hay en una red y qué servicios ofrecen",
+    "Encontrar información pública de una organización: subdominios, tecnologías, correos",
+    "Buscar archivos y rutas ocultas en un sitio web propio o autorizado"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": true,
+  "minutosEstimados": null,
+  "factorPractica": 3,
+  "modulos": [
+    {
+      "id": "hacking-etico-reconocimiento/escaneo-de-red",
+      "titulo": "Escaneo de red",
+      "lecciones": [
+        {
+          "id": "hacking-etico-reconocimiento/antes-de-empezar-un-objetivo-autorizado",
+          "slug": "antes-de-empezar-un-objetivo-autorizado",
+          "titulo": "Antes de empezar: un objetivo autorizado",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/Hackerone/Validación del objetivo (Fijando un target en HackerOne).md",
+          "seccion": null,
+          "minutos": 3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/nmap-y-sus-modos-de-escaneo",
+          "slug": "nmap-y-sus-modos-de-escaneo",
+          "titulo": "Nmap y sus modos de escaneo",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/EscaneoNmap/Nmap y sus diferentes modos de escaneo.md",
+          "seccion": null,
+          "minutos": 6.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/escaneo-frente-a-cortafuegos",
+          "slug": "escaneo-frente-a-cortafuegos",
+          "titulo": "Escaneo frente a cortafuegos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+          "seccion": null,
+          "minutos": 15.6,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/scripts-de-nmap",
+          "slug": "scripts-de-nmap",
+          "titulo": "Scripts de Nmap",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/Uso de scripts y categorías en nmap para aplicar reconocimiento.md",
+          "seccion": null,
+          "minutos": 13.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/tus-propios-scripts-de-nmap",
+          "slug": "tus-propios-scripts-de-nmap",
+          "titulo": "Tus propios scripts de Nmap",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/Creación de tus propios scripts en Lua para nmap.md",
+          "seccion": null,
+          "minutos": 3.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/escanear-puertos-sin-nmap",
+          "slug": "escanear-puertos-sin-nmap",
+          "titulo": "Escanear puertos sin Nmap",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+          "seccion": null,
+          "minutos": 5.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/descubrir-equipos-en-tu-red",
+          "slug": "descubrir-equipos-en-tu-red",
+          "titulo": "Descubrir equipos en tu red",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/DescubrirHosts/Descubrimiento de equipos en la red local (ARP e ICMP) y Tips.md",
+          "seccion": null,
+          "minutos": 10.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/identificar-el-sistema-operativo",
+          "slug": "identificar-el-sistema-operativo",
+          "titulo": "Identificar el sistema operativo",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/OS/Identificación y verificación externa de la versión del sistema operativo.md",
+          "seccion": null,
+          "minutos": 2.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-reconocimiento/informacion-publica",
+      "titulo": "Información pública (OSINT)",
+      "lecciones": [
+        {
+          "id": "hacking-etico-reconocimiento/correos-publicos-de-una-organizacion",
+          "slug": "correos-publicos-de-una-organizacion",
+          "titulo": "Correos públicos de una organización",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/Correos/Descubrimiento de correos electrónicos.md",
+          "seccion": null,
+          "minutos": 7.1,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": true,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/busqueda-por-imagenes",
+          "slug": "busqueda-por-imagenes",
+          "titulo": "Búsqueda por imágenes",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/RecImagen/Reconocimiento de imágenes.md",
+          "seccion": null,
+          "minutos": 3.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/encontrar-subdominios",
+          "slug": "encontrar-subdominios",
+          "titulo": "Encontrar subdominios",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/Subdominios/Enumeración de subdominios.md",
+          "seccion": null,
+          "minutos": 11.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/filtraciones-de-datos",
+          "slug": "filtraciones-de-datos",
+          "titulo": "Filtraciones de datos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/BrechasSeguridad/Credenciales y brechas de seguridad.md",
+          "seccion": null,
+          "minutos": 4.6,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": true,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/busquedas-avanzadas-en-google",
+          "slug": "busquedas-avanzadas-en-google",
+          "titulo": "Búsquedas avanzadas en Google",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/GoogleDorks/Google Dorks - Google Hacking (Los 18 Dorks más usados).md",
+          "seccion": null,
+          "minutos": 9.8,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-reconocimiento/reconocimiento-web",
+      "titulo": "Reconocimiento web",
+      "lecciones": [
+        {
+          "id": "hacking-etico-reconocimiento/que-tecnologias-usa-una-web",
+          "slug": "que-tecnologias-usa-una-web",
+          "titulo": "Qué tecnologías usa una web",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/TecnologiasWeb/Identificación de las tecnologías en una página web.md",
+          "seccion": null,
+          "minutos": 5.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/buscar-rutas-ocultas-1-de-2",
+          "slug": "buscar-rutas-ocultas-1-de-2",
+          "titulo": "Buscar rutas ocultas (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/Fuzzing y enumeración de archivos en un servidor web (1-2).md",
+          "seccion": null,
+          "minutos": 9.3,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "hacking-etico-reconocimiento/buscar-rutas-ocultas-2-de-2",
+          "slug": "buscar-rutas-ocultas-2-de-2",
+          "titulo": "Buscar rutas ocultas (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/Fuzzing y enumeración de archivos en un servidor web (2-2).md",
+          "seccion": null,
+          "minutos": 16.9,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

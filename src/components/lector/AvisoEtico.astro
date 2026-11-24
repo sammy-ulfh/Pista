@@ -1,0 +1,33 @@
+---
+/**
+ * AvisoEtico — caja de uso ético al inicio de una lección.
+ *
+ * - `nivel="medio"`: «Uso ético», con `datos/ajustes.json` → `textoAvisoEtico` (el mismo de la ficha del curso).
+ * - `nivel="alto"`: «Solo en tu laboratorio», con `textoAvisoEticoAlto` (más fuerte: técnicas que solo se practican
+ *   en un laboratorio propio o con autorización por escrito).
+ *
+ *   {leccion.riesgo !== 'ninguno' && <AvisoEtico nivel={leccion.riesgo} />}
+ */
+import { obtenerAjustes } from '../../lib/catalogo';
+import CajaAviso from '../ui/CajaAviso.astro';
+
+interface Props {
+  nivel?: 'medio' | 'alto';
+  class?: string;
+}
+
+const { nivel = 'medio', class: claseExtra } = Astro.props;
+const { textoAvisoEtico, textoAvisoEticoAlto } = obtenerAjustes();
+---
+
+{
+  nivel === 'alto' ? (
+    <CajaAviso titulo="Solo en tu laboratorio" tono="fuerte" class={claseExtra}>
+      {textoAvisoEticoAlto}
+    </CajaAviso>
+  ) : (
+    <CajaAviso titulo="Uso ético" tono="atencion" class={claseExtra}>
+      {textoAvisoEtico}
+    </CajaAviso>
+  )
+}

@@ -1,0 +1,87 @@
+---
+/**
+ * TarjetaEscuela — una escuela en el catálogo (pantalla 02): estado, nombre, descripción y sus áreas.
+ *
+ * - Las áreas con página (`disponible` o `muestra`) son enlaces a `/areas/<area>`; las «próximamente»
+ *   se ven en gris, sin enlace.
+ * - Una escuela «próximamente» se dibuja punteada y lleva «Avisarme», que solo muestra el aviso
+ *   `textoFuncionNoDisponible` de `datos/ajustes.json`.
+ * - Lleva `id` = id de la escuela, para que las migas de pan puedan enlazar a `/escuelas#<escuela>`.
+ *
+ *   <TarjetaEscuela escuela={escuela} />
+ */
+import { areaTienePagina, colorDeEscuela, obtenerAjustes, type Escuela } from '../../lib/catalogo';
+import { ETIQUETAS_ESTADO } from '../../lib/formato';
+import Boton from '../ui/Boton.astro';
+import Pildora from '../ui/Pildora.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+
+interface Props {
+  escuela: Escuela;
+}
+
+const { escuela } = Astro.props;
+const proximamente = escuela.estado === 'proximamente';
+const { textoFuncionNoDisponible } = obtenerAjustes();
+const idTitulo = `escuela-${escuela.id}`;
+---
+
+<Tarjeta
+  como="li"
+  punteada={proximamente}
+  relleno="ninguno"
+  class="flex flex-col overflow-hidden"
+>
+  <article id={escuela.id} aria-labelledby={idTitulo} class="flex flex-1 scroll-mt-6 flex-col">
+    <!-- Franja con el color de la escuela -->
+    <div
+      aria-hidden="true"
+      class:list={['h-3 border-b-2', proximamente ? 'border-dashed border-texto-3' : 'border-tinta']}
+      style={`background-color: ${colorDeEscuela(escuela.id)}`}></div>
+
+    <div class="flex flex-1 flex-col p-5 sm:p-6">
+      <div>
+        <Pildora variante={proximamente ? 'suave' : escuela.estado === 'disponible' ? 'relleno' : 'normal'}>
+          {ETIQUETAS_ESTADO[escuela.estado]}
+        </Pildora>
+      </div>
+      <h2 id={idTitulo} class:list={['mt-3 text-2xl', proximamente && 'text-texto-3']}>{escuela.nombre}</h2>
+      <p class:list={['mt-1', proximamente ? 'text-texto-3' : 'text-texto-2']}>{escuela.descripcion}</p>
+
+      <h3 class="sr-only">Áreas de {escuela.nombre}</h3>
+      <ul class="mt-4 flex flex-wrap items-center gap-2">
+        {
+          escuela.areas.map((area) =>
+            areaTienePagina(area) ? (
+              <li>
+                <a
+                  href={`/areas/${area.id}`}
+                  class="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border-2 border-tinta bg-blanco px-4 text-sm font-medium hover:bg-relleno"
+                >
+                  {area.nombre}
+                </a>
+              </li>
+            ) : (
+              <li>
+                <Pildora variante="suave" class="border-dashed">
+                  {area.nombre}
+                  <span class="sr-only">&nbsp;(próximamente)</span>
+                </Pildora>
+              </li>
+            ),
+          )
+        }
+      </ul>
+
+      {
+        proximamente && (
+          <div class="mt-auto flex justify-end pt-5">
+            <Boton tamano="mini" data-aviso={textoFuncionNoDisponible}>
+              Avisarme
+            </Boton>
+          </div>
+        )
+      }
+    </div>
+  </article>
+</Tarjeta>

@@ -1,0 +1,83 @@
+{
+  "id": "html-desde-cero",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Tu primera página web (HTML)",
+  "subtitulo": "Mini-curso: escribe una página web sencilla con títulos, párrafos y listas.",
+  "escuela": "tecnologia",
+  "areas": [
+    "desarrollo-web"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Qué es HTML y cómo lo lee el navegador",
+    "Escribir tu primer archivo .html y abrirlo",
+    "Usar etiquetas para títulos, párrafos y formato de texto"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "html-desde-cero/html",
+      "titulo": "HTML básico",
+      "lecciones": [
+        {
+          "id": "html-desde-cero/que-es-html",
+          "slug": "que-es-html",
+          "titulo": "¿Qué es HTML?",
+          "fuente": "notes-tecnologia",
+          "ruta": "Full-Stack/HTML/HTML (Conceptos).md",
+          "seccion": null,
+          "minutos": 1.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "html-desde-cero/etiquetas",
+          "slug": "etiquetas",
+          "titulo": "Etiquetas",
+          "fuente": "notes-tecnologia",
+          "ruta": "Full-Stack/HTML/Etiquetas.md",
+          "seccion": null,
+          "minutos": 2.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "html-desde-cero/estructura-de-una-pagina",
+          "slug": "estructura-de-una-pagina",
+          "titulo": "Estructura de una página",
+          "fuente": "notes-tecnologia",
+          "ruta": "Full-Stack/HTML/Estructura HTML.md",
+          "seccion": null,
+          "minutos": 2.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "html-desde-cero/etiquetas-para-textos",
+          "slug": "etiquetas-para-textos",
+          "titulo": "Etiquetas para textos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Full-Stack/HTML/Etiquetas para textos.md",
+          "seccion": null,
+          "minutos": 6.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

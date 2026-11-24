@@ -1,0 +1,31 @@
+---
+/**
+ * AvisoFlotante — contenedor de los avisos breves que aparecen abajo y se van solos
+ * (p. ej. «Disponible en la versión completa»).
+ *
+ * Ya está incluido en `layouts/LayoutBase.astro`; no hace falta ponerlo en cada página.
+ * Para mostrar un aviso:
+ * - con código: `mostrarAviso('texto')` de `src/lib/avisos.ts`;
+ * - sin código: cualquier elemento con `data-aviso="texto"`.
+ */
+---
+
+<div
+  id="avisos-flotantes"
+  role="status"
+  aria-live="polite"
+  class="pointer-events-none fixed inset-x-0 bottom-4 z-50 flex flex-col items-center gap-2 px-4"
+>
+</div>
+
+<template id="plantilla-aviso-flotante">
+  <p
+    class="pointer-events-auto max-w-md rounded-cuaderno border-2 border-tinta bg-blanco px-5 py-3 text-center font-medium shadow-desplazada"
+  >
+  </p>
+</template>
+
+<script>
+  import { conectarAvisosDeclarativos } from '../../lib/avisos';
+  conectarAvisosDeclarativos();
+</script>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 467" width="900" height="467" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Tabla de objeciones frecuentes y cómo responderlas</title>
+<desc id="d">Cuatro objeciones comunes: lo pienso, está caro, ahorita no y ya tengo a alguien. Para cada una, qué suele haber detrás y una forma de responder.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="467" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">Objeciones frecuentes</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Una objeción casi siempre es una pregunta que no te hicieron.</tspan></text>
+<rect x="40" y="112" width="820" height="46" rx="0" fill="#B84E1E" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="142" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="50" dy="0">Lo que dicen</tspan></text>
+<line x1="210" y1="112" x2="210" y2="158" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="220" y="142" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="220" dy="0">Qué puede haber detrás</tspan></text>
+<line x1="490" y1="112" x2="490" y2="158" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="500" y="142" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="500" dy="0">Cómo responder</tspan></text>
+<rect x="40" y="158" width="820" height="63" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="188" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">«Lo pienso»</tspan></text>
+<line x1="210" y1="158" x2="210" y2="221" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="220" y="188" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="220" dy="0">Duda sobre algo concreto, o no</tspan><tspan x="220" dy="20.8">sabe cómo decir que no.</tspan></text>
+<line x1="490" y1="158" x2="490" y2="221" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="500" y="188" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="500" dy="0">«Claro. ¿Qué parte le gustaría pensar: el</tspan><tspan x="500" dy="20.8">precio, el tiempo o cómo funciona?»</tspan></text>
+<rect x="40" y="221" width="820" height="84" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="251" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">«Está caro»</tspan></text>
+<line x1="210" y1="221" x2="210" y2="305" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="220" y="251" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="220" dy="0">No ve todavía el valor, o no le</tspan><tspan x="220" dy="20.8">alcanza ahora.</tspan></text>
+<line x1="490" y1="221" x2="490" y2="305" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="500" y="251" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="500" dy="0">«¿Caro comparado con qué?» Ofrece una</tspan><tspan x="500" dy="20.8">versión más pequeña, no un descuento</tspan><tspan x="500" dy="20.8">automático.</tspan></text>
+<rect x="40" y="305" width="820" height="63" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="335" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">«Ahorita no»</tspan></text>
+<line x1="210" y1="305" x2="210" y2="368" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="220" y="335" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="220" dy="0">No es el momento, o no es</tspan><tspan x="220" dy="20.8">prioridad.</tspan></text>
+<line x1="490" y1="305" x2="490" y2="368" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="500" y="335" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="500" dy="0">«¿Le escribo en dos semanas para ver cómo</tspan><tspan x="500" dy="20.8">va?» y anótalo.</tspan></text>
+<rect x="40" y="368" width="820" height="63" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="398" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">«Ya tengo a</tspan><tspan x="50" dy="20.8">alguien»</tspan></text>
+<line x1="210" y1="368" x2="210" y2="431" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="220" y="398" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="220" dy="0">Está bien atendido, o le da pena</tspan><tspan x="220" dy="20.8">cambiar.</tspan></text>
+<line x1="490" y1="368" x2="490" y2="431" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="500" y="398" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="500" dy="0">«Qué bueno. Si algún día necesita apoyo</tspan><tspan x="500" dy="20.8">extra, aquí estoy.» Deja la puerta abierta.</tspan></text>
+<rect x="40" y="112" width="820" height="319" rx="0" fill="none" stroke="#1F1E1C" stroke-width="2"/>
+</svg>

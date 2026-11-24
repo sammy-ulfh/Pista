@@ -1,0 +1,402 @@
+[
+ {
+  "tipo": "contrasena",
+  "archivo": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Formating.md",
+  "linea": 152,
+  "severidad": "falso_positivo",
+  "motivo": "Variable, archivo de configuración o consulta SQL de ejemplo",
+  "valor_enmascarado": "<oculto: 7 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Logs.md",
+  "linea": 18,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 31 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Network Configuration.md",
+  "linea": 88,
+  "severidad": "baja",
+  "motivo": "IP pública de ejemplo de un manual (whois/dig/nslookup); conviene cambiarla por 203.0.113.x",
+  "valor_enmascarado": "<oculto: 13 caracteres>"
+ },
+ {
+  "tipo": "contrasena",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Network Configuration.md",
+  "linea": 121,
+  "severidad": "falso_positivo",
+  "motivo": "Variable, archivo de configuración o consulta SQL de ejemplo",
+  "valor_enmascarado": "<oculto: 5 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 20,
+  "severidad": "baja",
+  "motivo": "IP pública de ejemplo de un manual (whois/dig/nslookup); conviene cambiarla por 203.0.113.x",
+  "valor_enmascarado": "<oculto: 13 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 23,
+  "severidad": "baja",
+  "motivo": "IP pública de ejemplo de un manual (whois/dig/nslookup); conviene cambiarla por 203.0.113.x",
+  "valor_enmascarado": "<oculto: 13 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 39,
+  "severidad": "baja",
+  "motivo": "IP pública de ejemplo de un manual (whois/dig/nslookup); conviene cambiarla por 203.0.113.x",
+  "valor_enmascarado": "<oculto: 14 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 45,
+  "severidad": "baja",
+  "motivo": "IP pública de ejemplo de un manual (whois/dig/nslookup); conviene cambiarla por 203.0.113.x",
+  "valor_enmascarado": "<oculto: 14 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 65,
+  "severidad": "baja",
+  "motivo": "IP pública de ejemplo de un manual (whois/dig/nslookup); conviene cambiarla por 203.0.113.x",
+  "valor_enmascarado": "<oculto: 13 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 85,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 24 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 88,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 20 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 103,
+  "severidad": "baja",
+  "motivo": "IP de ejemplo o DNS público",
+  "valor_enmascarado": "<oculto: 7 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+  "linea": 103,
+  "severidad": "baja",
+  "motivo": "IP de ejemplo o DNS público",
+  "valor_enmascarado": "<oculto: 7 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 70,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 83,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 85,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 87,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 89,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 97,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 98,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 99,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 100,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 26 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 108,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 26 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+  "linea": 108,
+  "severidad": "media",
+  "motivo": "Nombre de host interno de una empresa (laboratorio corporativo)",
+  "valor_enmascarado": "<oculto: 28 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Packaging.md",
+  "linea": 14,
+  "severidad": "falso_positivo",
+  "motivo": "Parte de una URL, no es un correo",
+  "valor_enmascarado": "<oculto: 27 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Packaging.md",
+  "linea": 58,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 22 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Jinja2 templates.md",
+  "linea": 26,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 25 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Extensions.md",
+  "linea": 21,
+  "severidad": "falso_positivo",
+  "motivo": "Número de versión del navegador, no es una IP",
+  "valor_enmascarado": "<oculto: 9 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Hacking_introduction/Reconocimiento/BrechasSeguridad/Credenciales y brechas de seguridad.md",
+  "linea": 56,
+  "severidad": "alta",
+  "motivo": "Correo real de una persona de una empresa real, obtenido con OSINT",
+  "valor_enmascarado": "<oculto: 22 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Hacking_introduction/Reconocimiento/BrechasSeguridad/Credenciales y brechas de seguridad.md",
+  "linea": 56,
+  "severidad": "alta",
+  "motivo": "Correo real de una persona de una empresa real, obtenido con OSINT",
+  "valor_enmascarado": "<oculto: 20 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Hacking_introduction/Reconocimiento/Correos/Descubrimiento de correos electrónicos.md",
+  "linea": 53,
+  "severidad": "alta",
+  "motivo": "Correo real de una persona de una empresa real, obtenido con OSINT",
+  "valor_enmascarado": "<oculto: 22 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Hacking_introduction/Reconocimiento/Correos/Descubrimiento de correos electrónicos.md",
+  "linea": 91,
+  "severidad": "alta",
+  "motivo": "Correo real de una persona de una empresa real, obtenido con OSINT",
+  "valor_enmascarado": "<oculto: 23 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+  "linea": 415,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 10 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/2-2/Enumeración de gestores de contenido (CMS) – WordPress (2-2).md",
+  "linea": 52,
+  "severidad": "baja",
+  "motivo": "Correo público (whois), de ejemplo o falso positivo de curl -d@archivo",
+  "valor_enmascarado": "<oculto: 10 caracteres>"
+ },
+ {
+  "tipo": "contrasena",
+  "archivo": "Hacking_introduction/EnumServComunes/SMB/Enumeración del servicio SMB.md",
+  "linea": 172,
+  "severidad": "falso_positivo",
+  "motivo": "Variable, archivo de configuración o consulta SQL de ejemplo",
+  "valor_enmascarado": "<oculto: 15 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar.md",
+  "linea": 37,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 9 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 17,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 12 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 29,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 12 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 47,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 12 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 50,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 10 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 56,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 14 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 67,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 14 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 68,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 12 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 69,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 12 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+  "linea": 74,
+  "severidad": "baja",
+  "motivo": "IP inventada para un ejercicio de subredes",
+  "valor_enmascarado": "<oculto: 12 caracteres>"
+ },
+ {
+  "tipo": "contrasena",
+  "archivo": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI/Introduccion a SQLI.md",
+  "linea": 72,
+  "severidad": "falso_positivo",
+  "motivo": "Variable, archivo de configuración o consulta SQL de ejemplo",
+  "valor_enmascarado": "<oculto: 6 caracteres>"
+ },
+ {
+  "tipo": "contrasena",
+  "archivo": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI/Introduccion a SQLI.md",
+  "linea": 80,
+  "severidad": "falso_positivo",
+  "motivo": "Variable, archivo de configuración o consulta SQL de ejemplo",
+  "valor_enmascarado": "<oculto: 6 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (2-2).md",
+  "linea": 35,
+  "severidad": "alta",
+  "motivo": "Correo personal (gmail) usado en el ejemplo; revisar también las capturas de esa nota (posible contraseña de aplicación)",
+  "valor_enmascarado": "<oculto: 17 caracteres>"
+ },
+ {
+  "tipo": "correo",
+  "archivo": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (2-2).md",
+  "linea": 35,
+  "severidad": "alta",
+  "motivo": "Correo personal (gmail) usado en el ejemplo; revisar también las capturas de esa nota (posible contraseña de aplicación)",
+  "valor_enmascarado": "<oculto: 17 caracteres>"
+ },
+ {
+  "tipo": "ip_publica",
+  "archivo": "Python_ofensivo/Offensive/arp_spoofer/Creando un envenenador ARP (ARP Spoofer) con Scapy.md",
+  "linea": 71,
+  "severidad": "baja",
+  "motivo": "IP de ejemplo o DNS público",
+  "valor_enmascarado": "<oculto: 7 caracteres>"
+ }
+]

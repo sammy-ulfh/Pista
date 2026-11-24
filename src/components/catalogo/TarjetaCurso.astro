@@ -1,0 +1,73 @@
+---
+/**
+ * TarjetaCurso — un curso en el catálogo de un área (pantalla 03): portada generada, estado, idioma,
+ * nivel, lecciones, duración e «Incluido en el plan». Nunca muestra precio.
+ *
+ * Toda la tarjeta es un enlace a la ficha del curso (el enlace está en el título y se estira con CSS).
+ * Con el plan activo, «Incluido en el plan» cambia a «Disponible con tu plan» (`data-con-plan`).
+ *
+ *   <TarjetaCurso curso={curso} escuelaDelArea="negocios" />
+ */
+import {
+  duracionCurso,
+  etiquetaEstadoCurso,
+  etiquetaIdiomaDeCurso,
+  leccionesVisibles,
+  obtenerEscuela,
+  type Curso,
+} from '../../lib/catalogo';
+import { NOMBRES_NIVEL, formatoDuracion, plural } from '../../lib/formato';
+import Pildora from '../ui/Pildora.astro';
+import Portada from '../ui/Portada.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+
+interface Props {
+  curso: Curso;
+  /** Escuela del área que se está viendo: si el curso es de otra, se muestra el nombre de su escuela. */
+  escuelaDelArea?: string;
+}
+
+const { curso, escuelaDelArea } = Astro.props;
+
+const escuela = await obtenerEscuela(curso.escuela);
+const proximamente = curso.estado === 'proximamente';
+const estado = etiquetaEstadoCurso(curso);
+const idioma = etiquetaIdiomaDeCurso(curso);
+const numeroLecciones = leccionesVisibles(curso).length;
+
+const datos = [
+  escuelaDelArea && escuelaDelArea !== curso.escuela ? escuela?.nombre : null,
+  NOMBRES_NIVEL[curso.nivel],
+  numeroLecciones > 0 ? plural(numeroLecciones, 'lección', 'lecciones') : null,
+  formatoDuracion(duracionCurso(curso)),
+].filter(Boolean);
+---
+
+<Tarjeta como="li" relleno="compacto" punteada={proximamente} class="group relative flex flex-col hover:shadow-desplazada">
+  <Portada titulo={curso.titulo} escuela={curso.escuela} etiqueta={escuela?.nombre} />
+
+  <div class="mt-4 flex flex-wrap gap-2">
+    {estado && <Pildora variante={proximamente ? 'suave' : 'normal'}>{estado}</Pildora>}
+    {idioma && <Pildora variante="suave">{idioma}</Pildora>}
+  </div>
+
+  <h3 class="mt-3 text-xl sm:text-2xl">
+    <a href={`/cursos/${curso.id}`} class="after:absolute after:inset-0 after:rounded-cuaderno group-hover:underline">
+      {curso.titulo}
+    </a>
+  </h3>
+  <p class="mt-1 text-sm text-texto-2">{datos.join(' · ')}</p>
+
+  <div class="mt-auto flex items-center justify-between gap-3 pt-4">
+    <p class="text-sm text-texto-2">
+      <span data-sin-plan>Incluido en el plan</span>
+      <span data-con-plan>Disponible con tu plan</span>
+    </p>
+    <span
+      aria-hidden="true"
+      class="inline-flex min-h-11 items-center rounded-cuaderno border-2 border-tinta bg-relleno px-4 text-sm font-semibold"
+    >
+      Ver curso
+    </span>
+  </div>
+</Tarjeta>

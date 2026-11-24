@@ -1,0 +1,26 @@
+---
+/**
+ * PieDePagina — pie de todas las páginas: «Hecho por estudiantes, para estudiantes» y «Reiniciar demo».
+ *
+ * «Reiniciar demo» borra el estado de la demo (plan, respuestas, progreso). Lo hace `data-reiniciar-demo`,
+ * conectado en `lib/estado-en-pagina.ts`. El aviso que aparece después sale de `datos/ajustes.json`
+ * (`suscripcion.avisoReinicio`).
+ */
+import { obtenerTextosSuscripcion } from '../../lib/catalogo';
+
+const { avisoReinicio } = obtenerTextosSuscripcion();
+---
+
+<footer class="mt-16 border-t-2 border-dashed border-linea">
+  <div class="contenedor flex flex-col gap-2 py-6 text-sm text-texto-2 sm:flex-row sm:items-center sm:justify-between">
+    <p>Hecho por estudiantes, para estudiantes</p>
+    <button
+      type="button"
+      data-reiniciar-demo
+      data-aviso-al-reiniciar={avisoReinicio}
+      class="inline-flex min-h-11 items-center self-start rounded-lg underline underline-offset-4 hover:text-tinta sm:self-auto"
+    >
+      Reiniciar demo
+    </button>
+  </div>
+</footer>

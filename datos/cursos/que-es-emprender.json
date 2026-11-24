@@ -1,0 +1,21 @@
+{
+  "id": "que-es-emprender",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Qué es emprender",
+  "subtitulo": "Lo que nadie te cuenta antes de empezar un negocio.",
+  "escuela": "negocios",
+  "areas": [
+    "emprender",
+    "conseguir-clientes"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 45,
+  "modulos": []
+}

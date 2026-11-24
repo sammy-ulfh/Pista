@@ -1,0 +1,20 @@
+{
+  "id": "responder-objeciones",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Responder objeciones",
+  "subtitulo": "Qué contestar cuando te dicen «está caro» o «lo pienso».",
+  "escuela": "negocios",
+  "areas": [
+    "ventas"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 60,
+  "modulos": []
+}

@@ -1,0 +1,40 @@
+---
+/**
+ * CajaAviso — caja gris para notas y avisos dentro de una pantalla
+ * (p. ej. «Esto es una demo: no se hará ningún cobro.»).
+ *
+ * - `tono="nota"`: información de apoyo.
+ * - `tono="atencion"`: algo que conviene leer antes de seguir; lleva una franja de tinta a la izquierda.
+ * - `tono="fuerte"`: un aviso que no se puede pasar por alto (uso ético de riesgo alto): franja de tinta, fondo
+ *   blanco, título en negritas con «⚠» y sombra desplazada.
+ *
+ *   <CajaAviso titulo="Antes de empezar">Texto…</CajaAviso>
+ */
+interface Props {
+  titulo?: string;
+  tono?: 'nota' | 'atencion' | 'fuerte';
+  class?: string;
+}
+
+const { titulo, tono = 'nota', class: claseExtra } = Astro.props;
+---
+
+<div
+  role="note"
+  class:list={[
+    'rounded-cuaderno border-2 border-tinta px-5 py-4',
+    tono === 'fuerte' ? 'border-l-8 bg-blanco shadow-desplazada' : 'bg-suave',
+    tono === 'atencion' && 'border-l-8',
+    claseExtra,
+  ]}
+>
+  {
+    titulo && (
+      <p class:list={['mb-1', tono === 'fuerte' ? 'font-titulo text-lg font-bold' : 'font-semibold']}>
+        {tono === 'fuerte' && <span aria-hidden="true">⚠ </span>}
+        {titulo}
+      </p>
+    )
+  }
+  <div class="text-tinta"><slot /></div>
+</div>

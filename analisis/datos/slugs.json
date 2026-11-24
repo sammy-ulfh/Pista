@@ -1,0 +1,3554 @@
+{
+ "regla": "(también se usa en construir_inventario.py, importándola desde aquí):\n  1. Reparar la codificación rota: U+00A0 (espacio duro) entre dos letras -> \"á\"\n     (en CP437 el byte 0xA0 es \"á\"; así se rompió \"Comandos básicos\" -> \"Comandos b\\xa0sicos\").\n  2. Normalizar a NFKD y quitar acentos/diacríticos (á->a, ñ->n).\n  3. Minúsculas. \"&\" -> \" y \". \"C&C\" -> \"c-y-c\".\n  4. Cualquier carácter que no sea [a-z0-9] -> \"-\". Colapsar guiones repetidos y quitarlos de los extremos.\n  5. Sufijos de parte \"(1-2)\", \" 1-2\", \"(1/4)\" -> \"-1-de-2\" (se conserva el orden).\n  6. Se quita la extensión .md.\n\nTítulo limpio: misma reparación de codificación, \"_\" -> espacio, \"(1-2)\"/\" 1-2\" -> \"(1 de 2)\".",
+ "filas": [
+  {
+   "tipo": "nota",
+   "ruta": "README.md",
+   "nombre": "README.md",
+   "slug": "readme",
+   "titulo": "README",
+   "problemas": [],
+   "ruta_slug": "readme"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals",
+   "nombre": "Cloud&DevOps_Fundamentals",
+   "slug": "cloud-y-devops-fundamentals",
+   "titulo": "Cloud&DevOps Fundamentals",
+   "problemas": [
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash",
+   "nombre": "Bash",
+   "slug": "bash",
+   "titulo": "Bash",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction",
+   "nombre": "Bash_Introduction",
+   "slug": "bash-introduction",
+   "titulo": "Bash Introduction",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+   "nombre": "Additional Materials.md",
+   "slug": "additional-materials",
+   "titulo": "Additional Materials",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction/additional-materials"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Bash startup files.md",
+   "nombre": "Bash startup files.md",
+   "slug": "bash-startup-files",
+   "titulo": "Bash startup files",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction/bash-startup-files"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Do's and Don'ts.md",
+   "nombre": "Do's and Don'ts.md",
+   "slug": "do-s-and-don-ts",
+   "titulo": "Do's and Don'ts",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction/do-s-and-don-ts"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Shell programming.md",
+   "nombre": "Shell programming.md",
+   "slug": "shell-programming",
+   "titulo": "Shell programming",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction/shell-programming"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Shell type.md",
+   "nombre": "Shell type.md",
+   "slug": "shell-type",
+   "titulo": "Shell type",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction/shell-type"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/What is Shell.md",
+   "nombre": "What is Shell.md",
+   "slug": "what-is-shell",
+   "titulo": "What is Shell",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-introduction/what-is-shell"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide",
+   "nombre": "Bash_Style_Guide",
+   "slug": "bash-style-guide",
+   "titulo": "Bash Style Guide",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-style-guide"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Calling commands.md",
+   "nombre": "Calling commands.md",
+   "slug": "calling-commands",
+   "titulo": "Calling commands",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-style-guide/calling-commands"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Comments.md",
+   "nombre": "Comments.md",
+   "slug": "comments",
+   "titulo": "Comments",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-style-guide/comments"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Environment.md",
+   "nombre": "Environment.md",
+   "slug": "environment",
+   "titulo": "Environment",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-style-guide/environment"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Formating.md",
+   "nombre": "Formating.md",
+   "slug": "formating",
+   "titulo": "Formating",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-style-guide/formating"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide/Naming conventions.md",
+   "nombre": "Naming conventions.md",
+   "slug": "naming-conventions",
+   "titulo": "Naming conventions",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-style-guide/naming-conventions"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax",
+   "nombre": "Bash_syntax",
+   "slug": "bash-syntax",
+   "titulo": "Bash syntax",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Bash options.md",
+   "nombre": "Bash options.md",
+   "slug": "bash-options",
+   "titulo": "Bash options",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/bash-options"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Conditions.md",
+   "nombre": "Conditions.md",
+   "slug": "conditions",
+   "titulo": "Conditions",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/conditions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Exit Codes.md",
+   "nombre": "Exit Codes.md",
+   "slug": "exit-codes",
+   "titulo": "Exit Codes",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/exit-codes"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Functions.md",
+   "nombre": "Functions.md",
+   "slug": "functions",
+   "titulo": "Functions",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/functions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/I-O Recirection.md",
+   "nombre": "I-O Recirection.md",
+   "slug": "i-o-recirection",
+   "titulo": "I-O Recirection",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/i-o-recirection"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Loops.md",
+   "nombre": "Loops.md",
+   "slug": "loops",
+   "titulo": "Loops",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/loops"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Script Development and Invocation.md",
+   "nombre": "Script Development and Invocation.md",
+   "slug": "script-development-and-invocation",
+   "titulo": "Script Development and Invocation",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/script-development-and-invocation"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Special characters.md",
+   "nombre": "Special characters.md",
+   "slug": "special-characters",
+   "titulo": "Special characters",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/special-characters"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Variables.md",
+   "nombre": "Variables.md",
+   "slug": "variables",
+   "titulo": "Variables",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/bash-syntax/variables"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED",
+   "nombre": "Text processors - AWK y SED",
+   "slug": "text-processors-awk-y-sed",
+   "titulo": "Text processors - AWK y SED",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/AWK Built-in Variables.md",
+   "nombre": "AWK Built-in Variables.md",
+   "slug": "awk-built-in-variables",
+   "titulo": "AWK Built-in Variables",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/awk-built-in-variables"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/AWK Examples.md",
+   "nombre": "AWK Examples.md",
+   "slug": "awk-examples",
+   "titulo": "AWK Examples",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/awk-examples"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/AWK Overview.md",
+   "nombre": "AWK Overview.md",
+   "slug": "awk-overview",
+   "titulo": "AWK Overview",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/awk-overview"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed address overview.md",
+   "nombre": "Sed address overview.md",
+   "slug": "sed-address-overview",
+   "titulo": "Sed address overview",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/sed-address-overview"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed command overview.md",
+   "nombre": "Sed command overview.md",
+   "slug": "sed-command-overview",
+   "titulo": "Sed command overview",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/sed-command-overview"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed overview.md",
+   "nombre": "Sed overview.md",
+   "slug": "sed-overview",
+   "titulo": "Sed overview",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/sed-overview"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed script overview.md",
+   "nombre": "Sed script overview.md",
+   "slug": "sed-script-overview",
+   "titulo": "Sed script overview",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/bash/text-processors-awk-y-sed/sed-script-overview"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Docker",
+   "nombre": "Docker",
+   "slug": "docker",
+   "titulo": "Docker",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/docker"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory",
+   "nombre": "Theory",
+   "slug": "theory",
+   "titulo": "Theory",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/docker/theory"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Docker essentials.md",
+   "nombre": "Docker essentials.md",
+   "slug": "docker-essentials",
+   "titulo": "Docker essentials",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/docker/theory/docker-essentials"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Working with Docker.md",
+   "nombre": "Working with Docker.md",
+   "slug": "working-with-docker",
+   "titulo": "Working with Docker",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/docker/theory/working-with-docker"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Working with Dockerfile.md",
+   "nombre": "Working with Dockerfile.md",
+   "slug": "working-with-dockerfile",
+   "titulo": "Working with Dockerfile",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/docker/theory/working-with-dockerfile"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux",
+   "nombre": "Linux",
+   "slug": "linux",
+   "titulo": "Linux",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction",
+   "nombre": "Linux_Introduction",
+   "slug": "linux-introduction",
+   "titulo": "Linux Introduction",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Boot Loaders.md",
+   "nombre": "Boot Loaders.md",
+   "slug": "boot-loaders",
+   "titulo": "Boot Loaders",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/boot-loaders"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Disk Quotas.md",
+   "nombre": "Disk Quotas.md",
+   "slug": "disk-quotas",
+   "titulo": "Disk Quotas",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/disk-quotas"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/File systems.md",
+   "nombre": "File systems.md",
+   "slug": "file-systems",
+   "titulo": "File systems",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/file-systems"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/LVM.md",
+   "nombre": "LVM.md",
+   "slug": "lvm",
+   "titulo": "LVM",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/lvm"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Linux Distributions.md",
+   "nombre": "Linux Distributions.md",
+   "slug": "linux-distributions",
+   "titulo": "Linux Distributions",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/linux-distributions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Runlevels.md",
+   "nombre": "Runlevels.md",
+   "slug": "runlevels",
+   "titulo": "Runlevels",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/runlevels"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Shell.md",
+   "nombre": "Shell.md",
+   "slug": "shell",
+   "titulo": "Shell",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/shell"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Swap.md",
+   "nombre": "Swap.md",
+   "slug": "swap",
+   "titulo": "Swap",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/swap"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Unix-Based OS's.md",
+   "nombre": "Unix-Based OS's.md",
+   "slug": "unix-based-os-s",
+   "titulo": "Unix-Based OS's",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-introduction/unix-based-os-s"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics",
+   "nombre": "Linux_shell_basics",
+   "slug": "linux-shell-basics",
+   "titulo": "Linux shell basics",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Basic shell commands.md",
+   "nombre": "Basic shell commands.md",
+   "slug": "basic-shell-commands",
+   "titulo": "Basic shell commands",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/basic-shell-commands"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Filesystem files search.md",
+   "nombre": "Filesystem files search.md",
+   "slug": "filesystem-files-search",
+   "titulo": "Filesystem files search",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/filesystem-files-search"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Introduction to shells.md",
+   "nombre": "Introduction to shells.md",
+   "slug": "introduction-to-shells",
+   "titulo": "Introduction to shells",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/introduction-to-shells"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Shell programming.md",
+   "nombre": "Shell programming.md",
+   "slug": "shell-programming",
+   "titulo": "Shell programming",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/shell-programming"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Text editors.md",
+   "nombre": "Text editors.md",
+   "slug": "text-editors",
+   "titulo": "Text editors",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/text-editors"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Working with archives.md",
+   "nombre": "Working with archives.md",
+   "slug": "working-with-archives",
+   "titulo": "Working with archives",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/working-with-archives"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Xargs.md",
+   "nombre": "Xargs.md",
+   "slug": "xargs",
+   "titulo": "Xargs",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/linux-shell-basics/xargs"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs",
+   "nombre": "Monitoring, Processes Control, Logs",
+   "slug": "monitoring-processes-control-logs",
+   "titulo": "Monitoring, Processes Control, Logs",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/monitoring-processes-control-logs"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Logs.md",
+   "nombre": "Logs.md",
+   "slug": "logs",
+   "titulo": "Logs",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/monitoring-processes-control-logs/logs"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Monitoring CPU.md",
+   "nombre": "Monitoring CPU.md",
+   "slug": "monitoring-cpu",
+   "titulo": "Monitoring CPU",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/monitoring-processes-control-logs/monitoring-cpu"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Monitoring Memory.md",
+   "nombre": "Monitoring Memory.md",
+   "slug": "monitoring-memory",
+   "titulo": "Monitoring Memory",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/monitoring-processes-control-logs/monitoring-memory"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Monitoring Storage.md",
+   "nombre": "Monitoring Storage.md",
+   "slug": "monitoring-storage",
+   "titulo": "Monitoring Storage",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/monitoring-processes-control-logs/monitoring-storage"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Process monitoring.md",
+   "nombre": "Process monitoring.md",
+   "slug": "process-monitoring",
+   "titulo": "Process monitoring",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/monitoring-processes-control-logs/process-monitoring"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access",
+   "nombre": "Networking, Remote Access",
+   "slug": "networking-remote-access",
+   "titulo": "Networking, Remote Access",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/networking-remote-access"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Firewall.d and IPtables.md",
+   "nombre": "Firewall.d and IPtables.md",
+   "slug": "firewall-d-and-iptables",
+   "titulo": "Firewall.d and IPtables",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/networking-remote-access/firewall-d-and-iptables"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Network Configuration.md",
+   "nombre": "Network Configuration.md",
+   "slug": "network-configuration",
+   "titulo": "Network Configuration",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/networking-remote-access/network-configuration"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+   "nombre": "Networking Tools.md",
+   "slug": "networking-tools",
+   "titulo": "Networking Tools",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/networking-remote-access/networking-tools"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+   "nombre": "Remote Access.md",
+   "slug": "remote-access",
+   "titulo": "Remote Access",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/networking-remote-access/remote-access"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management",
+   "nombre": "Package_management",
+   "slug": "package-management",
+   "titulo": "Package management",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/package-management"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Alternatives.md",
+   "nombre": "Alternatives.md",
+   "slug": "alternatives",
+   "titulo": "Alternatives",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/package-management/alternatives"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Crond.md",
+   "nombre": "Crond.md",
+   "slug": "crond",
+   "titulo": "Crond",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/package-management/crond"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/JAVA (OpenJDK).md",
+   "nombre": "JAVA (OpenJDK).md",
+   "slug": "java-openjdk",
+   "titulo": "JAVA (OpenJDK)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/package-management/java-openjdk"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Service Management in Linux.md",
+   "nombre": "Service Management in Linux.md",
+   "slug": "service-management-in-linux",
+   "titulo": "Service Management in Linux",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/package-management/service-management-in-linux"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Software management.md",
+   "nombre": "Software management.md",
+   "slug": "software-management",
+   "titulo": "Software management",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/package-management/software-management"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions",
+   "nombre": "Users, Groups, Permissions",
+   "slug": "users-groups-permissions",
+   "titulo": "Users, Groups, Permissions",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/users-groups-permissions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions/Permission Model.md",
+   "nombre": "Permission Model.md",
+   "slug": "permission-model",
+   "titulo": "Permission Model",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/users-groups-permissions/permission-model"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions/SELinux.md",
+   "nombre": "SELinux.md",
+   "slug": "selinux",
+   "titulo": "SELinux",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/users-groups-permissions/selinux"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions/Users and Groups.md",
+   "nombre": "Users and Groups.md",
+   "slug": "users-and-groups",
+   "titulo": "Users and Groups",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/linux/users-groups-permissions/users-and-groups"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python",
+   "nombre": "Python",
+   "slug": "python",
+   "titulo": "Python",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging",
+   "nombre": "Classes_Modules_Packaging",
+   "slug": "classes-modules-packaging",
+   "titulo": "Classes Modules Packaging",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Class.md",
+   "nombre": "Class.md",
+   "slug": "class",
+   "titulo": "Class",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging/class"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Files.md",
+   "nombre": "Files.md",
+   "slug": "files",
+   "titulo": "Files",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging/files"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Modules.md",
+   "nombre": "Modules.md",
+   "slug": "modules",
+   "titulo": "Modules",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging/modules"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Packages.md",
+   "nombre": "Packages.md",
+   "slug": "packages",
+   "titulo": "Packages",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging/packages"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Packaging.md",
+   "nombre": "Packaging.md",
+   "slug": "packaging",
+   "titulo": "Packaging",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging/packaging"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Scopes.md",
+   "nombre": "Scopes.md",
+   "slug": "scopes",
+   "titulo": "Scopes",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/classes-modules-packaging/scopes"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask",
+   "nombre": "Debugging_Jinja2 templates_Flask",
+   "slug": "debugging-jinja2-templates-flask",
+   "titulo": "Debugging Jinja2 templates Flask",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Debugging.md",
+   "nombre": "Debugging.md",
+   "slug": "debugging",
+   "titulo": "Debugging",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/debugging"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Exceptions.md",
+   "nombre": "Exceptions.md",
+   "slug": "exceptions",
+   "titulo": "Exceptions",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/exceptions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Flask.md",
+   "nombre": "Flask.md",
+   "slug": "flask",
+   "titulo": "Flask",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/flask"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/HTTP.md",
+   "nombre": "HTTP.md",
+   "slug": "http",
+   "titulo": "HTTP",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/http"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Jinja2 templates.md",
+   "nombre": "Jinja2 templates.md",
+   "slug": "jinja2-templates",
+   "titulo": "Jinja2 templates",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/jinja2-templates"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/PDB.md",
+   "nombre": "PDB.md",
+   "slug": "pdb",
+   "titulo": "PDB",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/pdb"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Python application architecture.md",
+   "nombre": "Python application architecture.md",
+   "slug": "python-application-architecture",
+   "titulo": "Python application architecture",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/python-application-architecture"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Requests.md",
+   "nombre": "Requests.md",
+   "slug": "requests",
+   "titulo": "Requests",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/debugging-jinja2-templates-flask/requests"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax",
+   "nombre": "Python Language Syntax",
+   "slug": "python-language-syntax",
+   "titulo": "Python Language Syntax",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Dictionaries.md",
+   "nombre": "Dictionaries.md",
+   "slug": "dictionaries",
+   "titulo": "Dictionaries",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/dictionaries"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Functions.md",
+   "nombre": "Functions.md",
+   "slug": "functions",
+   "titulo": "Functions",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/functions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Input and output from console.md",
+   "nombre": "Input and output from console.md",
+   "slug": "input-and-output-from-console",
+   "titulo": "Input and output from console",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/input-and-output-from-console"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Lists.md",
+   "nombre": "Lists.md",
+   "slug": "lists",
+   "titulo": "Lists",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/lists"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Loops.md",
+   "nombre": "Loops.md",
+   "slug": "loops",
+   "titulo": "Loops",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/loops"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Numbers.md",
+   "nombre": "Numbers.md",
+   "slug": "numbers",
+   "titulo": "Numbers",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/numbers"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Sets.md",
+   "nombre": "Sets.md",
+   "slug": "sets",
+   "titulo": "Sets",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/sets"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Strings.md",
+   "nombre": "Strings.md",
+   "slug": "strings",
+   "titulo": "Strings",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/strings"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Tuples.md",
+   "nombre": "Tuples.md",
+   "slug": "tuples",
+   "titulo": "Tuples",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/tuples"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Images",
+   "nombre": "Images",
+   "slug": "images",
+   "titulo": "Images",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/python-language-syntax/images"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing",
+   "nombre": "Testing_Dockerizing",
+   "slug": "testing-dockerizing",
+   "titulo": "Testing Dockerizing",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/testing-dockerizing"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/Dockerizing.md",
+   "nombre": "Dockerizing.md",
+   "slug": "dockerizing",
+   "titulo": "Dockerizing",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/testing-dockerizing/dockerizing"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/Nose_Coverage.md",
+   "nombre": "Nose_Coverage.md",
+   "slug": "nose-coverage",
+   "titulo": "Nose Coverage",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/testing-dockerizing/nose-coverage"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/Testing.md",
+   "nombre": "Testing.md",
+   "slug": "testing",
+   "titulo": "Testing",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/testing-dockerizing/testing"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/Tox.md",
+   "nombre": "Tox.md",
+   "slug": "tox",
+   "titulo": "Tox",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/testing-dockerizing/tox"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/Unit test.md",
+   "nombre": "Unit test.md",
+   "slug": "unit-test",
+   "titulo": "Unit test",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/testing-dockerizing/unit-test"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files",
+   "nombre": "Work with files",
+   "slug": "work-with-files",
+   "titulo": "Work with files",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Archiving.md",
+   "nombre": "Archiving.md",
+   "slug": "archiving",
+   "titulo": "Archiving",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/archiving"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Copying and moving.md",
+   "nombre": "Copying and moving.md",
+   "slug": "copying-and-moving",
+   "titulo": "Copying and moving",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/copying-and-moving"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Deleting.md",
+   "nombre": "Deleting.md",
+   "slug": "deleting",
+   "titulo": "Deleting",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/deleting"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Directory listing.md",
+   "nombre": "Directory listing.md",
+   "slug": "directory-listing",
+   "titulo": "Directory listing",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/directory-listing"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Filename pattern.md",
+   "nombre": "Filename pattern.md",
+   "slug": "filename-pattern",
+   "titulo": "Filename pattern",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/filename-pattern"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Making directories.md",
+   "nombre": "Making directories.md",
+   "slug": "making-directories",
+   "titulo": "Making directories",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/making-directories"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Temporary directory.md",
+   "nombre": "Temporary directory.md",
+   "slug": "temporary-directory",
+   "titulo": "Temporary directory",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/temporary-directory"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/Work with files/Traversing directory.md",
+   "nombre": "Traversing directory.md",
+   "slug": "traversing-directory",
+   "titulo": "Traversing directory",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/work-with-files/traversing-directory"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview",
+   "nombre": "overview",
+   "slug": "overview",
+   "titulo": "Overview",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Conditions.md",
+   "nombre": "Conditions.md",
+   "slug": "conditions",
+   "titulo": "Conditions",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/conditions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Editors - IDEs.md",
+   "nombre": "Editors - IDEs.md",
+   "slug": "editors-ides",
+   "titulo": "Editors - IDEs",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/editors-ides"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/History.md",
+   "nombre": "History.md",
+   "slug": "history",
+   "titulo": "History",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/history"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Input.md",
+   "nombre": "Input.md",
+   "slug": "input",
+   "titulo": "Input",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/input"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Installation.md",
+   "nombre": "Installation.md",
+   "slug": "installation",
+   "titulo": "Installation",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/installation"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Introduction.md",
+   "nombre": "Introduction.md",
+   "slug": "introduction",
+   "titulo": "Introduction",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/introduction"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Operators.md",
+   "nombre": "Operators.md",
+   "slug": "operators",
+   "titulo": "Operators",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/operators"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/PEP8.md",
+   "nombre": "PEP8.md",
+   "slug": "pep8",
+   "titulo": "PEP8",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/pep8"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/PIP.md",
+   "nombre": "PIP.md",
+   "slug": "pip",
+   "titulo": "PIP",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/pip"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Python Help.md",
+   "nombre": "Python Help.md",
+   "slug": "python-help",
+   "titulo": "Python Help",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/python-help"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Python Introduction.md",
+   "nombre": "Python Introduction.md",
+   "slug": "python-introduction",
+   "titulo": "Python Introduction",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/python-introduction"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Scripts.md",
+   "nombre": "Scripts.md",
+   "slug": "scripts",
+   "titulo": "Scripts",
+   "problemas": [],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/scripts"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Virtual Environments.md",
+   "nombre": "Virtual Environments.md",
+   "slug": "virtual-environments",
+   "titulo": "Virtual Environments",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/virtual-environments"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Working with data.md",
+   "nombre": "Working with data.md",
+   "slug": "working-with-data",
+   "titulo": "Working with data",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "cloud-y-devops-fundamentals/python/overview/working-with-data"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Fixes",
+   "nombre": "Fixes",
+   "slug": "fixes",
+   "titulo": "Fixes",
+   "problemas": [],
+   "ruta_slug": "fixes"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Fixes/ArchFailures",
+   "nombre": "ArchFailures",
+   "slug": "archfailures",
+   "titulo": "ArchFailures",
+   "problemas": [],
+   "ruta_slug": "fixes/archfailures"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Fixes/ArchFailures/Load kernel after break update-upgrade.md",
+   "nombre": "Load kernel after break update-upgrade.md",
+   "slug": "load-kernel-after-break-update-upgrade",
+   "titulo": "Load kernel after break update-upgrade",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "fixes/archfailures/load-kernel-after-break-update-upgrade"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Fixes/Python2_Install",
+   "nombre": "Python2_Install",
+   "slug": "python2-install",
+   "titulo": "Python2 Install",
+   "problemas": [],
+   "ruta_slug": "fixes/python2-install"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Fixes/Python2_Install/how_to_install.md",
+   "nombre": "how_to_install.md",
+   "slug": "how-to-install",
+   "titulo": "How to install",
+   "problemas": [],
+   "ruta_slug": "fixes/python2-install/how-to-install"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Fixes/Vmware",
+   "nombre": "Vmware",
+   "slug": "vmware",
+   "titulo": "Vmware",
+   "problemas": [],
+   "ruta_slug": "fixes/vmware"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Fixes/Vmware/Vmware.md",
+   "nombre": "Vmware.md",
+   "slug": "vmware",
+   "titulo": "Vmware",
+   "problemas": [],
+   "ruta_slug": "fixes/vmware/vmware"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Full-Stack",
+   "nombre": "Full-Stack",
+   "slug": "full-stack",
+   "titulo": "Full-Stack",
+   "problemas": [],
+   "ruta_slug": "full-stack"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Full-Stack/HTML",
+   "nombre": "HTML",
+   "slug": "html",
+   "titulo": "HTML",
+   "problemas": [],
+   "ruta_slug": "full-stack/html"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Full-Stack/HTML/Estructura HTML.md",
+   "nombre": "Estructura HTML.md",
+   "slug": "estructura-html",
+   "titulo": "Estructura HTML",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "full-stack/html/estructura-html"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Full-Stack/HTML/Etiquetas para textos.md",
+   "nombre": "Etiquetas para textos.md",
+   "slug": "etiquetas-para-textos",
+   "titulo": "Etiquetas para textos",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "full-stack/html/etiquetas-para-textos"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Full-Stack/HTML/Etiquetas.md",
+   "nombre": "Etiquetas.md",
+   "slug": "etiquetas",
+   "titulo": "Etiquetas",
+   "problemas": [],
+   "ruta_slug": "full-stack/html/etiquetas"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Full-Stack/HTML/HTML (Conceptos).md",
+   "nombre": "HTML (Conceptos).md",
+   "slug": "html-conceptos",
+   "titulo": "HTML (Conceptos)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "full-stack/html/html-conceptos"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction",
+   "nombre": "Hacking_introduction",
+   "slug": "hacking-introduction",
+   "titulo": "Hacking introduction",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos",
+   "nombre": "Conceptos básicos",
+   "slug": "conceptos-basicos",
+   "titulo": "Conceptos básicos",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Direcciones IP (IPv4 e IPv6).md",
+   "nombre": "Direcciones IP (IPv4 e IPv6).md",
+   "slug": "direcciones-ip-ipv4-e-ipv6",
+   "titulo": "Direcciones IP (IPv4 e IPv6)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/direcciones-ip-ipv4-e-ipv6"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Direcciones MAC (OUI y NIC).md",
+   "nombre": "Direcciones MAC (OUI y NIC).md",
+   "slug": "direcciones-mac-oui-y-nic",
+   "titulo": "Direcciones MAC (OUI y NIC)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/direcciones-mac-oui-y-nic"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Modelo OSI.md",
+   "nombre": "Modelo OSI.md",
+   "slug": "modelo-osi",
+   "titulo": "Modelo OSI",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/modelo-osi"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md",
+   "nombre": "Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md",
+   "slug": "protocolos-comunes-udp-tcp-y-el-famoso-three-way-handshake",
+   "titulo": "Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/protocolos-comunes-udp-tcp-y-el-famoso-three-way-handshake"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Subnetting - CIDRs y cálculo total de hosts.md",
+   "nombre": "Subnetting - CIDRs y cálculo total de hosts.md",
+   "slug": "subnetting-cidrs-y-calculo-total-de-hosts",
+   "titulo": "Subnetting - CIDRs y cálculo total de hosts",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/subnetting-cidrs-y-calculo-total-de-hosts"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Subnetting - Introduccion.md",
+   "nombre": "Subnetting - Introduccion.md",
+   "slug": "subnetting-introduccion",
+   "titulo": "Subnetting - Introduccion",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/subnetting-introduccion"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar.md",
+   "nombre": "Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar.md",
+   "slug": "subnetting-interpretacion-de-los-rangos-de-red-que-el-cliente-nos-ofrece-para-auditar",
+   "titulo": "Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/subnetting-interpretacion-de-los-rangos-de-red-que-el-cliente-nos-ofrece-para-auditar"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/Subnetting – Máscaras de subred, tipos de clase e interpretación de prefijos de red.md",
+   "nombre": "Subnetting – Máscaras de subred, tipos de clase e interpretación de prefijos de red.md",
+   "slug": "subnetting-mascaras-de-subred-tipos-de-clase-e-interpretacion-de-prefijos-de-red",
+   "titulo": "Subnetting – Máscaras de subred, tipos de clase e interpretación de prefijos de red",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/subnetting-mascaras-de-subred-tipos-de-clase-e-interpretacion-de-prefijos-de-red"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+   "nombre": "TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+   "slug": "tips-de-subnetting-y-calculo-veloz-de-direccionamiento-en-redes",
+   "titulo": "TIPS de subnetting y cálculo veloz de direccionamiento en redes",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos/tips-de-subnetting-y-calculo-veloz-de-direccionamiento-en-redes"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación",
+   "nombre": "Conceptos básicos de enumeración y explotación",
+   "slug": "conceptos-basicos-de-enumeracion-y-explotacion",
+   "titulo": "Conceptos básicos de enumeración y explotación",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Introducción.md",
+   "nombre": "Introducción.md",
+   "slug": "introduccion",
+   "titulo": "Introducción",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/introduccion"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite",
+   "nombre": "Burpsuite",
+   "slug": "burpsuite",
+   "titulo": "Burpsuite",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Comparer.md",
+   "nombre": "Comparer.md",
+   "slug": "comparer",
+   "titulo": "Comparer",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/comparer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Decoder.md",
+   "nombre": "Decoder.md",
+   "slug": "decoder",
+   "titulo": "Decoder",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/decoder"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Extensions.md",
+   "nombre": "Extensions.md",
+   "slug": "extensions",
+   "titulo": "Extensions",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/extensions"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Introduccion a Burpsuite.md",
+   "nombre": "Introduccion a Burpsuite.md",
+   "slug": "introduccion-a-burpsuite",
+   "titulo": "Introduccion a Burpsuite",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/introduccion-a-burpsuite"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Intruder.md",
+   "nombre": "Intruder.md",
+   "slug": "intruder",
+   "titulo": "Intruder",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/intruder"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Proxy.md",
+   "nombre": "Proxy.md",
+   "slug": "proxy",
+   "titulo": "Proxy",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/proxy"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Repeater.md",
+   "nombre": "Repeater.md",
+   "slug": "repeater",
+   "titulo": "Repeater",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/burpsuite/repeater"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Enumeracion del sistema",
+   "nombre": "Enumeracion del sistema",
+   "slug": "enumeracion-del-sistema",
+   "titulo": "Enumeracion del sistema",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/enumeracion-del-sistema"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Enumeracion del sistema/Enumeracion del sistema.md",
+   "nombre": "Enumeracion del sistema.md",
+   "slug": "enumeracion-del-sistema",
+   "titulo": "Enumeracion del sistema",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/enumeracion-del-sistema/enumeracion-del-sistema"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells",
+   "nombre": "Shells",
+   "slug": "shells",
+   "titulo": "Shells",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/shells"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Bind Shell.md",
+   "nombre": "Bind Shell.md",
+   "slug": "bind-shell",
+   "titulo": "Bind Shell",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/shells/bind-shell"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Forward Shell.md",
+   "nombre": "Forward Shell.md",
+   "slug": "forward-shell",
+   "titulo": "Forward Shell",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/shells/forward-shell"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Introducción a Shells.md",
+   "nombre": "Introducción a Shells.md",
+   "slug": "introduccion-a-shells",
+   "titulo": "Introducción a Shells",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/shells/introduccion-a-shells"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Reverse Shell.md",
+   "nombre": "Reverse Shell.md",
+   "slug": "reverse-shell",
+   "titulo": "Reverse Shell",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/shells/reverse-shell"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación",
+   "nombre": "Tipos de explotación",
+   "slug": "tipos-de-explotacion",
+   "titulo": "Tipos de explotación",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/tipos-de-explotacion"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+   "nombre": "Tipos de explotación (Manuales y Automatizadas).md",
+   "slug": "tipos-de-explotacion-manuales-y-automatizadas",
+   "titulo": "Tipos de explotación (Manuales y Automatizadas)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/tipos-de-explotacion/tipos-de-explotacion-manuales-y-automatizadas"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de payloads",
+   "nombre": "Tipos de payloads",
+   "slug": "tipos-de-payloads",
+   "titulo": "Tipos de payloads",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/tipos-de-payloads"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de payloads/Tipos de payloads (Staged y Non-taged).md",
+   "nombre": "Tipos de payloads (Staged y Non-taged).md",
+   "slug": "tipos-de-payloads-staged-y-non-taged",
+   "titulo": "Tipos de payloads (Staged y Non-taged)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/conceptos-basicos-de-enumeracion-y-explotacion/tipos-de-payloads/tipos-de-payloads-staged-y-non-taged"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Docker",
+   "nombre": "Docker",
+   "slug": "docker",
+   "titulo": "Docker",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/docker"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Docker/Construccion",
+   "nombre": "Construccion",
+   "slug": "construccion",
+   "titulo": "Construccion",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/docker/construccion"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Construccion/Carga de instrucciones en Docker y desplegando nuestro primer contenedor.md",
+   "nombre": "Carga de instrucciones en Docker y desplegando nuestro primer contenedor.md",
+   "slug": "carga-de-instrucciones-en-docker-y-desplegando-nuestro-primer-contenedor",
+   "titulo": "Carga de instrucciones en Docker y desplegando nuestro primer contenedor",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/docker/construccion/carga-de-instrucciones-en-docker-y-desplegando-nuestro-primer-contenedor"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Construccion/Comandos comunes para la gestión de contenedores.md",
+   "nombre": "Comandos comunes para la gestión de contenedores.md",
+   "slug": "comandos-comunes-para-la-gestion-de-contenedores",
+   "titulo": "Comandos comunes para la gestión de contenedores",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/construccion/comandos-comunes-para-la-gestion-de-contenedores"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Construccion/Creación y construcción de imágenes.md",
+   "nombre": "Creación y construcción de imágenes.md",
+   "slug": "creacion-y-construccion-de-imagenes",
+   "titulo": "Creación y construcción de imágenes",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/construccion/creacion-y-construccion-de-imagenes"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Construccion/Port Forwarding en Docker y uso de monturas.md",
+   "nombre": "Port Forwarding en Docker y uso de monturas.md",
+   "slug": "port-forwarding-en-docker-y-uso-de-monturas",
+   "titulo": "Port Forwarding en Docker y uso de monturas",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/docker/construccion/port-forwarding-en-docker-y-uso-de-monturas"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Docker/Introduccion",
+   "nombre": "Introduccion",
+   "slug": "introduccion",
+   "titulo": "Introduccion",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/docker/introduccion"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Introduccion/Definiendo la estructura básica de Dockerfile.md",
+   "nombre": "Definiendo la estructura básica de Dockerfile.md",
+   "slug": "definiendo-la-estructura-basica-de-dockerfile",
+   "titulo": "Definiendo la estructura básica de Dockerfile",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/introduccion/definiendo-la-estructura-basica-de-dockerfile"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Introduccion/Instalación de Docker en Linux.md",
+   "nombre": "Instalación de Docker en Linux.md",
+   "slug": "instalacion-de-docker-en-linux",
+   "titulo": "Instalación de Docker en Linux",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/introduccion/instalacion-de-docker-en-linux"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/Introduccion/Introducción a Docker.md",
+   "nombre": "Introducción a Docker.md",
+   "slug": "introduccion-a-docker",
+   "titulo": "Introducción a Docker",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/introduccion/introduccion-a-docker"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Docker/MaquinasVulnerbales",
+   "nombre": "MaquinasVulnerbales",
+   "slug": "maquinasvulnerbales",
+   "titulo": "MaquinasVulnerbales",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/docker/maquinasvulnerbales"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (1-2).md",
+   "nombre": "Despliegue de máquinas vulnerables con Docker-Compose (1-2).md",
+   "slug": "despliegue-de-maquinas-vulnerables-con-docker-compose-1-de-2",
+   "titulo": "Despliegue de máquinas vulnerables con Docker-Compose (1 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/maquinasvulnerbales/despliegue-de-maquinas-vulnerables-con-docker-compose-1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (2-2).md",
+   "nombre": "Despliegue de máquinas vulnerables con Docker-Compose (2-2).md",
+   "slug": "despliegue-de-maquinas-vulnerables-con-docker-compose-2-de-2",
+   "titulo": "Despliegue de máquinas vulnerables con Docker-Compose (2 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/docker/maquinasvulnerbales/despliegue-de-maquinas-vulnerables-con-docker-compose-2-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes",
+   "nombre": "EnumServComunes",
+   "slug": "enumservcomunes",
+   "titulo": "EnumServComunes",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/FTP",
+   "nombre": "FTP",
+   "slug": "ftp",
+   "titulo": "FTP",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/ftp"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/FTP/Enumeración del servicio FTP.md",
+   "nombre": "Enumeración del servicio FTP.md",
+   "slug": "enumeracion-del-servicio-ftp",
+   "titulo": "Enumeración del servicio FTP",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/ftp/enumeracion-del-servicio-ftp"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)",
+   "nombre": "Gestores de contenido (CMS)",
+   "slug": "gestores-de-contenido-cms",
+   "titulo": "Gestores de contenido (CMS)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Drupal",
+   "nombre": "Drupal",
+   "slug": "drupal",
+   "titulo": "Drupal",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/drupal"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Drupal/Enumeración de gestores de contenido (CMS) – Drupal.md",
+   "nombre": "Enumeración de gestores de contenido (CMS) – Drupal.md",
+   "slug": "enumeracion-de-gestores-de-contenido-cms-drupal",
+   "titulo": "Enumeración de gestores de contenido (CMS) – Drupal",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/drupal/enumeracion-de-gestores-de-contenido-cms-drupal"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Joomla",
+   "nombre": "Joomla",
+   "slug": "joomla",
+   "titulo": "Joomla",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/joomla"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Joomla/Enumeración de gestores de contenido (CMS) – Joomla.md",
+   "nombre": "Enumeración de gestores de contenido (CMS) – Joomla.md",
+   "slug": "enumeracion-de-gestores-de-contenido-cms-joomla",
+   "titulo": "Enumeración de gestores de contenido (CMS) – Joomla",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/joomla/enumeracion-de-gestores-de-contenido-cms-joomla"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Magento",
+   "nombre": "Magento",
+   "slug": "magento",
+   "titulo": "Magento",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/magento"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Magento/Enumeración de gestores de contenido (CMS) – Magento.md",
+   "nombre": "Enumeración de gestores de contenido (CMS) – Magento.md",
+   "slug": "enumeracion-de-gestores-de-contenido-cms-magento",
+   "titulo": "Enumeración de gestores de contenido (CMS) – Magento",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/magento/enumeracion-de-gestores-de-contenido-cms-magento"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress",
+   "nombre": "Wordpress",
+   "slug": "wordpress",
+   "titulo": "Wordpress",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/wordpress"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2",
+   "nombre": "1-2",
+   "slug": "1-de-2",
+   "titulo": "(1 de 2)",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/wordpress/1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "nombre": "Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+   "slug": "enumeracion-de-gestores-de-contenido-cms-wordpress-1-de-2",
+   "titulo": "Enumeración de gestores de contenido (CMS) – WordPress (1 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/wordpress/1-de-2/enumeracion-de-gestores-de-contenido-cms-wordpress-1-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/2-2",
+   "nombre": "2-2",
+   "slug": "2-de-2",
+   "titulo": "(2 de 2)",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/wordpress/2-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/2-2/Enumeración de gestores de contenido (CMS) – WordPress (2-2).md",
+   "nombre": "Enumeración de gestores de contenido (CMS) – WordPress (2-2).md",
+   "slug": "enumeracion-de-gestores-de-contenido-cms-wordpress-2-de-2",
+   "titulo": "Enumeración de gestores de contenido (CMS) – WordPress (2 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos",
+    "guion_largo"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/gestores-de-contenido-cms/wordpress/2-de-2/enumeracion-de-gestores-de-contenido-cms-wordpress-2-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/HTTP&HTTPS",
+   "nombre": "HTTP&HTTPS",
+   "slug": "http-y-https",
+   "titulo": "HTTP&HTTPS",
+   "problemas": [
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/http-y-https"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/HTTP&HTTPS/Enumeración del servicio HTTP y HTTPS.md",
+   "nombre": "Enumeración del servicio HTTP y HTTPS.md",
+   "slug": "enumeracion-del-servicio-http-y-https",
+   "titulo": "Enumeración del servicio HTTP y HTTPS",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/http-y-https/enumeracion-del-servicio-http-y-https"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/SMB",
+   "nombre": "SMB",
+   "slug": "smb",
+   "titulo": "SMB",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/smb"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/SMB/Enumeración del servicio SMB.md",
+   "nombre": "Enumeración del servicio SMB.md",
+   "slug": "enumeracion-del-servicio-smb",
+   "titulo": "Enumeración del servicio SMB",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/smb/enumeracion-del-servicio-smb"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/EnumServComunes/SSH",
+   "nombre": "SSH",
+   "slug": "ssh",
+   "titulo": "SSH",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/enumservcomunes/ssh"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/EnumServComunes/SSH/Enumeración del servicio SSH.md",
+   "nombre": "Enumeración del servicio SSH.md",
+   "slug": "enumeracion-del-servicio-ssh",
+   "titulo": "Enumeración del servicio SSH",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/enumservcomunes/ssh/enumeracion-del-servicio-ssh"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web",
+   "nombre": "OWASP TOP 10 y Vulnerabilidades Web",
+   "slug": "owasp-top-10-y-vulnerabilidades-web",
+   "titulo": "OWASP TOP 10 y Vulnerabilidades Web",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/owasp-top-10-y-vulnerabilidades-web"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI",
+   "nombre": "SQLI",
+   "slug": "sqli",
+   "titulo": "SQLI",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/owasp-top-10-y-vulnerabilidades-web/sqli"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI/Introduccion a SQLI.md",
+   "nombre": "Introduccion a SQLI.md",
+   "slug": "introduccion-a-sqli",
+   "titulo": "Introduccion a SQLI",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/owasp-top-10-y-vulnerabilidades-web/sqli/introduccion-a-sqli"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento",
+   "nombre": "Reconocimiento",
+   "slug": "reconocimiento",
+   "titulo": "Reconocimiento",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/BrechasSeguridad",
+   "nombre": "BrechasSeguridad",
+   "slug": "brechasseguridad",
+   "titulo": "BrechasSeguridad",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/brechasseguridad"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/BrechasSeguridad/Credenciales y brechas de seguridad.md",
+   "nombre": "Credenciales y brechas de seguridad.md",
+   "slug": "credenciales-y-brechas-de-seguridad",
+   "titulo": "Credenciales y brechas de seguridad",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/brechasseguridad/credenciales-y-brechas-de-seguridad"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/Correos",
+   "nombre": "Correos",
+   "slug": "correos",
+   "titulo": "Correos",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/correos"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/Correos/Descubrimiento de correos electrónicos.md",
+   "nombre": "Descubrimiento de correos electrónicos.md",
+   "slug": "descubrimiento-de-correos-electronicos",
+   "titulo": "Descubrimiento de correos electrónicos",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/correos/descubrimiento-de-correos-electronicos"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/DescubrirHosts",
+   "nombre": "DescubrirHosts",
+   "slug": "descubrirhosts",
+   "titulo": "DescubrirHosts",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/descubrirhosts"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/DescubrirHosts/Descubrimiento de equipos en la red local (ARP e ICMP) y Tips.md",
+   "nombre": "Descubrimiento de equipos en la red local (ARP e ICMP) y Tips.md",
+   "slug": "descubrimiento-de-equipos-en-la-red-local-arp-e-icmp-y-tips",
+   "titulo": "Descubrimiento de equipos en la red local (ARP e ICMP) y Tips",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/descubrirhosts/descubrimiento-de-equipos-en-la-red-local-arp-e-icmp-y-tips"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/EscaneoDescriptores",
+   "nombre": "EscaneoDescriptores",
+   "slug": "escaneodescriptores",
+   "titulo": "EscaneoDescriptores",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/escaneodescriptores"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+   "nombre": "Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+   "slug": "alternativas-para-la-enumeracion-de-puertos-usando-descriptores-de-archivo",
+   "titulo": "Alternativas para la enumeración de puertos usando descriptores de archivo",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/escaneodescriptores/alternativas-para-la-enumeracion-de-puertos-usando-descriptores-de-archivo"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/EscaneoNmap",
+   "nombre": "EscaneoNmap",
+   "slug": "escaneonmap",
+   "titulo": "EscaneoNmap",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/escaneonmap"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/EscaneoNmap/Nmap y sus diferentes modos de escaneo.md",
+   "nombre": "Nmap y sus diferentes modos de escaneo.md",
+   "slug": "nmap-y-sus-diferentes-modos-de-escaneo",
+   "titulo": "Nmap y sus diferentes modos de escaneo",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/escaneonmap/nmap-y-sus-diferentes-modos-de-escaneo"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/EvasionFirewall",
+   "nombre": "EvasionFirewall",
+   "slug": "evasionfirewall",
+   "titulo": "EvasionFirewall",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/evasionfirewall"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+   "nombre": "Técnicas de evasión de Firewalls.md",
+   "slug": "tecnicas-de-evasion-de-firewalls",
+   "titulo": "Técnicas de evasión de Firewalls",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/evasionfirewall/tecnicas-de-evasion-de-firewalls"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/Fuzzing",
+   "nombre": "Fuzzing",
+   "slug": "fuzzing",
+   "titulo": "Fuzzing",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/fuzzing"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/Fuzzing y enumeración de archivos en un servidor web (1-2).md",
+   "nombre": "Fuzzing y enumeración de archivos en un servidor web (1-2).md",
+   "slug": "fuzzing-y-enumeracion-de-archivos-en-un-servidor-web-1-de-2",
+   "titulo": "Fuzzing y enumeración de archivos en un servidor web (1 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/fuzzing/fuzzing-y-enumeracion-de-archivos-en-un-servidor-web-1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/Fuzzing/Fuzzing y enumeración de archivos en un servidor web (2-2).md",
+   "nombre": "Fuzzing y enumeración de archivos en un servidor web (2-2).md",
+   "slug": "fuzzing-y-enumeracion-de-archivos-en-un-servidor-web-2-de-2",
+   "titulo": "Fuzzing y enumeración de archivos en un servidor web (2 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/fuzzing/fuzzing-y-enumeracion-de-archivos-en-un-servidor-web-2-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/GoogleDorks",
+   "nombre": "GoogleDorks",
+   "slug": "googledorks",
+   "titulo": "GoogleDorks",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/googledorks"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/GoogleDorks/Google Dorks - Google Hacking (Los 18 Dorks más usados).md",
+   "nombre": "Google Dorks - Google Hacking (Los 18 Dorks más usados).md",
+   "slug": "google-dorks-google-hacking-los-18-dorks-mas-usados",
+   "titulo": "Google Dorks - Google Hacking (Los 18 Dorks más usados)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/googledorks/google-dorks-google-hacking-los-18-dorks-mas-usados"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/Hackerone",
+   "nombre": "Hackerone",
+   "slug": "hackerone",
+   "titulo": "Hackerone",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/hackerone"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/Hackerone/Validación del objetivo (Fijando un target en HackerOne).md",
+   "nombre": "Validación del objetivo (Fijando un target en HackerOne).md",
+   "slug": "validacion-del-objetivo-fijando-un-target-en-hackerone",
+   "titulo": "Validación del objetivo (Fijando un target en HackerOne)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/hackerone/validacion-del-objetivo-fijando-un-target-en-hackerone"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/OS",
+   "nombre": "OS",
+   "slug": "os",
+   "titulo": "OS",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/os"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/OS/Identificación y verificación externa de la versión del sistema operativo.md",
+   "nombre": "Identificación y verificación externa de la versión del sistema operativo.md",
+   "slug": "identificacion-y-verificacion-externa-de-la-version-del-sistema-operativo",
+   "titulo": "Identificación y verificación externa de la versión del sistema operativo",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/os/identificacion-y-verificacion-externa-de-la-version-del-sistema-operativo"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/RecImagen",
+   "nombre": "RecImagen",
+   "slug": "recimagen",
+   "titulo": "RecImagen",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/recimagen"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/RecImagen/Reconocimiento de imágenes.md",
+   "nombre": "Reconocimiento de imágenes.md",
+   "slug": "reconocimiento-de-imagenes",
+   "titulo": "Reconocimiento de imágenes",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/recimagen/reconocimiento-de-imagenes"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap",
+   "nombre": "ScriptsNmap",
+   "slug": "scriptsnmap",
+   "titulo": "ScriptsNmap",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/scriptsnmap"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/Creación de tus propios scripts en Lua para nmap.md",
+   "nombre": "Creación de tus propios scripts en Lua para nmap.md",
+   "slug": "creacion-de-tus-propios-scripts-en-lua-para-nmap",
+   "titulo": "Creación de tus propios scripts en Lua para nmap",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/scriptsnmap/creacion-de-tus-propios-scripts-en-lua-para-nmap"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/ScriptsNmap/Uso de scripts y categorías en nmap para aplicar reconocimiento.md",
+   "nombre": "Uso de scripts y categorías en nmap para aplicar reconocimiento.md",
+   "slug": "uso-de-scripts-y-categorias-en-nmap-para-aplicar-reconocimiento",
+   "titulo": "Uso de scripts y categorías en nmap para aplicar reconocimiento",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/scriptsnmap/uso-de-scripts-y-categorias-en-nmap-para-aplicar-reconocimiento"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/Subdominios",
+   "nombre": "Subdominios",
+   "slug": "subdominios",
+   "titulo": "Subdominios",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/subdominios"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/Subdominios/Enumeración de subdominios.md",
+   "nombre": "Enumeración de subdominios.md",
+   "slug": "enumeracion-de-subdominios",
+   "titulo": "Enumeración de subdominios",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/subdominios/enumeracion-de-subdominios"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Reconocimiento/TecnologiasWeb",
+   "nombre": "TecnologiasWeb",
+   "slug": "tecnologiasweb",
+   "titulo": "TecnologiasWeb",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/reconocimiento/tecnologiasweb"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Reconocimiento/TecnologiasWeb/Identificación de las tecnologías en una página web.md",
+   "nombre": "Identificación de las tecnologías en una página web.md",
+   "slug": "identificacion-de-las-tecnologias-en-una-pagina-web",
+   "titulo": "Identificación de las tecnologías en una página web",
+   "problemas": [
+    "espacios",
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/reconocimiento/tecnologiasweb/identificacion-de-las-tecnologias-en-una-pagina-web"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Hacking_introduction/Tools",
+   "nombre": "Tools",
+   "slug": "tools",
+   "titulo": "Tools",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/tools"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Tools/Correos.md",
+   "nombre": "Correos.md",
+   "slug": "correos",
+   "titulo": "Correos",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/tools/correos"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Tools/Enumeración.md",
+   "nombre": "Enumeración.md",
+   "slug": "enumeracion",
+   "titulo": "Enumeración",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "hacking-introduction/tools/enumeracion"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Tools/Imagenes.md",
+   "nombre": "Imagenes.md",
+   "slug": "imagenes",
+   "titulo": "Imagenes",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/tools/imagenes"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Hacking_introduction/Tools/Subdominios.md",
+   "nombre": "Subdominios.md",
+   "slug": "subdominios",
+   "titulo": "Subdominios",
+   "problemas": [],
+   "ruta_slug": "hacking-introduction/tools/subdominios"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Linux_Introduction",
+   "nombre": "Linux_Introduction",
+   "slug": "linux-introduction",
+   "titulo": "Linux Introduction",
+   "problemas": [],
+   "ruta_slug": "linux-introduction"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Linux_Introduction/Introduction",
+   "nombre": "Introduction",
+   "slug": "introduction",
+   "titulo": "Introduction",
+   "problemas": [],
+   "ruta_slug": "linux-introduction/introduction"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Introduction/Creando una m quina virtual.md",
+   "nombre": "Creando una m quina virtual.md",
+   "slug": "creando-una-maquina-virtual",
+   "titulo": "Creando una máquina virtual",
+   "problemas": [
+    "codificacion_rota",
+    "espacios"
+   ],
+   "ruta_slug": "linux-introduction/introduction/creando-una-maquina-virtual"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+   "nombre": "Sistemas operativos para pentesting.md",
+   "slug": "sistemas-operativos-para-pentesting",
+   "titulo": "Sistemas operativos para pentesting",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "linux-introduction/introduction/sistemas-operativos-para-pentesting"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Introduction/System_installation.md",
+   "nombre": "System_installation.md",
+   "slug": "system-installation",
+   "titulo": "System installation",
+   "problemas": [],
+   "ruta_slug": "linux-introduction/introduction/system-installation"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Linux_Introduction/Temario",
+   "nombre": "Temario",
+   "slug": "temario",
+   "titulo": "Temario",
+   "problemas": [],
+   "ruta_slug": "linux-introduction/temario"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Temario/Comandos b sicos 1-2.md",
+   "nombre": "Comandos b sicos 1-2.md",
+   "slug": "comandos-basicos-1-de-2",
+   "titulo": "Comandos básicos (1 de 2)",
+   "problemas": [
+    "codificacion_rota",
+    "espacios"
+   ],
+   "ruta_slug": "linux-introduction/temario/comandos-basicos-1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Temario/Comandos b sicos 2-2.md",
+   "nombre": "Comandos b sicos 2-2.md",
+   "slug": "comandos-basicos-2-de-2",
+   "titulo": "Comandos básicos (2 de 2)",
+   "problemas": [
+    "codificacion_rota",
+    "espacios"
+   ],
+   "ruta_slug": "linux-introduction/temario/comandos-basicos-2-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Temario/Control de flujo, operadores y procesos en segundo plano.md",
+   "nombre": "Control de flujo, operadores y procesos en segundo plano.md",
+   "slug": "control-de-flujo-operadores-y-procesos-en-segundo-plano",
+   "titulo": "Control de flujo, operadores y procesos en segundo plano",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "linux-introduction/temario/control-de-flujo-operadores-y-procesos-en-segundo-plano"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Temario/Permisos especiales.md",
+   "nombre": "Permisos especiales.md",
+   "slug": "permisos-especiales",
+   "titulo": "Permisos especiales",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "linux-introduction/temario/permisos-especiales"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Linux_Introduction/Temario/permisos.md",
+   "nombre": "permisos.md",
+   "slug": "permisos",
+   "titulo": "Permisos",
+   "problemas": [],
+   "ruta_slug": "linux-introduction/temario/permisos"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Personalizacion_entrono",
+   "nombre": "Personalizacion_entrono",
+   "slug": "personalizacion-entrono",
+   "titulo": "Personalizacion entrono",
+   "problemas": [],
+   "ruta_slug": "personalizacion-entrono"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+   "nombre": "Personalización_Linux.md",
+   "slug": "personalizacion-linux",
+   "titulo": "Personalización Linux",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "personalizacion-entrono/personalizacion-linux"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo",
+   "nombre": "Python_ofensivo",
+   "slug": "python-ofensivo",
+   "titulo": "Python ofensivo",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Introduction",
+   "nombre": "Introduction",
+   "slug": "introduction",
+   "titulo": "Introduction",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/introduction"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+   "nombre": "Biblioteca_estándar_y_herramientas_adicionales.md",
+   "slug": "biblioteca-estandar-y-herramientas-adicionales",
+   "titulo": "Biblioteca estándar y herramientas adicionales",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "python-ofensivo/introduction/biblioteca-estandar-y-herramientas-adicionales"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Colecciones_y_estructuras_de_datos_en_Python.md",
+   "nombre": "Colecciones_y_estructuras_de_datos_en_Python.md",
+   "slug": "colecciones-y-estructuras-de-datos-en-python",
+   "titulo": "Colecciones y estructuras de datos en Python",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/introduction/colecciones-y-estructuras-de-datos-en-python"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+   "nombre": "Conceptos_básicos_de_Python.md",
+   "slug": "conceptos-basicos-de-python",
+   "titulo": "Conceptos básicos de Python",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "python-ofensivo/introduction/conceptos-basicos-de-python"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+   "nombre": "Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+   "slug": "desarrollo-de-aplicaciones-de-escritorio-con-python",
+   "titulo": "Desarrollo de aplicaciones de escritorio con Python",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/introduction/desarrollo-de-aplicaciones-de-escritorio-con-python"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Entrada_y_salida_de_datos.md",
+   "nombre": "Entrada_y_salida_de_datos.md",
+   "slug": "entrada-y-salida-de-datos",
+   "titulo": "Entrada y salida de datos",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/introduction/entrada-y-salida-de-datos"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Introducción_a_Python.md",
+   "nombre": "Introducción_a_Python.md",
+   "slug": "introduccion-a-python",
+   "titulo": "Introducción a Python",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "python-ofensivo/introduction/introduccion-a-python"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+   "nombre": "Manejo_de_librerías_comunes.md",
+   "slug": "manejo-de-librerias-comunes",
+   "titulo": "Manejo de librerías comunes",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "python-ofensivo/introduction/manejo-de-librerias-comunes"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Módulos_y_paquetes_en_Python.md",
+   "nombre": "Módulos_y_paquetes_en_Python.md",
+   "slug": "modulos-y-paquetes-en-python",
+   "titulo": "Módulos y paquetes en Python",
+   "problemas": [
+    "acentos"
+   ],
+   "ruta_slug": "python-ofensivo/introduction/modulos-y-paquetes-en-python"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Programación_Orientada_a_Objetos_en_Python_(POO).md",
+   "nombre": "Programación_Orientada_a_Objetos_en_Python_(POO).md",
+   "slug": "programacion-orientada-a-objetos-en-python-poo",
+   "titulo": "Programación Orientada a Objetos en Python (POO)",
+   "problemas": [
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/introduction/programacion-orientada-a-objetos-en-python-poo"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/Proyectos_de_POO.md",
+   "nombre": "Proyectos_de_POO.md",
+   "slug": "proyectos-de-poo",
+   "titulo": "Proyectos de POO",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/introduction/proyectos-de-poo"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Introduction/README.md",
+   "nombre": "README.md",
+   "slug": "readme",
+   "titulo": "README",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/introduction/readme"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive",
+   "nombre": "Offensive",
+   "slug": "offensive",
+   "titulo": "Offensive",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/ARP_scanner",
+   "nombre": "ARP_scanner",
+   "slug": "arp-scanner",
+   "titulo": "ARP scanner",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/arp-scanner"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/ARP_scanner/Creando un escáner de red (ARP) con Scapy.md",
+   "nombre": "Creando un escáner de red (ARP) con Scapy.md",
+   "slug": "creando-un-escaner-de-red-arp-con-scapy",
+   "titulo": "Creando un escáner de red (ARP) con Scapy",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/arp-scanner/creando-un-escaner-de-red-arp-con-scapy"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Backdoors y C&c",
+   "nombre": "Backdoors y C&c",
+   "slug": "backdoors-y-c-y-c",
+   "titulo": "Backdoors y C&c",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/backdoors-y-c-y-c"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (1-2).md",
+   "nombre": "Creación de Backdoors y Command and Control (C&C) (1-2).md",
+   "slug": "creacion-de-backdoors-y-command-and-control-c-y-c-1-de-2",
+   "titulo": "Creación de Backdoors y Command and Control (C&C) (1 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/backdoors-y-c-y-c/creacion-de-backdoors-y-command-and-control-c-y-c-1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (2-2).md",
+   "nombre": "Creación de Backdoors y Command and Control (C&C) (2-2).md",
+   "slug": "creacion-de-backdoors-y-command-and-control-c-y-c-2-de-2",
+   "titulo": "Creación de Backdoors y Command and Control (C&C) (2 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/backdoors-y-c-y-c/creacion-de-backdoors-y-command-and-control-c-y-c-2-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Backdoors y C&c/scripts1",
+   "nombre": "scripts1",
+   "slug": "scripts1",
+   "titulo": "Scripts1",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/backdoors-y-c-y-c/scripts1"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Backdoors y C&c/scripts2",
+   "nombre": "scripts2",
+   "slug": "scripts2",
+   "titulo": "Scripts2",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/backdoors-y-c-y-c/scripts2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/ICMP_scanner",
+   "nombre": "ICMP_scanner",
+   "slug": "icmp-scanner",
+   "titulo": "ICMP scanner",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/icmp-scanner"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/ICMP_scanner/Creando un escáner de red (ICMP).md",
+   "nombre": "Creando un escáner de red (ICMP).md",
+   "slug": "creando-un-escaner-de-red-icmp",
+   "titulo": "Creando un escáner de red (ICMP)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/icmp-scanner/creando-un-escaner-de-red-icmp"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Keylogger",
+   "nombre": "Keylogger",
+   "slug": "keylogger",
+   "titulo": "Keylogger",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/keylogger"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (1-2).md",
+   "nombre": "Creando un Keylogger (1-2).md",
+   "slug": "creando-un-keylogger-1-de-2",
+   "titulo": "Creando un Keylogger (1 de 2)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/keylogger/creando-un-keylogger-1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (2-2).md",
+   "nombre": "Creando un Keylogger (2-2).md",
+   "slug": "creando-un-keylogger-2-de-2",
+   "titulo": "Creando un Keylogger (2 de 2)",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/keylogger/creando-un-keylogger-2-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Keylogger/scripts",
+   "nombre": "scripts",
+   "slug": "scripts",
+   "titulo": "Scripts",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/keylogger/scripts"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Keylogger/scripts/keylogger1",
+   "nombre": "keylogger1",
+   "slug": "keylogger1",
+   "titulo": "Keylogger1",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/keylogger/scripts/keylogger1"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Keylogger/scripts/keylogger2",
+   "nombre": "keylogger2",
+   "slug": "keylogger2",
+   "titulo": "Keylogger2",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/keylogger/scripts/keylogger2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Malware",
+   "nombre": "Malware",
+   "slug": "malware",
+   "titulo": "Malware",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/malware"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Malware/Creación de Malware (1-2).md",
+   "nombre": "Creación de Malware (1-2).md",
+   "slug": "creacion-de-malware-1-de-2",
+   "titulo": "Creación de Malware (1 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/malware/creacion-de-malware-1-de-2"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Malware/Creación de Malware (2-2).md",
+   "nombre": "Creación de Malware (2-2).md",
+   "slug": "creacion-de-malware-2-de-2",
+   "titulo": "Creación de Malware (2 de 2)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/malware/creacion-de-malware-2-de-2"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Malware/script",
+   "nombre": "script",
+   "slug": "script",
+   "titulo": "Script",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/malware/script"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/Traffic_Hijacking",
+   "nombre": "Traffic_Hijacking",
+   "slug": "traffic-hijacking",
+   "titulo": "Traffic Hijacking",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/traffic-hijacking"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/Traffic_Hijacking/Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking).md",
+   "nombre": "Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking).md",
+   "slug": "creando-un-manipulador-e-interceptor-de-trafico-traffic-hijacking",
+   "titulo": "Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/traffic-hijacking/creando-un-manipulador-e-interceptor-de-trafico-traffic-hijacking"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/arp_spoofer",
+   "nombre": "arp_spoofer",
+   "slug": "arp-spoofer",
+   "titulo": "Arp spoofer",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/arp-spoofer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/arp_spoofer/Creando un envenenador ARP (ARP Spoofer) con Scapy.md",
+   "nombre": "Creando un envenenador ARP (ARP Spoofer) con Scapy.md",
+   "slug": "creando-un-envenenador-arp-arp-spoofer-con-scapy",
+   "titulo": "Creando un envenenador ARP (ARP Spoofer) con Scapy",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/arp-spoofer/creando-un-envenenador-arp-arp-spoofer-con-scapy"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/dns_sniffer",
+   "nombre": "dns_sniffer",
+   "slug": "dns-sniffer",
+   "titulo": "Dns sniffer",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/dns-sniffer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/dns_sniffer/Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy.md",
+   "nombre": "Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy.md",
+   "slug": "creando-un-rastreador-de-consultas-dns-dns-sniffer-con-scapy",
+   "titulo": "Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/dns-sniffer/creando-un-rastreador-de-consultas-dns-dns-sniffer-con-scapy"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/dns_spoofer",
+   "nombre": "dns_spoofer",
+   "slug": "dns-spoofer",
+   "titulo": "Dns spoofer",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/dns-spoofer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/dns_spoofer/Creando un DNS Spoofer con Scapy y NetfilterQueue.md",
+   "nombre": "Creando un DNS Spoofer con Scapy y NetfilterQueue.md",
+   "slug": "creando-un-dns-spoofer-con-scapy-y-netfilterqueue",
+   "titulo": "Creando un DNS Spoofer con Scapy y NetfilterQueue",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/dns-spoofer/creando-un-dns-spoofer-con-scapy-y-netfilterqueue"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/forward_shell",
+   "nombre": "forward_shell",
+   "slug": "forward-shell",
+   "titulo": "Forward shell",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (1-4).md",
+   "nombre": "Creación de Forward Shell (1-4).md",
+   "slug": "creacion-de-forward-shell-1-de-4",
+   "titulo": "Creación de Forward Shell (1 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/creacion-de-forward-shell-1-de-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (2-4).md",
+   "nombre": "Creación de Forward Shell (2-4).md",
+   "slug": "creacion-de-forward-shell-2-de-4",
+   "titulo": "Creación de Forward Shell (2 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/creacion-de-forward-shell-2-de-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (3-4).md",
+   "nombre": "Creación de Forward Shell (3-4).md",
+   "slug": "creacion-de-forward-shell-3-de-4",
+   "titulo": "Creación de Forward Shell (3 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/creacion-de-forward-shell-3-de-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (4-4).md",
+   "nombre": "Creación de Forward Shell (4-4).md",
+   "slug": "creacion-de-forward-shell-4-de-4",
+   "titulo": "Creación de Forward Shell (4 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/creacion-de-forward-shell-4-de-4"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/scripts",
+   "nombre": "scripts",
+   "slug": "scripts",
+   "titulo": "Scripts",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/scripts"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/scripts/script3",
+   "nombre": "script3",
+   "slug": "script3",
+   "titulo": "Script3",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/scripts/script3"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/forward_shell/scripts/script4",
+   "nombre": "script4",
+   "slug": "script4",
+   "titulo": "Script4",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/forward-shell/scripts/script4"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/http_sniffer",
+   "nombre": "http_sniffer",
+   "slug": "http-sniffer",
+   "titulo": "Http sniffer",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/http-sniffer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/http_sniffer/Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy.md",
+   "nombre": "Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy.md",
+   "slug": "creando-un-rastreador-de-consultas-http-http-sniffer-con-scapy",
+   "titulo": "Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/http-sniffer/creando-un-rastreador-de-consultas-http-http-sniffer-con-scapy"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/https_image_sniffer",
+   "nombre": "https_image_sniffer",
+   "slug": "https-image-sniffer",
+   "titulo": "Https image sniffer",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/https-image-sniffer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/https_image_sniffer/Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump.md",
+   "nombre": "Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump.md",
+   "slug": "creando-un-rastreador-de-imagenes-por-https-https-image-snfifer-con-mitmdump",
+   "titulo": "Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/https-image-sniffer/creando-un-rastreador-de-imagenes-por-https-https-image-snfifer-con-mitmdump"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/https_image_sniffer/script",
+   "nombre": "script",
+   "slug": "script",
+   "titulo": "Script",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/https-image-sniffer/script"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/https_sniffer",
+   "nombre": "https_sniffer",
+   "slug": "https-sniffer",
+   "titulo": "Https sniffer",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/https-sniffer"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "nombre": "Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+   "slug": "creando-un-rastreador-de-consultas-https-https-sniffer-con-mitmdump",
+   "titulo": "Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump",
+   "problemas": [
+    "espacios",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/https-sniffer/creando-un-rastreador-de-consultas-https-https-sniffer-con-mitmdump"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/macchanger",
+   "nombre": "macchanger",
+   "slug": "macchanger",
+   "titulo": "Macchanger",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/macchanger"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/macchanger/Creando un programa que nos cambie la dirección MAC (macchanger).md",
+   "nombre": "Creando un programa que nos cambie la dirección MAC (macchanger).md",
+   "slug": "creando-un-programa-que-nos-cambie-la-direccion-mac-macchanger",
+   "titulo": "Creando un programa que nos cambie la dirección MAC (macchanger)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/macchanger/creando-un-programa-que-nos-cambie-la-direccion-mac-macchanger"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/port_scanner",
+   "nombre": "port_scanner",
+   "slug": "port-scanner",
+   "titulo": "Port scanner",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v1_4",
+   "nombre": "v1_4",
+   "slug": "v1-4",
+   "titulo": "V1 4",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v1-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v1_4/Creando un escáner de puertos (1-4).md",
+   "nombre": "Creando un escáner de puertos (1-4).md",
+   "slug": "creando-un-escaner-de-puertos-1-de-4",
+   "titulo": "Creando un escáner de puertos (1 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v1-4/creando-un-escaner-de-puertos-1-de-4"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v2_4",
+   "nombre": "v2_4",
+   "slug": "v2-4",
+   "titulo": "V2 4",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v2-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v2_4/Creando un escáner de puertos (2-4).md",
+   "nombre": "Creando un escáner de puertos (2-4).md",
+   "slug": "creando-un-escaner-de-puertos-2-de-4",
+   "titulo": "Creando un escáner de puertos (2 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v2-4/creando-un-escaner-de-puertos-2-de-4"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v3_4",
+   "nombre": "v3_4",
+   "slug": "v3-4",
+   "titulo": "V3 4",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v3-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v3_4/Creando un escáner de puertos (3-4).md",
+   "nombre": "Creando un escáner de puertos (3-4).md",
+   "slug": "creando-un-escaner-de-puertos-3-de-4",
+   "titulo": "Creando un escáner de puertos (3 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v3-4/creando-un-escaner-de-puertos-3-de-4"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v4_4",
+   "nombre": "v4_4",
+   "slug": "v4-4",
+   "titulo": "V4 4",
+   "problemas": [],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v4-4"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "Python_ofensivo/Offensive/port_scanner/v4_4/Creando un escáner de puertos (4-4).md",
+   "nombre": "Creando un escáner de puertos (4-4).md",
+   "slug": "creando-un-escaner-de-puertos-4-de-4",
+   "titulo": "Creando un escáner de puertos (4 de 4)",
+   "problemas": [
+    "espacios",
+    "acentos",
+    "simbolos"
+   ],
+   "ruta_slug": "python-ofensivo/offensive/port-scanner/v4-4/creando-un-escaner-de-puertos-4-de-4"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "VLANS",
+   "nombre": "VLANS",
+   "slug": "vlans",
+   "titulo": "VLANS",
+   "problemas": [],
+   "ruta_slug": "vlans"
+  },
+  {
+   "tipo": "carpeta",
+   "ruta": "VLANS/Base",
+   "nombre": "Base",
+   "slug": "base",
+   "titulo": "Base",
+   "problemas": [],
+   "ruta_slug": "vlans/base"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "VLANS/Base/Buenas practicas.md",
+   "nombre": "Buenas practicas.md",
+   "slug": "buenas-practicas",
+   "titulo": "Buenas practicas",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "vlans/base/buenas-practicas"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "VLANS/Base/Configuracion CLI.md",
+   "nombre": "Configuracion CLI.md",
+   "slug": "configuracion-cli",
+   "titulo": "Configuracion CLI",
+   "problemas": [
+    "espacios"
+   ],
+   "ruta_slug": "vlans/base/configuracion-cli"
+  },
+  {
+   "tipo": "nota",
+   "ruta": "VLANS/Base/VLANs.md",
+   "nombre": "VLANs.md",
+   "slug": "vlans",
+   "titulo": "VLANs",
+   "problemas": [],
+   "ruta_slug": "vlans/base/vlans"
+  }
+ ],
+ "choques_ruta_completa": {},
+ "choques_slug_nota_en_vault": {
+  "Cloud&DevOps_Fundamentals::shell-programming": [
+   "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Shell programming.md",
+   "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Shell programming.md"
+  ],
+  "Cloud&DevOps_Fundamentals::conditions": [
+   "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Conditions.md",
+   "Cloud&DevOps_Fundamentals/Python/overview/Conditions.md"
+  ],
+  "Cloud&DevOps_Fundamentals::functions": [
+   "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Functions.md",
+   "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Functions.md"
+  ],
+  "Cloud&DevOps_Fundamentals::loops": [
+   "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Loops.md",
+   "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Loops.md"
+  ]
+ }
+}

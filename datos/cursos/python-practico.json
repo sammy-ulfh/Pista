@@ -1,0 +1,385 @@
+{
+  "id": "python-practico",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Python práctico: librerías y apps de escritorio",
+  "subtitulo": "Usa las herramientas que ya trae Python para trabajar con fechas, archivos, internet y ventanas.",
+  "escuela": "tecnologia",
+  "areas": [
+    "programacion"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [
+    "python-desde-cero"
+  ],
+  "aprenderas": [
+    "Manejar fechas, textos con patrones y carpetas desde Python",
+    "Pedir información a páginas web desde tu programa",
+    "Hacer que tu programa haga varias cosas a la vez",
+    "Crear aplicaciones con ventanas y botones",
+    "Construir un chat entre varias personas con mensajes cifrados"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "python-practico/biblioteca-estandar",
+      "titulo": "La biblioteca estándar",
+      "lecciones": [
+        {
+          "id": "python-practico/manejo-de-fechas-y-horas",
+          "slug": "manejo-de-fechas-y-horas",
+          "titulo": "Manejo de fechas y horas",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Manejo de fechas y horas**",
+          "minutos": 3.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/expresiones-regulares",
+          "slug": "expresiones-regulares",
+          "titulo": "Expresiones regulares",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Expresiones regulares**",
+          "minutos": 16,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/manejo-de-archivos-y-directorios",
+          "slug": "manejo-de-archivos-y-directorios",
+          "titulo": "Manejo de archivos y directorios",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Manejo de archivos y directorios**",
+          "minutos": 9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/conexiones-de-red-y-protocolos-1-de-4",
+          "slug": "conexiones-de-red-y-protocolos-1-de-4",
+          "titulo": "Conexiones de red y protocolos (1 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Conexiones de red y protocolos (1/4)**",
+          "minutos": 14.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/conexiones-de-red-y-protocolos-2-de-4",
+          "slug": "conexiones-de-red-y-protocolos-2-de-4",
+          "titulo": "Conexiones de red y protocolos (2 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Conexiones de red y protocolos (2/4)**",
+          "minutos": 9.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/conexiones-de-red-y-protocolos-3-de-4",
+          "slug": "conexiones-de-red-y-protocolos-3-de-4",
+          "titulo": "Conexiones de red y protocolos (3 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Conexiones de red y protocolos (3/4)**",
+          "minutos": 9.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/conexiones-de-red-y-protocolos-4-de-4",
+          "slug": "conexiones-de-red-y-protocolos-4-de-4",
+          "titulo": "Conexiones de red y protocolos (4 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Biblioteca_estándar_y_herramientas_adicionales.md",
+          "seccion": "**Conexiones de red y protocolos (4/4)**",
+          "minutos": 11.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "python-practico/librerias-comunes",
+      "titulo": "Librerías comunes",
+      "lecciones": [
+        {
+          "id": "python-practico/libreria-os-y-sys",
+          "slug": "libreria-os-y-sys",
+          "titulo": "Librería os y sys",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+          "seccion": "**Librería os y sys**",
+          "minutos": 10.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/libreria-requests-1-de-2",
+          "slug": "libreria-requests-1-de-2",
+          "titulo": "Librería requests (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+          "seccion": "**Librería requests (1/2)**",
+          "minutos": 15.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/libreria-requests-2-de-2",
+          "slug": "libreria-requests-2-de-2",
+          "titulo": "Librería requests (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+          "seccion": "**Librería requests (2/2)**",
+          "minutos": 16.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/libreria-urllib3",
+          "slug": "libreria-urllib3",
+          "titulo": "Librería Urllib3",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+          "seccion": "**Librería Urllib3**",
+          "minutos": 13.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/libreria-threading-y-multiprocessing",
+          "slug": "libreria-threading-y-multiprocessing",
+          "titulo": "Librería threading y multiprocessing",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+          "seccion": "**Librería threading y multiprocessing**",
+          "minutos": 9.2,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "python-practico/apps-de-escritorio",
+      "titulo": "Aplicaciones de escritorio",
+      "lecciones": [
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-1-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-1-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (1 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (1/8)**",
+          "minutos": 15.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-2-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-2-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (2 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (2/8)**",
+          "minutos": 12,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-3-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-3-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (3 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (3/8)**",
+          "minutos": 15.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-4-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-4-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (4 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (4/8)**",
+          "minutos": 11.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-5-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-5-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (5 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (5/8)**",
+          "minutos": 6.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-6-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-6-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (6 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (6/8)**",
+          "minutos": 6.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-7-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-7-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (7 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (7/8)**",
+          "minutos": 7.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-8-de-8",
+          "slug": "desarrollo-de-aplicaciones-gui-con-tkinter-8-de-8",
+          "titulo": "Desarrollo de aplicaciones GUI con Tkinter (8 de 8)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI con Tkinter (8/8)**",
+          "minutos": 8.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/desarrollo-de-aplicaciones-gui-avanzado-con-customtkinter",
+          "slug": "desarrollo-de-aplicaciones-gui-avanzado-con-customtkinter",
+          "titulo": "Desarrollo de aplicaciones GUI avanzado con CustomTkinter",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Desarrollo de aplicaciones GUI avanzado con CustomTkinter**",
+          "minutos": 4.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/chat-multiusuario-con-gui-y-cifrado-e2e-1-de-5",
+          "slug": "chat-multiusuario-con-gui-y-cifrado-e2e-1-de-5",
+          "titulo": "Chat Multiusuario con GUI y Cifrado E2E (1 de 5)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Chat Multiusuario con GUI y Cifrado E2E (1/5)**",
+          "minutos": 7.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/chat-multiusuario-con-gui-y-cifrado-e2e-2-de-5",
+          "slug": "chat-multiusuario-con-gui-y-cifrado-e2e-2-de-5",
+          "titulo": "Chat Multiusuario con GUI y Cifrado E2E (2 de 5)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Chat Multiusuario con GUI y Cifrado E2E (2/5)**",
+          "minutos": 7.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/chat-multiusuario-con-gui-y-cifrado-e2e-3-de-5",
+          "slug": "chat-multiusuario-con-gui-y-cifrado-e2e-3-de-5",
+          "titulo": "Chat Multiusuario con GUI y Cifrado E2E (3 de 5)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Chat Multiusuario con GUI y Cifrado E2E (3/5)**",
+          "minutos": 3.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/chat-multiusuario-con-gui-y-cifrado-e2e-4-de-5",
+          "slug": "chat-multiusuario-con-gui-y-cifrado-e2e-4-de-5",
+          "titulo": "Chat Multiusuario con GUI y Cifrado E2E (4 de 5)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Chat Multiusuario con GUI y Cifrado E2E (4/5)**",
+          "minutos": 9.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-practico/chat-multiusuario-con-gui-y-cifrado-e2e-5-de-5",
+          "slug": "chat-multiusuario-con-gui-y-cifrado-e2e-5-de-5",
+          "titulo": "Chat Multiusuario con GUI y Cifrado E2E (5 de 5)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+          "seccion": "**Chat Multiusuario con GUI y Cifrado E2E (5/5)**",
+          "minutos": 9.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

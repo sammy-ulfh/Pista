@@ -1,0 +1,41 @@
+---
+/**
+ * AjustesRoadmap — «Lo que ajustamos por tus respuestas» (pantalla 07): una línea por respuesta del diagnóstico, con
+ * su motivo y lo que cambió («Ya sabes qué es una IP y un puerto: omitimos 2 lecciones de «Redes desde cero»»).
+ *
+ * Los textos salen del campo `motivo` de cada opción en `datos/diagnosticos/<área>.json`; lo que cambió lo arma
+ * `lib/roadmap.ts`.
+ *
+ *   <AjustesRoadmap />
+ */
+import Tarjeta from '../ui/Tarjeta.astro';
+---
+
+<Tarjeta relleno="compacto" class="sm:p-6" como="section">
+  <div data-ajustes-roadmap>
+    <h2 class="text-2xl">Lo que ajustamos por tus respuestas</h2>
+    <ul class="mt-3 flex flex-col gap-2" data-lista></ul>
+  </div>
+</Tarjeta>
+
+<script>
+  import { alTenerRuta } from './vista-ruta';
+
+  const lista = document.querySelector<HTMLElement>('[data-ajustes-roadmap] [data-lista]');
+  if (lista) {
+    alTenerRuta((vista) => {
+      lista.replaceChildren();
+      for (const ajuste of vista?.roadmap?.ajustes ?? []) {
+        const fila = document.createElement('li');
+        fila.className = 'flex gap-2';
+        const marca = document.createElement('span');
+        marca.setAttribute('aria-hidden', 'true');
+        marca.textContent = '✓';
+        const texto = document.createElement('span');
+        texto.textContent = ajuste.texto;
+        fila.append(marca, texto);
+        lista.append(fila);
+      }
+    });
+  }
+</script>

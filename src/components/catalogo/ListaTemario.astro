@@ -1,0 +1,82 @@
+---
+/**
+ * ListaTemario — el temario de un curso (pantalla 08): módulos y lecciones visibles, con su duración.
+ *
+ * Marcas por lección: «Vista previa gratis» (la primera lección abierta), «En preparación», «En inglés»
+ * (solo si el curso mezcla idiomas; si todo está en inglés lo dice la ficha), «Uso ético» para las de
+ * riesgo medio, con la nota de `textoAvisoEtico` de `datos/ajustes.json` debajo del temario, y «Solo en tu
+ * laboratorio» para las de riesgo alto (su aviso fuerte, `textoAvisoEticoAlto`, lo muestra la ficha arriba del temario).
+ * Si el curso tiene un solo módulo, no se repite su título.
+ *
+ *   <ListaTemario curso={curso} />
+ */
+import {
+  idiomaDeCurso,
+  modulosVisibles,
+  obtenerAjustes,
+  primeraLeccionDisponible,
+  type Curso,
+} from '../../lib/catalogo';
+import { formatoMinutosLeccion } from '../../lib/formato';
+import CajaAviso from '../ui/CajaAviso.astro';
+import Pildora from '../ui/Pildora.astro';
+
+interface Props {
+  curso: Curso;
+}
+
+const { curso } = Astro.props;
+const { textoAvisoEtico, mostrarEtiquetaIdioma, suscripcion } = obtenerAjustes();
+
+const modulos = modulosVisibles(curso);
+const primera = primeraLeccionDisponible(curso);
+const marcarIngles = mostrarEtiquetaIdioma && idiomaDeCurso(curso) === 'mixto';
+const hayRiesgoMedio = modulos.some((modulo) => modulo.lecciones.some((leccion) => leccion.riesgo === 'medio'));
+const variosModulos = modulos.length > 1;
+
+// Numeración corrida de las lecciones en todo el curso.
+let numero = 0;
+const numerados = modulos.map((modulo) => ({
+  ...modulo,
+  lecciones: modulo.lecciones.map((leccion) => ({ ...leccion, numero: ++numero })),
+}));
+---
+
+<div class="space-y-5">
+  {
+    numerados.map((modulo, i) => (
+      <section aria-labelledby={variosModulos ? `modulo-${i + 1}` : undefined}>
+        {variosModulos && (
+          <h3 id={`modulo-${i + 1}`} class="mb-2 text-lg">
+            Módulo {i + 1} · {modulo.titulo}
+          </h3>
+        )}
+        <ol class="rounded-cuaderno border-2 border-tinta bg-blanco px-4 sm:px-6">
+          {modulo.lecciones.map((leccion) => (
+            <li class="flex flex-col gap-2 border-b-2 border-dashed border-linea py-3 last:border-b-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+              <span class:list={['min-w-0', leccion.enPreparacion && 'text-texto-2']}>
+                {leccion.numero}. {leccion.titulo}
+              </span>
+              <span class="flex shrink-0 flex-wrap items-center gap-2 sm:justify-end">
+                {primera && leccion.id === primera.id && <Pildora variante="relleno">{suscripcion.etiquetaVistaPrevia}</Pildora>}
+                {leccion.enPreparacion && <Pildora variante="suave">En preparación</Pildora>}
+                {marcarIngles && leccion.idioma === 'en' && <Pildora variante="suave">En inglés</Pildora>}
+                {leccion.riesgo === 'medio' && <Pildora>Uso ético</Pildora>}
+                {leccion.riesgo === 'alto' && <Pildora variante="relleno">Solo en tu laboratorio</Pildora>}
+                <span class="text-sm whitespace-nowrap text-texto-2">{formatoMinutosLeccion(leccion.minutos)}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))
+  }
+
+  {
+    hayRiesgoMedio && (
+      <CajaAviso titulo="Lecciones marcadas con «Uso ético»" tono="atencion">
+        {textoAvisoEtico}
+      </CajaAviso>
+    )
+  }
+</div>

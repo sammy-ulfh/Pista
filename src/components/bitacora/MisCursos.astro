@@ -1,0 +1,91 @@
+---
+/**
+ * MisCursos — «Mis cursos» de la bitácora (pantalla 12): la píldora «Pista completo · activo» (o «Suscribirme»,
+ * que abre el diálogo de suscripción), el avance de cada curso empezado con «Seguir» y los demás cursos de la
+ * ruta con «Empezar» o «en preparación».
+ *
+ * Las filas salen de `filasMisCursos()` (`lib/bitacora.ts`). Necesita en la página un `DialogoSuscripcion` con
+ * el id `idDialogo`.
+ *
+ *   <MisCursos idDialogo="dialogo-suscripcion" />
+ */
+import { obtenerPlan, obtenerTextosSuscripcion } from '../../lib/catalogo';
+import BarraAvance from '../ui/BarraAvance.astro';
+import Boton from '../ui/Boton.astro';
+import Pildora from '../ui/Pildora.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+
+interface Props {
+  idDialogo: string;
+}
+
+const { idDialogo } = Astro.props;
+const plan = obtenerPlan();
+const textos = obtenerTextosSuscripcion();
+---
+
+<Tarjeta class="px-4 sm:px-6" relleno="compacto">
+  <section aria-labelledby="titulo-mis-cursos" data-mis-cursos>
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <h2 id="titulo-mis-cursos" class="text-2xl">Mis cursos</h2>
+      <span data-con-plan><Pildora variante="relleno">{plan.nombre} · activo</Pildora></span>
+      <span data-sin-plan>
+        <Boton tamano="mini" data-abrir-dialogo={idDialogo}>{textos.botonSuscribirme}</Boton>
+      </span>
+    </div>
+
+    <ul class="mt-2" data-lista></ul>
+    <div class="mt-3 pb-2" data-vacio hidden>
+      <p class="text-texto-2">Todavía no empiezas ningún curso.</p>
+      <a href="/mi-ruta" class="mt-2 inline-flex min-h-11 items-center font-semibold underline underline-offset-4">Ver mi ruta</a>
+    </div>
+
+    <template data-plantilla-curso>
+      <li class="flex items-center justify-between gap-4 border-b-2 border-dashed border-linea py-3 last:border-b-0">
+        <div class="min-w-0 flex-1">
+          <p>
+            <span class="font-medium" data-campo="titulo"></span>
+            <span class="text-sm text-texto-2" data-campo="detalle"></span>
+          </p>
+          <div data-avance hidden>
+            <BarraAvance valor={0} maximo={1} etiqueta="Avance del curso" grosor="delgada" mostrarTexto class="mt-1 max-w-xs" />
+          </div>
+        </div>
+        <Boton tamano="mini" href="#" class="shrink-0" data-boton=""><span data-campo="boton"></span></Boton>
+      </li>
+    </template>
+  </section>
+</Tarjeta>
+
+<script>
+  import { pintarBarraAvance } from '../../lib/barra-avance';
+  import { alTenerBitacora } from './vista-bitacora';
+
+  const raiz = document.querySelector<HTMLElement>('[data-mis-cursos]');
+  const lista = raiz?.querySelector<HTMLUListElement>('[data-lista]');
+  const vacio = raiz?.querySelector<HTMLElement>('[data-vacio]');
+  const plantilla = raiz?.querySelector<HTMLTemplateElement>('[data-plantilla-curso]');
+
+  const DETALLE = { 'en-preparacion': ' · en preparación', proximamente: ' · próximamente', 'por-empezar': '', empezado: '' } as const;
+
+  if (lista && plantilla && vacio) {
+    alTenerBitacora((vista) => {
+      lista.replaceChildren();
+      vacio.hidden = vista.misCursos.length > 0;
+      for (const fila of vista.misCursos) {
+        const el = (plantilla.content.cloneNode(true) as DocumentFragment).firstElementChild as HTMLElement;
+        el.querySelector('[data-campo="titulo"]')!.textContent = fila.titulo;
+        el.querySelector('[data-campo="detalle"]')!.textContent = DETALLE[fila.tipo];
+        const boton = el.querySelector<HTMLAnchorElement>('[data-boton]')!;
+        boton.href = fila.href;
+        boton.querySelector('[data-campo="boton"]')!.textContent = fila.boton;
+        boton.setAttribute('aria-label', `${fila.boton}: ${fila.titulo}`);
+        if (fila.tipo === 'empezado') {
+          el.querySelector<HTMLElement>('[data-avance]')!.hidden = false;
+          pintarBarraAvance(el.querySelector('[data-barra-avance]'), fila.avance.vistas, fila.avance.total);
+        }
+        lista.append(el);
+      }
+    });
+  }
+</script>

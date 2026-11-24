@@ -1,0 +1,84 @@
+{
+  "id": "tus-primeros-clientes",
+  "estado": "muestra",
+  "oculto": false,
+  "titulo": "Tus primeros clientes",
+  "subtitulo": "Aprende a encontrar a quién le sirve lo que haces y a pedir tu primera venta sin sentirte incómodo.",
+  "escuela": "negocios",
+  "areas": [
+    "conseguir-clientes"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Describir a tu cliente ideal en una frase",
+    "Saber dónde buscarlo, en línea y en persona",
+    "Escribir tu primer mensaje sin sonar a spam",
+    "Pedir la venta y responder a un «lo pienso»"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "tus-primeros-clientes/temario",
+      "titulo": "Temario",
+      "lecciones": [
+        {
+          "id": "tus-primeros-clientes/cliente-ideal",
+          "slug": "cliente-ideal",
+          "titulo": "¿Quién es tu cliente ideal?",
+          "fuente": "demo",
+          "ruta": "negocios/tus-primeros-clientes/01-cliente-ideal.md",
+          "seccion": null,
+          "minutos": 14.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "tus-primeros-clientes/donde-encontrarlo",
+          "slug": "donde-encontrarlo",
+          "titulo": "Dónde encontrarlo",
+          "fuente": "demo",
+          "ruta": "negocios/tus-primeros-clientes/02-donde-encontrarlo.md",
+          "seccion": null,
+          "minutos": 19,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "tus-primeros-clientes/primer-mensaje",
+          "slug": "primer-mensaje",
+          "titulo": "Tu primer mensaje",
+          "fuente": "demo",
+          "ruta": "negocios/tus-primeros-clientes/03-primer-mensaje.md",
+          "seccion": null,
+          "minutos": 18.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "tus-primeros-clientes/pedir-la-venta",
+          "slug": "pedir-la-venta",
+          "titulo": "Cómo pedir la venta",
+          "fuente": "demo",
+          "ruta": "negocios/tus-primeros-clientes/04-pedir-la-venta.md",
+          "seccion": null,
+          "minutos": 18.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

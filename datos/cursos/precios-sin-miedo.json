@@ -1,0 +1,59 @@
+{
+  "id": "precios-sin-miedo",
+  "estado": "muestra",
+  "oculto": false,
+  "titulo": "Precios sin miedo",
+  "subtitulo": "Calcula cuánto cobrar y dilo con seguridad.",
+  "escuela": "negocios",
+  "areas": [
+    "conseguir-clientes",
+    "ventas"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Sumar tus costos y el tiempo que te lleva cada trabajo",
+    "Elegir un precio que cubra tus costos y tu tiempo",
+    "Decir tu precio en voz alta sin justificarte de más",
+    "Responder con calma cuando te piden un descuento"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "precios-sin-miedo/temario",
+      "titulo": "Temario",
+      "lecciones": [
+        {
+          "id": "precios-sin-miedo/calcula-cuanto-cobrar",
+          "slug": "calcula-cuanto-cobrar",
+          "titulo": "Calcula cuánto cobrar",
+          "fuente": "demo",
+          "ruta": null,
+          "seccion": null,
+          "minutos": 25,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": true
+        },
+        {
+          "id": "precios-sin-miedo/di-tu-precio-con-seguridad",
+          "slug": "di-tu-precio-con-seguridad",
+          "titulo": "Di tu precio con seguridad",
+          "fuente": "demo",
+          "ruta": null,
+          "seccion": null,
+          "minutos": 25,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": true
+        }
+      ]
+    }
+  ]
+}

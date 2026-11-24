@@ -1,0 +1,495 @@
+{
+  "id": "administracion-linux",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Administra un servidor Linux",
+  "subtitulo": "Lo que necesitas para cuidar un servidor: discos, programas, usuarios, red y registros.",
+  "escuela": "tecnologia",
+  "areas": [
+    "linux",
+    "cloud-devops"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [
+    "linux-desde-cero"
+  ],
+  "aprenderas": [
+    "Cómo se organiza Linux por dentro: discos, carpetas y arranque",
+    "Instalar programas y programar tareas automáticas",
+    "Crear usuarios y controlar a qué puede entrar cada uno",
+    "Conectarte a otra computadora de forma segura (SSH)",
+    "Revisar el uso de memoria, disco y los registros del sistema"
+  ],
+  "idiomas": [
+    "en"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "administracion-linux/fundamentos",
+      "titulo": "Cómo funciona Linux",
+      "lecciones": [
+        {
+          "id": "administracion-linux/sistemas-tipo-unix",
+          "slug": "sistemas-tipo-unix",
+          "titulo": "Sistemas tipo Unix",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Unix-Based OS's.md",
+          "seccion": null,
+          "minutos": 1.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/distribuciones-de-linux",
+          "slug": "distribuciones-de-linux",
+          "titulo": "Distribuciones de Linux",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Linux Distributions.md",
+          "seccion": null,
+          "minutos": 0.8,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/la-terminal-shell",
+          "slug": "la-terminal-shell",
+          "titulo": "La terminal (shell)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Shell.md",
+          "seccion": null,
+          "minutos": 3,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/sistemas-de-archivos",
+          "slug": "sistemas-de-archivos",
+          "titulo": "Sistemas de archivos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/File systems.md",
+          "seccion": null,
+          "minutos": 2.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/volumenes-logicos-lvm",
+          "slug": "volumenes-logicos-lvm",
+          "titulo": "Volúmenes lógicos (LVM)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/LVM.md",
+          "seccion": null,
+          "minutos": 2.8,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/memoria-de-intercambio-swap",
+          "slug": "memoria-de-intercambio-swap",
+          "titulo": "Memoria de intercambio (swap)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Swap.md",
+          "seccion": null,
+          "minutos": 4.6,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/cuotas-de-disco",
+          "slug": "cuotas-de-disco",
+          "titulo": "Cuotas de disco",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Disk Quotas.md",
+          "seccion": null,
+          "minutos": 0.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/cargadores-de-arranque",
+          "slug": "cargadores-de-arranque",
+          "titulo": "Cargadores de arranque",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Boot Loaders.md",
+          "seccion": null,
+          "minutos": 1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/niveles-de-ejecucion",
+          "slug": "niveles-de-ejecucion",
+          "titulo": "Niveles de ejecución",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction/Runlevels.md",
+          "seccion": null,
+          "minutos": 1.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "administracion-linux/terminal",
+      "titulo": "Trabajo diario en la terminal",
+      "lecciones": [
+        {
+          "id": "administracion-linux/introduccion-a-las-terminales",
+          "slug": "introduccion-a-las-terminales",
+          "titulo": "Introducción a las terminales",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Introduction to shells.md",
+          "seccion": null,
+          "minutos": 3.6,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/variables-de-entorno",
+          "slug": "variables-de-entorno",
+          "titulo": "Variables de entorno",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Shell programming.md",
+          "seccion": null,
+          "minutos": 3,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/comandos-basicos",
+          "slug": "comandos-basicos",
+          "titulo": "Comandos básicos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Basic shell commands.md",
+          "seccion": null,
+          "minutos": 5.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/editores-de-texto-vim-y-nano",
+          "slug": "editores-de-texto-vim-y-nano",
+          "titulo": "Editores de texto (vim y nano)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Text editors.md",
+          "seccion": null,
+          "minutos": 4.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/buscar-archivos",
+          "slug": "buscar-archivos",
+          "titulo": "Buscar archivos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Filesystem files search.md",
+          "seccion": null,
+          "minutos": 0.8,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/xargs",
+          "slug": "xargs",
+          "titulo": "Xargs",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Xargs.md",
+          "seccion": null,
+          "minutos": 0.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/comprimir-y-descomprimir",
+          "slug": "comprimir-y-descomprimir",
+          "titulo": "Comprimir y descomprimir",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics/Working with archives.md",
+          "seccion": null,
+          "minutos": 1.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "administracion-linux/programas-y-servicios",
+      "titulo": "Programas y servicios",
+      "lecciones": [
+        {
+          "id": "administracion-linux/instalar-programas",
+          "slug": "instalar-programas",
+          "titulo": "Instalar programas",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Software management.md",
+          "seccion": null,
+          "minutos": 2.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/alternativas",
+          "slug": "alternativas",
+          "titulo": "Alternativas",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Alternatives.md",
+          "seccion": null,
+          "minutos": 0.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/servicios-systemd",
+          "slug": "servicios-systemd",
+          "titulo": "Servicios (systemd)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Service Management in Linux.md",
+          "seccion": null,
+          "minutos": 4.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/tareas-programadas-cron",
+          "slug": "tareas-programadas-cron",
+          "titulo": "Tareas programadas (cron)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Crond.md",
+          "seccion": null,
+          "minutos": 2.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/instalar-java",
+          "slug": "instalar-java",
+          "titulo": "Instalar Java",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/JAVA (OpenJDK).md",
+          "seccion": null,
+          "minutos": 0.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "administracion-linux/usuarios-y-permisos",
+      "titulo": "Usuarios y permisos",
+      "lecciones": [
+        {
+          "id": "administracion-linux/usuarios-y-grupos",
+          "slug": "usuarios-y-grupos",
+          "titulo": "Usuarios y grupos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions/Users and Groups.md",
+          "seccion": null,
+          "minutos": 3.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/modelo-de-permisos",
+          "slug": "modelo-de-permisos",
+          "titulo": "Modelo de permisos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions/Permission Model.md",
+          "seccion": null,
+          "minutos": 3.9,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/selinux",
+          "slug": "selinux",
+          "titulo": "SELinux",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions/SELinux.md",
+          "seccion": null,
+          "minutos": 2.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "administracion-linux/red-y-acceso-remoto",
+      "titulo": "Red y acceso remoto",
+      "lecciones": [
+        {
+          "id": "administracion-linux/configurar-la-red",
+          "slug": "configurar-la-red",
+          "titulo": "Configurar la red",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Network Configuration.md",
+          "seccion": null,
+          "minutos": 3.5,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/herramientas-de-red",
+          "slug": "herramientas-de-red",
+          "titulo": "Herramientas de red",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Networking Tools.md",
+          "seccion": null,
+          "minutos": 2.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/cortafuegos",
+          "slug": "cortafuegos",
+          "titulo": "Cortafuegos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Firewall.d and IPtables.md",
+          "seccion": null,
+          "minutos": 3.6,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/acceso-remoto-con-ssh",
+          "slug": "acceso-remoto-con-ssh",
+          "titulo": "Acceso remoto con SSH",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access/Remote Access.md",
+          "seccion": null,
+          "minutos": 3.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": true,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "administracion-linux/monitoreo",
+      "titulo": "Monitoreo y registros",
+      "lecciones": [
+        {
+          "id": "administracion-linux/procesos",
+          "slug": "procesos",
+          "titulo": "Procesos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Process monitoring.md",
+          "seccion": null,
+          "minutos": 0.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/uso-del-procesador",
+          "slug": "uso-del-procesador",
+          "titulo": "Uso del procesador",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Monitoring CPU.md",
+          "seccion": null,
+          "minutos": 2.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/uso-de-memoria",
+          "slug": "uso-de-memoria",
+          "titulo": "Uso de memoria",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Monitoring Memory.md",
+          "seccion": null,
+          "minutos": 0.7,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/uso-de-disco",
+          "slug": "uso-de-disco",
+          "titulo": "Uso de disco",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Monitoring Storage.md",
+          "seccion": null,
+          "minutos": 2.2,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "administracion-linux/registros-del-sistema-logs",
+          "slug": "registros-del-sistema-logs",
+          "titulo": "Registros del sistema (logs)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs/Logs.md",
+          "seccion": null,
+          "minutos": 4.1,
+          "idioma": "en",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

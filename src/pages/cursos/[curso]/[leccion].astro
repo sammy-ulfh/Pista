@@ -1,0 +1,129 @@
+---
+/**
+ * Pantallas 10 · Lección y 11 · Lección (apuntes reales): el lector de un curso guiado.
+ *
+ * Una página por lección VISIBLE de cada curso visible (las ocultas no tienen página). El contenido sale de
+ * `contenido-generado/` (`npm run sincronizar`), que ya trae las imágenes con medidas, sin el título repetido y
+ * con los ejercicios aparte.
+ *
+ * Acceso (lo decide el navegador con `data-con-plan` / `data-sin-plan`, ver `lib/estado-en-pagina.ts`):
+ *   - la primera lección de cada curso es vista previa gratis;
+ *   - las demás, sin plan, muestran «Suscríbete para continuar» con la tarjeta del plan;
+ *   - las «en preparación» muestran una tarjeta que lo dice, sin contenido.
+ *
+ * Aquí solo se arman los datos y los componentes: cada parte se dibuja en `components/lector/`.
+ */
+import type { GetStaticPaths } from 'astro';
+import { render } from 'astro:content';
+import {
+  areaPrincipalDeCurso,
+  datosMiRutaCompactos,
+  leccionesDelLector,
+  obtenerContenidoLeccion,
+  obtenerEscuela,
+  obtenerTextosSuscripcion,
+  type LeccionEnLector,
+} from '../../../lib/catalogo';
+import { formatoMinutosLeccion, plural } from '../../../lib/formato';
+import LayoutLector from '../../../layouts/LayoutLector.astro';
+import AvisoEtico from '../../../components/lector/AvisoEtico.astro';
+import EtiquetaIdioma from '../../../components/lector/EtiquetaIdioma.astro';
+import InvitacionSuscripcion from '../../../components/lector/InvitacionSuscripcion.astro';
+import ListaLecciones from '../../../components/lector/ListaLecciones.astro';
+import NavegacionLeccion from '../../../components/lector/NavegacionLeccion.astro';
+import VisorImagenes from '../../../components/lector/VisorImagenes.astro';
+import Boton from '../../../components/ui/Boton.astro';
+import CajaAviso from '../../../components/ui/CajaAviso.astro';
+import DatosParaNavegador from '../../../components/ui/DatosParaNavegador.astro';
+import Pildora from '../../../components/ui/Pildora.astro';
+import Tarjeta from '../../../components/ui/Tarjeta.astro';
+
+export const getStaticPaths = (async () => {
+  // Se calcula una vez y lo reciben todas las lecciones (solo dice qué cursos tiene la ruta de la persona).
+  const datosMiRuta = await datosMiRutaCompactos();
+  return (await leccionesDelLector()).map((item) => ({
+    params: { curso: item.curso.id, leccion: item.leccion.slug },
+    props: { ...item, datosMiRuta },
+  }));
+}) satisfies GetStaticPaths;
+
+type Props = LeccionEnLector & { datosMiRuta: Awaited<ReturnType<typeof datosMiRutaCompactos>> };
+
+const { curso, leccion, numero, total, esVistaPrevia, siguiente, datosMiRuta } = Astro.props;
+
+const escuela = await obtenerEscuela(curso.escuela);
+const area = (await areaPrincipalDeCurso(curso))?.area.nombre ?? null;
+const textos = obtenerTextosSuscripcion();
+
+const contenido = leccion.enPreparacion ? undefined : await obtenerContenidoLeccion(curso.id, leccion.slug);
+const { Content } = contenido ? await render(contenido) : { Content: null };
+const imagenes = contenido?.data.imagenes ?? 0;
+const ejercicios = contenido?.data.ejercicios ?? [];
+
+const metadatos = [
+  `Lección ${numero}`,
+  `~${formatoMinutosLeccion(leccion.minutos)}`,
+  imagenes > 0 ? plural(imagenes, 'imagen', 'imágenes') : null,
+  ejercicios.length > 0 ? plural(ejercicios.length, 'ejercicio') : null,
+].filter(Boolean);
+
+const enlaceSiguiente = siguiente ? { titulo: siguiente.titulo, href: `/cursos/${curso.id}/${siguiente.slug}` } : null;
+---
+
+<LayoutLector titulo={`${leccion.titulo} · ${curso.titulo}`} descripcion={curso.subtitulo}>
+  <DatosParaNavegador id="datos-mi-ruta" datos={datosMiRuta} />
+
+  <ListaLecciones slot="lateral" curso={curso} actual={leccion} numero={numero} total={total} escuela={escuela?.nombre ?? ''} area={area} />
+
+  <article aria-labelledby="titulo-leccion">
+    <header>
+      <div class="flex flex-wrap items-center gap-2">
+        <p class="text-sm text-texto-2">{metadatos.join(' · ')}</p>
+        <EtiquetaIdioma idioma={leccion.idioma} />
+        {esVistaPrevia && <span data-sin-plan><Pildora variante="relleno">{textos.etiquetaVistaPrevia}</Pildora></span>}
+      </div>
+      <h1 id="titulo-leccion" class="mt-2 text-3xl outline-none sm:text-4xl lg:text-5xl" tabindex="-1" data-foco-tras-activar>
+        {leccion.titulo}
+      </h1>
+    </header>
+
+    {leccion.riesgo !== 'ninguno' && <AvisoEtico nivel={leccion.riesgo} class="mt-6" />}
+
+    {
+      leccion.enPreparacion ? (
+        <Tarjeta punteada class="mt-8">
+          <h2 class="text-2xl">Esta lección está en preparación</h2>
+          <p class="mt-2">Todavía no tiene contenido. Mientras tanto, puedes seguir con el resto del curso.</p>
+          <Boton variante="principal" href={enlaceSiguiente?.href ?? `/cursos/${curso.id}`} class="mt-5">
+            {enlaceSiguiente ? `Ir a «${enlaceSiguiente.titulo}» →` : 'Volver al curso'}
+          </Boton>
+        </Tarjeta>
+      ) : !Content ? (
+        <CajaAviso class="mt-8" titulo="Esta lección todavía no está lista">
+          Su contenido no se ha generado. Corre <code>npm run sincronizar</code> y vuelve a abrir la página.
+        </CajaAviso>
+      ) : (
+        <>
+          <div class="mt-8" data-con-plan={esVistaPrevia ? undefined : ''}>
+            <div class="prose max-w-none" data-contenido-leccion>
+              <Content />
+            </div>
+            {ejercicios.map((ejercicio) => (
+              <CajaAviso titulo="Ejercicio" tono="atencion" class="mt-8">
+                {ejercicio}
+              </CajaAviso>
+            ))}
+            <NavegacionLeccion leccionId={leccion.id} siguiente={enlaceSiguiente} />
+          </div>
+          {!esVistaPrevia && (
+            <div class="mt-8" data-sin-plan>
+              <InvitacionSuscripcion curso={curso} />
+            </div>
+          )}
+        </>
+      )
+    }
+  </article>
+
+  <VisorImagenes />
+</LayoutLector>

@@ -1,0 +1,133 @@
+{
+  "id": "python-redes",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Herramientas de red con Python",
+  "subtitulo": "Programa tus propios escáneres para revisar qué equipos y servicios hay en tu red.",
+  "escuela": "tecnologia",
+  "areas": [
+    "ciberseguridad",
+    "programacion"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [
+    "python-desde-cero",
+    "redes-desde-cero"
+  ],
+  "aprenderas": [
+    "Programar un escáner de puertos y mejorarlo en cuatro versiones",
+    "Descubrir equipos de tu red con ICMP y ARP",
+    "Cambiar la dirección MAC de tu tarjeta de red desde un programa"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": true,
+  "minutosEstimados": null,
+  "factorPractica": 2.5,
+  "modulos": [
+    {
+      "id": "python-redes/escaner-de-puertos",
+      "titulo": "Escáner de puertos",
+      "lecciones": [
+        {
+          "id": "python-redes/creando-un-escaner-de-puertos-1-de-4",
+          "slug": "creando-un-escaner-de-puertos-1-de-4",
+          "titulo": "Creando un escáner de puertos (1 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/port_scanner/v1_4/Creando un escáner de puertos (1-4).md",
+          "seccion": null,
+          "minutos": 5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-redes/creando-un-escaner-de-puertos-2-de-4",
+          "slug": "creando-un-escaner-de-puertos-2-de-4",
+          "titulo": "Creando un escáner de puertos (2 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/port_scanner/v2_4/Creando un escáner de puertos (2-4).md",
+          "seccion": null,
+          "minutos": 6.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-redes/creando-un-escaner-de-puertos-3-de-4",
+          "slug": "creando-un-escaner-de-puertos-3-de-4",
+          "titulo": "Creando un escáner de puertos (3 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/port_scanner/v3_4/Creando un escáner de puertos (3-4).md",
+          "seccion": null,
+          "minutos": 3.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-redes/creando-un-escaner-de-puertos-4-de-4",
+          "slug": "creando-un-escaner-de-puertos-4-de-4",
+          "titulo": "Creando un escáner de puertos (4 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/port_scanner/v4_4/Creando un escáner de puertos (4-4).md",
+          "seccion": null,
+          "minutos": 2.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "python-redes/escaneres-de-red",
+      "titulo": "Escáneres de red",
+      "lecciones": [
+        {
+          "id": "python-redes/cambiar-la-direccion-mac",
+          "slug": "cambiar-la-direccion-mac",
+          "titulo": "Cambiar la dirección MAC",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/macchanger/Creando un programa que nos cambie la dirección MAC (macchanger).md",
+          "seccion": null,
+          "minutos": 4.3,
+          "idioma": "es",
+          "riesgo": "medio",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-redes/escaner-de-red-con-icmp",
+          "slug": "escaner-de-red-con-icmp",
+          "titulo": "Escáner de red con ICMP",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/ICMP_scanner/Creando un escáner de red (ICMP).md",
+          "seccion": null,
+          "minutos": 4.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-redes/escaner-de-red-con-arp",
+          "slug": "escaner-de-red-con-arp",
+          "titulo": "Escáner de red con ARP",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/ARP_scanner/Creando un escáner de red (ARP) con Scapy.md",
+          "seccion": null,
+          "minutos": 7.5,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

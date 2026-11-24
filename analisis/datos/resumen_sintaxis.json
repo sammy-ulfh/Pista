@@ -1,0 +1,678 @@
+{
+ "conteo": {
+  "comentario_%%": 1,
+  "embed:archivo_pdf:solo_nombre": 2,
+  "embed:imagen:con_ruta": 494,
+  "embed:imagen:con_ruta:EXT_MAYUSCULAS": 241,
+  "embed:imagen:solo_nombre": 1368,
+  "embed:imagen:solo_nombre:EXT_MAYUSCULAS": 125,
+  "embed:nota_incrustada:solo_nombre": 1,
+  "embed_estado:ambigua": 64,
+  "embed_estado:ok": 2167,
+  "enlace:ancla_misma_nota": 1016,
+  "enlace:nota": 220,
+  "enlace:nota#encabezado": 1,
+  "enlace:ruta/nota": 6,
+  "enlace:ruta/nota|alias": 3,
+  "enlace_estado:ancla_rota": 7,
+  "enlace_estado:ok": 1236,
+  "enlace_estado:rota": 3,
+  "frontmatter": 1,
+  "html:<br>": 161,
+  "html:<p>": 2,
+  "html:<pre>": 1,
+  "markdown:enlace": 184,
+  "notas_con_indice_al_inicio": 174,
+  "notas_con_siguientes_apuntes": 200,
+  "resaltado_==": 57,
+  "tabla": 15
+ },
+ "ejemplos": {
+  "enlace:ancla_misma_nota": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 4,
+    "ejemplo": "[[#Additional Materials]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 5,
+    "ejemplo": "[[#Materials]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 6,
+    "ejemplo": "[[#Practice Exercises]]"
+   }
+  ],
+  "enlace_estado:ok": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 4,
+    "ejemplo": "[[#Additional Materials]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 5,
+    "ejemplo": "[[#Materials]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 6,
+    "ejemplo": "[[#Practice Exercises]]"
+   }
+  ],
+  "enlace:nota": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 23,
+    "ejemplo": "[[Script Development and Invocation]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Do's and Don'ts.md",
+    "linea": 35,
+    "ejemplo": "[[Script Development and Invocation]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Shell programming.md",
+    "linea": 21,
+    "ejemplo": "[[Do's and Don'ts]]"
+   }
+  ],
+  "markdown:enlace": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 13,
+    "ejemplo": "[Advanced Bash-Scripting Guide. An in-depth exploration of the art of shell scripting](https://tldp.org/LDP/abs/html/)"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 14,
+    "ejemplo": "[Shell style guide](https://google.github.io/styleguide/shellguide.html)"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+    "linea": 15,
+    "ejemplo": "[Awesome-bash](https://github.com/awesome-lists/awesome-bash)"
+   }
+  ],
+  "enlace:ruta/nota": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Bash startup files.md",
+    "linea": 36,
+    "ejemplo": "[[Bash/Bash_Introduction/Shell programming]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Conditions.md",
+    "linea": 264,
+    "ejemplo": "[[Bash/Bash_syntax/Loops]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/I-O Recirection.md",
+    "linea": 233,
+    "ejemplo": "[[Bash/Bash_syntax/Functions]]"
+   }
+  ],
+  "embed:imagen:solo_nombre": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Bash options.md",
+    "linea": 22,
+    "ejemplo": "![[001.png]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Conditions.md",
+    "linea": 59,
+    "ejemplo": "![[006.png]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Exit Codes.md",
+    "linea": 7,
+    "ejemplo": "![[002.png]]"
+   }
+  ],
+  "embed_estado:ambigua": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Bash options.md",
+    "linea": 22,
+    "ejemplo": "![[001.png]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+    "linea": 41,
+    "ejemplo": "![[017.png]]"
+   },
+   {
+    "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+    "linea": 370,
+    "ejemplo": "![[034.png]]"
+   }
+  ],
+  "embed_estado:ok": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Conditions.md",
+    "linea": 59,
+    "ejemplo": "![[006.png]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Exit Codes.md",
+    "linea": 7,
+    "ejemplo": "![[002.png]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax/I-O Recirection.md",
+    "linea": 198,
+    "ejemplo": "![[007.png]]"
+   }
+  ],
+  "comentario_%%": [],
+  "embed:imagen:con_ruta": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED/Sed command overview.md",
+    "linea": 7,
+    "ejemplo": "![[Bash/Text processors - AWK y SED/images/001.png]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Comparer.md",
+    "linea": 7,
+    "ejemplo": "![[Conceptos básicos de enumeración y explotación/Burpsuite/images/041.png]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Comparer.md",
+    "linea": 11,
+    "ejemplo": "![[Conceptos básicos de enumeración y explotación/Burpsuite/images/042.png]]"
+   }
+  ],
+  "tabla": [],
+  "resaltado_==": [],
+  "enlace_estado:ancla_rota": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Modules.md",
+    "linea": 4,
+    "ejemplo": "[[#_import_ module1 [, module2 [,... moduleN]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Modules.md",
+    "linea": 6,
+    "ejemplo": "[[#import name1 as new_name [, ... ]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Modules.md",
+    "linea": 7,
+    "ejemplo": "[[#if _ _name _ _ == \" _ _main _ _\"]]"
+   }
+  ],
+  "enlace:ruta/nota|alias": [
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax/Sets.md",
+    "linea": 56,
+    "ejemplo": "[[Python/Python Language Syntax/Functions|Functions]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Operators.md",
+    "linea": 103,
+    "ejemplo": "[[Python/overview/Conditions|Conditions]]"
+   },
+   {
+    "ruta": "Cloud&DevOps_Fundamentals/Python/overview/PEP8.md",
+    "linea": 32,
+    "ejemplo": "[[Python/Python Language Syntax/Loops|Loops]]"
+   }
+  ],
+  "frontmatter": [
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Reverse Shell.md",
+    "linea": 1,
+    "ejemplo": "---"
+   }
+  ],
+  "embed:imagen:con_ruta:EXT_MAYUSCULAS": [
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+    "linea": 27,
+    "ejemplo": "![[Conceptos básicos de enumeración y explotación/Tipos de explotación/images/001.PNG]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+    "linea": 31,
+    "ejemplo": "![[Conceptos básicos de enumeración y explotación/Tipos de explotación/images/002.PNG]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de payloads/Tipos de payloads (Staged y Non-taged).md",
+    "linea": 29,
+    "ejemplo": "![[Conceptos básicos de enumeración y explotación/Tipos de payloads/images/001.PNG]]"
+   }
+  ],
+  "enlace:nota#encabezado": [
+   {
+    "ruta": "Hacking_introduction/Conceptos básicos/Direcciones MAC (OUI y NIC).md",
+    "linea": 4,
+    "ejemplo": "[[Direcciones IP (IPv4 e IPv6)#Índice]]"
+   }
+  ],
+  "html:<pre>": [
+   {
+    "ruta": "Hacking_introduction/Docker/Construccion/Port Forwarding en Docker y uso de monturas.md",
+    "linea": 131,
+    "ejemplo": "<pre>"
+   }
+  ],
+  "embed:imagen:solo_nombre:EXT_MAYUSCULAS": [
+   {
+    "ruta": "Hacking_introduction/Reconocimiento/EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+    "linea": 26,
+    "ejemplo": "![[025.PNG]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Reconocimiento/EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+    "linea": 30,
+    "ejemplo": "![[026.PNG]]"
+   },
+   {
+    "ruta": "Hacking_introduction/Reconocimiento/EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+    "linea": 36,
+    "ejemplo": "![[027.PNG]]"
+   }
+  ],
+  "enlace_estado:rota": [
+   {
+    "ruta": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+    "linea": 44,
+    "ejemplo": "[[Creando una máquina virtual]]"
+   },
+   {
+    "ruta": "Linux_Introduction/Introduction/System_installation.md",
+    "linea": 58,
+    "ejemplo": "[[Comandos básicos 1-2]]"
+   },
+   {
+    "ruta": "Linux_Introduction/Temario/Comandos b sicos 1-2.md",
+    "linea": 87,
+    "ejemplo": "[[Comandos básicos 2-2]]"
+   }
+  ],
+  "embed:archivo_pdf:solo_nombre": [
+   {
+    "ruta": "Linux_Introduction/Temario/Comandos b sicos 2-2.md",
+    "linea": 203,
+    "ejemplo": "![[basic_commands.pdf]]"
+   },
+   {
+    "ruta": "Linux_Introduction/Temario/Control de flujo, operadores y procesos en segundo plano.md",
+    "linea": 109,
+    "ejemplo": "![[bash_redirections.pdf]]"
+   }
+  ],
+  "html:<br>": [
+   {
+    "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+    "linea": 57,
+    "ejemplo": "</br>"
+   },
+   {
+    "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+    "linea": 72,
+    "ejemplo": "</br>"
+   },
+   {
+    "ruta": "Personalizacion_entrono/Personalización_Linux.md",
+    "linea": 90,
+    "ejemplo": "</br>"
+   }
+  ],
+  "embed:nota_incrustada:solo_nombre": [
+   {
+    "ruta": "Python_ofensivo/Introduction/Módulos_y_paquetes_en_Python.md",
+    "linea": 452,
+    "ejemplo": "![[README]]"
+   }
+  ],
+  "html:<p>": [
+   {
+    "ruta": "README.md",
+    "linea": 3,
+    "ejemplo": "<p align=\"center\">"
+   },
+   {
+    "ruta": "README.md",
+    "linea": 8,
+    "ejemplo": "</p>"
+   }
+  ]
+ },
+ "bloques_codigo": {
+  "total": 923,
+  "sin_lenguaje": 270,
+  "lenguajes": [
+   {
+    "lenguaje": "shell",
+    "bloques": 400,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/What is Shell.md",
+     "linea": 18
+    }
+   },
+   {
+    "lenguaje": "python",
+    "bloques": 179,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "python",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Class.md",
+     "linea": 22
+    }
+   },
+   {
+    "lenguaje": "HTML",
+    "bloques": 16,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "html",
+    "ejemplo": {
+     "ruta": "Full-Stack/HTML/Estructura HTML.md",
+     "linea": 15
+    }
+   },
+   {
+    "lenguaje": "bash",
+    "bloques": 8,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "bash",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Linux/Package_management/Service Management in Linux.md",
+     "linea": 44
+    }
+   },
+   {
+    "lenguaje": "python3",
+    "bloques": 8,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "python",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Joomla/Enumeración de gestores de contenido (CMS) – Joomla.md",
+     "linea": 100
+    }
+   },
+   {
+    "lenguaje": "php",
+    "bloques": 4,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "php",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Docker/Construccion/Port Forwarding en Docker y uso de monturas.md",
+     "linea": 113
+    }
+   },
+   {
+    "lenguaje": "msf",
+    "bloques": 3,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de payloads/Tipos de payloads (Staged y Non-taged).md",
+     "linea": 89
+    }
+   },
+   {
+    "lenguaje": "SQL",
+    "bloques": 3,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "sql",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI/Introduccion a SQLI.md",
+     "linea": 71
+    }
+   },
+   {
+    "lenguaje": "pip",
+    "bloques": 3,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+     "linea": 1186
+    }
+   },
+   {
+    "lenguaje": "Dockerfile",
+    "bloques": 2,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "dockerfile",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Docker/Theory/Working with Dockerfile.md",
+     "linea": 51
+    }
+   },
+   {
+    "lenguaje": "txt",
+    "bloques": 2,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "text",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging/Files.md",
+     "linea": 55
+    }
+   },
+   {
+    "lenguaje": "docker",
+    "bloques": 2,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing/Dockerizing.md",
+     "linea": 25
+    }
+   },
+   {
+    "lenguaje": "url",
+    "bloques": 2,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "text",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Reverse Shell.md",
+     "linea": 70
+    }
+   },
+   {
+    "lenguaje": "Shell",
+    "bloques": 2,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Conceptos básicos/Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md",
+     "linea": 67
+    }
+   },
+   {
+    "lenguaje": "WEB",
+    "bloques": 2,
+    "mayusculas": true,
+    "estandar": false,
+    "normalizar_a": "text",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (1-2).md",
+     "linea": 97
+    }
+   },
+   {
+    "lenguaje": "xml",
+    "bloques": 2,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "xml",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+     "linea": 402
+    }
+   },
+   {
+    "lenguaje": "POWERSHELL",
+    "bloques": 2,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "powershell",
+    "ejemplo": {
+     "ruta": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+     "linea": 96
+    }
+   },
+   {
+    "lenguaje": "yaml",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "yaml",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Debugging.md",
+     "linea": 89
+    }
+   },
+   {
+    "lenguaje": "j2",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "jinja",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Jinja2 templates.md",
+     "linea": 20
+    }
+   },
+   {
+    "lenguaje": "yml",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "yaml",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask/Jinja2 templates.md",
+     "linea": 105
+    }
+   },
+   {
+    "lenguaje": "powershell",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": true,
+    "normalizar_a": "powershell",
+    "ejemplo": {
+     "ruta": "Cloud&DevOps_Fundamentals/Python/overview/Scripts.md",
+     "linea": 44
+    }
+   },
+   {
+    "lenguaje": "PHP",
+    "bloques": 1,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "php",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Reverse Shell.md",
+     "linea": 34
+    }
+   },
+   {
+    "lenguaje": "SHELL",
+    "bloques": 1,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/Conceptos básicos/Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md",
+     "linea": 57
+    }
+   },
+   {
+    "lenguaje": "POST",
+    "bloques": 1,
+    "mayusculas": true,
+    "estandar": false,
+    "normalizar_a": "http",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Drupal/Enumeración de gestores de contenido (CMS) – Drupal.md",
+     "linea": 107
+    }
+   },
+   {
+    "lenguaje": "smbclient",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/EnumServComunes/SMB/Enumeración del servicio SMB.md",
+     "linea": 116
+    }
+   },
+   {
+    "lenguaje": "TXT",
+    "bloques": 1,
+    "mayusculas": true,
+    "estandar": true,
+    "normalizar_a": "text",
+    "ejemplo": {
+     "ruta": "Hacking_introduction/EnumServComunes/SSH/Enumeración del servicio SSH.md",
+     "linea": 173
+    }
+   },
+   {
+    "lenguaje": "shebang",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Python_ofensivo/Introduction/Colecciones_y_estructuras_de_datos_en_Python.md",
+     "linea": 740
+    }
+   },
+   {
+    "lenguaje": "git",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+     "linea": 1205
+    }
+   },
+   {
+    "lenguaje": "web",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "text",
+    "ejemplo": {
+     "ruta": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+     "linea": 257
+    }
+   },
+   {
+    "lenguaje": "pip3",
+    "bloques": 1,
+    "mayusculas": false,
+    "estandar": false,
+    "normalizar_a": "shell",
+    "ejemplo": {
+     "ruta": "Python_ofensivo/Introduction/Proyectos_de_POO.md",
+     "linea": 426
+    }
+   }
+  ]
+ }
+}

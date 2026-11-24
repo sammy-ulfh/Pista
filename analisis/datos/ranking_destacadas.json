@@ -1,0 +1,77 @@
+[
+ {
+  "id": "python-desde-cero/creacion-y-distribucion-de-paquetes",
+  "imagenes": 43,
+  "minutos": 21.1
+ },
+ {
+  "id": "python-desde-cero/decoradores-y-popiedades",
+  "imagenes": 41,
+  "minutos": 19.4
+ },
+ {
+  "id": "python-desde-cero/control-de-flujo-condicionales-y-bucles",
+  "imagenes": 40,
+  "minutos": 24.2
+ },
+ {
+  "id": "python-desde-cero/variables-y-tipos-de-datos",
+  "imagenes": 39,
+  "minutos": 19.7
+ },
+ {
+  "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-1-de-8",
+  "imagenes": 33,
+  "minutos": 15.6
+ },
+ {
+  "id": "python-desde-cero/encapsulamiento-y-metodos-especiales",
+  "imagenes": 32,
+  "minutos": 20.1
+ },
+ {
+  "id": "python-desde-cero/lectura-y-escritura-de-archivos",
+  "imagenes": 31,
+  "minutos": 18.0
+ },
+ {
+  "id": "python-practico/libreria-requests-2-de-2",
+  "imagenes": 31,
+  "minutos": 16.6
+ },
+ {
+  "id": "python-desde-cero/conjuntos",
+  "imagenes": 30,
+  "minutos": 13.3
+ },
+ {
+  "id": "python-desde-cero/formateo-de-cadenas-y-manipulacion-de-texto",
+  "imagenes": 30,
+  "minutos": 13.2
+ },
+ {
+  "id": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-3-de-8",
+  "imagenes": 30,
+  "minutos": 15.3
+ },
+ {
+  "id": "python-practico/libreria-requests-1-de-2",
+  "imagenes": 30,
+  "minutos": 15.4
+ },
+ {
+  "id": "linux-desde-cero/comandos-basicos-2-de-2",
+  "imagenes": 29,
+  "minutos": 11.9
+ },
+ {
+  "id": "python-practico/libreria-urllib3",
+  "imagenes": 29,
+  "minutos": 13.3
+ },
+ {
+  "id": "python-desde-cero/listas",
+  "imagenes": 27,
+  "minutos": 14.3
+ }
+]

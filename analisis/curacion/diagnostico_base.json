@@ -1,0 +1,1217 @@
+{
+  "_comentario": "Preguntas y reglas escritas a mano. En 'efectos' solo se escriben las claves que cambian algo; generar_diagnostico.py completa el resto con valores vacíos. Claves: curso_inicio, omitir_lecciones, omitir_modulos, horas_semana (0 = no cambia) y, como extensión, omitir_cursos y agregar_cursos.",
+  "orientacion": {
+    "preguntas": [
+      {
+        "id": "carrera",
+        "texto": "¿Qué estudias?",
+        "opciones": [
+          {
+            "id": "ingenieria",
+            "texto": "Ingeniería o sistemas",
+            "suma": {
+              "escuelas": {
+                "tecnologia": 2
+              },
+              "areas": {
+                "programacion": 1
+              }
+            }
+          },
+          {
+            "id": "negocios",
+            "texto": "Administración, contaduría o negocios",
+            "suma": {
+              "escuelas": {
+                "negocios": 2
+              },
+              "areas": {
+                "emprender": 1
+              }
+            }
+          },
+          {
+            "id": "humanidades",
+            "texto": "Comunicación, derecho o humanidades",
+            "suma": {
+              "escuelas": {
+                "comunicacion": 2
+              },
+              "areas": {
+                "hablar-en-publico": 1
+              }
+            }
+          },
+          {
+            "id": "artes",
+            "texto": "Diseño, arquitectura o artes",
+            "suma": {
+              "escuelas": {
+                "diseno": 2
+              },
+              "areas": {
+                "contenido-visual": 1
+              }
+            }
+          },
+          {
+            "id": "otra",
+            "texto": "Salud, ciencias u otra carrera",
+            "suma": {
+              "escuelas": {
+                "habilidades": 1
+              },
+              "areas": {
+                "productividad": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "lograr",
+        "texto": "¿Qué te gustaría lograr en los próximos meses?",
+        "opciones": [
+          {
+            "id": "trabajo-tecnologia",
+            "texto": "Conseguir trabajo o prácticas en tecnología",
+            "suma": {
+              "escuelas": {
+                "tecnologia": 3
+              },
+              "areas": {
+                "programacion": 1,
+                "ciberseguridad": 1
+              }
+            }
+          },
+          {
+            "id": "emprender",
+            "texto": "Emprender o conseguir mis primeros clientes",
+            "suma": {
+              "escuelas": {
+                "negocios": 3
+              },
+              "areas": {
+                "conseguir-clientes": 2,
+                "emprender": 1
+              }
+            }
+          },
+          {
+            "id": "hablar",
+            "texto": "Hablar en público sin ponerme nervioso",
+            "suma": {
+              "escuelas": {
+                "comunicacion": 3
+              },
+              "areas": {
+                "hablar-en-publico": 3
+              }
+            }
+          },
+          {
+            "id": "organizar",
+            "texto": "Organizar mejor mi tiempo y mi dinero",
+            "suma": {
+              "escuelas": {
+                "habilidades": 3
+              },
+              "areas": {
+                "productividad": 2,
+                "finanzas-personales": 2
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "disfrutas",
+        "texto": "¿Qué disfrutas más hacer?",
+        "opciones": [
+          {
+            "id": "computadora",
+            "texto": "Resolver problemas con la computadora",
+            "suma": {
+              "escuelas": {
+                "tecnologia": 2
+              },
+              "areas": {
+                "programacion": 1,
+                "linux": 1
+              }
+            }
+          },
+          {
+            "id": "gente",
+            "texto": "Platicar con gente y convencerla",
+            "suma": {
+              "escuelas": {
+                "negocios": 1,
+                "comunicacion": 1
+              },
+              "areas": {
+                "ventas": 1,
+                "persuasion": 1,
+                "hablar-en-publico": 1
+              }
+            }
+          },
+          {
+            "id": "organizar",
+            "texto": "Planear y organizar",
+            "suma": {
+              "escuelas": {
+                "habilidades": 2
+              },
+              "areas": {
+                "productividad": 1
+              }
+            }
+          },
+          {
+            "id": "visual",
+            "texto": "Crear cosas visuales",
+            "suma": {
+              "escuelas": {
+                "diseno": 2
+              },
+              "areas": {
+                "diseno-grafico": 1
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "primer-paso",
+        "texto": "Si pudieras empezar mañana, ¿qué harías primero?",
+        "opciones": [
+          {
+            "id": "primer-cliente",
+            "texto": "Conseguir mi primer cliente o venta",
+            "suma": {
+              "escuelas": {
+                "negocios": 2
+              },
+              "areas": {
+                "conseguir-clientes": 2
+              }
+            }
+          },
+          {
+            "id": "proteger",
+            "texto": "Entender cómo atacan los hackers para protegerme",
+            "suma": {
+              "escuelas": {
+                "tecnologia": 2
+              },
+              "areas": {
+                "ciberseguridad": 3
+              }
+            }
+          },
+          {
+            "id": "programa",
+            "texto": "Crear mi primer programa",
+            "suma": {
+              "escuelas": {
+                "tecnologia": 2
+              },
+              "areas": {
+                "programacion": 3
+              }
+            }
+          },
+          {
+            "id": "presentacion",
+            "texto": "Dar una presentación que salga bien",
+            "suma": {
+              "escuelas": {
+                "comunicacion": 2
+              },
+              "areas": {
+                "hablar-en-publico": 2
+              }
+            }
+          },
+          {
+            "id": "presupuesto",
+            "texto": "Hacer un presupuesto que sí cumpla",
+            "suma": {
+              "escuelas": {
+                "habilidades": 2
+              },
+              "areas": {
+                "finanzas-personales": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "regla": "Se suman los puntos de las 4 respuestas. Se recomienda la escuela con más puntos (empate: la que aparece primero en el catálogo) y, dentro de ella, las 1-2 áreas con más puntos (la segunda solo si tiene puntos). Si el área recomendada está en próximamente, se muestra un aviso y la alternativa disponible más cercana: el área disponible con más puntos de la misma escuela; si no hay, la de cualquier escuela; si nadie tiene puntos, la primera área disponible de esa escuela. «También te puede servir» = el área disponible con más puntos de otra escuela (si tiene puntos)."
+  },
+  "pregunta_tiempo": {
+    "id": "tiempo",
+    "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+    "opciones": [
+      {
+        "id": "menos-1",
+        "texto": "Menos de 1 hora",
+        "efectos": {
+          "horas_semana": 0.5
+        }
+      },
+      {
+        "id": "1-2",
+        "texto": "De 1 a 2 horas",
+        "efectos": {
+          "horas_semana": 1
+        }
+      },
+      {
+        "id": "3-4",
+        "texto": "De 3 a 4 horas",
+        "efectos": {
+          "horas_semana": 3
+        }
+      },
+      {
+        "id": "5-mas",
+        "texto": "5 horas o más",
+        "efectos": {
+          "horas_semana": 5
+        }
+      }
+    ],
+    "_nota": "Se planea con el mínimo de cada rango para que la ruta sea realista."
+  },
+  "areas": [
+    {
+      "area_id": "conseguir-clientes",
+      "preguntas": [
+        {
+          "id": "oferta",
+          "texto": "¿Ya tienes algo que ofrecer (un producto o un servicio)?",
+          "opciones": [
+            {
+              "id": "idea",
+              "texto": "Todavía no, solo una idea",
+              "efectos": {
+                "curso_inicio": "que-es-emprender"
+              }
+            },
+            {
+              "id": "no-se-explicar",
+              "texto": "Sí, pero no sé cómo explicarlo",
+              "efectos": {
+                "curso_inicio": "tus-primeros-clientes"
+              }
+            },
+            {
+              "id": "si",
+              "texto": "Sí, y sé explicarlo bien",
+              "efectos": {
+                "curso_inicio": "tus-primeros-clientes"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cliente-ideal",
+          "texto": "¿Sabes quién es tu cliente ideal?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No tengo idea",
+              "efectos": {}
+            },
+            {
+              "id": "mas-o-menos",
+              "texto": "Más o menos",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí, lo tengo muy claro",
+              "efectos": {
+                "omitir_lecciones": [
+                  "tus-primeros-clientes/cliente-ideal"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "has-vendido",
+          "texto": "¿Alguna vez le has vendido algo a alguien?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca",
+              "efectos": {
+                "curso_inicio": "que-es-emprender"
+              }
+            },
+            {
+              "id": "conocidos",
+              "texto": "Sí, a amigos o familia",
+              "efectos": {
+                "curso_inicio": "tus-primeros-clientes"
+              }
+            },
+            {
+              "id": "clientes",
+              "texto": "Sí, tengo clientes de vez en cuando",
+              "efectos": {
+                "curso_inicio": "tus-primeros-clientes",
+                "omitir_lecciones": [
+                  "tus-primeros-clientes/donde-encontrarlo"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Qué te gustaría lograr al terminar?",
+          "opciones": [
+            {
+              "id": "primer-cliente",
+              "texto": "Conseguir mi primer cliente lo antes posible",
+              "efectos": {
+                "omitir_cursos": [
+                  "precios-sin-miedo"
+                ]
+              }
+            },
+            {
+              "id": "clientes-cada-mes",
+              "texto": "Tener clientes cada mes",
+              "efectos": {}
+            },
+            {
+              "id": "cobrar-mejor",
+              "texto": "Cobrar mejor por lo que hago",
+              "efectos": {
+                "omitir_cursos": [
+                  "hablar-para-vender"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "hablar-en-publico",
+      "preguntas": [
+        {
+          "id": "veces",
+          "texto": "¿Cuántas veces has hablado frente a un grupo este año?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca",
+              "efectos": {}
+            },
+            {
+              "id": "pocas",
+              "texto": "Una o dos veces",
+              "efectos": {}
+            },
+            {
+              "id": "seguido",
+              "texto": "Seguido",
+              "efectos": {}
+            }
+          ]
+        },
+        {
+          "id": "nervios",
+          "texto": "Cuando te toca presentar, ¿qué te pasa?",
+          "opciones": [
+            {
+              "id": "bloqueo",
+              "texto": "Me bloqueo o se me olvida todo",
+              "efectos": {}
+            },
+            {
+              "id": "nervioso",
+              "texto": "Me pongo nervioso, pero termino",
+              "efectos": {}
+            },
+            {
+              "id": "tranquilo",
+              "texto": "Me siento tranquilo",
+              "efectos": {
+                "omitir_lecciones": [
+                  "habla-en-publico-sin-miedo/por-que-nos-ponemos-nerviosos"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "estructura",
+          "texto": "¿Cómo preparas lo que vas a decir?",
+          "opciones": [
+            {
+              "id": "improviso",
+              "texto": "No lo preparo, improviso",
+              "efectos": {}
+            },
+            {
+              "id": "lo-leo",
+              "texto": "Lo escribo completo y lo leo",
+              "efectos": {}
+            },
+            {
+              "id": "guion",
+              "texto": "Hago un guion con inicio, ideas y cierre",
+              "efectos": {
+                "omitir_lecciones": [
+                  "habla-en-publico-sin-miedo/estructura-del-discurso"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Para qué lo necesitas más?",
+          "opciones": [
+            {
+              "id": "clase",
+              "texto": "Exposiciones de clase",
+              "efectos": {}
+            },
+            {
+              "id": "entrevista",
+              "texto": "Entrevistas o exámenes orales",
+              "efectos": {
+                "omitir_cursos": [
+                  "presentaciones-claras"
+                ]
+              }
+            },
+            {
+              "id": "convencer",
+              "texto": "Convencer a otros (debates, juicios, juntas)",
+              "efectos": {
+                "agregar_cursos": [
+                  "argumentar-y-convencer"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "productividad",
+      "preguntas": [
+        {
+          "id": "agenda",
+          "texto": "¿Usas agenda o calendario?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca",
+              "efectos": {}
+            },
+            {
+              "id": "a-veces",
+              "texto": "A veces",
+              "efectos": {}
+            },
+            {
+              "id": "diario",
+              "texto": "Todos los días",
+              "efectos": {
+                "omitir_lecciones": [
+                  "tu-semana-en-orden/planea-tu-semana"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "tiempo-se-va",
+          "texto": "¿Sabes en qué se te va el tiempo?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No tengo idea",
+              "efectos": {}
+            },
+            {
+              "id": "mas-o-menos",
+              "texto": "Más o menos",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí, lo tengo medido",
+              "efectos": {
+                "omitir_lecciones": [
+                  "tu-semana-en-orden/a-donde-se-va-tu-tiempo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "concentracion",
+          "texto": "¿Te cuesta concentrarte cuando estudias?",
+          "opciones": [
+            {
+              "id": "mucho",
+              "texto": "Mucho",
+              "efectos": {}
+            },
+            {
+              "id": "a-veces",
+              "texto": "A veces",
+              "efectos": {}
+            },
+            {
+              "id": "casi-nunca",
+              "texto": "Casi nunca",
+              "efectos": {
+                "omitir_lecciones": [
+                  "tu-semana-en-orden/estudia-en-bloques"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Qué te gustaría lograr?",
+          "opciones": [
+            {
+              "id": "entregar",
+              "texto": "Entregar todo a tiempo",
+              "efectos": {
+                "omitir_cursos": [
+                  "estudia-mejor"
+                ]
+              }
+            },
+            {
+              "id": "estudiar",
+              "texto": "Estudiar mejor en menos tiempo",
+              "efectos": {}
+            },
+            {
+              "id": "descansar",
+              "texto": "Tener tiempo libre sin culpa",
+              "efectos": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "ciberseguridad",
+      "preguntas": [
+        {
+          "id": "terminal",
+          "texto": "¿Has usado Linux o la terminal (la ventana donde se escriben comandos)?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca lo he hecho",
+              "efectos": {}
+            },
+            {
+              "id": "poco",
+              "texto": "Un poco: sé abrirla y escribir algunos comandos",
+              "efectos": {
+                "omitir_lecciones": [
+                  "linux-desde-cero/comandos-basicos-1-de-2"
+                ]
+              }
+            },
+            {
+              "id": "seguido",
+              "texto": "La uso seguido",
+              "efectos": {
+                "curso_inicio": "redes-desde-cero"
+              }
+            }
+          ]
+        },
+        {
+          "id": "laboratorio",
+          "texto": "¿Tienes una máquina virtual o una computadora con Linux para practicar?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_modulos": [
+                  "linux-desde-cero/preparar-equipo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "redes",
+          "texto": "¿Sabes qué es una dirección IP?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "oido",
+              "texto": "He oído de eso",
+              "efectos": {}
+            },
+            {
+              "id": "subredes",
+              "texto": "Sí, y sé calcular subredes",
+              "efectos": {
+                "omitir_modulos": [
+                  "redes-desde-cero/direcciones-y-protocolos",
+                  "redes-desde-cero/subredes"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Qué te gustaría lograr?",
+          "opciones": [
+            {
+              "id": "protegerme",
+              "texto": "Entender cómo me pueden atacar, para protegerme",
+              "efectos": {
+                "omitir_cursos": [
+                  "docker-desde-cero",
+                  "hacking-etico-explotacion"
+                ]
+              }
+            },
+            {
+              "id": "trabajar",
+              "texto": "Prepararme para trabajar en ciberseguridad",
+              "efectos": {}
+            },
+            {
+              "id": "herramientas",
+              "texto": "Crear mis propias herramientas",
+              "efectos": {
+                "agregar_cursos": [
+                  "python-desde-cero",
+                  "python-redes"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "linux",
+      "preguntas": [
+        {
+          "id": "uso",
+          "texto": "¿Has usado Linux alguna vez?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca lo he hecho",
+              "efectos": {}
+            },
+            {
+              "id": "poco",
+              "texto": "Un poco",
+              "efectos": {}
+            },
+            {
+              "id": "seguido",
+              "texto": "Lo uso seguido",
+              "efectos": {
+                "curso_inicio": "terminal-y-bash"
+              }
+            }
+          ]
+        },
+        {
+          "id": "laboratorio",
+          "texto": "¿Tienes una máquina virtual o una computadora con Linux?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_modulos": [
+                  "linux-desde-cero/preparar-equipo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "comandos",
+          "texto": "¿Sabes moverte entre carpetas escribiendo comandos?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "mas-o-menos",
+              "texto": "Más o menos",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_modulos": [
+                  "linux-desde-cero/comandos"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Para qué quieres usar Linux?",
+          "opciones": [
+            {
+              "id": "mi-compu",
+              "texto": "En mi computadora, y que se vea bien",
+              "efectos": {
+                "agregar_cursos": [
+                  "personaliza-tu-linux"
+                ],
+                "omitir_cursos": [
+                  "administracion-linux"
+                ]
+              }
+            },
+            {
+              "id": "automatizar",
+              "texto": "Para automatizar tareas",
+              "efectos": {
+                "omitir_cursos": [
+                  "administracion-linux"
+                ]
+              }
+            },
+            {
+              "id": "servidores",
+              "texto": "Para administrar servidores",
+              "efectos": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "programacion",
+      "preguntas": [
+        {
+          "id": "experiencia",
+          "texto": "¿Has programado antes?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca lo he hecho",
+              "efectos": {}
+            },
+            {
+              "id": "clase",
+              "texto": "Hice ejercicios en clase",
+              "efectos": {}
+            },
+            {
+              "id": "proyectos",
+              "texto": "Ya hice proyectos pequeños",
+              "efectos": {
+                "curso_inicio": "python-practico"
+              }
+            }
+          ]
+        },
+        {
+          "id": "python",
+          "texto": "¿Has usado Python?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "poco",
+              "texto": "Un poco",
+              "efectos": {
+                "omitir_lecciones": [
+                  "python-desde-cero/caracteristicas-y-ventajas-de-python",
+                  "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "objetos",
+          "texto": "¿Sabes qué es una clase o un objeto en programación?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_modulos": [
+                  "python-desde-cero/objetos"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Qué te gustaría poder hacer?",
+          "opciones": [
+            {
+              "id": "basico",
+              "texto": "Entender lo básico de programar",
+              "efectos": {
+                "omitir_cursos": [
+                  "python-practico"
+                ]
+              }
+            },
+            {
+              "id": "apps",
+              "texto": "Hacer programas con ventanas y botones",
+              "efectos": {}
+            },
+            {
+              "id": "automatizar",
+              "texto": "Automatizar tareas de servidores",
+              "efectos": {
+                "agregar_cursos": [
+                  "python-automatizacion"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "cloud-devops",
+      "preguntas": [
+        {
+          "id": "terminal",
+          "texto": "¿Has usado Linux o la terminal?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca lo he hecho",
+              "efectos": {}
+            },
+            {
+              "id": "poco",
+              "texto": "Un poco",
+              "efectos": {}
+            },
+            {
+              "id": "seguido",
+              "texto": "La uso seguido",
+              "efectos": {
+                "curso_inicio": "docker-desde-cero"
+              }
+            }
+          ]
+        },
+        {
+          "id": "contenedores",
+          "texto": "¿Has oído hablar de Docker o de los contenedores?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca",
+              "efectos": {}
+            },
+            {
+              "id": "oido",
+              "texto": "He oído, pero no los he usado",
+              "efectos": {}
+            },
+            {
+              "id": "uso",
+              "texto": "Ya los uso",
+              "efectos": {
+                "omitir_modulos": [
+                  "docker-desde-cero/introduccion"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "python",
+          "texto": "¿Programas en Python?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "poco",
+              "texto": "Un poco",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_modulos": [
+                  "python-automatizacion/panorama",
+                  "python-automatizacion/sintaxis"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Qué te gustaría lograr?",
+          "opciones": [
+            {
+              "id": "entender",
+              "texto": "Entender qué hace un equipo de DevOps",
+              "efectos": {
+                "omitir_cursos": [
+                  "python-automatizacion"
+                ]
+              }
+            },
+            {
+              "id": "automatizar",
+              "texto": "Automatizar mis tareas",
+              "efectos": {}
+            },
+            {
+              "id": "publicar",
+              "texto": "Publicar mi propia aplicación",
+              "efectos": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "area_id": "redes",
+      "preguntas": [
+        {
+          "id": "ip",
+          "texto": "¿Sabes qué es una dirección IP?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "mas-o-menos",
+              "texto": "Más o menos",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_lecciones": [
+                  "redes-desde-cero/direcciones-ip-ipv4-e-ipv6"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "subredes",
+          "texto": "¿Has calculado subredes alguna vez?",
+          "opciones": [
+            {
+              "id": "nunca",
+              "texto": "Nunca lo he hecho",
+              "efectos": {}
+            },
+            {
+              "id": "clase",
+              "texto": "En clase, con ayuda",
+              "efectos": {}
+            },
+            {
+              "id": "soltura",
+              "texto": "Sí, con soltura",
+              "efectos": {
+                "omitir_modulos": [
+                  "redes-desde-cero/subredes"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "equipo",
+          "texto": "¿Has configurado un router o un switch?",
+          "opciones": [
+            {
+              "id": "no",
+              "texto": "No",
+              "efectos": {}
+            },
+            {
+              "id": "si",
+              "texto": "Sí",
+              "efectos": {
+                "omitir_lecciones": [
+                  "redes-desde-cero/configurar-un-switch"
+                ]
+              }
+            }
+          ]
+        },
+        "tiempo",
+        {
+          "id": "meta",
+          "texto": "¿Para qué quieres aprender redes?",
+          "opciones": [
+            {
+              "id": "entender",
+              "texto": "Para entender cómo funciona internet",
+              "efectos": {
+                "omitir_modulos": [
+                  "redes-desde-cero/vlans"
+                ]
+              }
+            },
+            {
+              "id": "seguridad",
+              "texto": "Para empezar en ciberseguridad",
+              "efectos": {
+                "agregar_cursos": [
+                  "hacking-etico-reconocimiento"
+                ]
+              }
+            },
+            {
+              "id": "administrar",
+              "texto": "Para administrar la red de un lugar",
+              "efectos": {}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "perfiles_demo": [
+    {
+      "nombre": "Mariana",
+      "carrera": "Administración de empresas",
+      "objetivo": "Conseguir sus primeros clientes para un negocio de pasteles por encargo.",
+      "es_tecnologia": false,
+      "respuestas_orientacion": {
+        "carrera": "negocios",
+        "lograr": "emprender",
+        "disfrutas": "gente",
+        "primer-paso": "primer-cliente"
+      },
+      "respuestas_diagnostico": {
+        "oferta": "no-se-explicar",
+        "cliente-ideal": "mas-o-menos",
+        "has-vendido": "conocidos",
+        "tiempo": "1-2",
+        "meta": "clientes-cada-mes"
+      }
+    },
+    {
+      "nombre": "Diego",
+      "carrera": "Derecho",
+      "objetivo": "Perder el miedo a hablar en público antes de sus audiencias simuladas.",
+      "es_tecnologia": false,
+      "respuestas_orientacion": {
+        "carrera": "humanidades",
+        "lograr": "hablar",
+        "disfrutas": "gente",
+        "primer-paso": "presentacion"
+      },
+      "respuestas_diagnostico": {
+        "veces": "pocas",
+        "nervios": "bloqueo",
+        "estructura": "lo-leo",
+        "tiempo": "1-2",
+        "meta": "convencer"
+      }
+    },
+    {
+      "nombre": "Valeria",
+      "carrera": "Ingeniería en Mecatrónica",
+      "objetivo": "Entrar a ciberseguridad y conseguir prácticas en el área.",
+      "es_tecnologia": true,
+      "respuestas_orientacion": {
+        "carrera": "ingenieria",
+        "lograr": "trabajo-tecnologia",
+        "disfrutas": "computadora",
+        "primer-paso": "proteger"
+      },
+      "respuestas_diagnostico": {
+        "terminal": "poco",
+        "laboratorio": "si",
+        "redes": "oido",
+        "tiempo": "3-4",
+        "meta": "trabajar"
+      }
+    }
+  ],
+  "casos_de_prueba": [
+    {
+      "nombre": "Aviso de próximamente",
+      "respuestas_orientacion": {
+        "carrera": "otra",
+        "lograr": "organizar",
+        "disfrutas": "organizar",
+        "primer-paso": "presupuesto"
+      },
+      "esperado": "Finanzas personales (próximamente) -> aviso y alternativa Productividad"
+    }
+  ]
+}

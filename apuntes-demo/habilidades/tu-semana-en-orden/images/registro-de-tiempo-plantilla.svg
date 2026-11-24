@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 598" width="900" height="598" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Plantilla de registro de tiempo por horas</title>
+<desc id="d">Una tabla en blanco con horas de 7:00 a 21:00 en filas y tres días en columnas, para anotar qué hiciste en cada bloque de dos horas.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="598" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#7A4FD1" text-anchor="start"><tspan x="40" dy="0">Registro de tiempo · 3 días</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Anota lo que de verdad hiciste en cada bloque, no lo que planeabas.</tspan></text>
+<rect x="40" y="110" width="110" height="46" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="52" dy="0">Hora</tspan></text>
+<rect x="150" y="110" width="236" height="46" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="162" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="162" dy="0">Día 1</tspan></text>
+<rect x="386" y="110" width="236" height="46" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="398" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="398" dy="0">Día 2</tspan></text>
+<rect x="622" y="110" width="236" height="46" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="634" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="634" dy="0">Día 3</tspan></text>
+<rect x="40" y="156" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="185" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">7:00</tspan></text>
+<rect x="150" y="156" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="156" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="156" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="202" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="231" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">9:00</tspan></text>
+<rect x="150" y="202" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="202" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="202" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="248" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="277" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">11:00</tspan></text>
+<rect x="150" y="248" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="248" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="248" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="294" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="323" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">13:00</tspan></text>
+<rect x="150" y="294" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="294" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="294" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="340" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="369" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">15:00</tspan></text>
+<rect x="150" y="340" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="340" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="340" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="386" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="415" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">17:00</tspan></text>
+<rect x="150" y="386" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="386" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="386" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="432" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="461" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">19:00</tspan></text>
+<rect x="150" y="432" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="432" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="432" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="40" y="478" width="110" height="46" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="52" y="507" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="52" dy="0">21:00</tspan></text>
+<rect x="150" y="478" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="386" y="478" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<rect x="622" y="478" width="236" height="46" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="40" y="558" font-size="16" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Tip: anota cada vez que cambies de actividad; al final del día es difícil recordarlo.</tspan></text>
+</svg>

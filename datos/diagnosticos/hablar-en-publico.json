@@ -1,0 +1,143 @@
+{
+  "area": "hablar-en-publico",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar.",
+  "preguntas": [
+    {
+      "id": "veces",
+      "texto": "¿Cuántas veces has hablado frente a un grupo este año?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca",
+          "efectos": {}
+        },
+        {
+          "id": "pocas",
+          "texto": "Una o dos veces",
+          "efectos": {}
+        },
+        {
+          "id": "seguido",
+          "texto": "Seguido",
+          "efectos": {}
+        }
+      ]
+    },
+    {
+      "id": "nervios",
+      "texto": "Cuando te toca presentar, ¿qué te pasa?",
+      "opciones": [
+        {
+          "id": "bloqueo",
+          "texto": "Me bloqueo o se me olvida todo",
+          "efectos": {}
+        },
+        {
+          "id": "nervioso",
+          "texto": "Me pongo nervioso, pero termino",
+          "efectos": {}
+        },
+        {
+          "id": "tranquilo",
+          "texto": "Me siento tranquilo",
+          "motivo": "ya presentas con calma",
+          "efectos": {
+            "omitirLecciones": [
+              "habla-en-publico-sin-miedo/por-que-nos-ponemos-nerviosos"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "estructura",
+      "texto": "¿Cómo preparas lo que vas a decir?",
+      "opciones": [
+        {
+          "id": "improviso",
+          "texto": "No lo preparo, improviso",
+          "efectos": {}
+        },
+        {
+          "id": "lo-leo",
+          "texto": "Lo escribo completo y lo leo",
+          "efectos": {}
+        },
+        {
+          "id": "guion",
+          "texto": "Hago un guion con inicio, ideas y cierre",
+          "motivo": "ya preparas un guion",
+          "efectos": {
+            "omitirLecciones": [
+              "habla-en-publico-sin-miedo/estructura-del-discurso"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+      "opciones": [
+        {
+          "id": "menos-1",
+          "texto": "Menos de 1 hora",
+          "efectos": {
+            "horasSemana": 0.5
+          }
+        },
+        {
+          "id": "1-2",
+          "texto": "De 1 a 2 horas",
+          "efectos": {
+            "horasSemana": 1
+          }
+        },
+        {
+          "id": "3-4",
+          "texto": "De 3 a 4 horas",
+          "efectos": {
+            "horasSemana": 3
+          }
+        },
+        {
+          "id": "5-mas",
+          "texto": "5 horas o más",
+          "efectos": {
+            "horasSemana": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "texto": "¿Para qué lo necesitas más?",
+      "opciones": [
+        {
+          "id": "clase",
+          "texto": "Exposiciones de clase",
+          "efectos": {}
+        },
+        {
+          "id": "entrevista",
+          "texto": "Entrevistas o exámenes orales",
+          "motivo": "te preparas para entrevistas o exámenes orales",
+          "efectos": {
+            "omitirCursos": [
+              "presentaciones-claras"
+            ]
+          }
+        },
+        {
+          "id": "convencer",
+          "texto": "Convencer a otros (debates, juicios, juntas)",
+          "efectos": {
+            "agregarCursos": [
+              "argumentar-y-convencer"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

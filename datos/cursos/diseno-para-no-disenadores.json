@@ -1,0 +1,20 @@
+{
+  "id": "diseno-para-no-disenadores",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Diseño para no diseñadores",
+  "subtitulo": "Color, tipografía y espacio para que todo se vea mejor.",
+  "escuela": "diseno",
+  "areas": [
+    "diseno-grafico"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 70,
+  "modulos": []
+}

@@ -1,0 +1,1149 @@
+[
+ {
+  "archivo": "Personalizacion_entrono/Personalización_Linux.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": false,
+    "menciones": 15
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (1-2).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": false,
+    "menciones": 4
+   },
+   {
+    "categoria": "laboratorio_vulnerable",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Docker/MaquinasVulnerbales/Despliegue de máquinas vulnerables con Docker-Compose (2-2).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "payloads",
+    "en_titulo": false,
+    "menciones": 4
+   },
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 4
+   },
+   {
+    "categoria": "laboratorio_vulnerable",
+    "en_titulo": true,
+    "menciones": 0
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": false,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Introducción.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": false,
+    "menciones": 3
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 4
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Bind Shell.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 2
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 3
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 3
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Forward Shell.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 10
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 5
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 5
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Introducción a Shells.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": false,
+    "menciones": 11
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 1
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Shells/Reverse Shell.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 6
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 8
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 9
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de payloads/Tipos de payloads (Staged y Non-taged).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": false,
+    "menciones": 5
+   },
+   {
+    "categoria": "payloads",
+    "en_titulo": true,
+    "menciones": 38
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 18
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 16
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Comparer.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 2
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 2
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 2
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Decoder.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 2
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 2
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 3
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Extensions.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 0
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 0
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 3
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Introduccion a Burpsuite.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 9
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 9
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 24
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Intruder.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "payloads",
+    "en_titulo": false,
+    "menciones": 18
+   },
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 11
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 11
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 16
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Proxy.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 11
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 11
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 16
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite/Repeater.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 5
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 5
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": true,
+    "menciones": 5
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 93
+   },
+   {
+    "categoria": "inyeccion_sql",
+    "en_titulo": false,
+    "menciones": 9
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 38
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": false,
+    "menciones": 9
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Enumeracion del sistema/Enumeracion del sistema.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": true,
+    "menciones": 3
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 15
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "suplantacion_spoofing",
+    "en_titulo": false,
+    "menciones": 6
+   },
+   {
+    "categoria": "evasion_firewall",
+    "en_titulo": true,
+    "menciones": 1
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 70
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/BrechasSeguridad/Credenciales y brechas de seguridad.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": true,
+    "menciones": 8
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/Subdominios/Enumeración de subdominios.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 5
+   },
+   {
+    "categoria": "fuzzing",
+    "en_titulo": false,
+    "menciones": 3
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 20
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 9
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/EscaneoNmap/Nmap y sus diferentes modos de escaneo.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 68
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/RecImagen/Reconocimiento de imágenes.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 8
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/Hackerone/Validación del objetivo (Fijando un target en HackerOne).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/DescubrirHosts/Descubrimiento de equipos en la red local (ARP e ICMP) y Tips.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 34
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/ScriptsNmap/Creación de tus propios scripts en Lua para nmap.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 13
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/ScriptsNmap/Uso de scripts y categorías en nmap para aplicar reconocimiento.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "payloads",
+    "en_titulo": false,
+    "menciones": 7
+   },
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 3
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 64
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/OS/Identificación y verificación externa de la versión del sistema operativo.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/Correos/Descubrimiento de correos electrónicos.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "osint_correos",
+    "en_titulo": true,
+    "menciones": 1
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 15
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/Fuzzing/Fuzzing y enumeración de archivos en un servidor web (1-2).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 6
+   },
+   {
+    "categoria": "fuzzing",
+    "en_titulo": true,
+    "menciones": 12
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 12
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/Fuzzing/Fuzzing y enumeración de archivos en un servidor web (2-2).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "fuzzing",
+    "en_titulo": true,
+    "menciones": 26
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 30
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": false,
+    "menciones": 30
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/GoogleDorks/Google Dorks - Google Hacking (Los 18 Dorks más usados).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": false,
+    "menciones": 5
+   },
+   {
+    "categoria": "osint_dorks",
+    "en_titulo": true,
+    "menciones": 7
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 18
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Reconocimiento/TecnologiasWeb/Identificación de las tecnologías en una página web.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 10
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Tools/Enumeración.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 4
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/SSH/Enumeración del servicio SSH.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 4
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 8
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Magento/Enumeración de gestores de contenido (CMS) – Magento.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": false,
+    "menciones": 4
+   },
+   {
+    "categoria": "inyeccion_sql",
+    "en_titulo": false,
+    "menciones": 10
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Joomla/Enumeración de gestores de contenido (CMS) – Joomla.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 7
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Drupal/Enumeración de gestores de contenido (CMS) – Drupal.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": false,
+    "menciones": 3
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 9
+   },
+   {
+    "categoria": "proxy_interceptacion",
+    "en_titulo": false,
+    "menciones": 4
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "explotacion",
+    "en_titulo": false,
+    "menciones": 6
+   },
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 5
+   },
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 7
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 16
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/2-2/Enumeración de gestores de contenido (CMS) – WordPress (2-2).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 3
+   },
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 5
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/FTP/Enumeración del servicio FTP.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "fuerza_bruta",
+    "en_titulo": false,
+    "menciones": 6
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 10
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/HTTP&HTTPS/Enumeración del servicio HTTP y HTTPS.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 8
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/EnumServComunes/SMB/Enumeración del servicio SMB.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 5
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/Conceptos básicos/Direcciones MAC (OUI y NIC).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "cambio_mac",
+    "en_titulo": false,
+    "menciones": 3
+   },
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": false,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI/Introduccion a SQLI.md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "inyeccion_sql",
+    "en_titulo": true,
+    "menciones": 14
+   }
+  ]
+ },
+ {
+  "archivo": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "pentesting",
+    "en_titulo": true,
+    "menciones": 2
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Introduction/Manejo_de_librerías_comunes.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 5
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/dns_spoofer/Creando un DNS Spoofer con Scapy y NetfilterQueue.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "suplantacion_spoofing",
+    "en_titulo": true,
+    "menciones": 33
+   },
+   {
+    "categoria": "payloads",
+    "en_titulo": false,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (1-2).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "keylogger",
+    "en_titulo": true,
+    "menciones": 18
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (2-2).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "keylogger",
+    "en_titulo": true,
+    "menciones": 19
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/ARP_scanner/Creando un escáner de red (ARP) con Scapy.md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 4
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/arp_spoofer/Creando un envenenador ARP (ARP Spoofer) con Scapy.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "suplantacion_spoofing",
+    "en_titulo": true,
+    "menciones": 13
+   },
+   {
+    "categoria": "envenenamiento_arp",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/port_scanner/v3_4/Creando un escáner de puertos (3-4).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 5
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/port_scanner/v2_4/Creando un escáner de puertos (2-4).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 4
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/port_scanner/v1_4/Creando un escáner de puertos (1-4).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 5
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/port_scanner/v4_4/Creando un escáner de puertos (4-4).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 3
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/https_image_sniffer/Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "captura_trafico",
+    "en_titulo": true,
+    "menciones": 7
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/ICMP_scanner/Creando un escáner de red (ICMP).md",
+  "riesgo": "bajo",
+  "categorias": [
+   {
+    "categoria": "reconocimiento",
+    "en_titulo": true,
+    "menciones": 7
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "captura_trafico",
+    "en_titulo": true,
+    "menciones": 26
+   },
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 3
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Traffic_Hijacking/Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "secuestro_trafico",
+    "en_titulo": true,
+    "menciones": 8
+   },
+   {
+    "categoria": "payloads",
+    "en_titulo": false,
+    "menciones": 4
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/http_sniffer/Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "captura_trafico",
+    "en_titulo": true,
+    "menciones": 25
+   },
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 13
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/dns_sniffer/Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy.md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "captura_trafico",
+    "en_titulo": true,
+    "menciones": 23
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (1-2).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "backdoor",
+    "en_titulo": true,
+    "menciones": 15
+   },
+   {
+    "categoria": "comando_y_control",
+    "en_titulo": true,
+    "menciones": 15
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (2-2).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "backdoor",
+    "en_titulo": true,
+    "menciones": 4
+   },
+   {
+    "categoria": "comando_y_control",
+    "en_titulo": true,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/macchanger/Creando un programa que nos cambie la dirección MAC (macchanger).md",
+  "riesgo": "medio",
+  "categorias": [
+   {
+    "categoria": "cambio_mac",
+    "en_titulo": true,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (1-4).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 9
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (2-4).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (3-4).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 2
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (4-4).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "shells_remotas",
+    "en_titulo": true,
+    "menciones": 1
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Malware/Creación de Malware (1-2).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "malware",
+    "en_titulo": true,
+    "menciones": 12
+   },
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 6
+   }
+  ]
+ },
+ {
+  "archivo": "Python_ofensivo/Offensive/Malware/Creación de Malware (2-2).md",
+  "riesgo": "alto",
+  "categorias": [
+   {
+    "categoria": "malware",
+    "en_titulo": true,
+    "menciones": 15
+   },
+   {
+    "categoria": "osint_credenciales",
+    "en_titulo": false,
+    "menciones": 6
+   }
+  ]
+ }
+]

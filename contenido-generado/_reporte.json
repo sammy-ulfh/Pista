@@ -1,0 +1,847 @@
+{
+  "ocultarDatosPersonales": true,
+  "ocultarRiesgoAlto": false,
+  "resumen": {
+    "leccionesGeneradas": 295,
+    "leccionesEscritas": 0,
+    "leccionesBorradas": 0,
+    "leccionesNoGeneradas": {
+      "datos-personales": 4,
+      "en-preparacion": 4
+    },
+    "archivosPublicados": 2220,
+    "archivosCopiados": 0,
+    "archivosConvertidosAWebp": 0,
+    "tamanoOriginalesMB": 202.4,
+    "archivosBorrados": 0,
+    "tamanoPublicoMB": 55.8,
+    "capturasParaRevisar": 420,
+    "capturasRiesgoAlto": 232,
+    "segundos": 1.7
+  },
+  "avisos": [],
+  "masImagenes": [
+    {
+      "leccion": "python-desde-cero/creacion-y-distribucion-de-paquetes",
+      "titulo": "Creación y distribución de paquetes",
+      "imagenes": 43
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "titulo": "WordPress (1 de 2)",
+      "imagenes": 41
+    },
+    {
+      "leccion": "python-desde-cero/decoradores-y-popiedades",
+      "titulo": "Decoradores y popiedades",
+      "imagenes": 41
+    },
+    {
+      "leccion": "python-desde-cero/control-de-flujo-condicionales-y-bucles",
+      "titulo": "Control de flujo (Condicionales y Bucles)",
+      "imagenes": 40
+    },
+    {
+      "leccion": "python-desde-cero/variables-y-tipos-de-datos",
+      "titulo": "Variables y tipos de datos",
+      "imagenes": 39
+    },
+    {
+      "leccion": "hacking-etico-explotacion/explotacion-manual-y-automatizada",
+      "titulo": "Explotación manual y automatizada",
+      "imagenes": 38
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "titulo": "Rastrear tráfico HTTPS",
+      "imagenes": 34
+    },
+    {
+      "leccion": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-1-de-8",
+      "titulo": "Desarrollo de aplicaciones GUI con Tkinter (1 de 8)",
+      "imagenes": 33
+    },
+    {
+      "leccion": "python-desde-cero/encapsulamiento-y-metodos-especiales",
+      "titulo": "Encapsulamiento y métodos especiales",
+      "imagenes": 32
+    },
+    {
+      "leccion": "python-desde-cero/lectura-y-escritura-de-archivos",
+      "titulo": "Lectura y escritura de archivos",
+      "imagenes": 31
+    }
+  ],
+  "notasFaltantes": [],
+  "fuentesPendientes": [],
+  "seccionesSinEmpatar": [],
+  "bloquesUnidos": [
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 1985,
+      "encabezado": "¿Problemas con el tamaño de la ventana *burpsuite*?",
+      "seUneA": "personaliza-tu-linux/extra-problemas-con-java-en-burp-suite",
+      "porBloquesExtra": true
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 2450,
+      "encabezado": "Bloqueando la pantalla con *i3lock*",
+      "seUneA": "personaliza-tu-linux/tema-de-rofi-y-bloqueo-de-pantalla",
+      "porBloquesExtra": true
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 49,
+      "encabezado": "¿Que es *Bspwm* y *Sxhkd*?",
+      "seUneA": "personaliza-tu-linux/instalacion-y-configuracion-de-bspwm-y-sxhkd"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 421,
+      "encabezado": "¿Que son la *Polybar*, *Picom* y *Rofi*?",
+      "seUneA": "personaliza-tu-linux/instalacion-de-la-polybar-picom-y-rofi"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 551,
+      "encabezado": "¿Que son la *kitty*, *Hack Nerd Fonts* y *Feh*?",
+      "seUneA": "personaliza-tu-linux/configurando-las-fuentes-la-kitty-e-instalacion-de-feh"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 895,
+      "encabezado": "¿Que es la *Polybar*?",
+      "seUneA": "personaliza-tu-linux/despliegue-de-la-polybar"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 955,
+      "encabezado": "¿Que es *Picom*?",
+      "seUneA": "personaliza-tu-linux/configurando-los-bordeados-las-sombras-y-los-difuminados-con-picom"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 1441,
+      "encabezado": "¿Que es la *zsh (Z shell)* y *Powerlevel10k*?",
+      "seUneA": "personaliza-tu-linux/configurando-la-zsh-e-instalando-la-powerlevel10k"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 1839,
+      "encabezado": "¿Que es *Batcat* y *Lsd*?",
+      "seUneA": "personaliza-tu-linux/instalacion-de-batcat-y-lsd"
+    },
+    {
+      "archivo": "fuentes/Notes/Personalizacion_entrono/Personalización_Linux.md",
+      "linea": 2259,
+      "encabezado": "¿Que son *NVchad* y *Neovim*?",
+      "seUneA": "personaliza-tu-linux/configuracion-e-integracion-de-nvchad-en-neovim"
+    },
+    {
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Introducción_a_Python.md",
+      "linea": 10,
+      "encabezado": "**Historia y filosofía de Python**",
+      "seUneA": "python-desde-cero/caracteristicas-y-ventajas-de-python"
+    },
+    {
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Desarrollo_de_aplicaciones_de_escritorio_con_Python.md",
+      "linea": 20,
+      "encabezado": "**Introducción a las interfaces gráficas de usuario (GUI)**",
+      "seUneA": "python-practico/desarrollo-de-aplicaciones-gui-con-tkinter-1-de-8"
+    }
+  ],
+  "enlacesATextoPlano": [],
+  "imagenesNoEncontradas": [],
+  "imagenesAmbiguas": [
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 370,
+      "enlace": "![[034.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/034.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/034.png",
+        "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/034.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/034.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 382,
+      "enlace": "![[035.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/035.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/035.png",
+        "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/035.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/035.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 386,
+      "enlace": "![[036.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/036.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/036.png",
+        "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/036.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/036.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 420,
+      "enlace": "![[038.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/038.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/038.png",
+        "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/038.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/038.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 424,
+      "enlace": "![[039.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/039.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/039.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/039.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 428,
+      "enlace": "![[040.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/040.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/040.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/040.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-explotacion/wordpress-1-de-2",
+      "archivo": "fuentes/Notes/Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+      "linea": 444,
+      "enlace": "![[041.png]]",
+      "elegida": "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/041.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/041.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/041.png"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-reconocimiento/escaneo-frente-a-cortafuegos",
+      "archivo": "fuentes/Notes/Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+      "linea": 176,
+      "enlace": "![[018.PNG]]",
+      "elegida": "Reconocimiento/EvasionFirewall/images/018.PNG",
+      "candidatos": [
+        "Reconocimiento/EvasionFirewall/images/018.PNG",
+        "Reconocimiento/ScriptsNmap/images/018.PNG"
+      ]
+    },
+    {
+      "leccion": "hacking-etico-reconocimiento/escaneo-frente-a-cortafuegos",
+      "archivo": "fuentes/Notes/Hacking_introduction/Reconocimiento/EvasionFirewall/Técnicas de evasión de Firewalls.md",
+      "linea": 214,
+      "enlace": "![[019.PNG]]",
+      "elegida": "Reconocimiento/EvasionFirewall/images/019.PNG",
+      "candidatos": [
+        "Reconocimiento/EvasionFirewall/images/019.PNG",
+        "Reconocimiento/ScriptsNmap/images/019.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 8,
+      "enlace": "![[6.PNG]]",
+      "elegida": "Introduction/images/6.PNG",
+      "candidatos": [
+        "Introduction/images/6.PNG",
+        "Temario/images/6.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 12,
+      "enlace": "![[7.PNG]]",
+      "elegida": "Introduction/images/7.PNG",
+      "candidatos": [
+        "Introduction/images/7.PNG",
+        "Temario/images/7.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 16,
+      "enlace": "![[8.PNG]]",
+      "elegida": "Introduction/images/8.PNG",
+      "candidatos": [
+        "Introduction/images/8.PNG",
+        "Temario/images/8.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 20,
+      "enlace": "![[9.PNG]]",
+      "elegida": "Introduction/images/9.PNG",
+      "candidatos": [
+        "Introduction/images/9.PNG",
+        "Temario/images/9.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 28,
+      "enlace": "![[11.PNG]]",
+      "elegida": "Introduction/images/11.PNG",
+      "candidatos": [
+        "Introduction/images/11.PNG",
+        "Temario/images/11.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 35,
+      "enlace": "![[12.PNG]]",
+      "elegida": "Introduction/images/12.PNG",
+      "candidatos": [
+        "Introduction/images/12.PNG",
+        "Temario/images/12.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 41,
+      "enlace": "![[14.PNG]]",
+      "elegida": "Introduction/images/14.PNG",
+      "candidatos": [
+        "Introduction/images/14.PNG",
+        "Temario/images/14.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 47,
+      "enlace": "![[15.PNG]]",
+      "elegida": "Introduction/images/15.PNG",
+      "candidatos": [
+        "Introduction/images/15.PNG",
+        "Temario/images/15.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 51,
+      "enlace": "![[16.PNG]]",
+      "elegida": "Introduction/images/16.PNG",
+      "candidatos": [
+        "Introduction/images/16.PNG",
+        "Temario/images/16.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 55,
+      "enlace": "![[17.PNG]]",
+      "elegida": "Introduction/images/17.PNG",
+      "candidatos": [
+        "Introduction/images/17.PNG",
+        "Temario/images/17.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 61,
+      "enlace": "![[18.PNG]]",
+      "elegida": "Introduction/images/18.PNG",
+      "candidatos": [
+        "Introduction/images/18.PNG",
+        "Temario/images/18.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 65,
+      "enlace": "![[19.PNG]]",
+      "elegida": "Introduction/images/19.PNG",
+      "candidatos": [
+        "Introduction/images/19.PNG",
+        "Temario/images/19.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 72,
+      "enlace": "![[20.PNG]]",
+      "elegida": "Introduction/images/20.PNG",
+      "candidatos": [
+        "Introduction/images/20.PNG",
+        "Temario/images/20.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 74,
+      "enlace": "![[21.PNG]]",
+      "elegida": "Introduction/images/21.PNG",
+      "candidatos": [
+        "Introduction/images/21.PNG",
+        "Temario/images/21.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/crear-una-maquina-virtual",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/Creando una m quina virtual.md",
+      "linea": 78,
+      "enlace": "![[22.PNG]]",
+      "elegida": "Introduction/images/22.PNG",
+      "candidatos": [
+        "Introduction/images/22.PNG",
+        "Temario/images/22.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 3,
+      "enlace": "![[23.PNG]]",
+      "elegida": "Introduction/images/23.PNG",
+      "candidatos": [
+        "Introduction/images/23.PNG",
+        "Temario/images/23.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 6,
+      "enlace": "![[24.PNG]]",
+      "elegida": "Introduction/images/24.PNG",
+      "candidatos": [
+        "Introduction/images/24.PNG",
+        "Temario/images/24.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 10,
+      "enlace": "![[25.PNG]]",
+      "elegida": "Introduction/images/25.PNG",
+      "candidatos": [
+        "Introduction/images/25.PNG",
+        "Temario/images/25.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 15,
+      "enlace": "![[26.PNG]]",
+      "elegida": "Introduction/images/26.PNG",
+      "candidatos": [
+        "Introduction/images/26.PNG",
+        "Temario/images/26.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 21,
+      "enlace": "![[27.PNG]]",
+      "elegida": "Introduction/images/27.PNG",
+      "candidatos": [
+        "Introduction/images/27.PNG",
+        "Temario/images/27.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 31,
+      "enlace": "![[28.PNG]]",
+      "elegida": "Introduction/images/28.PNG",
+      "candidatos": [
+        "Introduction/images/28.PNG",
+        "Temario/images/28.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 39,
+      "enlace": "![[29.PNG]]",
+      "elegida": "Introduction/images/29.PNG",
+      "candidatos": [
+        "Introduction/images/29.PNG",
+        "Temario/images/29.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 41,
+      "enlace": "![[30.PNG]]",
+      "elegida": "Introduction/images/30.PNG",
+      "candidatos": [
+        "Introduction/images/30.PNG",
+        "Temario/images/30.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 45,
+      "enlace": "![[31.PNG]]",
+      "elegida": "Introduction/images/31.PNG",
+      "candidatos": [
+        "Introduction/images/31.PNG",
+        "Temario/images/31.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 49,
+      "enlace": "![[32.PNG]]",
+      "elegida": "Introduction/images/32.PNG",
+      "candidatos": [
+        "Introduction/images/32.PNG",
+        "Temario/images/32.PNG"
+      ]
+    },
+    {
+      "leccion": "linux-desde-cero/instalar-el-sistema",
+      "archivo": "fuentes/Notes/Linux_Introduction/Introduction/System_installation.md",
+      "linea": 53,
+      "enlace": "![[33.PNG]]",
+      "elegida": "Introduction/images/33.PNG",
+      "candidatos": [
+        "Introduction/images/33.PNG",
+        "Temario/images/33.PNG"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Introducción_a_Python.md",
+      "linea": 96,
+      "enlace": "![[IMG_001.png]]",
+      "elegida": "images/IMG_001.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_001.png",
+        "images/IMG_001.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Introducción_a_Python.md",
+      "linea": 98,
+      "enlace": "![[IMG_002.png]]",
+      "elegida": "images/IMG_002.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_002.png",
+        "images/IMG_002.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Introducción_a_Python.md",
+      "linea": 102,
+      "enlace": "![[IMG_003.png]]",
+      "elegida": "images/IMG_003.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_003.png",
+        "images/IMG_003.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Introducción_a_Python.md",
+      "linea": 104,
+      "enlace": "![[IMG_004.png]]",
+      "elegida": "images/IMG_004.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_004.png",
+        "images/IMG_004.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/el-interprete-de-python",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+      "linea": 25,
+      "enlace": "![[IMG_005.png]]",
+      "elegida": "images/IMG_005.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_005.png",
+        "images/IMG_005.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/el-interprete-de-python",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+      "linea": 29,
+      "enlace": "![[IMG_006.png]]",
+      "elegida": "images/IMG_006.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_006.png",
+        "images/IMG_006.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/shebang-y-convenios-en-python",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+      "linea": 77,
+      "enlace": "![[IMG_007.png]]",
+      "elegida": "images/IMG_007.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_007.png",
+        "images/IMG_007.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/shebang-y-convenios-en-python",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+      "linea": 81,
+      "enlace": "![[IMG_008.png]]",
+      "elegida": "images/IMG_008.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_008.png",
+        "images/IMG_008.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/shebang-y-convenios-en-python",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+      "linea": 127,
+      "enlace": "![[IMG_009.png]]",
+      "elegida": "images/IMG_009.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_009.png",
+        "images/IMG_009.png"
+      ]
+    },
+    {
+      "leccion": "python-desde-cero/shebang-y-convenios-en-python",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Conceptos_básicos_de_Python.md",
+      "linea": 133,
+      "enlace": "![[IMG_010.png]]",
+      "elegida": "images/IMG_010.png",
+      "candidatos": [
+        "Offensive/port_scanner/v1_4/images/IMG_010.png",
+        "images/IMG_010.png"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 178,
+      "enlace": "![[022.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/022.PNG",
+      "candidatos": [
+        "Offensive/Keylogger/images/022.PNG",
+        "Offensive/dns_spoofer/images/022.PNG",
+        "Offensive/forward_shell/images/022.PNG",
+        "Offensive/https_sniffer/images/022.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 186,
+      "enlace": "![[023.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/023.PNG",
+      "candidatos": [
+        "Offensive/Keylogger/images/023.PNG",
+        "Offensive/dns_spoofer/images/023.PNG",
+        "Offensive/forward_shell/images/023.PNG",
+        "Offensive/https_sniffer/images/023.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 202,
+      "enlace": "![[024.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/024.PNG",
+      "candidatos": [
+        "Offensive/dns_spoofer/images/024.PNG",
+        "Offensive/forward_shell/images/024.PNG",
+        "Offensive/https_sniffer/images/024.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 206,
+      "enlace": "![[025.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/025.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/025.PNG",
+        "Offensive/https_sniffer/images/025.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 214,
+      "enlace": "![[027.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/027.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/027.PNG",
+        "Offensive/https_sniffer/images/027.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 216,
+      "enlace": "![[026.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/026.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/026.PNG",
+        "Offensive/https_sniffer/images/026.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 224,
+      "enlace": "![[029.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/029.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/029.PNG",
+        "Offensive/https_sniffer/images/029.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 226,
+      "enlace": "![[028.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/028.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/028.PNG",
+        "Offensive/https_sniffer/images/028.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 232,
+      "enlace": "![[030.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/030.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/030.PNG",
+        "Offensive/https_sniffer/images/030.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 238,
+      "enlace": "![[032.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/032.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/032.PNG",
+        "Offensive/https_sniffer/images/032.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 242,
+      "enlace": "![[031.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/031.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/031.PNG",
+        "Offensive/https_sniffer/images/031.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 246,
+      "enlace": "![[033.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/033.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/033.PNG",
+        "Offensive/https_sniffer/images/033.PNG"
+      ]
+    },
+    {
+      "leccion": "python-ofensivo-laboratorio/rastrear-trafico-https",
+      "archivo": "fuentes/Notes/Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+      "linea": 250,
+      "enlace": "![[034.PNG]]",
+      "elegida": "Offensive/https_sniffer/images/034.PNG",
+      "candidatos": [
+        "Offensive/forward_shell/images/034.PNG",
+        "Offensive/https_sniffer/images/034.PNG"
+      ]
+    },
+    {
+      "leccion": "redes-desde-cero/trucos-para-calcular-rapido",
+      "archivo": "fuentes/Notes/Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+      "linea": 41,
+      "enlace": "![[017.png]]",
+      "elegida": "Conceptos básicos/images/017.png",
+      "candidatos": [
+        "Conceptos básicos de enumeración y explotación/Burpsuite/images/017.png",
+        "Conceptos básicos de enumeración y explotación/Shells/images/017.png",
+        "Conceptos básicos de enumeración y explotación/Tipos de explotación/images/017.png",
+        "Conceptos básicos/images/017.png",
+        "Docker/Construccion/images/017.png",
+        "Docker/MaquinasVulnerbales/images/017.png",
+        "EnumServComunes/Gestores de contenido (CMS)/Wordpress/1-2/images/017.png",
+        "Reconocimiento/Fuzzing/images/017.png"
+      ]
+    },
+    {
+      "leccion": "terminal-y-bash/opciones-de-bash",
+      "archivo": "fuentes/Notes/Cloud&DevOps_Fundamentals/Bash/Bash_syntax/Bash options.md",
+      "linea": 22,
+      "enlace": "![[001.png]]",
+      "elegida": "Bash/Bash_syntax/images/001.png",
+      "candidatos": [
+        "Bash/Bash_syntax/images/001.png",
+        "Bash/Text processors - AWK y SED/images/001.png"
+      ]
+    }
+  ],
+  "imagenesOmitidas": [],
+  "notasIncrustadas": [
+    {
+      "leccion": "python-desde-cero/creacion-y-distribucion-de-paquetes",
+      "archivo": "fuentes/Notes/Python_ofensivo/Introduction/Módulos_y_paquetes_en_Python.md",
+      "linea": 452,
+      "nota": "Python_ofensivo/Introduction/README.md"
+    }
+  ],
+  "imagenesSinMedidas": [],
+  "imagenesSinConvertir": [],
+  "enlacesANavegacionQuitados": 9,
+  "titulosRepetidosQuitados": 183,
+  "leccionesConEncabezadosBajados": 57
+}

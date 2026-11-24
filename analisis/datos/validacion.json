@@ -1,0 +1,17 @@
+{
+ "errores": [],
+ "avisos": [
+  "escuela diseno sin curso de muestra (próximamente a propósito)",
+  "imágenes ambiguas en lecciones del inventario: 60",
+  "enlaces rotos en lecciones del inventario: 0"
+ ],
+ "ok": [
+  "ids de lección únicos (297)",
+  "referencias internas del inventario revisadas",
+  "ids de diagnostico.json revisados contra inventario.json (y prerrequisitos de las rutas)",
+  "35 precios entre $20 y $50",
+  "perfiles de tecnología: 1 (['Valeria'])",
+  "8 áreas con diagnóstico",
+  "orientación con 4 preguntas"
+ ]
+}

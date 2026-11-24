@@ -1,0 +1,38 @@
+---
+/**
+ * Insignias — las 5 insignias de «Mi bitácora» (pantalla 12). Las que faltan se ven punteadas.
+ * Nombres y condiciones: `src/lib/insignias.ts` (se calculan, no se guardan).
+ *
+ *   <Insignias />
+ */
+import { INSIGNIAS } from '../../lib/insignias';
+import Insignia from '../ui/Insignia.astro';
+---
+
+<section aria-labelledby="titulo-insignias" data-insignias>
+  <h2 id="titulo-insignias" class="text-2xl">Insignias</h2>
+  <ul class="mt-4 flex flex-wrap gap-3 sm:gap-4">
+    {
+      INSIGNIAS.map((insignia) => (
+        <li>
+          <Insignia id={insignia.id} texto={insignia.nombre} bloqueada />
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<script>
+  import { alTenerBitacora } from './vista-bitacora';
+
+  const raiz = document.querySelector<HTMLElement>('[data-insignias]');
+  alTenerBitacora((vista) => {
+    for (const insignia of vista.insignias) {
+      const el = raiz?.querySelector<HTMLElement>(`[data-insignia="${insignia.id}"]`);
+      if (!el) continue;
+      el.toggleAttribute('data-bloqueada', !insignia.obtenida);
+      const texto = el.querySelector<HTMLElement>('[data-texto-bloqueada]');
+      if (texto) texto.textContent = insignia.obtenida ? '(conseguida)' : '(todavía no la consigues)';
+    }
+  });
+</script>

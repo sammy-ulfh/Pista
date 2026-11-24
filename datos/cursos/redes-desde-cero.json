@@ -1,0 +1,203 @@
+{
+  "id": "redes-desde-cero",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Redes desde cero",
+  "subtitulo": "Entiende cómo se comunican las computadoras: direcciones IP, protocolos y subredes.",
+  "escuela": "tecnologia",
+  "areas": [
+    "redes",
+    "ciberseguridad"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Qué es una dirección IP y una dirección MAC",
+    "Cómo viaja la información por capas (modelo OSI)",
+    "Qué hacen los protocolos TCP y UDP",
+    "Calcular subredes a mano y con trucos rápidos",
+    "Dividir una red en partes con VLANs"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "factorPractica": 3,
+  "modulos": [
+    {
+      "id": "redes-desde-cero/direcciones-y-protocolos",
+      "titulo": "Direcciones y protocolos",
+      "lecciones": [
+        {
+          "id": "redes-desde-cero/direcciones-ip-ipv4-e-ipv6",
+          "slug": "direcciones-ip-ipv4-e-ipv6",
+          "titulo": "Direcciones IP (IPv4 e IPv6)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Direcciones IP (IPv4 e IPv6).md",
+          "seccion": null,
+          "minutos": 2.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/direcciones-mac-oui-y-nic",
+          "slug": "direcciones-mac-oui-y-nic",
+          "titulo": "Direcciones MAC (OUI y NIC)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Direcciones MAC (OUI y NIC).md",
+          "seccion": null,
+          "minutos": 4.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/protocolos-tcp-y-udp",
+          "slug": "protocolos-tcp-y-udp",
+          "titulo": "Protocolos TCP y UDP",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md",
+          "seccion": null,
+          "minutos": 3.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/modelo-osi",
+          "slug": "modelo-osi",
+          "titulo": "Modelo OSI",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Modelo OSI.md",
+          "seccion": null,
+          "minutos": 2.1,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "redes-desde-cero/subredes",
+      "titulo": "Subredes (subnetting)",
+      "lecciones": [
+        {
+          "id": "redes-desde-cero/introduccion-a-las-subredes",
+          "slug": "introduccion-a-las-subredes",
+          "titulo": "Introducción a las subredes",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Subnetting - Introduccion.md",
+          "seccion": null,
+          "minutos": 3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/cidr-y-numero-de-equipos",
+          "slug": "cidr-y-numero-de-equipos",
+          "titulo": "CIDR y número de equipos",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Subnetting - CIDRs y cálculo total de hosts.md",
+          "seccion": null,
+          "minutos": 3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/mascaras-y-clases-de-red",
+          "slug": "mascaras-y-clases-de-red",
+          "titulo": "Máscaras y clases de red",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Subnetting – Máscaras de subred, tipos de clase e interpretación de prefijos de red.md",
+          "seccion": null,
+          "minutos": 5.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/interpretar-rangos-de-red",
+          "slug": "interpretar-rangos-de-red",
+          "titulo": "Interpretar rangos de red",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar.md",
+          "seccion": null,
+          "minutos": 3.8,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/trucos-para-calcular-rapido",
+          "slug": "trucos-para-calcular-rapido",
+          "titulo": "Trucos para calcular rápido",
+          "fuente": "notes-tecnologia",
+          "ruta": "Hacking_introduction/Conceptos básicos/TIPS de subnetting y cálculo veloz de direccionamiento en redes.md",
+          "seccion": null,
+          "minutos": 3.3,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "redes-desde-cero/vlans",
+      "titulo": "VLANs",
+      "lecciones": [
+        {
+          "id": "redes-desde-cero/que-es-una-vlan",
+          "slug": "que-es-una-vlan",
+          "titulo": "Qué es una VLAN",
+          "fuente": "notes-tecnologia",
+          "ruta": "VLANS/Base/VLANs.md",
+          "seccion": null,
+          "minutos": 0.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/configurar-un-switch",
+          "slug": "configurar-un-switch",
+          "titulo": "Configurar un switch",
+          "fuente": "notes-tecnologia",
+          "ruta": "VLANS/Base/Configuracion CLI.md",
+          "seccion": null,
+          "minutos": 0.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "redes-desde-cero/buenas-practicas",
+          "slug": "buenas-practicas",
+          "titulo": "Buenas prácticas",
+          "fuente": "notes-tecnologia",
+          "ruta": "VLANS/Base/Buenas practicas.md",
+          "seccion": null,
+          "minutos": 0.9,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "presentaciones-claras",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Presentaciones que se entienden",
+  "subtitulo": "Diapositivas simples que acompañan, no que distraen.",
+  "escuela": "comunicacion",
+  "areas": [
+    "hablar-en-publico"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 60,
+  "modulos": []
+}

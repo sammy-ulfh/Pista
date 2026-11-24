@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 415" width="900" height="415" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Comparación: mensaje que parece spam y mensaje personal</title>
+<desc id="d">A la izquierda, un mensaje genérico con mayúsculas, promesas y sin nombre. A la derecha, un mensaje corto que nombra a la persona, dice por qué le escribe y termina con una pregunta.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="415" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">¿Spam o mensaje personal?</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">El mismo servicio, dos formas de presentarlo.</tspan></text>
+<text x="40" y="135" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="40" dy="0">✗  Parece spam</tspan></text>
+<rect x="40" y="155" width="390" height="190" rx="16" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="58" y="187" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="58" dy="0">¡¡HOLA!! ¿Quieres que tu negocio CREZCA?</tspan><tspan x="58" dy="22.1">Ofrezco servicios de contabilidad, redes</tspan><tspan x="58" dy="22.1">sociales, diseño y mucho más. ¡Precios</tspan><tspan x="58" dy="22.1">increíbles! Escríbeme YA y pregunta por</tspan><tspan x="58" dy="22.1">la promoción.</tspan></text>
+<text x="40" y="375" font-size="15" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Sin nombre · ofrece de todo · presiona</tspan></text>
+<text x="470" y="135" font-size="20" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="470" dy="0">✓  Mensaje personal</tspan></text>
+<rect x="470" y="155" width="390" height="190" rx="16" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<text x="488" y="187" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="488" dy="0">Hola, don Luis. Soy vecina de la colonia</tspan><tspan x="488" dy="22.1">y estudio Administración. Vi que anota</tspan><tspan x="488" dy="22.1">los pedidos de la tienda a mano. Ayudo a</tspan><tspan x="488" dy="22.1">negocios pequeños a llevar sus cuentas en</tspan><tspan x="488" dy="22.1">una hoja sencilla. ¿Le enseño un ejemplo</tspan><tspan x="488" dy="22.1">de 5 minutos el jueves?</tspan></text>
+<text x="470" y="375" font-size="15" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="470" dy="0">Con nombre · una sola oferta · una pregunta clara</tspan></text>
+</svg>

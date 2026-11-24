@@ -1,0 +1,39 @@
+---
+/**
+ * InvitacionSuscripcion — lo que ve quien abre una lección que no es la vista previa SIN plan activo:
+ * «Suscríbete para continuar», un enlace a la lección gratis y la tarjeta del plan con su diálogo.
+ * Con el plan activo no se ve (va dentro de un `data-sin-plan` en la página de la lección).
+ *
+ * Textos: `datos/ajustes.json` → `suscripcion` (`tituloLeccionBloqueada`, `textoLeccionBloqueada`,
+ * `enlaceVistaPrevia`).
+ *
+ *   <InvitacionSuscripcion curso={curso} />
+ */
+import { obtenerTextosSuscripcion, primeraLeccionDisponible, type Curso } from '../../lib/catalogo';
+import { rellenar } from '../../lib/formato';
+import TarjetaPlan from '../catalogo/TarjetaPlan.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+
+interface Props {
+  curso: Curso;
+}
+
+const { curso } = Astro.props;
+const textos = obtenerTextosSuscripcion();
+const primera = primeraLeccionDisponible(curso);
+---
+
+<section aria-labelledby="titulo-suscribete" class="grid gap-6 md:grid-cols-[minmax(0,1fr)_22rem] md:items-start">
+  <Tarjeta punteada>
+    <h2 id="titulo-suscribete" class="text-2xl">{textos.tituloLeccionBloqueada}</h2>
+    <p class="mt-2">{rellenar(textos.textoLeccionBloqueada, { curso: curso.titulo })}</p>
+    {
+      primera && (
+        <a href={`/cursos/${curso.id}/${primera.slug}`} class="mt-4 inline-flex min-h-11 items-center font-semibold underline underline-offset-4">
+          {textos.enlaceVistaPrevia}: {primera.titulo}
+        </a>
+      )
+    }
+  </Tarjeta>
+  <TarjetaPlan curso={curso} />
+</section>

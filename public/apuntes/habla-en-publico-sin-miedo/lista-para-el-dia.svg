@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 532" width="900" height="532" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Lista de revisión para el día de la presentación</title>
+<desc id="d">Lista de casillas en dos columnas: antes de salir (archivo guardado en dos lugares, notas impresas, ropa cómoda, agua) y al llegar (llegar con tiempo, probar el equipo, ubicar dónde pararte, respirar 4-4-4, repasar la primera frase).</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="532" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">El día de la presentación</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Revisa la lista y quítate preocupaciones de encima.</tspan></text>
+<rect x="40" y="110" width="400" height="50" rx="12" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="143" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="60" dy="0">Antes de salir</tspan></text>
+<rect x="50" y="180" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="94" y="201" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="94" dy="0">Archivo guardado en dos lugares</tspan><tspan x="94" dy="22.1">(correo y memoria USB)</tspan></text>
+<rect x="50" y="252" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="94" y="273" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="94" dy="0">Tarjeta con palabras clave</tspan></text>
+<rect x="50" y="324" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="94" y="345" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="94" dy="0">Ropa en la que te sientas cómodo</tspan></text>
+<rect x="50" y="396" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="94" y="417" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="94" dy="0">Agua</tspan></text>
+<rect x="50" y="468" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="94" y="489" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="94" dy="0">Dormir lo suficiente la noche anterior</tspan></text>
+<rect x="460" y="110" width="400" height="50" rx="12" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="480" y="143" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="480" dy="0">Al llegar</tspan></text>
+<rect x="470" y="180" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="514" y="201" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="514" dy="0">Llega con tiempo para no correr</tspan></text>
+<rect x="470" y="252" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="514" y="273" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="514" dy="0">Prueba la computadora, el proyector y</tspan><tspan x="514" dy="22.1">el control</tspan></text>
+<rect x="470" y="324" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="514" y="345" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="514" dy="0">Ubica dónde te vas a parar</tspan></text>
+<rect x="470" y="396" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="514" y="417" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="514" dy="0">Respira 4-4-4 un par de veces</tspan></text>
+<rect x="470" y="468" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="514" y="489" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="514" dy="0">Repasa tu primera frase en voz baja</tspan></text>
+</svg>

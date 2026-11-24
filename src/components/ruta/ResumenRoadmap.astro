@@ -1,0 +1,38 @@
+---
+/**
+ * ResumenRoadmap — el encabezado del roadmap (pantalla 07): «Resultado de tu diagnóstico · Tecnología › Ciberseguridad»,
+ * «Tu roadmap: Ciberseguridad» y «5 etapas · ~10 semanas · 3 h por semana / Incluye tiempo de práctica en tu
+ * laboratorio».
+ *
+ * Lo llena el navegador con el roadmap calculado (`vista-ruta.ts` → `lib/roadmap.ts`).
+ *
+ *   <ResumenRoadmap />
+ */
+---
+
+<div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between" data-resumen-roadmap>
+  <div>
+    <p class="text-sm text-texto-2">Resultado de tu diagnóstico · <span data-campo="escuela"></span> › <span data-campo="area"></span></p>
+    <h1 class="mt-1 text-4xl sm:text-5xl">Tu roadmap: <span data-campo="area"></span></h1>
+  </div>
+  <p class="text-texto-2 lg:text-right">
+    <span data-campo="resumen"></span><br />
+    Incluye tiempo de práctica en tu laboratorio
+  </p>
+</div>
+
+<script>
+  import { formatoHorasSemana } from '../../lib/formato';
+  import { textoResumenRoadmap } from '../../lib/roadmap';
+  import { alTenerRuta, ponerTexto } from './vista-ruta';
+
+  const raiz = document.querySelector<HTMLElement>('[data-resumen-roadmap]');
+  if (raiz) {
+    alTenerRuta((vista) => {
+      if (!vista?.roadmap) return;
+      ponerTexto(raiz, 'escuela', vista.area.nombreEscuela);
+      ponerTexto(raiz, 'area', vista.area.nombre);
+      ponerTexto(raiz, 'resumen', textoResumenRoadmap(vista.roadmap, formatoHorasSemana(vista.ruta.horasSemana)));
+    });
+  }
+</script>

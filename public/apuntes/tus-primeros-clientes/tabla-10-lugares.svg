@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 748" width="900" height="748" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Tabla de 10 lugares de ejemplo</title>
+<desc id="d">Tabla con diez lugares donde buscar clientes, si es en línea o en persona, una estimación propia de cuántos posibles clientes hay y qué tan fácil es llegar. Tres están marcados como los más prometedores.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="748" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">10 lugares donde está mi cliente (ejemplo)</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">La columna «posibles clientes» es tu estimación, no un dato exacto. ★ = los 3 más prometedores.</tspan></text>
+<rect x="40" y="110" width="820" height="50" rx="0" fill="#B84E1E" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="50" dy="0">Lugar</tspan></text>
+<line x1="370" y1="110" x2="370" y2="160" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="380" dy="0">Tipo</tspan></text>
+<line x1="510" y1="110" x2="510" y2="160" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="520" dy="0">Posibles clientes</tspan></text>
+<line x1="670" y1="110" x2="670" y2="160" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="140" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="680" dy="0">¿Qué tan fácil llego?</tspan></text>
+<rect x="40" y="160" width="820" height="63" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="190" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">★ Mercado de la colonia</tspan></text>
+<line x1="370" y1="160" x2="370" y2="223" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="190" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En persona</tspan></text>
+<line x1="510" y1="160" x2="510" y2="223" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="190" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Muchos</tspan></text>
+<line x1="670" y1="160" x2="670" y2="223" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="190" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Fácil: voy cada</tspan><tspan x="680" dy="20.8">semana</tspan></text>
+<rect x="40" y="223" width="820" height="63" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="253" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">★ Grupo de comerciantes de la zona</tspan></text>
+<line x1="370" y1="223" x2="370" y2="286" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="253" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En línea</tspan></text>
+<line x1="510" y1="223" x2="510" y2="286" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="253" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Muchos</tspan></text>
+<line x1="670" y1="223" x2="670" y2="286" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="253" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Media: necesito que</tspan><tspan x="680" dy="20.8">me agreguen</tspan></text>
+<rect x="40" y="286" width="820" height="50" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="316" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">★ Negocios de mi familia y amigos</tspan></text>
+<line x1="370" y1="286" x2="370" y2="336" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="316" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En persona</tspan></text>
+<line x1="510" y1="286" x2="510" y2="336" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="316" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Algunos</tspan></text>
+<line x1="670" y1="286" x2="670" y2="336" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="316" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Fácil</tspan></text>
+<rect x="40" y="336" width="820" height="50" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="366" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Bazar de los domingos</tspan></text>
+<line x1="370" y1="336" x2="370" y2="386" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="366" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En persona</tspan></text>
+<line x1="510" y1="336" x2="510" y2="386" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="366" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Algunos</tspan></text>
+<line x1="670" y1="336" x2="670" y2="386" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="366" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Media</tspan></text>
+<rect x="40" y="386" width="820" height="50" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="416" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Página de compra-venta de la ciudad</tspan></text>
+<line x1="370" y1="386" x2="370" y2="436" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="416" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En línea</tspan></text>
+<line x1="510" y1="386" x2="510" y2="436" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="416" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Algunos</tspan></text>
+<line x1="670" y1="386" x2="670" y2="436" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="416" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Fácil</tspan></text>
+<rect x="40" y="436" width="820" height="50" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="466" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Bolsa de trabajo de mi escuela</tspan></text>
+<line x1="370" y1="436" x2="370" y2="486" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="466" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En persona</tspan></text>
+<line x1="510" y1="436" x2="510" y2="486" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="466" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Pocos</tspan></text>
+<line x1="670" y1="436" x2="670" y2="486" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="466" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Fácil</tspan></text>
+<rect x="40" y="486" width="820" height="63" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="516" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Papelería que hace trámites</tspan></text>
+<line x1="370" y1="486" x2="370" y2="549" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="516" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En persona</tspan></text>
+<line x1="510" y1="486" x2="510" y2="549" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="516" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Algunos</tspan></text>
+<line x1="670" y1="486" x2="670" y2="549" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="516" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Media: hablar con el</tspan><tspan x="680" dy="20.8">dueño</tspan></text>
+<rect x="40" y="549" width="820" height="50" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="579" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Mi perfil en redes</tspan></text>
+<line x1="370" y1="549" x2="370" y2="599" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="579" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En línea</tspan></text>
+<line x1="510" y1="549" x2="510" y2="599" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="579" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Pocos</tspan></text>
+<line x1="670" y1="549" x2="670" y2="599" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="579" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Fácil</tspan></text>
+<rect x="40" y="599" width="820" height="63" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="629" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Asociación de comerciantes</tspan></text>
+<line x1="370" y1="599" x2="370" y2="662" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="629" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En persona</tspan></text>
+<line x1="510" y1="599" x2="510" y2="662" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="629" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Muchos</tspan></text>
+<line x1="670" y1="599" x2="670" y2="662" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="629" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Difícil: no conozco a</tspan><tspan x="680" dy="20.8">nadie</tspan></text>
+<rect x="40" y="662" width="820" height="50" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="692" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">Foro de pequeños negocios</tspan></text>
+<line x1="370" y1="662" x2="370" y2="712" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="380" y="692" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="380" dy="0">En línea</tspan></text>
+<line x1="510" y1="662" x2="510" y2="712" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="520" y="692" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="520" dy="0">Pocos</tspan></text>
+<line x1="670" y1="662" x2="670" y2="712" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="680" y="692" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="680" dy="0">Fácil</tspan></text>
+<rect x="40" y="110" width="820" height="602" rx="0" fill="none" stroke="#1F1E1C" stroke-width="2"/>
+</svg>

@@ -1,0 +1,84 @@
+{
+  "id": "tu-semana-en-orden",
+  "estado": "muestra",
+  "oculto": false,
+  "titulo": "Tu semana en orden",
+  "subtitulo": "Descubre a dónde se va tu tiempo y arma una semana realista para estudiar, trabajar y descansar.",
+  "escuela": "habilidades",
+  "areas": [
+    "productividad"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [
+    "Medir a dónde se va tu tiempo durante tres días",
+    "Separar lo urgente de lo importante",
+    "Planear tu semana en 20 minutos",
+    "Estudiar en bloques cortos con descansos"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": null,
+  "modulos": [
+    {
+      "id": "tu-semana-en-orden/temario",
+      "titulo": "Temario",
+      "lecciones": [
+        {
+          "id": "tu-semana-en-orden/a-donde-se-va-tu-tiempo",
+          "slug": "a-donde-se-va-tu-tiempo",
+          "titulo": "¿A dónde se va tu tiempo?",
+          "fuente": "demo",
+          "ruta": "habilidades/tu-semana-en-orden/01-a-donde-se-va-tu-tiempo.md",
+          "seccion": null,
+          "minutos": 18.7,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "tu-semana-en-orden/prioriza-lo-importante",
+          "slug": "prioriza-lo-importante",
+          "titulo": "Prioriza lo importante",
+          "fuente": "demo",
+          "ruta": "habilidades/tu-semana-en-orden/02-prioriza-lo-importante.md",
+          "seccion": null,
+          "minutos": 13.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "tu-semana-en-orden/planea-tu-semana",
+          "slug": "planea-tu-semana",
+          "titulo": "Planea tu semana en 20 minutos",
+          "fuente": "demo",
+          "ruta": "habilidades/tu-semana-en-orden/03-planea-tu-semana.md",
+          "seccion": null,
+          "minutos": 23.6,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "tu-semana-en-orden/estudia-en-bloques",
+          "slug": "estudia-en-bloques",
+          "titulo": "Estudia en bloques y descansa",
+          "fuente": "demo",
+          "ruta": "habilidades/tu-semana-en-orden/04-estudia-en-bloques.md",
+          "seccion": null,
+          "minutos": 13.4,
+          "idioma": "es",
+          "riesgo": "ninguno",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+---
+/**
+ * VistaRoadmap — «Mi ruta» de un área con etapas (pantalla 07 · Roadmap de Ciberseguridad).
+ *
+ * Arriba, el encabezado y las etapas; debajo, «Esta semana» (con el botón principal), «Lo que ajustamos por tus
+ * respuestas» y la tarjeta del plan. La página la muestra solo si el área elegida tiene `etapas`
+ * (`data-vista-roadmap`, lo conecta `vista-ruta.ts`); si no, se ve `VistaSemanas`.
+ *
+ *   <VistaRoadmap />
+ */
+import TarjetaPlan from '../catalogo/TarjetaPlan.astro';
+import AjustesRoadmap from './AjustesRoadmap.astro';
+import EstaSemana from './EstaSemana.astro';
+import EtapasRoadmap from './EtapasRoadmap.astro';
+import ResumenRoadmap from './ResumenRoadmap.astro';
+---
+
+<div data-vista-roadmap hidden>
+  <ResumenRoadmap />
+  <EtapasRoadmap />
+  <div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_22rem]">
+    <EstaSemana />
+    <AjustesRoadmap />
+    <TarjetaPlan variante="ruta" idDialogo="dialogo-suscripcion-roadmap" />
+  </div>
+</div>

@@ -1,0 +1,33 @@
+---
+/**
+ * InvitacionRuta — lo que muestra «Mi ruta» cuando todavía no hay diagnóstico: invita a elegir un área en
+ * `/escuelas` o a hacer la orientación en `/orientacion`.
+ *
+ *   <InvitacionRuta />
+ */
+import { numeroPreguntasOrientacion } from '../../lib/catalogo';
+import { plural } from '../../lib/formato';
+import Boton from '../ui/Boton.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+
+const preguntas = plural(await numeroPreguntasOrientacion(), 'pregunta');
+---
+
+<div class="mx-auto max-w-3xl">
+  <h1 class="text-4xl sm:text-5xl">Todavía no tienes una ruta</h1>
+  <p class="mt-3 text-lg text-texto-2">
+    Tu ruta se arma con unas preguntas cortas sobre lo que ya sabes y el tiempo que tienes. Elige cómo empezar:
+  </p>
+  <div class="mt-8 grid gap-5 md:grid-cols-2">
+    <Tarjeta class="flex flex-col">
+      <h2 class="text-xl sm:text-2xl">No sé por dónde empezar</h2>
+      <p class="mt-2 flex-1 text-texto-2">Responde {preguntas} sobre tus objetivos y te recomendamos un área.</p>
+      <Boton variante="principal" href="/orientacion" class="mt-5">Descubre tu ruta</Boton>
+    </Tarjeta>
+    <Tarjeta class="flex flex-col">
+      <h2 class="text-xl sm:text-2xl">Ya sé qué quiero aprender</h2>
+      <p class="mt-2 flex-1 text-texto-2">Elige una escuela y un área, y personaliza tu ruta desde ahí.</p>
+      <Boton href="/escuelas" class="mt-5">Ver escuelas</Boton>
+    </Tarjeta>
+  </div>
+</div>

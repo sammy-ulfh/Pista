@@ -1,0 +1,44 @@
+{
+  "plan": {
+    "nombre": "Pista completo",
+    "precio": 50,
+    "moneda": "MXN",
+    "periodo": "mes",
+    "incluye": [
+      "Todos los cursos de todas las escuelas",
+      "Cambia de área cuando quieras"
+    ]
+  },
+  "suscripcion": {
+    "incluidoEnCurso": "Este curso está incluido en",
+    "incluidoEnRuta": "Tu ruta está incluida en",
+    "acceso": "Acceso a todos los cursos de todas las escuelas",
+    "botonSuscribirme": "Suscribirme",
+    "notaVistaPrevia": "La primera lección se puede ver gratis",
+    "etiquetaVistaPrevia": "Vista previa gratis",
+    "tituloLeccionBloqueada": "Suscríbete para continuar",
+    "textoLeccionBloqueada": "Esta lección es parte de «{curso}». La primera lección de cada curso es gratis; con el plan ves todas las lecciones de todos los cursos.",
+    "enlaceVistaPrevia": "Ver la lección gratis",
+    "tituloDialogo": "Confirmar suscripción",
+    "incluyeEnDialogo": "Acceso a todos los cursos de todas las escuelas, incluido «{curso}».",
+    "avisoDemo": "Esto es una demo: no se hará ningún cobro.",
+    "botonCancelar": "Cancelar",
+    "botonConfirmar": "Sí, compré",
+    "planActivo": "Tu plan está activo",
+    "botonEmpezar": "Empezar",
+    "sinLecciones": "Las lecciones de este curso todavía están en preparación.",
+    "avisoActivado": "Listo: tu plan está activo. Ya puedes ver todos los cursos.",
+    "avisoReinicio": "Se reinició la demo."
+  },
+  "ocultarDatosPersonales": true,
+  "ocultarRiesgoAlto": false,
+  "mostrarEtiquetaIdioma": true,
+  "textoFuncionNoDisponible": "Disponible en la versión completa",
+  "textoAvisoEtico": "Este contenido es para aprender a proteger sistemas. Practica solo en equipos propios o con permiso por escrito.",
+  "textoAvisoEticoAlto": "Practica esto solo en tu propio laboratorio o con autorización por escrito. Usarlo contra sistemas ajenos es un delito.",
+  "ritmo": {
+    "horasSemanaPorDefecto": 1,
+    "descripcion": "Las semanas se llenan por minutos acumulados: caben las lecciones mientras su suma no pase de horasSemana × 60 minutos. Una lección nunca se parte entre semanas; si una sola lección pasa del límite, ocupa una semana para ella sola. Un curso nuevo sigue en la misma semana si aún cabe. Las lecciones ocultas no cuentan. Un curso «próximamente» (sin lecciones) ocupa sus minutosEstimados en semanas propias: se divide en partes iguales, tantas como semanas necesite, y lo que sigue empieza en semana nueva. Los minutos se redondean a un decimal.",
+    "combinarRespuestas": "cursoInicio: gana el que va más adelante en la ruta del área (los cursos anteriores se omiten). omitirLecciones, omitirModulos, omitirCursos y agregarCursos: se suman los de todas las respuestas (agregarCursos va al final, en orden). horasSemana: la última respuesta que lo indique; si ninguna lo indica, horasSemanaPorDefecto."
+  }
+}

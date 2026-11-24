@@ -1,0 +1,144 @@
+{
+  "area": "productividad",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar.",
+  "preguntas": [
+    {
+      "id": "agenda",
+      "texto": "¿Usas agenda o calendario?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca",
+          "efectos": {}
+        },
+        {
+          "id": "a-veces",
+          "texto": "A veces",
+          "efectos": {}
+        },
+        {
+          "id": "diario",
+          "texto": "Todos los días",
+          "motivo": "ya usas agenda todos los días",
+          "efectos": {
+            "omitirLecciones": [
+              "tu-semana-en-orden/planea-tu-semana"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo-se-va",
+      "texto": "¿Sabes en qué se te va el tiempo?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "No tengo idea",
+          "efectos": {}
+        },
+        {
+          "id": "mas-o-menos",
+          "texto": "Más o menos",
+          "efectos": {}
+        },
+        {
+          "id": "si",
+          "texto": "Sí, lo tengo medido",
+          "motivo": "ya sabes en qué se te va el tiempo",
+          "efectos": {
+            "omitirLecciones": [
+              "tu-semana-en-orden/a-donde-se-va-tu-tiempo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "concentracion",
+      "texto": "¿Te cuesta concentrarte cuando estudias?",
+      "opciones": [
+        {
+          "id": "mucho",
+          "texto": "Mucho",
+          "efectos": {}
+        },
+        {
+          "id": "a-veces",
+          "texto": "A veces",
+          "efectos": {}
+        },
+        {
+          "id": "casi-nunca",
+          "texto": "Casi nunca",
+          "motivo": "ya te concentras sin problema",
+          "efectos": {
+            "omitirLecciones": [
+              "tu-semana-en-orden/estudia-en-bloques"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+      "opciones": [
+        {
+          "id": "menos-1",
+          "texto": "Menos de 1 hora",
+          "efectos": {
+            "horasSemana": 0.5
+          }
+        },
+        {
+          "id": "1-2",
+          "texto": "De 1 a 2 horas",
+          "efectos": {
+            "horasSemana": 1
+          }
+        },
+        {
+          "id": "3-4",
+          "texto": "De 3 a 4 horas",
+          "efectos": {
+            "horasSemana": 3
+          }
+        },
+        {
+          "id": "5-mas",
+          "texto": "5 horas o más",
+          "efectos": {
+            "horasSemana": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "texto": "¿Qué te gustaría lograr?",
+      "opciones": [
+        {
+          "id": "entregar",
+          "texto": "Entregar todo a tiempo",
+          "motivo": "tu meta es entregar todo a tiempo",
+          "efectos": {
+            "omitirCursos": [
+              "estudia-mejor"
+            ]
+          }
+        },
+        {
+          "id": "estudiar",
+          "texto": "Estudiar mejor en menos tiempo",
+          "efectos": {}
+        },
+        {
+          "id": "descansar",
+          "texto": "Tener tiempo libre sin culpa",
+          "efectos": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 553" width="900" height="553" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Plantilla de mensaje en 4 partes</title>
+<desc id="d">Cuatro bloques numerados: saludo con su nombre, por qué le escribes a esa persona, qué ofreces en una frase y una pregunta fácil de responder. Cada uno con un ejemplo.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="553" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">Tu primer mensaje en 4 partes</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Corto, personal y con una sola pregunta al final.</tspan></text>
+<circle cx="70" cy="160" r="20" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="70" y="167" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="70" dy="0">1</tspan></text>
+<rect x="110" y="120" width="750" height="82" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<text x="130" y="152" font-size="19" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="130" dy="0">Saludo con su nombre</tspan></text>
+<text x="130" y="180" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="130" dy="0">«Hola, doña Carmen:»</tspan></text>
+<circle cx="70" cy="265" r="20" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="70" y="272" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="70" dy="0">2</tspan></text>
+<rect x="110" y="225" width="750" height="82" rx="12" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="130" y="257" font-size="19" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="130" dy="0">Por qué le escribes a ella</tspan></text>
+<text x="130" y="285" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="130" dy="0">«Vi que en su fonda siempre hay fila a la hora de la comida.»</tspan></text>
+<circle cx="70" cy="370" r="20" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="70" y="377" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="70" dy="0">3</tspan></text>
+<rect x="110" y="330" width="750" height="82" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<text x="130" y="362" font-size="19" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="130" dy="0">Qué ofreces, en una frase</tspan></text>
+<text x="130" y="390" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="130" dy="0">«Ayudo a negocios pequeños a llevar sus cuentas en una hoja sencilla.»</tspan></text>
+<circle cx="70" cy="475" r="20" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="70" y="482" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="70" dy="0">4</tspan></text>
+<rect x="110" y="435" width="750" height="82" rx="12" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="130" y="467" font-size="19" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="130" dy="0">Una pregunta fácil de responder</tspan></text>
+<text x="130" y="495" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="130" dy="0">«¿Le puedo enseñar un ejemplo de 5 minutos esta semana?»</tspan></text>
+</svg>

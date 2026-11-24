@@ -1,0 +1,20 @@
+{
+  "id": "valida-tu-idea",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Valida tu idea sin gastar",
+  "subtitulo": "Prueba si alguien pagaría por tu idea antes de invertir.",
+  "escuela": "negocios",
+  "areas": [
+    "emprender"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 70,
+  "modulos": []
+}

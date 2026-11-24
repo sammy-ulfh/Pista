@@ -1,0 +1,113 @@
+---
+/**
+ * Panel del presentador (`/demo`). No aparece en la navegación ni en buscadores (`noindex`).
+ *
+ * - «Cargar perfil: …» → empieza una demo limpia con las respuestas y el área de ese perfil, el plan sin activar,
+ *   y lleva a «Mi ruta» (`cargarPerfil` de `lib/estado-demo.ts`). Los perfiles salen de `datos/perfiles-demo.json`,
+ *   en el orden del archivo.
+ * - «Reiniciar demo» → borra todo el estado.
+ * - El recorrido de la presentación, pantalla por pantalla (ver `GUION_PRESENTACION.md`).
+ */
+import { obtenerPerfiles, obtenerTextosSuscripcion } from '../lib/catalogo';
+import LayoutBase from '../layouts/LayoutBase.astro';
+import Boton from '../components/ui/Boton.astro';
+import CajaAviso from '../components/ui/CajaAviso.astro';
+import Tarjeta from '../components/ui/Tarjeta.astro';
+
+const perfiles = await obtenerPerfiles();
+const { avisoReinicio } = obtenerTextosSuscripcion();
+
+/** Las pantallas del recorrido principal (perfil de Sofía, Ciberseguridad), en el orden de `GUION_PRESENTACION.md`. */
+const recorrido = [
+  { numero: '01', nombre: 'Inicio', href: '/' },
+  { numero: '02', nombre: 'Escuelas', href: '/escuelas' },
+  { numero: '03', nombre: 'Área · Ciberseguridad', href: '/areas/ciberseguridad' },
+  { numero: '06', nombre: 'Diagnóstico · Ciberseguridad (respuestas de Sofía)', href: '/areas/ciberseguridad/diagnostico' },
+  { numero: '07', nombre: 'Roadmap de Ciberseguridad', href: '/mi-ruta' },
+  { numero: '11', nombre: 'Lección con apuntes reales · Crear una máquina virtual («Empezar semana 1»)', href: '/cursos/linux-desde-cero/crear-una-maquina-virtual' },
+  { numero: '08', nombre: 'Curso · Linux desde cero', href: '/cursos/linux-desde-cero' },
+  { numero: '09', nombre: 'Suscripción simulada (botón «Suscribirme» de la ficha)', href: '/cursos/linux-desde-cero' },
+  { numero: '12', nombre: 'Mi bitácora', href: '/bitacora' },
+  { numero: '07', nombre: 'Roadmap de Valeria (cárgala arriba)', href: '/mi-ruta' },
+  { numero: '07b', nombre: 'Cierre · Tu ruta de Mariana (cárgala arriba)', href: '/mi-ruta' },
+  { numero: '04', nombre: 'Si preguntan · Orientación («No sé por dónde empezar»)', href: '/orientacion' },
+  { numero: '08', nombre: 'Si preguntan · Python ofensivo (etapa avanzada, con aviso ético)', href: '/cursos/python-ofensivo-laboratorio' },
+];
+---
+
+<LayoutBase titulo="Panel del presentador" ocultarDeBuscadores>
+  <div class="contenedor max-w-4xl space-y-10 pt-6 lg:pt-10">
+    <div>
+      <h1 class="text-4xl sm:text-5xl">Panel del presentador</h1>
+      <p class="mt-3 text-texto-2">Esta página no aparece en el sitio. Ábrela antes de presentar en <code>/demo</code>.</p>
+    </div>
+
+    <section aria-labelledby="titulo-perfiles">
+      <h2 id="titulo-perfiles" class="text-2xl">Perfiles de la presentación</h2>
+      <p class="mt-1 text-sm text-texto-2">Cada uno empieza una demo limpia: sus respuestas y su área, sin plan y sin lecciones vistas.</p>
+      <ul class="mt-4 grid gap-4 md:grid-cols-2">
+        {
+          perfiles.map((perfil, i) => (
+            <li>
+              <Tarjeta destacada={i === 0} relleno="compacto" class="flex h-full flex-col gap-3">
+                <p class="text-sm text-texto-2">
+                  {i + 1}. {perfil.carrera}
+                  {i === 0 && ' · perfil principal'}
+                </p>
+                <p class="flex-1">{perfil.objetivo}</p>
+                <Boton
+                  variante={i === 0 ? 'principal' : 'secundario'}
+                  tamano="chico"
+                  bloque
+                  data-cargar-perfil={JSON.stringify({
+                    id: perfil.id,
+                    area: perfil.area,
+                    respuestasOrientacion: perfil.respuestasOrientacion,
+                    respuestasDiagnostico: perfil.respuestasDiagnostico,
+                  })}
+                >
+                  Cargar perfil: {perfil.nombre} ({perfil.carrera.split(' ')[0]})
+                </Boton>
+              </Tarjeta>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="titulo-reiniciar">
+      <h2 id="titulo-reiniciar" class="text-2xl">Si algo falla</h2>
+      <CajaAviso class="mt-3">
+        «Reiniciar demo» borra el plan, las respuestas y el progreso de este navegador. Después vuelve a cargar un perfil.
+      </CajaAviso>
+      <Boton class="mt-4" data-reiniciar-demo data-aviso-al-reiniciar={avisoReinicio}>Reiniciar demo</Boton>
+    </section>
+
+    <section aria-labelledby="titulo-recorrido">
+      <h2 id="titulo-recorrido" class="text-2xl">Recorrido, pantalla por pantalla</h2>
+      <ol class="mt-4 rounded-cuaderno border-2 border-tinta bg-blanco px-4 sm:px-6">
+        {
+          recorrido.map((paso) => (
+            <li class="border-b-2 border-dashed border-linea last:border-b-0">
+              <a href={paso.href} class="flex min-h-12 items-center gap-3 py-2 underline-offset-4 hover:underline">
+                <span class="font-titulo font-bold text-texto-2">{paso.numero}</span>
+                <span>{paso.nombre}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+  </div>
+</LayoutBase>
+
+<script>
+  import { cargarPerfil, type PerfilParaCargar } from '../lib/estado-demo';
+
+  document.addEventListener('click', (evento) => {
+    const boton = evento.target instanceof Element ? evento.target.closest<HTMLElement>('[data-cargar-perfil]') : null;
+    if (!boton?.dataset.cargarPerfil) return;
+    cargarPerfil(JSON.parse(boton.dataset.cargarPerfil) as PerfilParaCargar);
+    window.location.href = '/mi-ruta';
+  });
+</script>

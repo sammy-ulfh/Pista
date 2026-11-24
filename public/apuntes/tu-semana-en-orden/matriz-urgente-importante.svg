@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 576" width="900" height="576" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Matriz urgente / importante</title>
+<desc id="d">Una matriz de dos por dos. Urgente e importante: hazlo ya. Importante pero no urgente: agéndalo. Urgente pero no importante: hazlo rápido o pide ayuda. Ni urgente ni importante: elimínalo o déjalo para el final.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="576" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#7A4FD1" text-anchor="start"><tspan x="40" dy="0">Urgente / importante</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Dos preguntas para cada pendiente: ¿tiene fecha cercana? ¿me acerca a algo que me importa?</tspan></text>
+<text x="325.0" y="126" font-size="18" font-weight="700" fill="#1F1E1C" text-anchor="middle"><tspan x="325.0" dy="0">Urgente</tspan></text>
+<text x="675.0" y="126" font-size="18" font-weight="700" fill="#1F1E1C" text-anchor="middle"><tspan x="675.0" dy="0">No urgente</tspan></text>
+<text x="130" y="240.0" font-size="18" font-weight="700" fill="#1F1E1C" text-anchor="middle" transform="rotate(-90 130 240.0)">Importante</text>
+<text x="130" y="440.0" font-size="18" font-weight="700" fill="#1F1E1C" text-anchor="middle" transform="rotate(-90 130 440.0)">No importante</text>
+<rect x="150" y="140" width="350" height="200" rx="0" fill="#7A4FD1" stroke="#1F1E1C" stroke-width="2"/>
+<text x="168" y="176" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="168" dy="0">1. Hazlo ya</tspan></text>
+<text x="168" y="206" font-size="16" font-weight="400" fill="#FFFFFF" text-anchor="start"><tspan x="168" dy="0">Tiene fecha cercana y consecuencias si</tspan><tspan x="168" dy="20.8">no lo haces.</tspan></text>
+<rect x="500" y="140" width="350" height="200" rx="0" fill="#EEE8FA" stroke="#1F1E1C" stroke-width="2"/>
+<text x="518" y="176" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="518" dy="0">2. Agéndalo</tspan></text>
+<text x="518" y="206" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="518" dy="0">Te importa pero no corre prisa. Ponle</tspan><tspan x="518" dy="20.8">día y hora: aquí está lo que más te</tspan><tspan x="518" dy="20.8">ayuda.</tspan></text>
+<rect x="150" y="340" width="350" height="200" rx="0" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="168" y="376" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="168" dy="0">3. Rápido o pide ayuda</tspan></text>
+<text x="168" y="406" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="168" dy="0">Te lo piden con prisa, pero no te</tspan><tspan x="168" dy="20.8">acerca a tus metas.</tspan></text>
+<rect x="500" y="340" width="350" height="200" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="2"/>
+<text x="518" y="376" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="518" dy="0">4. Déjalo para el final</tspan></text>
+<text x="518" y="406" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="518" dy="0">Ni urgente ni importante. Si no lo</tspan><tspan x="518" dy="20.8">haces, no pasa nada.</tspan></text>
+</svg>

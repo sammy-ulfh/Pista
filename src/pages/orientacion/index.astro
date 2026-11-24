@@ -1,0 +1,24 @@
+---
+/**
+ * Pantalla 04 · Orientación («No sé por dónde empezar»). Las preguntas y sus textos salen de
+ * `datos/orientacion.json`; las respuestas se guardan en el navegador y, al terminar, se va a la recomendación.
+ */
+import { datosOrientacion } from '../../lib/catalogo';
+import LayoutBase from '../../layouts/LayoutBase.astro';
+import Cuestionario from '../../components/cuestionario/Cuestionario.astro';
+
+const { preguntas, notaAlFinal } = await datosOrientacion();
+---
+
+<LayoutBase titulo="Descubre tu área" salirA="/">
+  <div class="contenedor pt-8 pb-4 lg:pt-14">
+    <Cuestionario
+      tipo="orientacion"
+      preguntas={preguntas}
+      nota={notaAlFinal}
+      volverA="/"
+      destino="/orientacion/resultado"
+      textoTerminar="Ver mi recomendación →"
+    />
+  </div>
+</LayoutBase>

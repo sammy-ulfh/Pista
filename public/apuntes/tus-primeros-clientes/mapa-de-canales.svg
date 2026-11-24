@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 436" width="900" height="436" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Mapa de canales: en línea y en persona</title>
+<desc id="d">Dos columnas con lugares donde buscar clientes. En línea: grupos, redes, marketplaces, foros. En persona: tu círculo cercano, la escuela, comercios, eventos. En medio, tu cliente ideal.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="436" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">Mapa de canales</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Dos caminos para llegar a la misma persona.</tspan></text>
+<rect x="40" y="120" width="300" height="280" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M40,164 v-32 a12,12 0 0 1 12,-12 h276 a12,12 0 0 1 12,12 v32 z" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="56" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="56" dy="0">En línea</tspan></text>
+<text x="56" y="192" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="56" dy="0">• Grupos de mensajes de tu</tspan><tspan x="56" dy="20.8">colonia o de tu carrera</tspan><tspan x="56" dy="20.8">• Grupos y comunidades en redes</tspan><tspan x="56" dy="20.8">sociales</tspan><tspan x="56" dy="20.8">• Tu propio perfil: publica lo</tspan><tspan x="56" dy="20.8">que haces</tspan><tspan x="56" dy="20.8">• Páginas de compra y venta de tu</tspan><tspan x="56" dy="20.8">ciudad</tspan><tspan x="56" dy="20.8">• Foros o comunidades de tu tema</tspan></text>
+<rect x="560" y="120" width="300" height="280" rx="12" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M560,164 v-32 a12,12 0 0 1 12,-12 h276 a12,12 0 0 1 12,12 v32 z" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="576" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="576" dy="0">En persona</tspan></text>
+<text x="576" y="192" font-size="16" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="576" dy="0">• Familia, amigos y vecinos (y a</tspan><tspan x="576" dy="20.8">quién conocen)</tspan><tspan x="576" dy="20.8">• Tu escuela: compañeros,</tspan><tspan x="576" dy="20.8">profesores, bolsa de trabajo</tspan><tspan x="576" dy="20.8">• Comercios y mercados de tu zona</tspan><tspan x="576" dy="20.8">• Ferias, bazares y eventos</tspan><tspan x="576" dy="20.8">• Clientes de alguien que vende</tspan><tspan x="576" dy="20.8">algo complementario</tspan></text>
+<circle cx="450" cy="260" r="80" fill="#B84E1E" stroke="#1F1E1C" stroke-width="2"/>
+<text x="450" y="252" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="450" dy="0">Tu cliente</tspan></text>
+<text x="450" y="276" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="450" dy="0">ideal</tspan></text>
+<line x1="345" y1="260" x2="365" y2="260" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+<line x1="555" y1="260" x2="535" y2="260" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+</svg>

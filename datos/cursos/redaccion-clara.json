@@ -1,0 +1,20 @@
+{
+  "id": "redaccion-clara",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Redacción clara para trabajos y tesis",
+  "subtitulo": "Ordena tus ideas y escribe sin rodeos.",
+  "escuela": "comunicacion",
+  "areas": [
+    "escritura"
+  ],
+  "nivel": "intermedio",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 90,
+  "modulos": []
+}

@@ -1,0 +1,287 @@
+{
+  "regla": "Se suman los puntos de las 4 respuestas. Se recomienda la escuela con más puntos (empate: la que aparece primero en el catálogo) y, dentro de ella, las 1-2 áreas con más puntos (la segunda solo si tiene puntos). Si el área recomendada está en próximamente, se muestra un aviso y la alternativa disponible más cercana: el área disponible con más puntos de la misma escuela; si no hay, la de cualquier escuela; si nadie tiene puntos, la primera área disponible de esa escuela. «También te puede servir» = el área disponible con más puntos de otra escuela (si tiene puntos).",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar.",
+  "avisoProximamente": "«{area}» llega pronto. Mientras tanto te recomendamos un área disponible.",
+  "preguntas": [
+    {
+      "id": "carrera",
+      "texto": "¿Qué estudias?",
+      "opciones": [
+        {
+          "id": "ingenieria",
+          "texto": "Ingeniería o sistemas",
+          "suma": {
+            "escuelas": {
+              "tecnologia": 2
+            },
+            "areas": {
+              "programacion": 1
+            }
+          }
+        },
+        {
+          "id": "negocios",
+          "texto": "Administración, contaduría o negocios",
+          "suma": {
+            "escuelas": {
+              "negocios": 2
+            },
+            "areas": {
+              "emprender": 1
+            }
+          }
+        },
+        {
+          "id": "humanidades",
+          "texto": "Comunicación, derecho o humanidades",
+          "suma": {
+            "escuelas": {
+              "comunicacion": 2
+            },
+            "areas": {
+              "hablar-en-publico": 1
+            }
+          }
+        },
+        {
+          "id": "artes",
+          "texto": "Diseño, arquitectura o artes",
+          "suma": {
+            "escuelas": {
+              "diseno": 2
+            },
+            "areas": {
+              "contenido-visual": 1
+            }
+          }
+        },
+        {
+          "id": "otra",
+          "texto": "Salud, ciencias u otra carrera",
+          "suma": {
+            "escuelas": {
+              "habilidades": 1
+            },
+            "areas": {
+              "productividad": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "lograr",
+      "texto": "¿Qué te gustaría lograr en los próximos meses?",
+      "opciones": [
+        {
+          "id": "trabajo-tecnologia",
+          "texto": "Conseguir trabajo o prácticas en tecnología",
+          "suma": {
+            "escuelas": {
+              "tecnologia": 3
+            },
+            "areas": {
+              "programacion": 1,
+              "ciberseguridad": 1
+            }
+          }
+        },
+        {
+          "id": "protegerme",
+          "texto": "Entender cómo me pueden hackear y protegerme",
+          "suma": {
+            "escuelas": {
+              "tecnologia": 3
+            },
+            "areas": {
+              "ciberseguridad": 2
+            }
+          }
+        },
+        {
+          "id": "emprender",
+          "texto": "Emprender o conseguir mis primeros clientes",
+          "suma": {
+            "escuelas": {
+              "negocios": 3
+            },
+            "areas": {
+              "conseguir-clientes": 2,
+              "emprender": 1
+            }
+          }
+        },
+        {
+          "id": "hablar",
+          "texto": "Hablar en público sin ponerme nervioso",
+          "suma": {
+            "escuelas": {
+              "comunicacion": 3
+            },
+            "areas": {
+              "hablar-en-publico": 3
+            }
+          }
+        },
+        {
+          "id": "organizar",
+          "texto": "Organizar mejor mi tiempo y mi dinero",
+          "suma": {
+            "escuelas": {
+              "habilidades": 3
+            },
+            "areas": {
+              "productividad": 2,
+              "finanzas-personales": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "disfrutas",
+      "texto": "¿Qué disfrutas más hacer?",
+      "opciones": [
+        {
+          "id": "computadora",
+          "texto": "Resolver problemas con la computadora",
+          "suma": {
+            "escuelas": {
+              "tecnologia": 2
+            },
+            "areas": {
+              "programacion": 1,
+              "linux": 1
+            }
+          }
+        },
+        {
+          "id": "gente",
+          "texto": "Platicar con gente y convencerla",
+          "suma": {
+            "escuelas": {
+              "negocios": 1,
+              "comunicacion": 1
+            },
+            "areas": {
+              "ventas": 1,
+              "persuasion": 1,
+              "hablar-en-publico": 1
+            }
+          }
+        },
+        {
+          "id": "organizar",
+          "texto": "Planear y organizar",
+          "suma": {
+            "escuelas": {
+              "habilidades": 2
+            },
+            "areas": {
+              "productividad": 1
+            }
+          }
+        },
+        {
+          "id": "visual",
+          "texto": "Crear cosas visuales",
+          "suma": {
+            "escuelas": {
+              "diseno": 2
+            },
+            "areas": {
+              "diseno-grafico": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "primer-paso",
+      "texto": "Si pudieras empezar mañana, ¿qué harías primero?",
+      "opciones": [
+        {
+          "id": "primer-cliente",
+          "texto": "Conseguir mi primer cliente o venta",
+          "suma": {
+            "escuelas": {
+              "negocios": 2
+            },
+            "areas": {
+              "conseguir-clientes": 2
+            }
+          }
+        },
+        {
+          "id": "proteger",
+          "texto": "Entender cómo atacan los hackers para protegerme",
+          "suma": {
+            "escuelas": {
+              "tecnologia": 2
+            },
+            "areas": {
+              "ciberseguridad": 3
+            }
+          }
+        },
+        {
+          "id": "programa",
+          "texto": "Crear mi primer programa",
+          "suma": {
+            "escuelas": {
+              "tecnologia": 2
+            },
+            "areas": {
+              "programacion": 3
+            }
+          }
+        },
+        {
+          "id": "presentacion",
+          "texto": "Dar una presentación que salga bien",
+          "suma": {
+            "escuelas": {
+              "comunicacion": 2
+            },
+            "areas": {
+              "hablar-en-publico": 2
+            }
+          }
+        },
+        {
+          "id": "presupuesto",
+          "texto": "Hacer un presupuesto que sí cumpla",
+          "suma": {
+            "escuelas": {
+              "habilidades": 2
+            },
+            "areas": {
+              "finanzas-personales": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "casosDePrueba": [
+    {
+      "nombre": "Aviso de próximamente",
+      "respuestas": {
+        "carrera": "otra",
+        "lograr": "organizar",
+        "disfrutas": "organizar",
+        "primer-paso": "presupuesto"
+      },
+      "esperado": {
+        "escuela": "habilidades",
+        "area": "productividad",
+        "areasRecomendadas": [
+          "finanzas-personales",
+          "productividad"
+        ],
+        "tambienTePuedeServir": null,
+        "avisoProximamente": "«Finanzas personales» llega pronto. Mientras tanto te recomendamos un área disponible."
+      }
+    }
+  ]
+}

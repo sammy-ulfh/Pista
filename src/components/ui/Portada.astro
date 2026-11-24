@@ -1,0 +1,75 @@
+---
+/**
+ * Portada — «imagen» de escuela o curso generada solo con CSS: el color de la escuela, un patrón
+ * y una etiqueta blanca con el título, como la tapa de un cuaderno. No usa imágenes.
+ *
+ * - `escuela`: id de la escuela; el color es su campo `color` de `datos/escuelas.json` (`colorDeEscuela`).
+ * - `variante`: grande (inicio, ficha de curso) · tarjeta (catálogos) · mini (listas; sin texto).
+ * - `patron`: opcional; si no se da, cada escuela tiene uno fijo (ver `lib/portadas.ts`).
+ * - `decorativa`: si el título ya aparece junto a la portada (lo normal), se oculta a lectores de pantalla.
+ *
+ *   <Portada titulo="Tus primeros clientes" escuela="negocios" etiqueta="Negocios" variante="grande" />
+ */
+import { colorDeEscuela } from '../../lib/catalogo';
+import { patronDeEscuela, type Patron } from '../../lib/portadas';
+
+interface Props {
+  titulo: string;
+  escuela: string;
+  variante?: 'grande' | 'tarjeta' | 'mini';
+  /** Texto pequeño sobre el título (nombre de la escuela o del área). */
+  etiqueta?: string;
+  patron?: Patron;
+  decorativa?: boolean;
+  class?: string;
+}
+
+const {
+  titulo,
+  escuela,
+  variante = 'tarjeta',
+  etiqueta,
+  patron = patronDeEscuela(escuela),
+  decorativa = true,
+  class: claseExtra,
+} = Astro.props;
+
+const accesibilidad = decorativa ? { 'aria-hidden': 'true' as const } : { role: 'img' as const, 'aria-label': `Portada: ${titulo}` };
+---
+
+<div
+  {...accesibilidad}
+  data-patron={patron}
+  style={`--escuela: ${colorDeEscuela(escuela)}`}
+  class:list={[
+    'portada relative isolate overflow-hidden rounded-cuaderno border-2 border-tinta',
+    { grande: 'aspect-[16/10]', tarjeta: 'aspect-[4/3]', mini: 'aspect-[4/3] w-16' }[variante],
+    claseExtra,
+  ]}
+>
+  <div class="portada-patron"></div>
+  <!-- Lomo del cuaderno -->
+  <div class="absolute inset-y-0 left-0 w-3 border-r-2 border-tinta bg-tinta/25"></div>
+  {
+    variante !== 'mini' && (
+      <div
+        class:list={[
+          'absolute rounded-lg border-2 border-tinta bg-blanco',
+          variante === 'grande' ? 'right-6 bottom-6 left-9 px-5 py-4' : 'right-4 bottom-4 left-7 px-3 py-2',
+        ]}
+      >
+        {etiqueta && (
+          <p class:list={['font-medium text-texto-2', variante === 'grande' ? 'text-sm' : 'hidden text-xs sm:block']}>{etiqueta}</p>
+        )}
+        <p
+          class:list={[
+            'font-titulo leading-tight font-bold text-tinta',
+            variante === 'grande' ? 'text-2xl sm:text-3xl' : 'line-clamp-3 text-base sm:text-lg',
+          ]}
+        >
+          {titulo}
+        </p>
+      </div>
+    )
+  }
+</div>

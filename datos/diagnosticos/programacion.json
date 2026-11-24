@@ -1,0 +1,137 @@
+{
+  "area": "programacion",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar.",
+  "preguntas": [
+    {
+      "id": "experiencia",
+      "texto": "¿Has programado antes?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca lo he hecho",
+          "efectos": {}
+        },
+        {
+          "id": "clase",
+          "texto": "Hice ejercicios en clase",
+          "efectos": {}
+        },
+        {
+          "id": "proyectos",
+          "texto": "Ya hice proyectos pequeños",
+          "motivo": "ya hiciste proyectos pequeños",
+          "efectos": {
+            "cursoInicio": "python-practico"
+          }
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "texto": "¿Has usado Python?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "No",
+          "efectos": {}
+        },
+        {
+          "id": "poco",
+          "texto": "Un poco",
+          "motivo": "ya usaste Python",
+          "efectos": {
+            "omitirLecciones": [
+              "python-desde-cero/caracteristicas-y-ventajas-de-python",
+              "python-desde-cero/diferencias-entre-python2-python3-pip2-y-pip3"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "objetos",
+      "texto": "¿Sabes qué es una clase o un objeto en programación?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "No",
+          "efectos": {}
+        },
+        {
+          "id": "si",
+          "texto": "Sí",
+          "motivo": "ya sabes qué es un objeto",
+          "efectos": {
+            "omitirModulos": [
+              "python-desde-cero/objetos"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+      "opciones": [
+        {
+          "id": "menos-1",
+          "texto": "Menos de 1 hora",
+          "efectos": {
+            "horasSemana": 0.5
+          }
+        },
+        {
+          "id": "1-2",
+          "texto": "De 1 a 2 horas",
+          "efectos": {
+            "horasSemana": 1
+          }
+        },
+        {
+          "id": "3-4",
+          "texto": "De 3 a 4 horas",
+          "efectos": {
+            "horasSemana": 3
+          }
+        },
+        {
+          "id": "5-mas",
+          "texto": "5 horas o más",
+          "efectos": {
+            "horasSemana": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "texto": "¿Qué te gustaría poder hacer?",
+      "opciones": [
+        {
+          "id": "basico",
+          "texto": "Entender lo básico de programar",
+          "motivo": "por ahora quieres lo básico",
+          "efectos": {
+            "omitirCursos": [
+              "python-practico"
+            ]
+          }
+        },
+        {
+          "id": "apps",
+          "texto": "Hacer programas con ventanas y botones",
+          "efectos": {}
+        },
+        {
+          "id": "automatizar",
+          "texto": "Automatizar tareas de servidores",
+          "efectos": {
+            "agregarCursos": [
+              "python-automatizacion"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

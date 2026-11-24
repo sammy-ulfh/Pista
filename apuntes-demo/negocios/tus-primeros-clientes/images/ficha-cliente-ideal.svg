@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 524" width="900" height="524" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Ficha de cliente ideal llena</title>
+<desc id="d">Una ficha con cinco preguntas sobre el cliente ideal y un ejemplo de respuesta para cada una.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="524" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#B84E1E" text-anchor="start"><tspan x="40" dy="0">Ficha de cliente ideal (ejemplo)</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Llénala pensando en una persona real que conoces, no en un promedio.</tspan></text>
+<rect x="40" y="112" width="820" height="46" rx="0" fill="#B84E1E" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="143" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="50" dy="0">Pregunta</tspan></text>
+<line x1="280" y1="112" x2="280" y2="158" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="290" y="143" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="290" dy="0">Respuesta de ejemplo</tspan></text>
+<rect x="40" y="158" width="820" height="66" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="189" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">¿Quién es?</tspan></text>
+<line x1="280" y1="158" x2="280" y2="224" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="290" y="189" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="290" dy="0">Dueña de una fonda pequeña en mi colonia; atiende ella misma de</tspan><tspan x="290" dy="22.1">lunes a sábado.</tspan></text>
+<rect x="40" y="224" width="820" height="66" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="255" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">¿Qué problema tiene?</tspan></text>
+<line x1="280" y1="224" x2="280" y2="290" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="290" y="255" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="290" dy="0">Anota ventas y gastos en un cuaderno; a fin de mes no sabe cuánto</tspan><tspan x="290" dy="22.1">ganó.</tspan></text>
+<rect x="40" y="290" width="820" height="66" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="321" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">¿Qué ha intentado?</tspan></text>
+<line x1="280" y1="290" x2="280" y2="356" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="290" y="321" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="290" dy="0">Una aplicación del celular que dejó de usar porque le pareció</tspan><tspan x="290" dy="22.1">complicada.</tspan></text>
+<rect x="40" y="356" width="820" height="66" rx="0" fill="#F7E9E2" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="387" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">¿Dónde pasa su tiempo?</tspan></text>
+<line x1="280" y1="356" x2="280" y2="422" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="290" y="387" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="290" dy="0">En su local, en el mercado por las mañanas y en el grupo de</tspan><tspan x="290" dy="22.1">mensajes de comerciantes de la zona.</tspan></text>
+<rect x="40" y="422" width="820" height="66" rx="0" fill="#FFFFFF" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="50" y="453" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="50" dy="0">¿Qué la haría decir «sí»?</tspan></text>
+<line x1="280" y1="422" x2="280" y2="488" stroke="#1F1E1C" stroke-width="1.5"/>
+<text x="290" y="453" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="290" dy="0">Algo fácil, que pueda usar en 10 minutos al día y que alguien le</tspan><tspan x="290" dy="22.1">explique en persona.</tspan></text>
+<rect x="40" y="112" width="820" height="376" rx="0" fill="none" stroke="#1F1E1C" stroke-width="2"/>
+</svg>

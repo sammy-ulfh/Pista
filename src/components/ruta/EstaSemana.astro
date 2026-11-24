@@ -1,0 +1,72 @@
+---
+/**
+ * EstaSemana — «Esta semana» del roadmap (pantalla 07): las lecciones de la semana actual, con su tiempo (lectura +
+ * práctica), las ya vistas marcadas, y el botón principal «Empezar semana N →», que lleva a la primera lección sin ver.
+ *
+ * La semana actual y la lección siguiente las calcula `lib/roadmap.ts`; aquí solo se dibujan.
+ *
+ *   <EstaSemana />
+ */
+import Boton from '../ui/Boton.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+---
+
+<Tarjeta relleno="compacto" class="flex flex-col sm:p-6" como="section">
+  <div data-esta-semana class="flex flex-1 flex-col">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+      <h2 class="text-2xl">Esta semana</h2>
+      <p class="text-sm text-texto-2" data-campo="numero"></p>
+    </div>
+    <p class="mt-1 text-sm text-texto-2">Los tiempos incluyen la práctica en tu laboratorio.</p>
+    <ul class="mt-3 flex-1" data-lista></ul>
+    <Boton variante="principal" href="#" class="mt-4 self-start" data-boton-semana="">
+      <span data-campo="boton"></span>
+    </Boton>
+  </div>
+
+  <template data-plantilla-leccion>
+    <li class="flex items-baseline justify-between gap-4 border-b-2 border-dashed border-linea py-2 last:border-b-0">
+      <span class="min-w-0"><span aria-hidden="true" data-campo="marca"></span><span data-campo="titulo"></span></span>
+      <span class="shrink-0 text-sm whitespace-nowrap text-texto-2" data-campo="minutos"></span>
+    </li>
+  </template>
+</Tarjeta>
+
+<script>
+  import { formatoMinutosLeccion } from '../../lib/formato';
+  import { leerEstado } from '../../lib/estado-demo';
+  import { alTenerRuta, copiarPlantilla, ponerTexto } from './vista-ruta';
+
+  const raiz = document.querySelector<HTMLElement>('[data-esta-semana]');
+  const lista = raiz?.querySelector<HTMLUListElement>('[data-lista]');
+  const plantilla = raiz?.parentElement?.querySelector<HTMLTemplateElement>('[data-plantilla-leccion]');
+  const boton = raiz?.querySelector<HTMLAnchorElement>('[data-boton-semana]');
+
+  if (raiz && lista && plantilla && boton) {
+    alTenerRuta((vista) => {
+      lista.replaceChildren();
+      const roadmap = vista?.roadmap;
+      if (!roadmap) return;
+      const semana = roadmap.semanaActual;
+      const vistas = new Set(leerEstado().leccionesVistas);
+      ponerTexto(raiz, 'numero', semana ? `Semana ${semana.numero} de ${roadmap.totalSemanas}` : '');
+      for (const elemento of semana?.elementos ?? []) {
+        const fila = copiarPlantilla(plantilla);
+        const vista = vistas.has(elemento.id);
+        ponerTexto(fila, 'marca', vista ? '✓ ' : '');
+        ponerTexto(fila, 'titulo', vista ? `${elemento.titulo} (vista)` : elemento.titulo);
+        ponerTexto(fila, 'minutos', `~${formatoMinutosLeccion(elemento.minutos)}`);
+        if (vista) fila.classList.add('text-texto-2');
+        lista.append(fila);
+      }
+      if (roadmap.siguienteLeccion && semana) {
+        const empezada = semana.elementos.some((e) => vistas.has(e.id));
+        boton.href = `/cursos/${roadmap.siguienteLeccion}`;
+        ponerTexto(boton, 'boton', `${empezada ? 'Seguir con la semana' : 'Empezar semana'} ${semana.numero} →`);
+      } else {
+        boton.href = '/bitacora';
+        ponerTexto(boton, 'boton', 'Ver mi bitácora →');
+      }
+    });
+  }
+</script>

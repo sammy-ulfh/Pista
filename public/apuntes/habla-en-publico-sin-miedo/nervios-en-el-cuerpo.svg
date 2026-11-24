@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 416" width="900" height="416" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Lo que pasa en el cuerpo con los nervios</title>
+<desc id="d">Esquema en tres columnas: la situación (vas a hablar), las señales del cuerpo en alerta (corazón rápido, respiración corta, manos frías, boca seca, voz temblorosa) y qué puedes hacer en cada caso.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="416" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">Los nervios, paso a paso</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Es una reacción de alerta normal. No se quita: se acomoda.</tspan></text>
+<rect x="40" y="120" width="220" height="260" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M40,164 v-32 a12,12 0 0 1 12,-12 h196 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="56" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="56" dy="0">1. La situación</tspan></text>
+<text x="56" y="192" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="56" dy="0">Vas a hablar frente a</tspan><tspan x="56" dy="22.1">otras personas y tu</tspan><tspan x="56" dy="22.1">cerebro lo interpreta</tspan><tspan x="56" dy="22.1">como un reto.</tspan></text>
+<rect x="310" y="120" width="260" height="260" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M310,164 v-32 a12,12 0 0 1 12,-12 h236 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="326" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="326" dy="0">2. Tu cuerpo se activa</tspan></text>
+<text x="326" y="192" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="326" dy="0">• El corazón late más</tspan><tspan x="326" dy="22.1">rápido</tspan><tspan x="326" dy="22.1">• Respiras corto y alto</tspan><tspan x="326" dy="22.1">• Manos frías o sudadas</tspan><tspan x="326" dy="22.1">• Boca seca</tspan><tspan x="326" dy="22.1">• Voz o piernas</tspan><tspan x="326" dy="22.1">temblorosas</tspan></text>
+<rect x="620" y="120" width="240" height="260" rx="12" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<path d="M620,164 v-32 a12,12 0 0 1 12,-12 h216 a12,12 0 0 1 12,12 v32 z" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="636" y="149" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start"><tspan x="636" dy="0">3. Qué puedes hacer</tspan></text>
+<text x="636" y="192" font-size="17" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="636" dy="0">• Respira lento (4-4-4)</tspan><tspan x="636" dy="22.1">• Mueve hombros y manos</tspan><tspan x="636" dy="22.1">antes de empezar</tspan><tspan x="636" dy="22.1">• Ten agua cerca</tspan><tspan x="636" dy="22.1">• Di tu primera frase</tspan><tspan x="636" dy="22.1">despacio</tspan></text>
+<line x1="264" y1="250" x2="304" y2="250" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+<line x1="574" y1="250" x2="614" y2="250" stroke="#1F1E1C" stroke-width="3" marker-end="url(#punta)"/>
+</svg>

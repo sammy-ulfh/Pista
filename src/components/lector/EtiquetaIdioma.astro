@@ -1,0 +1,19 @@
+---
+/**
+ * EtiquetaIdioma — píldora «En inglés» para las lecciones que no están en español (pantallas 10 y 11).
+ * No se muestra si `mostrarEtiquetaIdioma` es `false` en `datos/ajustes.json`.
+ *
+ *   <EtiquetaIdioma idioma={leccion.idioma} />
+ */
+import { obtenerAjustes } from '../../lib/catalogo';
+import Pildora from '../ui/Pildora.astro';
+
+interface Props {
+  idioma: 'es' | 'en';
+}
+
+const { idioma } = Astro.props;
+const mostrar = obtenerAjustes().mostrarEtiquetaIdioma && idioma === 'en';
+---
+
+{mostrar && <Pildora variante="suave"><span lang="es">En inglés</span></Pildora>}

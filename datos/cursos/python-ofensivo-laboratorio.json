@@ -1,0 +1,262 @@
+{
+  "id": "python-ofensivo-laboratorio",
+  "estado": "disponible",
+  "oculto": false,
+  "titulo": "Python ofensivo (solo en laboratorio)",
+  "subtitulo": "Cómo se construyen las herramientas de ataque más comunes, para reconocerlas y defenderte. Solo en entornos propios o autorizados.",
+  "escuela": "tecnologia",
+  "areas": [
+    "ciberseguridad"
+  ],
+  "nivel": "avanzado",
+  "prerrequisitos": [
+    "python-redes",
+    "hacking-etico-reconocimiento"
+  ],
+  "aprenderas": [
+    "Cómo un atacante intercepta y modifica el tráfico de una red",
+    "Cómo funcionan un keylogger, un malware y una puerta trasera, para detectarlos",
+    "Construir una shell remota en tu laboratorio"
+  ],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": true,
+  "minutosEstimados": null,
+  "factorPractica": 3,
+  "modulos": [
+    {
+      "id": "python-ofensivo-laboratorio/interceptar-trafico",
+      "titulo": "Interceptar tráfico",
+      "lecciones": [
+        {
+          "id": "python-ofensivo-laboratorio/envenenamiento-arp",
+          "slug": "envenenamiento-arp",
+          "titulo": "Envenenamiento ARP",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/arp_spoofer/Creando un envenenador ARP (ARP Spoofer) con Scapy.md",
+          "seccion": null,
+          "minutos": 5.7,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/rastrear-consultas-dns",
+          "slug": "rastrear-consultas-dns",
+          "titulo": "Rastrear consultas DNS",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/dns_sniffer/Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy.md",
+          "seccion": null,
+          "minutos": 8,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/rastrear-trafico-http",
+          "slug": "rastrear-trafico-http",
+          "titulo": "Rastrear tráfico HTTP",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/http_sniffer/Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy.md",
+          "seccion": null,
+          "minutos": 9.6,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/rastrear-trafico-https",
+          "slug": "rastrear-trafico-https",
+          "titulo": "Rastrear tráfico HTTPS",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+          "seccion": null,
+          "minutos": 20.4,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/rastrear-imagenes-por-https",
+          "slug": "rastrear-imagenes-por-https",
+          "titulo": "Rastrear imágenes por HTTPS",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/https_image_sniffer/Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump.md",
+          "seccion": null,
+          "minutos": 3.3,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/suplantar-respuestas-dns",
+          "slug": "suplantar-respuestas-dns",
+          "titulo": "Suplantar respuestas DNS",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/dns_spoofer/Creando un DNS Spoofer con Scapy y NetfilterQueue.md",
+          "seccion": null,
+          "minutos": 18,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/manipular-trafico",
+          "slug": "manipular-trafico",
+          "titulo": "Manipular tráfico",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Traffic_Hijacking/Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking).md",
+          "seccion": null,
+          "minutos": 8.2,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    },
+    {
+      "id": "python-ofensivo-laboratorio/control-remoto",
+      "titulo": "Malware y control remoto",
+      "lecciones": [
+        {
+          "id": "python-ofensivo-laboratorio/keylogger-1-de-2",
+          "slug": "keylogger-1-de-2",
+          "titulo": "Keylogger (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (1-2).md",
+          "seccion": null,
+          "minutos": 7.2,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/keylogger-2-de-2",
+          "slug": "keylogger-2-de-2",
+          "titulo": "Keylogger (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Keylogger/Creando un Keylogger (2-2).md",
+          "seccion": null,
+          "minutos": 5.2,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": true,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/malware-de-laboratorio-1-de-2",
+          "slug": "malware-de-laboratorio-1-de-2",
+          "titulo": "Malware de laboratorio (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Malware/Creación de Malware (1-2).md",
+          "seccion": null,
+          "minutos": 5.8,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/malware-de-laboratorio-2-de-2",
+          "slug": "malware-de-laboratorio-2-de-2",
+          "titulo": "Malware de laboratorio (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Malware/Creación de Malware (2-2).md",
+          "seccion": null,
+          "minutos": 6.7,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/puertas-traseras-y-c-y-c-1-de-2",
+          "slug": "puertas-traseras-y-c-y-c-1-de-2",
+          "titulo": "Puertas traseras y C&C (1 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (1-2).md",
+          "seccion": null,
+          "minutos": 4.8,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/puertas-traseras-y-c-y-c-2-de-2",
+          "slug": "puertas-traseras-y-c-y-c-2-de-2",
+          "titulo": "Puertas traseras y C&C (2 de 2)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (2-2).md",
+          "seccion": null,
+          "minutos": 2.5,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/forward-shell-1-de-4",
+          "slug": "forward-shell-1-de-4",
+          "titulo": "Forward shell (1 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (1-4).md",
+          "seccion": null,
+          "minutos": 16.9,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/forward-shell-2-de-4",
+          "slug": "forward-shell-2-de-4",
+          "titulo": "Forward shell (2 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (2-4).md",
+          "seccion": null,
+          "minutos": 6.7,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/forward-shell-3-de-4",
+          "slug": "forward-shell-3-de-4",
+          "titulo": "Forward shell (3 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (3-4).md",
+          "seccion": null,
+          "minutos": 6,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        },
+        {
+          "id": "python-ofensivo-laboratorio/forward-shell-4-de-4",
+          "slug": "forward-shell-4-de-4",
+          "titulo": "Forward shell (4 de 4)",
+          "fuente": "notes-tecnologia",
+          "ruta": "Python_ofensivo/Offensive/forward_shell/Creación de Forward Shell (4-4).md",
+          "seccion": null,
+          "minutos": 2,
+          "idioma": "es",
+          "riesgo": "alto",
+          "datosPersonales": false,
+          "enPreparacion": false
+        }
+      ]
+    }
+  ]
+}

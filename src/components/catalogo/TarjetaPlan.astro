@@ -1,0 +1,105 @@
+---
+/**
+ * TarjetaPlan — la tarjeta «Pista completo · $50 MXN al mes» (pantallas 07, 08, 09 y 10) con su diálogo
+ * «Confirmar suscripción» (`DialogoSuscripcion.astro`).
+ *
+ * Tiene dos estados, y el navegador muestra el que toca (`lib/estado-en-pagina.ts`):
+ * - sin plan: precio, «Suscribirme» (abre el diálogo) y la nota de la vista previa;
+ * - con plan: «Tu plan está activo» y «Empezar» (primera lección del curso).
+ *
+ * Variante `ruta` (pantalla 07): lista lo que incluye («Los N cursos de tu ruta» + `plan.incluye`), «Suscribirme»
+ * es secundario (el botón principal de la pantalla es «Ver el primer curso →») y, con el plan activo, solo dice
+ * «Tu plan está activo». El número de cursos lo pone el navegador en `[data-cursos-de-ruta]`.
+ *
+ * TODOS los textos, el nombre del plan y el precio salen de `datos/ajustes.json` (`plan` y `suscripcion`).
+ *
+ *   <TarjetaPlan curso={curso} />       ← ficha de curso
+ *   <TarjetaPlan variante="ruta" />     ← Tu ruta
+ */
+import { obtenerPlan, obtenerTextosSuscripcion, primeraLeccionDisponible, type Curso } from '../../lib/catalogo';
+import Boton from '../ui/Boton.astro';
+import Tarjeta from '../ui/Tarjeta.astro';
+import DialogoSuscripcion from './DialogoSuscripcion.astro';
+
+interface Props {
+  variante?: 'curso' | 'ruta';
+  /** El curso de la ficha: da el enlace de «Empezar» y su título aparece en el diálogo. */
+  curso?: Curso;
+  /** A dónde lleva «Empezar» si no hay `curso` (variante curso sin curso; la variante ruta no lo muestra). */
+  hrefEmpezar?: string;
+  /** Id del diálogo; cámbialo solo si hay dos tarjetas en la misma página. */
+  idDialogo?: string;
+  class?: string;
+}
+
+const { variante = 'curso', curso, hrefEmpezar, idDialogo = 'dialogo-suscripcion', class: claseExtra } = Astro.props;
+
+const plan = obtenerPlan();
+const textos = obtenerTextosSuscripcion();
+
+const primera = curso ? primeraLeccionDisponible(curso) : undefined;
+const enlaceEmpezar = primera && curso ? `/cursos/${curso.id}/${primera.slug}` : hrefEmpezar;
+// Si el curso no tiene lecciones abiertas, no hay vista previa gratis que prometer.
+const mostrarNotaVistaPrevia = variante === 'curso' && Boolean(primera);
+---
+
+<Tarjeta destacada class={claseExtra}>
+  <!-- Sin plan -->
+  <div data-sin-plan>
+    <p class="text-sm text-texto-2">{variante === 'curso' ? textos.incluidoEnCurso : textos.incluidoEnRuta}</p>
+    <h2 class="mt-0.5 text-2xl">{plan.nombre}</h2>
+    <p class="mt-3 font-titulo leading-none font-extrabold">
+      <span class="text-5xl">${plan.precio}</span>{' '}
+      <span class="text-xl font-bold">{plan.moneda} al {plan.periodo}</span>
+    </p>
+    {
+      variante === 'ruta' ? (
+        <ul class="mt-4 flex flex-col gap-1.5">
+          <li class="flex gap-2" data-cursos-de-ruta hidden>
+            <span aria-hidden="true">✓</span>
+            <span data-campo="cursos-de-ruta" />
+          </li>
+          {plan.incluye.map((texto) => (
+            <li class="flex gap-2">
+              <span aria-hidden="true">✓</span>
+              {texto}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="mt-2 text-sm text-texto-2">{textos.acceso}</p>
+      )
+    }
+    <Boton variante={variante === 'ruta' ? 'secundario' : 'principal'} bloque class="mt-5" data-abrir-dialogo={idDialogo}>
+      {textos.botonSuscribirme}
+    </Boton>
+    {mostrarNotaVistaPrevia && <p class="mt-3 text-sm text-texto-2">{textos.notaVistaPrevia}</p>}
+  </div>
+
+  <!-- Con plan (lo muestra el navegador) -->
+  <div data-con-plan>
+    <p
+      class="inline-flex items-center gap-2 font-semibold outline-none"
+      tabindex={variante === 'ruta' ? '-1' : undefined}
+      data-foco-tras-activar={variante === 'ruta' ? '' : undefined}
+    >
+      <span aria-hidden="true" class="inline-flex size-6 items-center justify-center rounded-full bg-tinta text-sm text-blanco">✓</span>
+      {textos.planActivo}
+    </p>
+    <h2 class="mt-1 text-2xl">{plan.nombre}</h2>
+    <p class="mt-2 text-sm text-texto-2">{textos.acceso}</p>
+    {
+      variante === 'ruta' ? null : enlaceEmpezar ? (
+        <Boton variante="principal" bloque class="mt-5" href={enlaceEmpezar} data-foco-tras-activar="">
+          {textos.botonEmpezar}
+        </Boton>
+      ) : (
+        <p class="mt-4 text-texto-2" tabindex="-1" data-foco-tras-activar="">
+          {textos.sinLecciones}
+        </p>
+      )
+    }
+  </div>
+</Tarjeta>
+
+<DialogoSuscripcion id={idDialogo} curso={curso} />

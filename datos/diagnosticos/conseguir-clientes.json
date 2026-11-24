@@ -1,0 +1,158 @@
+{
+  "area": "conseguir-clientes",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar.",
+  "preguntas": [
+    {
+      "id": "oferta",
+      "texto": "¿Ya tienes algo que ofrecer (un producto o un servicio)?",
+      "opciones": [
+        {
+          "id": "idea",
+          "texto": "Todavía no, solo una idea",
+          "efectos": {
+            "cursoInicio": "que-es-emprender"
+          }
+        },
+        {
+          "id": "no-se-explicar",
+          "texto": "Sí, pero no sé cómo explicarlo",
+          "motivo": "ya tienes algo que ofrecer",
+          "efectos": {
+            "cursoInicio": "tus-primeros-clientes"
+          }
+        },
+        {
+          "id": "si",
+          "texto": "Sí, y sé explicarlo bien",
+          "motivo": "ya tienes algo que ofrecer",
+          "efectos": {
+            "cursoInicio": "tus-primeros-clientes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cliente-ideal",
+      "texto": "¿Sabes quién es tu cliente ideal?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "No tengo idea",
+          "efectos": {}
+        },
+        {
+          "id": "mas-o-menos",
+          "texto": "Más o menos",
+          "efectos": {}
+        },
+        {
+          "id": "si",
+          "texto": "Sí, lo tengo muy claro",
+          "motivo": "ya tienes claro a tu cliente ideal",
+          "efectos": {
+            "omitirLecciones": [
+              "tus-primeros-clientes/cliente-ideal"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "has-vendido",
+      "texto": "¿Alguna vez le has vendido algo a alguien?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca",
+          "efectos": {
+            "cursoInicio": "que-es-emprender"
+          }
+        },
+        {
+          "id": "conocidos",
+          "texto": "Sí, a amigos o familia",
+          "motivo": "ya le vendes a conocidos",
+          "efectos": {
+            "cursoInicio": "tus-primeros-clientes"
+          }
+        },
+        {
+          "id": "clientes",
+          "texto": "Sí, tengo clientes de vez en cuando",
+          "motivo": "ya tienes clientes",
+          "efectos": {
+            "cursoInicio": "tus-primeros-clientes",
+            "omitirLecciones": [
+              "tus-primeros-clientes/donde-encontrarlo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+      "opciones": [
+        {
+          "id": "menos-1",
+          "texto": "Menos de 1 hora",
+          "efectos": {
+            "horasSemana": 0.5
+          }
+        },
+        {
+          "id": "1-2",
+          "texto": "De 1 a 2 horas",
+          "efectos": {
+            "horasSemana": 1
+          }
+        },
+        {
+          "id": "3-4",
+          "texto": "De 3 a 4 horas",
+          "efectos": {
+            "horasSemana": 3
+          }
+        },
+        {
+          "id": "5-mas",
+          "texto": "5 horas o más",
+          "efectos": {
+            "horasSemana": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "texto": "¿Qué te gustaría lograr al terminar?",
+      "opciones": [
+        {
+          "id": "primer-cliente",
+          "texto": "Conseguir mi primer cliente lo antes posible",
+          "motivo": "por ahora quieres tu primer cliente",
+          "efectos": {
+            "omitirCursos": [
+              "precios-sin-miedo"
+            ]
+          }
+        },
+        {
+          "id": "clientes-cada-mes",
+          "texto": "Tener clientes cada mes",
+          "efectos": {}
+        },
+        {
+          "id": "cobrar-mejor",
+          "texto": "Cobrar mejor por lo que hago",
+          "motivo": "tu meta es cobrar mejor",
+          "efectos": {
+            "omitirCursos": [
+              "hablar-para-vender"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

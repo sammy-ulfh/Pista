@@ -1,0 +1,1213 @@
+{
+  "_comentario": "Curación hecha a mano (Etapa 1). Define cómo se agrupan las notas reales en cursos y módulos. Las métricas (palabras, minutos, imágenes, enlaces) NO se escriben aquí: las calcula construir_inventario.py. 'notas' fija el orden; si falta, el script ordena con la cadena 'Siguientes apuntes', luego el sufijo (n-m) y por último alfabéticamente. 'dividir_h2': cada encabezado H2 de la nota (salvo Índice/Siguientes apuntes) se vuelve una lección. 'titulos' traduce o limpia el título visible. 'idioma' indica el idioma del apunte original.",
+  "cursos": [
+    {
+      "id": "linux-desde-cero",
+      "titulo": "Linux desde cero",
+      "subtitulo": "Instala Linux en una máquina virtual, sin tocar tu sistema, y aprende a moverte con comandos.",
+      "nivel": "basico",
+      "justificacion_nivel": "Empieza por crear una máquina virtual y explica cada comando con capturas; no supone nada previo.",
+      "prerrequisitos": [],
+      "areas": [
+        "linux",
+        "ciberseguridad",
+        "cloud-devops"
+      ],
+      "es_base_de": [
+        "linux",
+        "ciberseguridad",
+        "cloud-devops"
+      ],
+      "aprenderas": [
+        "Crear una computadora virtual para practicar sin riesgo de romper la tuya",
+        "Instalar Linux paso a paso",
+        "Moverte entre carpetas y crear, copiar y buscar archivos escribiendo comandos",
+        "Encadenar comandos y dejar tareas trabajando en segundo plano",
+        "Decidir quién puede ver o cambiar cada archivo (permisos)"
+      ],
+      "modulos": [
+        {
+          "id": "preparar-equipo",
+          "titulo": "Prepara tu equipo",
+          "carpeta": "Linux_Introduction/Introduction",
+          "notas": [
+            "Creando una m quina virtual.md",
+            "System_installation.md"
+          ],
+          "titulos": {
+            "Creando una m quina virtual.md": "Crear una máquina virtual",
+            "System_installation.md": "Instalar el sistema"
+          }
+        },
+        {
+          "id": "comandos",
+          "titulo": "Comandos esenciales",
+          "carpeta": "Linux_Introduction/Temario",
+          "notas": [
+            "Comandos b sicos 1-2.md",
+            "Comandos b sicos 2-2.md",
+            "Control de flujo, operadores y procesos en segundo plano.md"
+          ],
+          "titulos": {
+            "Control de flujo, operadores y procesos en segundo plano.md": "Control de flujo y procesos"
+          }
+        },
+        {
+          "id": "permisos",
+          "titulo": "Permisos",
+          "carpeta": "Linux_Introduction/Temario",
+          "notas": [
+            "permisos.md",
+            "Permisos especiales.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "personaliza-tu-linux",
+      "titulo": "Personaliza tu escritorio Linux",
+      "subtitulo": "Convierte un Linux recién instalado en un escritorio rápido, bonito y a tu gusto.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Supone que ya instalaste Linux y usas la terminal; edita archivos de configuración y compila programas.",
+      "prerrequisitos": [
+        "linux-desde-cero"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "aprenderas": [
+        "Cambiar el escritorio por un gestor de ventanas ligero que se maneja con el teclado",
+        "Agregar una barra superior con la hora, la red y tus atajos",
+        "Elegir fuentes, colores, transparencias y fondo de pantalla",
+        "Dejar la terminal con colores, autocompletado e íconos"
+      ],
+      "modulos": [
+        {
+          "id": "escritorio",
+          "titulo": "Tu escritorio paso a paso",
+          "carpeta": "Personalizacion_entrono",
+          "notas": [
+            "Personalización_Linux.md"
+          ],
+          "dividir_h2": true
+        }
+      ]
+    },
+    {
+      "id": "terminal-y-bash",
+      "titulo": "Automatiza tareas con la terminal (Bash)",
+      "subtitulo": "Escribe pequeños programas de terminal que hacen por ti las tareas repetitivas.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Usa la terminal desde el inicio y entra en variables, condiciones y ciclos; conviene haber hecho Linux desde cero.",
+      "prerrequisitos": [
+        "linux-desde-cero"
+      ],
+      "areas": [
+        "linux",
+        "cloud-devops"
+      ],
+      "idioma": "en",
+      "aprenderas": [
+        "Qué es una terminal y qué tipos existen",
+        "Escribir tu primer script con variables, condiciones y repeticiones",
+        "Guardar y reutilizar resultados de comandos (redirecciones y tuberías)",
+        "Buscar y transformar texto con AWK y SED",
+        "Seguir una guía de estilo para que otros entiendan tus scripts"
+      ],
+      "modulos": [
+        {
+          "id": "que-es-la-terminal",
+          "titulo": "Qué es la terminal",
+          "carpeta": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction",
+          "notas": [
+            "What is Shell.md",
+            "Shell type.md",
+            "Bash startup files.md",
+            "Shell programming.md",
+            "Do's and Don'ts.md"
+          ],
+          "titulos": {
+            "What is Shell.md": "¿Qué es una terminal (shell)?",
+            "Shell type.md": "Tipos de terminal",
+            "Bash startup files.md": "Archivos de arranque de Bash",
+            "Shell programming.md": "Programar en la terminal",
+            "Do's and Don'ts.md": "Qué sí y qué no hacer con Bash"
+          }
+        },
+        {
+          "id": "sintaxis",
+          "titulo": "Tu primer script",
+          "carpeta": "Cloud&DevOps_Fundamentals/Bash/Bash_syntax",
+          "notas": [
+            "Script Development and Invocation.md",
+            "Bash options.md",
+            "Exit Codes.md",
+            "Special characters.md",
+            "Variables.md",
+            "Conditions.md",
+            "Loops.md",
+            "I-O Recirection.md",
+            "Functions.md"
+          ],
+          "titulos": {
+            "Script Development and Invocation.md": "Crear y ejecutar un script",
+            "Bash options.md": "Opciones de Bash",
+            "Exit Codes.md": "Códigos de salida",
+            "Special characters.md": "Caracteres especiales",
+            "Variables.md": "Variables",
+            "Conditions.md": "Condiciones",
+            "Loops.md": "Ciclos (repeticiones)",
+            "I-O Recirection.md": "Redirecciones y tuberías",
+            "Functions.md": "Funciones"
+          }
+        },
+        {
+          "id": "estilo",
+          "titulo": "Guía de estilo",
+          "carpeta": "Cloud&DevOps_Fundamentals/Bash/Bash_Style_Guide",
+          "notas": [
+            "Environment.md",
+            "Comments.md",
+            "Formating.md",
+            "Naming conventions.md",
+            "Calling commands.md"
+          ],
+          "titulos": {
+            "Environment.md": "Entorno y salida de errores",
+            "Comments.md": "Comentarios",
+            "Formating.md": "Formato",
+            "Naming conventions.md": "Cómo nombrar las cosas",
+            "Calling commands.md": "Llamar comandos"
+          }
+        },
+        {
+          "id": "procesar-texto",
+          "titulo": "Procesar texto con AWK y SED",
+          "carpeta": "Cloud&DevOps_Fundamentals/Bash/Text processors - AWK y SED",
+          "notas": [
+            "AWK Overview.md",
+            "AWK Built-in Variables.md",
+            "AWK Examples.md",
+            "Sed overview.md",
+            "Sed script overview.md",
+            "Sed address overview.md",
+            "Sed command overview.md"
+          ],
+          "titulos": {
+            "AWK Overview.md": "AWK: visión general",
+            "AWK Built-in Variables.md": "Variables integradas de AWK",
+            "AWK Examples.md": "AWK con ejemplos",
+            "Sed overview.md": "SED: visión general",
+            "Sed script overview.md": "Scripts de SED",
+            "Sed address overview.md": "Direcciones en SED",
+            "Sed command overview.md": "Comandos de SED"
+          }
+        }
+      ],
+      "excluir": [
+        "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md"
+      ]
+    },
+    {
+      "id": "administracion-linux",
+      "titulo": "Administra un servidor Linux",
+      "subtitulo": "Lo que necesitas para cuidar un servidor: discos, programas, usuarios, red y registros.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Explica tareas de administrador (particiones, servicios, cortafuegos) que suponen soltura con la terminal.",
+      "prerrequisitos": [
+        "linux-desde-cero"
+      ],
+      "areas": [
+        "linux",
+        "cloud-devops"
+      ],
+      "idioma": "en",
+      "aprenderas": [
+        "Cómo se organiza Linux por dentro: discos, carpetas y arranque",
+        "Instalar programas y programar tareas automáticas",
+        "Crear usuarios y controlar a qué puede entrar cada uno",
+        "Conectarte a otra computadora de forma segura (SSH)",
+        "Revisar el uso de memoria, disco y los registros del sistema"
+      ],
+      "modulos": [
+        {
+          "id": "fundamentos",
+          "titulo": "Cómo funciona Linux",
+          "carpeta": "Cloud&DevOps_Fundamentals/Linux/Linux_Introduction",
+          "notas": [
+            "Unix-Based OS's.md",
+            "Linux Distributions.md",
+            "Shell.md",
+            "File systems.md",
+            "LVM.md",
+            "Swap.md",
+            "Disk Quotas.md",
+            "Boot Loaders.md",
+            "Runlevels.md"
+          ],
+          "titulos": {
+            "Unix-Based OS's.md": "Sistemas tipo Unix",
+            "Linux Distributions.md": "Distribuciones de Linux",
+            "Shell.md": "La terminal (shell)",
+            "File systems.md": "Sistemas de archivos",
+            "LVM.md": "Volúmenes lógicos (LVM)",
+            "Swap.md": "Memoria de intercambio (swap)",
+            "Disk Quotas.md": "Cuotas de disco",
+            "Boot Loaders.md": "Cargadores de arranque",
+            "Runlevels.md": "Niveles de ejecución"
+          }
+        },
+        {
+          "id": "terminal",
+          "titulo": "Trabajo diario en la terminal",
+          "carpeta": "Cloud&DevOps_Fundamentals/Linux/Linux_shell_basics",
+          "notas": [
+            "Introduction to shells.md",
+            "Shell programming.md",
+            "Basic shell commands.md",
+            "Text editors.md",
+            "Filesystem files search.md",
+            "Xargs.md",
+            "Working with archives.md"
+          ],
+          "titulos": {
+            "Introduction to shells.md": "Introducción a las terminales",
+            "Shell programming.md": "Variables de entorno",
+            "Basic shell commands.md": "Comandos básicos",
+            "Text editors.md": "Editores de texto (vim y nano)",
+            "Filesystem files search.md": "Buscar archivos",
+            "Xargs.md": "Xargs",
+            "Working with archives.md": "Comprimir y descomprimir"
+          }
+        },
+        {
+          "id": "programas-y-servicios",
+          "titulo": "Programas y servicios",
+          "carpeta": "Cloud&DevOps_Fundamentals/Linux/Package_management",
+          "notas": [
+            "Software management.md",
+            "Alternatives.md",
+            "Service Management in Linux.md",
+            "Crond.md",
+            "JAVA (OpenJDK).md"
+          ],
+          "titulos": {
+            "Software management.md": "Instalar programas",
+            "Alternatives.md": "Alternativas",
+            "Service Management in Linux.md": "Servicios (systemd)",
+            "Crond.md": "Tareas programadas (cron)",
+            "JAVA (OpenJDK).md": "Instalar Java"
+          }
+        },
+        {
+          "id": "usuarios-y-permisos",
+          "titulo": "Usuarios y permisos",
+          "carpeta": "Cloud&DevOps_Fundamentals/Linux/Users, Groups, Permissions",
+          "notas": [
+            "Users and Groups.md",
+            "Permission Model.md",
+            "SELinux.md"
+          ],
+          "titulos": {
+            "Users and Groups.md": "Usuarios y grupos",
+            "Permission Model.md": "Modelo de permisos",
+            "SELinux.md": "SELinux"
+          }
+        },
+        {
+          "id": "red-y-acceso-remoto",
+          "titulo": "Red y acceso remoto",
+          "carpeta": "Cloud&DevOps_Fundamentals/Linux/Networking, Remote Access",
+          "notas": [
+            "Network Configuration.md",
+            "Networking Tools.md",
+            "Firewall.d and IPtables.md",
+            "Remote Access.md"
+          ],
+          "titulos": {
+            "Network Configuration.md": "Configurar la red",
+            "Networking Tools.md": "Herramientas de red",
+            "Firewall.d and IPtables.md": "Cortafuegos",
+            "Remote Access.md": "Acceso remoto con SSH"
+          }
+        },
+        {
+          "id": "monitoreo",
+          "titulo": "Monitoreo y registros",
+          "carpeta": "Cloud&DevOps_Fundamentals/Linux/Monitoring, Processes Control, Logs",
+          "notas": [
+            "Process monitoring.md",
+            "Monitoring CPU.md",
+            "Monitoring Memory.md",
+            "Monitoring Storage.md",
+            "Logs.md"
+          ],
+          "titulos": {
+            "Process monitoring.md": "Procesos",
+            "Monitoring CPU.md": "Uso del procesador",
+            "Monitoring Memory.md": "Uso de memoria",
+            "Monitoring Storage.md": "Uso de disco",
+            "Logs.md": "Registros del sistema (logs)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-desde-cero",
+      "titulo": "Python desde cero",
+      "subtitulo": "Aprende a programar con Python, el lenguaje más usado para empezar, con proyectos pequeños.",
+      "nivel": "basico",
+      "justificacion_nivel": "Arranca con la historia del lenguaje y el intérprete; cada tema trae ejemplos que se pueden copiar.",
+      "prerrequisitos": [],
+      "areas": [
+        "programacion",
+        "ciberseguridad"
+      ],
+      "es_base_de": [
+        "programacion"
+      ],
+      "aprenderas": [
+        "Escribir y ejecutar tus primeros programas",
+        "Guardar datos en listas y diccionarios y recorrerlos",
+        "Organizar tu código en funciones, clases y módulos",
+        "Leer y escribir archivos",
+        "Construir proyectos pequeños, como un gestor de biblioteca o de notas"
+      ],
+      "modulos": [
+        {
+          "id": "fundamentos",
+          "titulo": "Fundamentos",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Introducción_a_Python.md",
+            "Conceptos_básicos_de_Python.md"
+          ],
+          "dividir_h2": true
+        },
+        {
+          "id": "colecciones",
+          "titulo": "Listas, tuplas y diccionarios",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Colecciones_y_estructuras_de_datos_en_Python.md"
+          ],
+          "dividir_h2": true
+        },
+        {
+          "id": "objetos",
+          "titulo": "Programación orientada a objetos",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Programación_Orientada_a_Objetos_en_Python_(POO).md"
+          ],
+          "dividir_h2": true
+        },
+        {
+          "id": "modulos-y-archivos",
+          "titulo": "Módulos y archivos",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Módulos_y_paquetes_en_Python.md",
+            "Entrada_y_salida_de_datos.md"
+          ],
+          "dividir_h2": true
+        },
+        {
+          "id": "proyectos",
+          "titulo": "Proyectos",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Proyectos_de_POO.md"
+          ],
+          "dividir_h2": true,
+          "nivel": "intermedio"
+        }
+      ]
+    },
+    {
+      "id": "python-practico",
+      "titulo": "Python práctico: librerías y apps de escritorio",
+      "subtitulo": "Usa las herramientas que ya trae Python para trabajar con fechas, archivos, internet y ventanas.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Supone dominar lo básico del lenguaje; trabaja con red, hilos y una app de chat con cifrado.",
+      "prerrequisitos": [
+        "python-desde-cero"
+      ],
+      "areas": [
+        "programacion"
+      ],
+      "aprenderas": [
+        "Manejar fechas, textos con patrones y carpetas desde Python",
+        "Pedir información a páginas web desde tu programa",
+        "Hacer que tu programa haga varias cosas a la vez",
+        "Crear aplicaciones con ventanas y botones",
+        "Construir un chat entre varias personas con mensajes cifrados"
+      ],
+      "modulos": [
+        {
+          "id": "biblioteca-estandar",
+          "titulo": "La biblioteca estándar",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Biblioteca_estándar_y_herramientas_adicionales.md"
+          ],
+          "dividir_h2": true
+        },
+        {
+          "id": "librerias-comunes",
+          "titulo": "Librerías comunes",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Manejo_de_librerías_comunes.md"
+          ],
+          "dividir_h2": true
+        },
+        {
+          "id": "apps-de-escritorio",
+          "titulo": "Aplicaciones de escritorio",
+          "carpeta": "Python_ofensivo/Introduction",
+          "notas": [
+            "Desarrollo_de_aplicaciones_de_escritorio_con_Python.md"
+          ],
+          "dividir_h2": true
+        }
+      ]
+    },
+    {
+      "id": "python-automatizacion",
+      "titulo": "Python para automatizar (DevOps)",
+      "subtitulo": "Usa Python para automatizar tareas de servidores, probar tu código y empaquetarlo.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Repasa el lenguaje rápido y se enfoca en entornos, pruebas, Flask y Docker; está pensado para quien ya programa un poco.",
+      "prerrequisitos": [
+        "linux-desde-cero"
+      ],
+      "areas": [
+        "programacion",
+        "cloud-devops"
+      ],
+      "idioma": "en",
+      "aprenderas": [
+        "Preparar un entorno de trabajo ordenado para cada proyecto",
+        "Repasar lo esencial de Python con ejemplos cortos",
+        "Encontrar y corregir errores en tu código",
+        "Escribir pruebas automáticas",
+        "Empaquetar tu programa y meterlo en un contenedor"
+      ],
+      "modulos": [
+        {
+          "id": "panorama",
+          "titulo": "Panorama y entorno",
+          "carpeta": "Cloud&DevOps_Fundamentals/Python/overview",
+          "notas": [
+            "Introduction.md",
+            "History.md",
+            "Python Help.md",
+            "Installation.md",
+            "Virtual Environments.md",
+            "PIP.md",
+            "Scripts.md",
+            "Editors - IDEs.md",
+            "Python Introduction.md",
+            "Working with data.md",
+            "Operators.md",
+            "Conditions.md",
+            "Input.md",
+            "PEP8.md"
+          ],
+          "titulos": {
+            "Introduction.md": "Presentación de Python",
+            "History.md": "Historia",
+            "Python Help.md": "Pedir ayuda a Python",
+            "Installation.md": "Instalación",
+            "Virtual Environments.md": "Entornos virtuales",
+            "PIP.md": "Instalar paquetes (pip)",
+            "Scripts.md": "Ejecutar scripts",
+            "Editors - IDEs.md": "Editores",
+            "Python Introduction.md": "Primeros pasos",
+            "Working with data.md": "Datos mutables e inmutables",
+            "Operators.md": "Operadores",
+            "Conditions.md": "Condiciones",
+            "Input.md": "Entrada de datos",
+            "PEP8.md": "Guía de estilo PEP 8"
+          }
+        },
+        {
+          "id": "sintaxis",
+          "titulo": "Sintaxis del lenguaje",
+          "carpeta": "Cloud&DevOps_Fundamentals/Python/Python Language Syntax",
+          "notas": [
+            "Loops.md",
+            "Numbers.md",
+            "Strings.md",
+            "Lists.md",
+            "Tuples.md",
+            "Dictionaries.md",
+            "Sets.md",
+            "Functions.md",
+            "Input and output from console.md"
+          ],
+          "titulos": {
+            "Loops.md": "Ciclos",
+            "Numbers.md": "Números",
+            "Strings.md": "Textos (strings)",
+            "Lists.md": "Listas",
+            "Tuples.md": "Tuplas",
+            "Dictionaries.md": "Diccionarios",
+            "Sets.md": "Conjuntos",
+            "Functions.md": "Funciones",
+            "Input and output from console.md": "Entrada y salida en consola"
+          }
+        },
+        {
+          "id": "clases-y-modulos",
+          "titulo": "Clases, módulos y paquetes",
+          "carpeta": "Cloud&DevOps_Fundamentals/Python/Classes_Modules_Packaging",
+          "notas": [
+            "Scopes.md",
+            "Class.md",
+            "Modules.md",
+            "Files.md",
+            "Packages.md",
+            "Packaging.md"
+          ],
+          "titulos": {
+            "Scopes.md": "Alcance de las variables",
+            "Class.md": "Clases",
+            "Modules.md": "Módulos",
+            "Files.md": "Archivos",
+            "Packages.md": "Paquetes",
+            "Packaging.md": "Empaquetar tu proyecto"
+          }
+        },
+        {
+          "id": "errores-y-web",
+          "titulo": "Errores, plantillas y web",
+          "carpeta": "Cloud&DevOps_Fundamentals/Python/Debugging_Jinja2 templates_Flask",
+          "notas": [
+            "Exceptions.md",
+            "Debugging.md",
+            "PDB.md",
+            "Jinja2 templates.md",
+            "Python application architecture.md",
+            "Flask.md",
+            "HTTP.md",
+            "Requests.md"
+          ],
+          "titulos": {
+            "Exceptions.md": "Excepciones",
+            "Debugging.md": "Depurar y registrar",
+            "PDB.md": "El depurador PDB",
+            "Jinja2 templates.md": "Plantillas Jinja2",
+            "Python application architecture.md": "Arquitectura de una app web",
+            "Flask.md": "Flask",
+            "HTTP.md": "HTTP",
+            "Requests.md": "La librería requests"
+          }
+        },
+        {
+          "id": "pruebas-y-docker",
+          "titulo": "Pruebas y contenedores",
+          "carpeta": "Cloud&DevOps_Fundamentals/Python/Testing_Dockerizing",
+          "notas": [
+            "Testing.md",
+            "Unit test.md",
+            "Nose_Coverage.md",
+            "Tox.md",
+            "Dockerizing.md"
+          ],
+          "titulos": {
+            "Testing.md": "Por qué probar tu código",
+            "Unit test.md": "Pruebas unitarias",
+            "Nose_Coverage.md": "Cobertura de pruebas",
+            "Tox.md": "Tox",
+            "Dockerizing.md": "Meter tu app en Docker"
+          }
+        },
+        {
+          "id": "archivos-y-carpetas",
+          "titulo": "Archivos y carpetas",
+          "carpeta": "Cloud&DevOps_Fundamentals/Python/Work with files",
+          "notas": [
+            "Directory listing.md",
+            "Making directories.md",
+            "Filename pattern.md",
+            "Traversing directory.md",
+            "Temporary directory.md",
+            "Deleting.md",
+            "Copying and moving.md",
+            "Archiving.md"
+          ],
+          "titulos": {
+            "Directory listing.md": "Listar una carpeta",
+            "Making directories.md": "Crear carpetas",
+            "Filename pattern.md": "Buscar por patrón",
+            "Traversing directory.md": "Recorrer carpetas",
+            "Temporary directory.md": "Carpetas temporales",
+            "Deleting.md": "Borrar",
+            "Copying and moving.md": "Copiar y mover",
+            "Archiving.md": "Comprimir"
+          }
+        }
+      ]
+    },
+    {
+      "id": "docker-desde-cero",
+      "titulo": "Docker desde cero",
+      "subtitulo": "Empaqueta programas en contenedores para que funcionen igual en cualquier computadora.",
+      "nivel": "basico",
+      "justificacion_nivel": "Los dos primeros módulos van paso a paso con capturas; el tercero (en inglés) profundiza y es intermedio.",
+      "prerrequisitos": [
+        "linux-desde-cero"
+      ],
+      "areas": [
+        "cloud-devops",
+        "ciberseguridad"
+      ],
+      "aprenderas": [
+        "Qué es un contenedor y por qué todos los usan",
+        "Instalar Docker y levantar tu primer contenedor",
+        "Crear tu propia imagen con un Dockerfile",
+        "Conectar el contenedor con tu computadora (puertos y carpetas compartidas)"
+      ],
+      "modulos": [
+        {
+          "id": "introduccion",
+          "titulo": "Introducción",
+          "carpeta": "Hacking_introduction/Docker/Introduccion",
+          "notas": [
+            "Introducción a Docker.md",
+            "Instalación de Docker en Linux.md",
+            "Definiendo la estructura básica de Dockerfile.md"
+          ]
+        },
+        {
+          "id": "construccion",
+          "titulo": "Tu primer contenedor",
+          "carpeta": "Hacking_introduction/Docker/Construccion",
+          "notas": [
+            "Creación y construcción de imágenes.md",
+            "Carga de instrucciones en Docker y desplegando nuestro primer contenedor.md",
+            "Comandos comunes para la gestión de contenedores.md",
+            "Port Forwarding en Docker y uso de monturas.md"
+          ],
+          "titulos": {
+            "Carga de instrucciones en Docker y desplegando nuestro primer contenedor.md": "Desplegar tu primer contenedor",
+            "Port Forwarding en Docker y uso de monturas.md": "Puertos y carpetas compartidas"
+          }
+        },
+        {
+          "id": "a-fondo",
+          "titulo": "Docker a fondo",
+          "carpeta": "Cloud&DevOps_Fundamentals/Docker/Theory",
+          "nivel": "intermedio",
+          "idioma": "en",
+          "notas": [
+            "Docker essentials.md",
+            "Working with Docker.md",
+            "Working with Dockerfile.md"
+          ],
+          "titulos": {
+            "Docker essentials.md": "Lo esencial de Docker",
+            "Working with Docker.md": "Trabajar con Docker",
+            "Working with Dockerfile.md": "Trabajar con Dockerfile"
+          }
+        }
+      ]
+    },
+    {
+      "id": "redes-desde-cero",
+      "titulo": "Redes desde cero",
+      "subtitulo": "Entiende cómo se comunican las computadoras: direcciones IP, protocolos y subredes.",
+      "nivel": "basico",
+      "justificacion_nivel": "Parte de qué es una dirección IP; el subnetting usa cuentas con binario explicadas paso a paso.",
+      "prerrequisitos": [],
+      "areas": [
+        "redes",
+        "ciberseguridad"
+      ],
+      "es_base_de": [
+        "redes",
+        "ciberseguridad"
+      ],
+      "aprenderas": [
+        "Qué es una dirección IP y una dirección MAC",
+        "Cómo viaja la información por capas (modelo OSI)",
+        "Qué hacen los protocolos TCP y UDP",
+        "Calcular subredes a mano y con trucos rápidos",
+        "Dividir una red en partes con VLANs"
+      ],
+      "modulos": [
+        {
+          "id": "direcciones-y-protocolos",
+          "titulo": "Direcciones y protocolos",
+          "carpeta": "Hacking_introduction/Conceptos básicos",
+          "notas": [
+            "Direcciones IP (IPv4 e IPv6).md",
+            "Direcciones MAC (OUI y NIC).md",
+            "Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md",
+            "Modelo OSI.md"
+          ],
+          "titulos": {
+            "Protocolos comunes (UDP, TCP) y el famoso Three-Way Handshake.md": "Protocolos TCP y UDP"
+          }
+        },
+        {
+          "id": "subredes",
+          "titulo": "Subredes (subnetting)",
+          "carpeta": "Hacking_introduction/Conceptos básicos",
+          "notas": [
+            "Subnetting - Introduccion.md",
+            "Subnetting - CIDRs y cálculo total de hosts.md",
+            "Subnetting – Máscaras de subred, tipos de clase e interpretación de prefijos de red.md",
+            "Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar.md",
+            "TIPS de subnetting y cálculo veloz de direccionamiento en redes.md"
+          ],
+          "titulos": {
+            "Subnetting - Introduccion.md": "Introducción a las subredes",
+            "Subnetting - CIDRs y cálculo total de hosts.md": "CIDR y número de equipos",
+            "Subnetting – Máscaras de subred, tipos de clase e interpretación de prefijos de red.md": "Máscaras y clases de red",
+            "Subnetting – Interpretación de los rangos de red que el cliente nos ofrece para auditar.md": "Interpretar rangos de red",
+            "TIPS de subnetting y cálculo veloz de direccionamiento en redes.md": "Trucos para calcular rápido"
+          }
+        },
+        {
+          "id": "vlans",
+          "titulo": "VLANs",
+          "carpeta": "VLANS/Base",
+          "nivel": "intermedio",
+          "notas": [
+            "VLANs.md",
+            "Configuracion CLI.md",
+            "Buenas practicas.md"
+          ],
+          "titulos": {
+            "VLANs.md": "Qué es una VLAN",
+            "Configuracion CLI.md": "Configurar un switch",
+            "Buenas practicas.md": "Buenas prácticas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-reconocimiento",
+      "titulo": "Hacking ético: reconocimiento",
+      "subtitulo": "La primera fase de una auditoría autorizada: descubrir qué equipos, servicios y datos públicos existen.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Usa la terminal y conceptos de redes todo el tiempo; necesita Linux y Redes desde cero.",
+      "prerrequisitos": [
+        "linux-desde-cero",
+        "redes-desde-cero"
+      ],
+      "areas": [
+        "ciberseguridad"
+      ],
+      "aviso_etico": true,
+      "aprenderas": [
+        "Elegir un objetivo con permiso (programas de recompensas como HackerOne)",
+        "Descubrir qué equipos hay en una red y qué servicios ofrecen",
+        "Encontrar información pública de una organización: subdominios, tecnologías, correos",
+        "Buscar archivos y rutas ocultas en un sitio web propio o autorizado"
+      ],
+      "modulos": [
+        {
+          "id": "escaneo-de-red",
+          "titulo": "Escaneo de red",
+          "carpeta": "Hacking_introduction/Reconocimiento",
+          "notas": [
+            "Hackerone/Validación del objetivo (Fijando un target en HackerOne).md",
+            "EscaneoNmap/Nmap y sus diferentes modos de escaneo.md",
+            "EvasionFirewall/Técnicas de evasión de Firewalls.md",
+            "ScriptsNmap/Uso de scripts y categorías en nmap para aplicar reconocimiento.md",
+            "ScriptsNmap/Creación de tus propios scripts en Lua para nmap.md",
+            "EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md",
+            "DescubrirHosts/Descubrimiento de equipos en la red local (ARP e ICMP) y Tips.md",
+            "OS/Identificación y verificación externa de la versión del sistema operativo.md"
+          ],
+          "titulos": {
+            "Hackerone/Validación del objetivo (Fijando un target en HackerOne).md": "Antes de empezar: un objetivo autorizado",
+            "EscaneoNmap/Nmap y sus diferentes modos de escaneo.md": "Nmap y sus modos de escaneo",
+            "EvasionFirewall/Técnicas de evasión de Firewalls.md": "Escaneo frente a cortafuegos",
+            "ScriptsNmap/Uso de scripts y categorías en nmap para aplicar reconocimiento.md": "Scripts de Nmap",
+            "ScriptsNmap/Creación de tus propios scripts en Lua para nmap.md": "Tus propios scripts de Nmap",
+            "EscaneoDescriptores/Alternativas para la enumeración de puertos usando descriptores de archivo.md": "Escanear puertos sin Nmap",
+            "DescubrirHosts/Descubrimiento de equipos en la red local (ARP e ICMP) y Tips.md": "Descubrir equipos en tu red",
+            "OS/Identificación y verificación externa de la versión del sistema operativo.md": "Identificar el sistema operativo"
+          }
+        },
+        {
+          "id": "informacion-publica",
+          "titulo": "Información pública (OSINT)",
+          "carpeta": "Hacking_introduction/Reconocimiento",
+          "notas": [
+            "Correos/Descubrimiento de correos electrónicos.md",
+            "RecImagen/Reconocimiento de imágenes.md",
+            "Subdominios/Enumeración de subdominios.md",
+            "BrechasSeguridad/Credenciales y brechas de seguridad.md",
+            "GoogleDorks/Google Dorks - Google Hacking (Los 18 Dorks más usados).md"
+          ],
+          "titulos": {
+            "Correos/Descubrimiento de correos electrónicos.md": "Correos públicos de una organización",
+            "RecImagen/Reconocimiento de imágenes.md": "Búsqueda por imágenes",
+            "Subdominios/Enumeración de subdominios.md": "Encontrar subdominios",
+            "BrechasSeguridad/Credenciales y brechas de seguridad.md": "Filtraciones de datos",
+            "GoogleDorks/Google Dorks - Google Hacking (Los 18 Dorks más usados).md": "Búsquedas avanzadas en Google"
+          }
+        },
+        {
+          "id": "reconocimiento-web",
+          "titulo": "Reconocimiento web",
+          "carpeta": "Hacking_introduction/Reconocimiento",
+          "notas": [
+            "TecnologiasWeb/Identificación de las tecnologías en una página web.md",
+            "Fuzzing/Fuzzing y enumeración de archivos en un servidor web (1-2).md",
+            "Fuzzing/Fuzzing y enumeración de archivos en un servidor web (2-2).md"
+          ],
+          "titulos": {
+            "TecnologiasWeb/Identificación de las tecnologías en una página web.md": "Qué tecnologías usa una web",
+            "Fuzzing/Fuzzing y enumeración de archivos en un servidor web (1-2).md": "Buscar rutas ocultas (1 de 2)",
+            "Fuzzing/Fuzzing y enumeración de archivos en un servidor web (2-2).md": "Buscar rutas ocultas (2 de 2)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hacking-etico-explotacion",
+      "titulo": "Hacking ético: enumeración y explotación",
+      "subtitulo": "Practica en un laboratorio propio cómo se revisan servicios y sitios web vulnerables.",
+      "nivel": "avanzado",
+      "justificacion_nivel": "Encadena Docker, Burp Suite, shells y explotación de servicios; supone el curso de reconocimiento.",
+      "prerrequisitos": [
+        "hacking-etico-reconocimiento",
+        "docker-desde-cero"
+      ],
+      "areas": [
+        "ciberseguridad"
+      ],
+      "aviso_etico": true,
+      "aprenderas": [
+        "Montar un laboratorio con máquinas vulnerables dentro de tu computadora",
+        "Revisar servicios comunes (FTP, SSH, web, carpetas compartidas) en busca de fallas",
+        "Revisar sitios hechos con WordPress, Joomla, Drupal o Magento",
+        "Usar Burp Suite para ver y modificar lo que envía tu navegador",
+        "Entender cómo funcionan las inyecciones SQL para poder prevenirlas"
+      ],
+      "modulos": [
+        {
+          "id": "laboratorio",
+          "titulo": "Tu laboratorio",
+          "carpeta": "Hacking_introduction/Docker/MaquinasVulnerbales",
+          "titulos": {
+            "Despliegue de máquinas vulnerables con Docker-Compose (1-2).md": "Laboratorio con Docker Compose (1 de 2)",
+            "Despliegue de máquinas vulnerables con Docker-Compose (2-2).md": "Laboratorio con Docker Compose (2 de 2)"
+          }
+        },
+        {
+          "id": "servicios",
+          "titulo": "Revisar servicios comunes",
+          "carpeta": "Hacking_introduction/EnumServComunes",
+          "notas": [
+            "FTP/Enumeración del servicio FTP.md",
+            "SSH/Enumeración del servicio SSH.md",
+            "HTTP&HTTPS/Enumeración del servicio HTTP y HTTPS.md",
+            "SMB/Enumeración del servicio SMB.md"
+          ],
+          "titulos": {
+            "FTP/Enumeración del servicio FTP.md": "Servicio FTP",
+            "SSH/Enumeración del servicio SSH.md": "Servicio SSH",
+            "HTTP&HTTPS/Enumeración del servicio HTTP y HTTPS.md": "Servicios HTTP y HTTPS",
+            "SMB/Enumeración del servicio SMB.md": "Carpetas compartidas (SMB)"
+          }
+        },
+        {
+          "id": "gestores-de-contenido",
+          "titulo": "Gestores de contenido (CMS)",
+          "carpeta": "Hacking_introduction/EnumServComunes/Gestores de contenido (CMS)",
+          "notas": [
+            "Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md",
+            "Wordpress/2-2/Enumeración de gestores de contenido (CMS) – WordPress (2-2).md",
+            "Joomla/Enumeración de gestores de contenido (CMS) – Joomla.md",
+            "Drupal/Enumeración de gestores de contenido (CMS) – Drupal.md",
+            "Magento/Enumeración de gestores de contenido (CMS) – Magento.md"
+          ],
+          "titulos": {
+            "Wordpress/1-2/Enumeración de gestores de contenido (CMS) – WordPress (1-2).md": "WordPress (1 de 2)",
+            "Wordpress/2-2/Enumeración de gestores de contenido (CMS) – WordPress (2-2).md": "WordPress (2 de 2)",
+            "Joomla/Enumeración de gestores de contenido (CMS) – Joomla.md": "Joomla",
+            "Drupal/Enumeración de gestores de contenido (CMS) – Drupal.md": "Drupal",
+            "Magento/Enumeración de gestores de contenido (CMS) – Magento.md": "Magento"
+          }
+        },
+        {
+          "id": "explotacion",
+          "titulo": "Conceptos de explotación",
+          "carpeta": "Hacking_introduction/Conceptos básicos de enumeración y explotación",
+          "notas": [
+            "Introducción.md",
+            "Shells/Introducción a Shells.md",
+            "Shells/Reverse Shell.md",
+            "Shells/Bind Shell.md",
+            "Shells/Forward Shell.md",
+            "Tipos de payloads/Tipos de payloads (Staged y Non-taged).md",
+            "Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md",
+            "Enumeracion del sistema/Enumeracion del sistema.md"
+          ],
+          "titulos": {
+            "Introducción.md": "Introducción a la explotación",
+            "Tipos de payloads/Tipos de payloads (Staged y Non-taged).md": "Tipos de payloads",
+            "Tipos de explotación/Tipos de explotación (Manuales y Automatizadas).md": "Explotación manual y automatizada",
+            "Enumeracion del sistema/Enumeracion del sistema.md": "Revisar un sistema por dentro"
+          }
+        },
+        {
+          "id": "burp-suite",
+          "titulo": "Burp Suite",
+          "carpeta": "Hacking_introduction/Conceptos básicos de enumeración y explotación/Burpsuite",
+          "notas": [
+            "Introduccion a Burpsuite.md",
+            "Proxy.md",
+            "Intruder.md",
+            "Comparer.md",
+            "Repeater.md",
+            "Decoder.md",
+            "Extensions.md"
+          ],
+          "titulos": {
+            "Introduccion a Burpsuite.md": "Introducción a Burp Suite",
+            "Extensions.md": "Extensiones"
+          }
+        },
+        {
+          "id": "vulnerabilidades-web",
+          "titulo": "Vulnerabilidades web",
+          "carpeta": "Hacking_introduction/OWASP TOP 10 y Vulnerabilidades Web/SQLI",
+          "notas": [
+            "Introduccion a SQLI.md"
+          ],
+          "titulos": {
+            "Introduccion a SQLI.md": "Introducción a la inyección SQL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-redes",
+      "titulo": "Herramientas de red con Python",
+      "subtitulo": "Programa tus propios escáneres para revisar qué equipos y servicios hay en tu red.",
+      "nivel": "intermedio",
+      "justificacion_nivel": "Supone Python básico y conceptos de redes; cada herramienta crece por versiones.",
+      "prerrequisitos": [
+        "python-desde-cero",
+        "redes-desde-cero"
+      ],
+      "areas": [
+        "ciberseguridad",
+        "programacion"
+      ],
+      "aviso_etico": true,
+      "aprenderas": [
+        "Programar un escáner de puertos y mejorarlo en cuatro versiones",
+        "Descubrir equipos de tu red con ICMP y ARP",
+        "Cambiar la dirección MAC de tu tarjeta de red desde un programa"
+      ],
+      "modulos": [
+        {
+          "id": "escaner-de-puertos",
+          "titulo": "Escáner de puertos",
+          "carpeta": "Python_ofensivo/Offensive/port_scanner",
+          "notas": [
+            "v1_4/Creando un escáner de puertos (1-4).md",
+            "v2_4/Creando un escáner de puertos (2-4).md",
+            "v3_4/Creando un escáner de puertos (3-4).md",
+            "v4_4/Creando un escáner de puertos (4-4).md"
+          ]
+        },
+        {
+          "id": "escaneres-de-red",
+          "titulo": "Escáneres de red",
+          "carpeta": "Python_ofensivo/Offensive",
+          "notas": [
+            "macchanger/Creando un programa que nos cambie la dirección MAC (macchanger).md",
+            "ICMP_scanner/Creando un escáner de red (ICMP).md",
+            "ARP_scanner/Creando un escáner de red (ARP) con Scapy.md"
+          ],
+          "titulos": {
+            "macchanger/Creando un programa que nos cambie la dirección MAC (macchanger).md": "Cambiar la dirección MAC",
+            "ICMP_scanner/Creando un escáner de red (ICMP).md": "Escáner de red con ICMP",
+            "ARP_scanner/Creando un escáner de red (ARP) con Scapy.md": "Escáner de red con ARP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-ofensivo-laboratorio",
+      "titulo": "Python ofensivo (solo en laboratorio)",
+      "subtitulo": "Cómo se construyen las herramientas de ataque más comunes, para reconocerlas y defenderte. Solo en entornos propios o autorizados.",
+      "nivel": "avanzado",
+      "justificacion_nivel": "Intercepta tráfico, crea malware de laboratorio y shells remotas; exige Python, redes y criterio ético.",
+      "prerrequisitos": [
+        "python-redes",
+        "hacking-etico-reconocimiento"
+      ],
+      "areas": [
+        "ciberseguridad"
+      ],
+      "aviso_etico": true,
+      "mostrar_en_presentacion": false,
+      "aprenderas": [
+        "Cómo un atacante intercepta y modifica el tráfico de una red",
+        "Cómo funcionan un keylogger, un malware y una puerta trasera, para detectarlos",
+        "Construir una shell remota en tu laboratorio"
+      ],
+      "modulos": [
+        {
+          "id": "interceptar-trafico",
+          "titulo": "Interceptar tráfico",
+          "carpeta": "Python_ofensivo/Offensive",
+          "notas": [
+            "arp_spoofer/Creando un envenenador ARP (ARP Spoofer) con Scapy.md",
+            "dns_sniffer/Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy.md",
+            "http_sniffer/Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy.md",
+            "https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md",
+            "https_image_sniffer/Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump.md",
+            "dns_spoofer/Creando un DNS Spoofer con Scapy y NetfilterQueue.md",
+            "Traffic_Hijacking/Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking).md"
+          ],
+          "titulos": {
+            "arp_spoofer/Creando un envenenador ARP (ARP Spoofer) con Scapy.md": "Envenenamiento ARP",
+            "dns_sniffer/Creando un rastreador de consultas DNS (DNS Sniffer) con Scapy.md": "Rastrear consultas DNS",
+            "http_sniffer/Creando un rastreador de consultas HTTP (HTTP Sniffer) con Scapy.md": "Rastrear tráfico HTTP",
+            "https_sniffer/Creando un rastreador de consultas HTTPS (HTTPS Sniffer) con mitmdump.md": "Rastrear tráfico HTTPS",
+            "https_image_sniffer/Creando un rastreador de imágenes por HTTPS (HTTPS Image Snfifer) con mitmdump.md": "Rastrear imágenes por HTTPS",
+            "dns_spoofer/Creando un DNS Spoofer con Scapy y NetfilterQueue.md": "Suplantar respuestas DNS",
+            "Traffic_Hijacking/Creando un Manipulador e Interceptor de Tráfico (Traffic Hijacking).md": "Manipular tráfico"
+          }
+        },
+        {
+          "id": "control-remoto",
+          "titulo": "Malware y control remoto",
+          "carpeta": "Python_ofensivo/Offensive",
+          "notas": [
+            "Keylogger/Creando un Keylogger (1-2).md",
+            "Keylogger/Creando un Keylogger (2-2).md",
+            "Malware/Creación de Malware (1-2).md",
+            "Malware/Creación de Malware (2-2).md",
+            "Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (1-2).md",
+            "Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (2-2).md",
+            "forward_shell/Creación de Forward Shell (1-4).md",
+            "forward_shell/Creación de Forward Shell (2-4).md",
+            "forward_shell/Creación de Forward Shell (3-4).md",
+            "forward_shell/Creación de Forward Shell (4-4).md"
+          ],
+          "titulos": {
+            "Keylogger/Creando un Keylogger (1-2).md": "Keylogger (1 de 2)",
+            "Keylogger/Creando un Keylogger (2-2).md": "Keylogger (2 de 2)",
+            "Malware/Creación de Malware (1-2).md": "Malware de laboratorio (1 de 2)",
+            "Malware/Creación de Malware (2-2).md": "Malware de laboratorio (2 de 2)",
+            "Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (1-2).md": "Puertas traseras y C&C (1 de 2)",
+            "Backdoors y C&c/Creación de Backdoors y Command and Control (C&C) (2-2).md": "Puertas traseras y C&C (2 de 2)",
+            "forward_shell/Creación de Forward Shell (1-4).md": "Forward shell (1 de 4)",
+            "forward_shell/Creación de Forward Shell (2-4).md": "Forward shell (2 de 4)",
+            "forward_shell/Creación de Forward Shell (3-4).md": "Forward shell (3 de 4)",
+            "forward_shell/Creación de Forward Shell (4-4).md": "Forward shell (4 de 4)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "html-desde-cero",
+      "titulo": "Tu primera página web (HTML)",
+      "subtitulo": "Mini-curso: escribe una página web sencilla con títulos, párrafos y listas.",
+      "nivel": "basico",
+      "justificacion_nivel": "Explica qué es una etiqueta y construye un archivo desde cero; solo necesitas un editor de texto.",
+      "prerrequisitos": [],
+      "areas": [
+        "desarrollo-web"
+      ],
+      "aprenderas": [
+        "Qué es HTML y cómo lo lee el navegador",
+        "Escribir tu primer archivo .html y abrirlo",
+        "Usar etiquetas para títulos, párrafos y formato de texto"
+      ],
+      "modulos": [
+        {
+          "id": "html",
+          "titulo": "HTML básico",
+          "carpeta": "Full-Stack/HTML",
+          "notas": [
+            "HTML (Conceptos).md",
+            "Etiquetas.md",
+            "Estructura HTML.md",
+            "Etiquetas para textos.md"
+          ],
+          "titulos": {
+            "HTML (Conceptos).md": "¿Qué es HTML?",
+            "Etiquetas.md": "Etiquetas",
+            "Estructura HTML.md": "Estructura de una página",
+            "Etiquetas para textos.md": "Etiquetas para textos"
+          }
+        }
+      ]
+    }
+  ],
+  "recursos_extra": [
+    {
+      "id": "sistemas-para-ciberseguridad",
+      "titulo": "Sistemas operativos para ciberseguridad",
+      "ruta_md": "Linux_Introduction/Introduction/Sistemas operativos para pentesting.md",
+      "area": "ciberseguridad",
+      "motivo": "Nota corta que no forma parte del recorrido de Linux desde cero (la pantalla 10 muestra 7 lecciones); encaja como lectura previa a Hacking ético."
+    },
+    {
+      "id": "herramientas-de-reconocimiento",
+      "titulo": "Listas de herramientas de reconocimiento",
+      "ruta_md": "Hacking_introduction/Tools/",
+      "area": "ciberseguridad",
+      "motivo": "4 notas de 22-39 palabras: son listas de enlaces, no lecciones."
+    },
+    {
+      "id": "recuperar-arranque-arch",
+      "titulo": "Recuperar el arranque tras una actualización (Arch)",
+      "ruta_md": "Fixes/ArchFailures/Load kernel after break update-upgrade.md",
+      "area": "linux",
+      "motivo": "Receta suelta de 142 palabras."
+    },
+    {
+      "id": "instalar-python2",
+      "titulo": "Instalar Python 2 en Debian",
+      "ruta_md": "Fixes/Python2_Install/how_to_install.md",
+      "area": "programacion",
+      "motivo": "Receta suelta de 92 palabras; Python 2 está obsoleto."
+    },
+    {
+      "id": "materiales-bash",
+      "titulo": "Materiales y ejercicios de Bash",
+      "ruta_md": "Cloud&DevOps_Fundamentals/Bash/Bash_Introduction/Additional Materials.md",
+      "area": "linux",
+      "motivo": "41 palabras con enlaces externos."
+    },
+    {
+      "id": "libreria-hack4u",
+      "titulo": "Ejemplo de README de una librería",
+      "ruta_md": "Python_ofensivo/Introduction/README.md",
+      "area": "programacion",
+      "motivo": "Se incrusta con ![[README]] dentro de 'Módulos y paquetes'; no es una lección propia."
+    }
+  ],
+  "descartados": [
+    {
+      "ruta_md": "Fixes/Vmware/Vmware.md",
+      "motivo": "Solo 7 palabras, sin contenido útil."
+    }
+  ],
+  "destacadas_para_demo": {
+    "_regla": "Elegidas a mano entre las candidatas que calcula el script (curso sin aviso ético, >= 8 imágenes, 4-25 min); se prefieren las que dan un resultado visible para alguien que no programa.",
+    "lecciones": [
+      "linux-desde-cero/crear-una-maquina-virtual",
+      "linux-desde-cero/comandos-basicos-1-de-2",
+      "personaliza-tu-linux/configurando-la-zsh-e-instalando-la-powerlevel10k",
+      "docker-desde-cero/desplegar-tu-primer-contenedor",
+      "html-desde-cero/etiquetas-para-textos"
+    ]
+  }
+}

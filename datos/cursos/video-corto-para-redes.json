@@ -1,0 +1,20 @@
+{
+  "id": "video-corto-para-redes",
+  "estado": "proximamente",
+  "oculto": false,
+  "titulo": "Video corto para redes",
+  "subtitulo": "Graba y edita videos de 30 segundos que se entienden sin sonido.",
+  "escuela": "diseno",
+  "areas": [
+    "contenido-visual"
+  ],
+  "nivel": "basico",
+  "prerrequisitos": [],
+  "aprenderas": [],
+  "idiomas": [
+    "es"
+  ],
+  "avisoEtico": false,
+  "minutosEstimados": 60,
+  "modulos": []
+}

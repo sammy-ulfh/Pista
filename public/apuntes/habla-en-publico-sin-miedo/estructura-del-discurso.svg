@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 466" width="900" height="466" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">Estructura de un discurso</title>
+<desc id="d">Una barra dividida en cinco partes: inicio, idea 1, idea 2, idea 3 y cierre, con lo que va en cada parte y el tiempo aproximado en una presentación de 3 minutos.</desc>
+<defs><marker id="punta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1E1C"/></marker></defs>
+<rect width="900" height="466" fill="#FFFFFF"/>
+<text x="40" y="52" font-size="28" font-weight="700" fill="#177A62" text-anchor="start"><tspan x="40" dy="0">Inicio · tres ideas · cierre</tspan></text>
+<text x="40" y="84" font-size="17" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="40" dy="0">Ejemplo de reparto para una presentación de 3 minutos.</tspan></text>
+<rect x="40" y="130" width="150.0" height="80" rx="10" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="115.0" y="168" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="115.0" dy="0">Inicio</tspan></text>
+<text x="115.0" y="194" font-size="15" font-weight="400" fill="#FFFFFF" text-anchor="middle"><tspan x="115.0" dy="0">~30 s</tspan></text>
+<text x="46" y="250" font-size="15" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="46" dy="0">Algo que despierte</tspan><tspan x="46" dy="19.5">interés y de qué</tspan><tspan x="46" dy="19.5">vas a hablar</tspan></text>
+<rect x="190.0" y="130" width="190.0" height="80" rx="10" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="285.0" y="168" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="middle"><tspan x="285.0" dy="0">Idea 1</tspan></text>
+<text x="285.0" y="194" font-size="15" font-weight="400" fill="#57534E" text-anchor="middle"><tspan x="285.0" dy="0">~40 s</tspan></text>
+<text x="196.0" y="250" font-size="15" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="196.0" dy="0">Una idea + un ejemplo</tspan></text>
+<rect x="380.0" y="130" width="190.0" height="80" rx="10" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="475.0" y="168" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="middle"><tspan x="475.0" dy="0">Idea 2</tspan></text>
+<text x="475.0" y="194" font-size="15" font-weight="400" fill="#57534E" text-anchor="middle"><tspan x="475.0" dy="0">~40 s</tspan></text>
+<text x="386.0" y="250" font-size="15" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="386.0" dy="0">Una idea + un ejemplo</tspan></text>
+<rect x="570.0" y="130" width="190.0" height="80" rx="10" fill="#E2F1EC" stroke="#1F1E1C" stroke-width="2"/>
+<text x="665.0" y="168" font-size="20" font-weight="700" fill="#1F1E1C" text-anchor="middle"><tspan x="665.0" dy="0">Idea 3</tspan></text>
+<text x="665.0" y="194" font-size="15" font-weight="400" fill="#57534E" text-anchor="middle"><tspan x="665.0" dy="0">~40 s</tspan></text>
+<text x="576.0" y="250" font-size="15" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="576.0" dy="0">Una idea + un ejemplo</tspan></text>
+<rect x="760.0" y="130" width="100.0" height="80" rx="10" fill="#177A62" stroke="#1F1E1C" stroke-width="2"/>
+<text x="810.0" y="168" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle"><tspan x="810.0" dy="0">Cierre</tspan></text>
+<text x="810.0" y="194" font-size="15" font-weight="400" fill="#FFFFFF" text-anchor="middle"><tspan x="810.0" dy="0">~30 s</tspan></text>
+<text x="766.0" y="250" font-size="15" font-weight="400" fill="#1F1E1C" text-anchor="start"><tspan x="766.0" dy="0">Resume y di</tspan><tspan x="766.0" dy="19.5">qué quieres</tspan><tspan x="766.0" dy="19.5">que hagan</tspan></text>
+<rect x="40" y="350" width="820" height="80" rx="12" fill="#F4F2ED" stroke="#1F1E1C" stroke-width="2"/>
+<text x="60" y="382" font-size="18" font-weight="700" fill="#1F1E1C" text-anchor="start"><tspan x="60" dy="0">Regla útil: si una idea no cabe en una frase, todavía no está clara.</tspan></text>
+<text x="60" y="410" font-size="16" font-weight="400" fill="#57534E" text-anchor="start"><tspan x="60" dy="0">Cada idea lleva un ejemplo, una historia corta o un dato que sí puedas comprobar.</tspan></text>
+</svg>

@@ -1,0 +1,18 @@
+---
+/**
+ * Pantalla 05 · Recomendación. La recomendación se calcula en el navegador con `lib/orientacion.ts`
+ * (componente `cuestionario/Recomendacion.astro`); aquí solo se arman los datos que necesita.
+ */
+import { areasParaNavegador, datosOrientacion } from '../../lib/catalogo';
+import LayoutBase from '../../layouts/LayoutBase.astro';
+import Recomendacion from '../../components/cuestionario/Recomendacion.astro';
+
+const datos = await datosOrientacion();
+const areas = await areasParaNavegador();
+---
+
+<LayoutBase titulo="Tu recomendación" salirA="/">
+  <div class="contenedor pt-8 pb-4 lg:pt-14">
+    <Recomendacion datos={datos} areas={areas} />
+  </div>
+</LayoutBase>

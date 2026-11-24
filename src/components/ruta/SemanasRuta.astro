@@ -1,0 +1,78 @@
+---
+/**
+ * SemanasRuta — las tarjetas de semana de «Tu ruta» (pantalla 07).
+ *
+ * Cada tarjeta dice «Semana N», la primera lección (o el curso) de esa semana y cuánto toma. La semana actual
+ * se destaca con la sombra desplazada. Las semanas que caen en cursos sin lecciones disponibles se ven
+ * atenuadas, con la píldora «Próximamente» o «En preparación».
+ *
+ * El reparto en semanas lo hace `lib/ruta.ts`; aquí solo se dibuja (plantilla `<template>` + `vista-ruta.ts`).
+ *
+ *   <SemanasRuta />
+ */
+import Pildora from '../ui/Pildora.astro';
+---
+
+<section aria-labelledby="titulo-semanas" class="mt-8" data-semanas-ruta>
+  <h2 id="titulo-semanas" class="sr-only">Semanas de tu ruta</h2>
+  <ol class="grid grid-cols-2 gap-3 sm:grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] sm:gap-4" data-lista></ol>
+
+  <template data-plantilla-semana>
+    <li
+      class="flex flex-col gap-1 rounded-cuaderno border-2 border-tinta bg-blanco p-4 data-[actual]:bg-relleno data-[actual]:shadow-desplazada data-[atenuada]:border-dashed data-[atenuada]:border-texto-3 data-[atenuada]:bg-papel data-[atenuada]:text-texto-2"
+    >
+      <p class="font-titulo text-lg font-bold">
+        <span data-campo="numero"></span>
+        <span class="sr-only" data-campo="actual-sr"></span>
+      </p>
+      <p class="leading-snug font-medium" data-campo="titulo"></p>
+      <p class="text-sm text-texto-2" data-campo="detalle"></p>
+      <span class="mt-1" data-pildora hidden><Pildora variante="suave"><span data-campo="pildora"></span></Pildora></span>
+    </li>
+  </template>
+</section>
+
+<script>
+  import { formatoDuracion, plural } from '../../lib/formato';
+  import { alTenerRuta, copiarPlantilla, ponerTexto } from './vista-ruta';
+
+  const raiz = document.querySelector<HTMLElement>('[data-semanas-ruta]');
+  const lista = raiz?.querySelector<HTMLOListElement>('[data-lista]');
+  const plantilla = raiz?.querySelector<HTMLTemplateElement>('[data-plantilla-semana]');
+
+  const PILDORAS = { proximamente: 'Próximamente', 'en-preparacion': 'En preparación' } as const;
+
+  if (lista && plantilla) {
+    alTenerRuta((vista) => {
+      lista.replaceChildren();
+      if (!vista) return;
+      for (const semana of vista.ruta.semanas) {
+        const tarjeta = copiarPlantilla(plantilla);
+        const [primero] = semana.elementos;
+        const lecciones = semana.elementos.filter((e) => e.tipo === 'leccion').length;
+        const esActual = semana.numero === vista.semanaActual;
+
+        ponerTexto(tarjeta, 'numero', `Semana ${semana.numero}`);
+        ponerTexto(tarjeta, 'actual-sr', esActual ? '(semana actual)' : '');
+        ponerTexto(tarjeta, 'titulo', primero.titulo);
+        ponerTexto(
+          tarjeta,
+          'detalle',
+          [lecciones > 0 ? plural(lecciones, 'lección', 'lecciones') : null, formatoDuracion(semana.minutos)]
+            .filter(Boolean)
+            .join(' · '),
+        );
+        if (esActual) {
+          tarjeta.dataset.actual = '';
+          tarjeta.setAttribute('aria-current', 'step');
+        }
+        if (semana.estado !== 'disponible') {
+          tarjeta.dataset.atenuada = '';
+          ponerTexto(tarjeta, 'pildora', PILDORAS[semana.estado]);
+          tarjeta.querySelector<HTMLElement>('[data-pildora]')!.hidden = false;
+        }
+        lista.append(tarjeta);
+      }
+    });
+  }
+</script>

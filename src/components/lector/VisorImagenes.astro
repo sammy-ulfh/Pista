@@ -1,0 +1,46 @@
+---
+/**
+ * VisorImagenes — al hacer clic en una imagen de la lección, se abre en grande en un `Dialogo`.
+ *
+ * Cada `<img>` dentro de `[data-contenido-leccion]` se envuelve en un botón «Ampliar imagen» (se puede usar con
+ * teclado). Las medidas y `loading="lazy"` de las imágenes vienen de la sincronización (`scripts/sincronizar/`).
+ *
+ *   <article data-contenido-leccion>…</article>
+ *   <VisorImagenes />
+ */
+import Dialogo from '../ui/Dialogo.astro';
+---
+
+<Dialogo id="dialogo-imagen" titulo="Imagen ampliada" ancho="amplio">
+  <figure>
+    <img data-imagen-grande alt="" class="mx-auto h-auto max-h-[70dvh] w-auto max-w-full rounded-cuaderno border-2 border-tinta bg-blanco" />
+    <figcaption class="mt-3 text-sm text-texto-2" data-pie-imagen></figcaption>
+  </figure>
+</Dialogo>
+
+<script>
+  import { abrirDialogo } from '../../lib/dialogo';
+
+  /** Texto alternativo que no describe nada (lo pone la sincronización a las capturas sin nombre). */
+  const ALT_GENERICO = 'Captura de los apuntes';
+
+  const grande = document.querySelector<HTMLImageElement>('[data-imagen-grande]');
+  const pie = document.querySelector<HTMLElement>('[data-pie-imagen]');
+
+  document.querySelectorAll<HTMLImageElement>('[data-contenido-leccion] img').forEach((imagen) => {
+    if (imagen.closest('a, button')) return; // ya es un enlace: se respeta
+    const boton = document.createElement('button');
+    boton.type = 'button';
+    boton.className = 'imagen-ampliable';
+    boton.setAttribute('aria-label', `Ampliar imagen: ${imagen.alt || 'sin descripción'}`);
+    imagen.replaceWith(boton);
+    boton.append(imagen);
+    boton.addEventListener('click', () => {
+      if (!grande || !pie) return;
+      grande.src = imagen.currentSrc || imagen.src;
+      grande.alt = imagen.alt;
+      pie.textContent = imagen.alt && imagen.alt !== ALT_GENERICO ? imagen.alt : '';
+      abrirDialogo('dialogo-imagen');
+    });
+  });
+</script>

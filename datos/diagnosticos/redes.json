@@ -1,0 +1,143 @@
+{
+  "area": "redes",
+  "notaAlFinal": "No hay respuestas malas: esto solo sirve para saber dónde empezar.",
+  "preguntas": [
+    {
+      "id": "ip",
+      "texto": "¿Sabes qué es una dirección IP?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "No",
+          "efectos": {}
+        },
+        {
+          "id": "mas-o-menos",
+          "texto": "Más o menos",
+          "efectos": {}
+        },
+        {
+          "id": "si",
+          "texto": "Sí",
+          "motivo": "ya sabes qué es una dirección IP",
+          "efectos": {
+            "omitirLecciones": [
+              "redes-desde-cero/direcciones-ip-ipv4-e-ipv6"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "subredes",
+      "texto": "¿Has calculado subredes alguna vez?",
+      "opciones": [
+        {
+          "id": "nunca",
+          "texto": "Nunca lo he hecho",
+          "efectos": {}
+        },
+        {
+          "id": "clase",
+          "texto": "En clase, con ayuda",
+          "efectos": {}
+        },
+        {
+          "id": "soltura",
+          "texto": "Sí, con soltura",
+          "motivo": "ya calculas subredes con soltura",
+          "efectos": {
+            "omitirModulos": [
+              "redes-desde-cero/subredes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "equipo",
+      "texto": "¿Has configurado un router o un switch?",
+      "opciones": [
+        {
+          "id": "no",
+          "texto": "No",
+          "efectos": {}
+        },
+        {
+          "id": "si",
+          "texto": "Sí",
+          "motivo": "ya configuraste un router o un switch",
+          "efectos": {
+            "omitirLecciones": [
+              "redes-desde-cero/configurar-un-switch"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "texto": "¿Cuánto tiempo puedes dedicarle a la semana?",
+      "opciones": [
+        {
+          "id": "menos-1",
+          "texto": "Menos de 1 hora",
+          "efectos": {
+            "horasSemana": 0.5
+          }
+        },
+        {
+          "id": "1-2",
+          "texto": "De 1 a 2 horas",
+          "efectos": {
+            "horasSemana": 1
+          }
+        },
+        {
+          "id": "3-4",
+          "texto": "De 3 a 4 horas",
+          "efectos": {
+            "horasSemana": 3
+          }
+        },
+        {
+          "id": "5-mas",
+          "texto": "5 horas o más",
+          "efectos": {
+            "horasSemana": 5
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta",
+      "texto": "¿Para qué quieres aprender redes?",
+      "opciones": [
+        {
+          "id": "entender",
+          "texto": "Para entender cómo funciona internet",
+          "motivo": "por ahora quieres entender cómo funciona internet",
+          "efectos": {
+            "omitirModulos": [
+              "redes-desde-cero/vlans"
+            ]
+          }
+        },
+        {
+          "id": "seguridad",
+          "texto": "Para empezar en ciberseguridad",
+          "efectos": {
+            "agregarCursos": [
+              "hacking-etico-reconocimiento"
+            ]
+          }
+        },
+        {
+          "id": "administrar",
+          "texto": "Para administrar la red de un lugar",
+          "efectos": {}
+        }
+      ]
+    }
+  ]
+}

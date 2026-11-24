@@ -1,0 +1,92 @@
+---
+/**
+ * LayoutBase — el esqueleto de todas las páginas: <head>, fuentes, estilos, cabecera, pie
+ * y el contenedor de avisos flotantes.
+ *
+ *   <LayoutBase titulo="Escuelas">…contenido…</LayoutBase>
+ *
+ * - `titulo`: lo que se ve en la pestaña («Escuelas · Pista»). Sin título, solo «Pista».
+ * - `salirA`: cabecera de cuestionario, solo con «Salir» hacia esa dirección (pantallas 04 a 06).
+ *   Sin `salirA`, la cabecera (con o sin sesión) depende del estado de la demo, no de la página.
+ *
+ * Sin parpadeo: lo primero del <head> es un script en línea muy pequeño que lee el estado guardado y marca
+ * <html> con `data-plan` y `data-sesion` antes de pintar nada; `styles/global.css` muestra u oculta según eso.
+ * Ese script SOLO lee; toda la escritura sigue en `lib/estado-demo.ts`.
+ * - `ocultarDeBuscadores`: para páginas internas como /demo.
+ */
+import '@fontsource-variable/inter';
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource-variable/jetbrains-mono';
+import '../styles/global.css';
+
+import Cabecera from '../components/sitio/Cabecera.astro';
+import PieDePagina from '../components/sitio/PieDePagina.astro';
+import AvisoFlotante from '../components/ui/AvisoFlotante.astro';
+import { CLAVE_ALMACEN } from '../lib/estado-demo';
+
+interface Props {
+  titulo?: string;
+  descripcion?: string;
+  salirA?: string;
+  ocultarDeBuscadores?: boolean;
+}
+
+const {
+  titulo,
+  descripcion = 'Pista: cursos guiados y muy baratos para estudiantes de cualquier carrera.',
+  salirA,
+  ocultarDeBuscadores = false,
+} = Astro.props;
+
+const tituloCompleto = titulo ? `${titulo} · Pista` : 'Pista · Aprende algo nuevo con una ruta clara';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline define:vars={{ clave: CLAVE_ALMACEN }}>
+      // Marca <html> con el estado de la demo antes de pintar (ver el comentario de arriba). Solo lee.
+      // La condición de «sesión» es la misma que `haySesion()` en lib/estado-demo.ts: si cambias una, cambia la otra.
+      try {
+        var e = JSON.parse(localStorage.getItem(clave) || 'null');
+        if (!e || e.version !== 1) e = {};
+        var diagnosticos = e.diagnosticos || {};
+        var conDiagnostico = Object.keys(diagnosticos).some(function (a) {
+          return diagnosticos[a] && Object.keys(diagnosticos[a]).length > 0;
+        });
+        document.documentElement.dataset.plan = e.planActivo === true ? 'activo' : 'inactivo';
+        document.documentElement.dataset.sesion =
+          typeof e.areaElegida === 'string' || conDiagnostico || e.planActivo === true ? 'si' : 'no';
+      } catch (error) {
+        // Sin almacenamiento o con datos dañados: se ve la versión sin plan y sin sesión.
+      }
+    </script>
+    <meta name="description" content={descripcion} />
+    {ocultarDeBuscadores && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{tituloCompleto}</title>
+  </head>
+  <body class="flex min-h-dvh flex-col">
+    <a
+      href="#contenido"
+      class="sr-only rounded-lg bg-tinta px-4 text-blanco focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:inline-flex focus:min-h-11 focus:items-center"
+    >
+      Saltar al contenido
+    </a>
+    <Cabecera salirA={salirA} />
+    <main id="contenido" class="flex-1">
+      <slot />
+    </main>
+    <PieDePagina />
+    <AvisoFlotante />
+  </body>
+</html>
+
+<script>
+  // Mantiene al día data-plan / data-sesion, «Sí, compré» y «Reiniciar demo» (ver lib/estado-en-pagina.ts).
+  import { conectarEstadoEnPagina } from '../lib/estado-en-pagina';
+  conectarEstadoEnPagina();
+</script>

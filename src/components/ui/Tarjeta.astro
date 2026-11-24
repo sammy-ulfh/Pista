@@ -1,0 +1,33 @@
+---
+/**
+ * Tarjeta — caja con borde de tinta y radio de 12 px.
+ *
+ * - `destacada`: el elemento actual o recomendado; lleva la sombra desplazada.
+ * - `punteada`: borde punteado y gris, para lo bloqueado o «próximamente».
+ * - `como`: etiqueta HTML que se usa (div, article, section, li).
+ *
+ *   <Tarjeta destacada><h3>Semana 1</h3>…</Tarjeta>
+ */
+interface Props {
+  destacada?: boolean;
+  punteada?: boolean;
+  como?: 'div' | 'article' | 'section' | 'li';
+  /** Relleno interior: normal (24 px) o compacto (16 px). */
+  relleno?: 'normal' | 'compacto' | 'ninguno';
+  class?: string;
+}
+
+const { destacada = false, punteada = false, como: Etiqueta = 'div', relleno = 'normal', class: claseExtra } = Astro.props;
+---
+
+<Etiqueta
+  class:list={[
+    'rounded-cuaderno border-2',
+    punteada ? 'border-dashed border-texto-3 bg-papel' : 'border-tinta bg-blanco',
+    destacada && 'shadow-desplazada',
+    { normal: 'p-6', compacto: 'p-4', ninguno: '' }[relleno],
+    claseExtra,
+  ]}
+>
+  <slot />
+</Etiqueta>

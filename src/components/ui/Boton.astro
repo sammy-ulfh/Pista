@@ -1,0 +1,63 @@
+---
+/**
+ * Boton — botón o enlace con forma de botón.
+ *
+ * Regla del wireframe: UN solo botón `principal` (oscuro) por pantalla; el resto, `secundario` (gris).
+ * Si recibe `href` se dibuja como enlace (<a>); si no, como <button>.
+ *
+ *   <Boton variante="principal" href="/orientacion">Descubre tu ruta</Boton>
+ *   <Boton tamano="chico" data-aviso="Disponible en la versión completa">Descargar PDF</Boton>
+ */
+interface Props {
+  variante?: 'principal' | 'secundario';
+  /** normal = 56 px de alto · chico = 48 px · mini = 44 px (mínimo táctil). */
+  tamano?: 'normal' | 'chico' | 'mini';
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  /** Ocupa todo el ancho disponible. */
+  bloque?: boolean;
+  disabled?: boolean;
+  id?: string;
+  class?: string;
+  'aria-label'?: string;
+  [atributoData: `data-${string}`]: string | undefined;
+}
+
+const {
+  variante = 'secundario',
+  tamano = 'normal',
+  href,
+  type = 'button',
+  bloque = false,
+  disabled = false,
+  class: claseExtra,
+  ...resto
+} = Astro.props;
+
+const clases = [
+  'inline-flex items-center justify-center gap-2 text-center font-semibold leading-tight',
+  'rounded-cuaderno border-2 border-tinta transition-[transform,box-shadow] duration-150',
+  'hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-desplazada motion-reduce:transition-none motion-reduce:hover:translate-0',
+  'disabled:pointer-events-none disabled:opacity-60 aria-disabled:pointer-events-none aria-disabled:opacity-60',
+  variante === 'principal' ? 'bg-tinta text-blanco' : 'bg-relleno text-tinta',
+  {
+    normal: 'min-h-14 px-7 text-lg',
+    chico: 'min-h-12 px-5 text-base',
+    mini: 'min-h-11 px-4 text-sm',
+  }[tamano],
+  bloque ? 'w-full' : '',
+  claseExtra,
+];
+---
+
+{
+  href ? (
+    <a href={disabled ? undefined : href} aria-disabled={disabled ? 'true' : undefined} class:list={clases} {...resto}>
+      <slot />
+    </a>
+  ) : (
+    <button type={type} disabled={disabled} class:list={clases} {...resto}>
+      <slot />
+    </button>
+  )
+}

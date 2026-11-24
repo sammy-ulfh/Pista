@@ -1,0 +1,47 @@
+---
+/**
+ * Pantalla 12 · Mi bitácora: racha, lecciones vistas, semanas de la ruta, las etapas del roadmap (si el área tiene),
+ * calendario, insignias y «Mis cursos».
+ *
+ * Todo se calcula en el navegador a partir del estado de la demo (`components/bitacora/vista-bitacora.ts`): aquí
+ * solo se incrustan los datos (cursos visibles y diagnósticos, para conocer la ruta) y se arman los componentes.
+ * «Descargar mi avance (PDF)» solo muestra el aviso «Disponible en la versión completa».
+ */
+import { areasParaNavegador, datosRuta, obtenerAjustes } from '../lib/catalogo';
+import LayoutBase from '../layouts/LayoutBase.astro';
+import CalendarioEstudio from '../components/bitacora/CalendarioEstudio.astro';
+import EtapasBitacora from '../components/bitacora/EtapasBitacora.astro';
+import Estadisticas from '../components/bitacora/Estadisticas.astro';
+import Insignias from '../components/bitacora/Insignias.astro';
+import MisCursos from '../components/bitacora/MisCursos.astro';
+import DialogoSuscripcion from '../components/catalogo/DialogoSuscripcion.astro';
+import Boton from '../components/ui/Boton.astro';
+import DatosParaNavegador from '../components/ui/DatosParaNavegador.astro';
+
+const datos = { ...(await datosRuta()), areas: await areasParaNavegador() };
+const { textoFuncionNoDisponible } = obtenerAjustes();
+---
+
+<LayoutBase titulo="Mi bitácora">
+  <DatosParaNavegador id="datos-bitacora" datos={datos} />
+
+  <div class="contenedor grid gap-10 pt-6 lg:grid-cols-2 lg:gap-14 lg:pt-10">
+    <div class="min-w-0 space-y-10">
+      <div>
+        <h1 class="text-4xl sm:text-5xl">Mi bitácora</h1>
+        <div class="mt-6"><Estadisticas /></div>
+      </div>
+      <EtapasBitacora />
+      <CalendarioEstudio />
+    </div>
+
+    <div class="min-w-0 space-y-8">
+      <Insignias />
+      <MisCursos idDialogo="dialogo-suscripcion" />
+      <Boton variante="principal" data-aviso={textoFuncionNoDisponible}>Descargar mi avance (PDF)</Boton>
+    </div>
+  </div>
+
+  <DialogoSuscripcion id="dialogo-suscripcion" />
+</LayoutBase>
+

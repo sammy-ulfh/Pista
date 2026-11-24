@@ -1,0 +1,42 @@
+---
+/**
+ * Pantalla 06 · Diagnóstico del área. Una página por área con diagnóstico (`datos/diagnosticos/<area>.json`).
+ * Al terminar guarda el área como `areaElegida` y lleva a «Mi ruta», que calcula la ruta con `lib/ruta.ts`.
+ */
+import type { GetStaticPaths } from 'astro';
+import { obtenerAreasConPagina, obtenerDiagnostico, type AreaConEscuela } from '../../../lib/catalogo';
+import LayoutBase from '../../../layouts/LayoutBase.astro';
+import Cuestionario from '../../../components/cuestionario/Cuestionario.astro';
+
+export const getStaticPaths = (async () => {
+  const areas = await obtenerAreasConPagina();
+  const conDiagnostico = await Promise.all(
+    areas.map(async (area) => ({ area, diagnostico: await obtenerDiagnostico(area.id) })),
+  );
+  return conDiagnostico.flatMap(({ area, diagnostico }) =>
+    diagnostico ? [{ params: { area: area.id }, props: { area, diagnostico } }] : [],
+  );
+}) satisfies GetStaticPaths;
+
+interface Props {
+  area: AreaConEscuela;
+  diagnostico: NonNullable<Awaited<ReturnType<typeof obtenerDiagnostico>>>;
+}
+
+const { area, diagnostico } = Astro.props;
+---
+
+<LayoutBase titulo={`Diagnóstico · ${area.nombre}`} salirA={`/areas/${area.id}`}>
+  <div class="contenedor pt-8 pb-4 lg:pt-14">
+    <Cuestionario
+      tipo="diagnostico"
+      area={area.id}
+      preguntas={diagnostico.preguntas}
+      nota={diagnostico.notaAlFinal}
+      prefijo={area.nombre}
+      volverA={`/areas/${area.id}`}
+      destino="/mi-ruta"
+      textoTerminar="Ver mi ruta →"
+    />
+  </div>
+</LayoutBase>

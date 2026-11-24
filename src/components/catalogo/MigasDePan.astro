@@ -1,0 +1,33 @@
+---
+/**
+ * MigasDePan — «Escuelas › Negocios y Emprendimiento › Conseguir clientes» (pantallas 03 y 08).
+ * El último elemento es la página actual (o un tramo sin página): se escribe sin enlace.
+ *
+ *   <MigasDePan tramos={[{ texto: 'Escuelas', href: '/escuelas' }, { texto: 'Negocios' }]} />
+ */
+interface Props {
+  tramos: { texto: string; href?: string }[];
+  class?: string;
+}
+
+const { tramos, class: claseExtra } = Astro.props;
+---
+
+<nav aria-label="Migas de pan" class:list={['text-sm text-texto-2', claseExtra]}>
+  <ol class="flex flex-wrap items-center gap-x-2">
+    {
+      tramos.map((tramo, i) => (
+        <li class="flex items-center gap-2">
+          {i > 0 && <span aria-hidden="true">›</span>}
+          {tramo.href ? (
+            <a href={tramo.href} class="inline-flex min-h-11 min-w-11 items-center justify-center underline-offset-4 hover:text-tinta hover:underline">
+              {tramo.texto}
+            </a>
+          ) : (
+            <span class="inline-flex min-h-11 items-center">{tramo.texto}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
